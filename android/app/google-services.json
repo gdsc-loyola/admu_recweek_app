@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "900423780245",
+    "firebase_url": "https://admu-recweek-app.firebaseio.com",
+    "project_id": "admu-recweek-app",
+    "storage_bucket": "admu-recweek-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900423780245:android:8dae7a1b8aa37ab87fd89c",
+        "android_client_info": {
+          "package_name": "org.dscadmu.admurecweekapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900423780245-9gtg9688g4636h9v9jfagn7rf94iri32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoquuQlpexQog8lJ_mR-1f5ccE0DlXtww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900423780245-9gtg9688g4636h9v9jfagn7rf94iri32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
