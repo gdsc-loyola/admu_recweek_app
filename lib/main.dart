@@ -139,9 +139,10 @@ class _LoggedInScreenState extends State<LoggedInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.blue,
             iconTheme: IconThemeData(color: Colors.black),
-            elevation: 0,
+            // elevation: 0,
+            title: Text("ADMU Recweek App"),
             automaticallyImplyLeading: false // remove back button
             ),
         body: pages[selectedPageIndex],
