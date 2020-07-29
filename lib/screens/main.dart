@@ -7,12 +7,12 @@ import 'package:admu_recweek_app/screens/list.dart';
 import 'package:admu_recweek_app/screens/settings.dart';
 import 'package:admu_recweek_app/screens/tracker.dart';
 
-import 'package:admu_recweek_app/models/user.dart';
+// import 'package:dio/dio.dart';
 
 // ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
   // ignore: unused_field
-  GoogleSignIn _googleSignIn;
+  static GoogleSignIn _googleSignIn;
   // ignore: unused_field
   FirebaseUser _user;
 
@@ -30,91 +30,52 @@ class _MainScreenState extends State<MainScreen> {
 
   var pages = [
     HomeScreen(),
-    ListScreen(),
+    ListScreen(_filter),
     TrackerScreen(),
-    SettingsScreen(),
+    SettingsScreen(MainScreen._googleSignIn),
   ];
 
+  static TextEditingController _filter = new TextEditingController();
+  // final dio = new Dio();
+  String _searchText = "";
+  List names = new List();
+  List filteredNames = new List();
+  Icon _searchIcon = new Icon(Icons.search);
+  Widget _appBarTitle = new Text("Pavilion",
+      style: TextStyle(
+          color: const Color(0xff295EFF),
+          fontWeight: FontWeight.bold,
+          fontSize: 32.0));
+
+  _MainScreenState() {
+    _filter.addListener(() {
+      if (_filter.text.isEmpty) {
+        setState(() {
+          _searchText = "";
+          filteredNames = names;
+        });
+      } else {
+        setState(() {
+          _searchText = _filter.text;
+        });
+      }
+    });
+  }
+
   @override
+  void initState() {
+    // this._getNames();
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black),
-          backgroundColor: Colors.white,
-          automaticallyImplyLeading: false,
-          actions: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(right: 16),
-              child: IconButton(
-                icon: Container(
-                  height: 30,
-                  width: 30,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: new DecorationImage(
-                        fit: BoxFit.cover,
-                        image: NetworkImage(
-                          imageUrl,
-                        ),
-                      )),
-                ),
-                onPressed: () {
-                  debugPrint("profile is pressed");
-                },
-              ),
-            )
-          ],
-          elevation: 0,
-        ),
-        // appBar: AppBar(
-        //     backgroundColor: Colors.white,
-        //     iconTheme: IconThemeData(color: Colors.black),
-        //     // elevation: 0,
-        //     title: Text("ADMU Recweek App"),
-        //     automaticallyImplyLeading: false // remove back button
-        //     ),
+        appBar: _buildBar(context),
         body: pages[selectedPageIndex],
         // body: Container(
-        //     color: Colors.white,
-        //     padding: EdgeInsets.all(50),
-        //     child: Align(
-        //         alignment: Alignment.center,
-        //         child: Column(
-        //           mainAxisAlignment: MainAxisAlignment.center,
-        //           children: <Widget>[
-        //             ClipOval(
-        //                 child: Image.network(_user.photoUrl,
-        //                     width: 100, height: 100, fit: BoxFit.cover)),
-        //             SizedBox(height: 20),
-        //             Text('Welcome,', textAlign: TextAlign.center),
-        //             Text(_user.displayName,
-        //                 textAlign: TextAlign.center,
-        //                 style: TextStyle(
-        //                     fontWeight: FontWeight.bold, fontSize: 25)),
-        //             SizedBox(height: 20),
-        //             FlatButton(
-        //                 shape: RoundedRectangleBorder(
-        //                   borderRadius: BorderRadius.circular(20),
-        //                 ),
-        //                 onPressed: () {
-        //                   _googleSignIn.signOut();
-        //                   Navigator.pop(context, false);
-        //                 },
-        //                 color: Colors.redAccent,
-        //                 child: Padding(
-        //                     padding: EdgeInsets.all(10),
-        //                     child: Row(
-        //                       mainAxisAlignment: MainAxisAlignment.center,
-        //                       crossAxisAlignment: CrossAxisAlignment.center,
-        //                       children: <Widget>[
-        //                         Icon(Icons.exit_to_app, color: Colors.white),
-        //                         SizedBox(width: 10),
-        //                         Text('Log out of Google',
-        //                             style: TextStyle(color: Colors.white))
-        //                       ],
-        //                     )))
-        //           ],
-        //         )))
+        //   child: _buildList(),
+        // ),
+        resizeToAvoidBottomPadding: false,
         bottomNavigationBar: BottomNavigationBar(
             items: [
               BottomNavigationBarItem(
@@ -153,4 +114,103 @@ class _MainScreenState extends State<MainScreen> {
             },
             currentIndex: selectedPageIndex));
   }
+
+  Widget _buildBar(BuildContext context) {
+    return new AppBar(
+      centerTitle: false,
+      title: _appBarTitle,
+      automaticallyImplyLeading: false,
+      backgroundColor: Colors.white,
+      elevation: 0.05,
+      iconTheme: new IconThemeData(color: const Color(0xff295EFF)),
+      actions: <Widget>[
+        Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: SizedBox(
+              height: 32.0,
+              width: 32.0,
+              child: IconButton(
+                icon: _searchIcon,
+                onPressed: _searchPressed,
+              ),
+            )),
+      ],
+    );
+  }
+
+  // Widget _buildList() {
+  //   if (!(_searchText.isEmpty)) {
+  //     List tempList = new List();
+  //     for (int i = 0; i < filteredNames.length; i++) {
+  //       if (filteredNames[i]['name']
+  //           .toLowerCase()
+  //           .contains(_searchText.toLowerCase())) {
+  //         tempList.add(filteredNames[i]);
+  //       }
+  //     }
+  //     filteredNames = tempList;
+  //   }
+  //   return ListView.builder(
+  //     itemCount: names == null ? 0 : filteredNames.length,
+  //     itemBuilder: (BuildContext context, int index) {
+  //       return new ListTile(
+  //         title: Text(filteredNames[index]['name']),
+  //         onTap: () => print(filteredNames[index]['name']),
+  //       );
+  //     },
+  //   );
+  // }
+
+  void _searchPressed() {
+    setState(() {
+      selectedPageIndex = 1;
+      if (this._searchIcon.icon == Icons.search) {
+        this._searchIcon = new Icon(Icons.close);
+        this._appBarTitle = new Container(
+          decoration: new BoxDecoration(
+              color: const Color(0xffE2EAFF),
+              borderRadius: new BorderRadius.circular(10.0)),
+          child: new Center(
+            child: new TextFormField(
+              cursorColor: const Color(0xfff295EFF),
+              controller: _filter,
+              style: TextStyle(color: const Color(0xff8198BB)),
+              decoration: new InputDecoration(
+                border: InputBorder.none,
+                focusColor: const Color(0xfff295EFF),
+                focusedBorder: InputBorder.none,
+                enabledBorder: InputBorder.none,
+                errorBorder: InputBorder.none,
+                disabledBorder: InputBorder.none,
+                prefixIcon:
+                    new Icon(Icons.search, color: const Color(0xff8198BB)),
+              ),
+            ),
+          ),
+        );
+      } else {
+        this._searchIcon = new Icon(Icons.search);
+        this._appBarTitle = new Text("Pavilion",
+            style: TextStyle(
+                color: const Color(0xff295EFF),
+                fontWeight: FontWeight.bold,
+                fontSize: 32.0));
+        filteredNames = names;
+        _filter.clear();
+      }
+    });
+  }
+
+  // void _getNames() async {
+  //   final response = await dio.get('https://swapi.co/api/people');
+  //   List tempList = new List();
+  //   for (int i = 0; i < response.data['results'].length; i++) {
+  //     tempList.add(response.data['results'][i]);
+  //   }
+  //   setState(() {
+  //     names = tempList;
+  //     names.shuffle();
+  //     filteredNames = names;
+  //   });
+  // }
 }

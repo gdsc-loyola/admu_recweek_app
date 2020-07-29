@@ -35,57 +35,52 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Container(
         color: Colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 150.0),
         child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              FlutterLogo(size: 150),
-              SizedBox(height: 50),
-              OutlineButton(
-                splashColor: Colors.grey,
-                onPressed: () {
-                  onGoogleSignIn(context);
-                  // signInWithGoogle().whenComplete(() {
-                  //   Navigator.of(context).push(
-                  //     MaterialPageRoute(
-                  //       builder: (context) {
-                  //         return MainScreen();
-                  //       },
-                  //     ),
-                  //   );
-                  // });
-                },
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40)),
-                highlightElevation: 0,
-                color: isUserSignedIn ? Colors.green : Colors.white,
-                borderSide: BorderSide(color: Colors.grey),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Image(
-                          image: AssetImage("assets/images/google.png"),
-                          height: 35.0),
-                      Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Text("Sign in with Google",
-                              style:
-                                  TextStyle(color: Colors.grey, fontSize: 20))
-                          // Text(
-                          //   'Sign in with Google',
-                          //   style: TextStyle(
-                          //     fontSize: 20,
-                          //     color: Colors.grey,
-                          //   ),
-                          // ),
-                          )
-                    ],
-                  ),
-                ),
+              Column(
+                children: <Widget>[
+                  Image.asset('assets/images/logo.png'),
+                  Text(
+                    "pavilion",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 56.0,
+                        color: const Color(0xff295EFF)),
+                  )
+                ],
+              ),
+              Column(
+                children: <Widget>[
+                  FlatButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      onPressed: () {
+                        onGoogleSignIn(context);
+                      },
+                      color: const Color(0xff295EFF),
+                      child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Sign in with Google',
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 24.0)))),
+                  Padding(
+                      padding: const EdgeInsets.only(top: 16.0),
+                      child: GestureDetector(
+                        child: Text("Continue offline",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: const Color(0xff1C41B2),
+                                fontSize: 16.0)),
+                        onTap: () {
+                          onGoogleSignIn(context);
+                        },
+                      ))
+                ],
               ),
             ],
           ),

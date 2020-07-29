@@ -1,12 +1,14 @@
 String firstName;
 String email;
 String imageUrl;
+String displayName;
 
 void getCurrentUser(user) async {
   assert(user.email != null);
   assert(user.displayName != null);
   assert(user.photoUrl != null);
 
+  displayName = user.displayName;
   firstName = user.displayName;
   email = user.email;
   imageUrl = user.photoUrl;

@@ -5,7 +5,14 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 
 import 'package:admu_recweek_app/models/org.dart';
 
+// ignore: must_be_immutable
 class ListScreen extends StatefulWidget {
+  TextEditingController searchController;
+
+  ListScreen(_searchController) {
+    searchController = _searchController;
+  }
+
   @override
   _ListScreenState createState() => _ListScreenState();
 }
@@ -15,7 +22,6 @@ class _ListScreenState extends State<ListScreen> {
   List<String> strList = [];
   List<Widget> favouriteList = [];
   List<Widget> normalList = [];
-  TextEditingController searchController = TextEditingController();
 
   @override
   void initState() {
@@ -30,7 +36,7 @@ class _ListScreenState extends State<ListScreen> {
     userList
         .sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
     filterList();
-    searchController.addListener(() {
+    widget.searchController.addListener(() {
       filterList();
     });
     super.initState();
@@ -42,10 +48,10 @@ class _ListScreenState extends State<ListScreen> {
     favouriteList = [];
     normalList = [];
     strList = [];
-    if (searchController.text.isNotEmpty) {
+    if (widget.searchController.text.isNotEmpty) {
       users.retainWhere((user) => user.name
           .toLowerCase()
-          .contains(searchController.text.toLowerCase()));
+          .contains(widget.searchController.text.toLowerCase()));
     }
     users.forEach((user) {
       if (user.favourite) {
@@ -145,28 +151,26 @@ class _ListScreenState extends State<ListScreen> {
       },
       keyboardUsage: true,
       headerWidgetList: <AlphabetScrollListHeader>[
-        AlphabetScrollListHeader(widgetList: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: TextFormField(
-              controller: searchController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                suffix: Icon(
-                  Icons.search,
-                  color: Colors.grey,
-                ),
-                labelText: "Search",
-              ),
-            ),
-          )
-        ], icon: Icon(Icons.search), indexedHeaderHeight: (index) => 80),
+        // AlphabetScrollListHeader(widgetList: [
+        //   Padding(
+        //     padding: const EdgeInsets.all(16.0),
+        //     child: TextFormField(
+        //       controller: widget.searchController,
+        //       decoration: InputDecoration(
+        //         border: OutlineInputBorder(),
+        //         suffix: Icon(
+        //           Icons.search,
+        //           color: Colors.grey,
+        //         ),
+        //         labelText: "Search",
+        //       ),
+        //     ),
+        //   )
+        // ], icon: Icon(Icons.search), indexedHeaderHeight: (index) => 80),
         AlphabetScrollListHeader(
             widgetList: favouriteList,
-            icon: Icon(Icons.star),
-            indexedHeaderHeight: (index) {
-              return 80;
-            }),
+            icon: Icon(Icons.search),
+            indexedHeaderHeight: (index) => 80),
       ],
     );
   }
