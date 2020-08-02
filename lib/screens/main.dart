@@ -77,35 +77,54 @@ class _MainScreenState extends State<MainScreen> {
         // ),
         resizeToAvoidBottomPadding: false,
         bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(
-                title: Text(""),
-                icon: Icon(
-                  Icons.home,
-                  color: selectedPageIndex == 0 ? Colors.blue : Colors.blueGrey,
-                ),
-              ),
-              BottomNavigationBarItem(
-                title: Text(""),
-                icon: Icon(
-                  Icons.search,
-                  color: selectedPageIndex == 1 ? Colors.blue : Colors.blueGrey,
-                ),
-              ),
-              BottomNavigationBarItem(
                   title: Text(""),
-                  icon: Icon(
-                    Icons.assessment,
-                    color:
-                        selectedPageIndex == 2 ? Colors.blue : Colors.blueGrey,
+                  backgroundColor: Colors.white,
+                  icon: SizedBox(
+                    width: 56.0,
+                    height: 56.0,
+                    child: selectedPageIndex == 0
+                        ? Image(
+                            image: AssetImage('assets/icons/home_active.png'))
+                        : Image(image: AssetImage('assets/icons/home.png')),
                   )),
               BottomNavigationBarItem(
-                title: Text(""),
-                icon: Icon(
-                  Icons.settings,
-                  color: selectedPageIndex == 3 ? Colors.blue : Colors.blueGrey,
-                ),
-              ),
+                  title: Text(""),
+                  backgroundColor: Colors.white,
+                  icon: SizedBox(
+                    width: 56.0,
+                    height: 56.0,
+                    child: selectedPageIndex == 1
+                        ? Image(
+                            image: AssetImage('assets/icons/list_active.png'))
+                        : Image(image: AssetImage('assets/icons/list.png')),
+                  )),
+              BottomNavigationBarItem(
+                  title: Text(""),
+                  backgroundColor: Colors.white,
+                  icon: SizedBox(
+                    width: 56.0,
+                    height: 56.0,
+                    child: selectedPageIndex == 2
+                        ? Image(
+                            image:
+                                AssetImage('assets/icons/tracker_active.png'))
+                        : Image(image: AssetImage('assets/icons/tracker.png')),
+                  )),
+              BottomNavigationBarItem(
+                  title: Text(""),
+                  backgroundColor: Colors.white,
+                  icon: SizedBox(
+                    width: 56.0,
+                    height: 56.0,
+                    child: selectedPageIndex == 3
+                        ? Image(
+                            image:
+                                AssetImage('assets/icons/settings_active.png'))
+                        : Image(image: AssetImage('assets/icons/settings.png')),
+                  )),
             ],
             onTap: (index) {
               setState(() {
