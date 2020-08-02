@@ -67,7 +67,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           padding: EdgeInsets.all(8.0),
                           child: Text('Sign in with Google',
                               style: TextStyle(
-                                  color: Colors.white, fontSize: 24.0)))),
+                                  color: Colors.white,
+                                  fontSize: 24.0,
+                                  fontWeight: FontWeight.bold)))),
                   Padding(
                       padding: const EdgeInsets.only(top: 16.0),
                       child: GestureDetector(
