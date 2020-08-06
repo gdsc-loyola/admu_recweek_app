@@ -50,6 +50,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
+    - assets/logos/
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg

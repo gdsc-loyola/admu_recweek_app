@@ -4,6 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:admu_recweek_app/screens/main.dart';
 
 import 'package:admu_recweek_app/models/user.dart';
+import 'package:admu_recweek_app/screens/bodies/lions.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -126,7 +127,8 @@ class _LoginScreenState extends State<LoginScreen> {
     FirebaseUser user = await _handleSignIn();
     var userSignedIn = await Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => MainScreen(user, _googleSignIn)),
+      // MaterialPageRoute(builder: (context) => MainScreen(user, _googleSignIn)),
+      MaterialPageRoute(builder: (context) => LionsScreen()),
     );
 
     setState(() {
