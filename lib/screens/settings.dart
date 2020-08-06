@@ -29,8 +29,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: Image.network(imageUrl,
                         width: 100, height: 100, fit: BoxFit.cover)),
                 SizedBox(height: 20),
-                Text('Welcome, this is the Settings Screen,',
-                    textAlign: TextAlign.center),
                 Text(displayName,
                     textAlign: TextAlign.center,
                     style:
@@ -38,23 +36,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 SizedBox(height: 20),
                 FlatButton(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                     ),
                     onPressed: () {
                       widget._googleSignIn.signOut();
                       Navigator.pop(context, false);
                     },
-                    color: Colors.redAccent,
+                    color: Colors.red[600],
                     child: Padding(
                         padding: EdgeInsets.all(10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            Icon(Icons.exit_to_app, color: Colors.white),
-                            SizedBox(width: 10),
-                            Text('Log out of Google',
-                                style: TextStyle(color: Colors.white))
+                            //Icon(Icons.exit_to_app, color: Colors.white),
+                            //SizedBox(width: 10),
+                            Text('Sign Out',
+                                style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold))
                           ],
                         )))
               ],
