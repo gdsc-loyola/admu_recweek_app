@@ -56,7 +56,7 @@ class _COAScreenState extends State<COAScreen> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             Container(
-                child: Image.asset('assets/images/placeholder.png'),
+                child: Image.asset('assets/images/coa_cover.png'),
                 height: 180,
                 margin: const EdgeInsets.only(bottom: 8, top: 16)),
             Text(
