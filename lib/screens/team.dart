@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ProductTeam extends StatefulWidget {
+class ProductTeamScreen extends StatefulWidget {
   @override
   _ProductTeamState createState() => _ProductTeamState();
 }
 
-class _ProductTeam extends State<ProductTeamScreen> {
+class _ProductTeamState extends State<ProductTeamScreen> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Product Team ",
+          "Product Team",
           style: TextStyle(
               color: const Color(0xff295EFF), fontWeight: FontWeight.bold),
         ),
@@ -22,20 +22,7 @@ class _ProductTeam extends State<ProductTeamScreen> {
         actions: <Widget>[
           Padding(
               padding: const EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    bookmark = !bookmark;
-                  });
-                },
-                child: SizedBox(
-                  width: 24.0,
-                  height: 24.0,
-                  child: bookmark
-                      ? Image.asset('assets/bodies/coa/bookmark_active.png')
-                      : Image.asset('assets/bodies/coa/bookmark.png'),
                 ),
-              ))
         ],
       ),
       body: Container(
@@ -43,42 +30,14 @@ class _ProductTeam extends State<ProductTeamScreen> {
           color: Colors.white,
           child: ListView(
             children: <Widget>[
-              Align(
-                alignment: Alignment.center,
-                child: SizedBox(
-                  height: 72.0,
-                  width: 72.0,
-                  child: Image.asset('assets/bodies/coa/logo.png'),
-                ),
-              ),
-              Text(
-                "Council of Organizations - Ateneo",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              ),
-              Container(
-                  child: Image.asset('assets/bodies/coa/cover.png'),
-                  height: 180,
-                  margin: const EdgeInsets.only(bottom: 8, top: 16)),
-              Text(
-                "Description of COA. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                style: TextStyle(fontSize: 18),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 30.0, bottom: 16.0),
-                child: Text(
-                  "Clusters",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.left,
-                ),
-              ),
               Expanded(
-                  child: Table(
+                  child: Table (
                 children: [
                   TableRow(children: [
                     TableCell(
                         child: GestureDetector(
                             onTap: () {
-                              print("Analysis & Discourse");
+                              print("Ceej Atienza Github");
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -89,25 +48,39 @@ class _ProductTeam extends State<ProductTeamScreen> {
                                     height: 64,
                                     width: 64,
                                     child: Image.asset(
-                                        'assets/bodies/coa/analysis-discourse.png'),
+                                        'assets/team/ceej.png'),
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(top: 8),
                                       child: Flexible(
                                           child: new Text(
-                                        "Analysis & Discourse",
+                                        "Cedric Atienza",
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
+                                            color: const Color(0xff295EFF),
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
-                                      )))
+                                      ))),
+                                  Padding (
+                                    padding: const EdgeInsets.only(top: 8),
+                                        child: Flexible(
+                                            child: new Text(
+                                          "Product Manager & Designer",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: const Color(0xff295EFF),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        )
+                                      )
+                                    ),
                                 ],
                               ),
                             ))),
                     TableCell(
                       child: GestureDetector(
                           onTap: () {
-                            print("Faith & Formation");
+                            print("Harvey Sison Github");
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
@@ -118,26 +91,42 @@ class _ProductTeam extends State<ProductTeamScreen> {
                                   height: 64,
                                   width: 64,
                                   child: Image.asset(
-                                      'assets/bodies/coa/faith-formation.png'),
+                                      'assets/team/harvs.png'),
                                 ),
                                 Padding(
                                     padding: const EdgeInsets.only(top: 8),
                                     child: Flexible(
                                         child: new Text(
-                                      "Faith & Formation",
+                                      "Harvey Sison",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
+                                          color: const Color(0xff295EFF),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16),
-                                    )))
+                                    ))),
+                                Padding (
+                                    padding: const EdgeInsets.only(top: 8),
+                                        child: Flexible(
+                                            child: new Text(
+                                          "Developer",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: const Color(0xff295EFF),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        )
+                                      )
+                                    ),
                               ],
                             ),
                           )),
                     ),
+                    ]),
+                    TableRow(children: [
                     TableCell(
                       child: GestureDetector(
                           onTap: () {
-                            print("Science & Technology");
+                            print("Franz Taborlupa Github");
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
@@ -148,28 +137,40 @@ class _ProductTeam extends State<ProductTeamScreen> {
                                   height: 64,
                                   width: 64,
                                   child: Image.asset(
-                                      'assets/bodies/coa/science-technology.png'),
+                                      'assets/team/franz.png'),
                                 ),
                                 Padding(
                                     padding: const EdgeInsets.only(top: 8),
                                     child: Flexible(
                                         child: new Text(
-                                      "Science & Technology",
+                                      "Franz Taborlupa",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
+                                          color: const Color(0xff295EFF),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16),
-                                    )))
+                                    ))),
+                                Padding (
+                                    padding: const EdgeInsets.only(top: 8),
+                                        child: Flexible(
+                                            child: new Text(
+                                          "Developer",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: const Color(0xff295EFF),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        )
+                                      )
+                                    ),
                               ],
                             ),
                           )),
                     ),
-                  ]),
-                  TableRow(children: [
                     TableCell(
                       child: GestureDetector(
                         onTap: () {
-                          print("Health & Environment");
+                          print("Polly Baterna Github");
                         },
                         child: Container(
                           padding: const EdgeInsets.all(8),
@@ -180,27 +181,43 @@ class _ProductTeam extends State<ProductTeamScreen> {
                                 height: 64,
                                 width: 64,
                                 child: Image.asset(
-                                    'assets/bodies/coa/health-environment.png'),
+                                    'assets/team/polly.png'),
                               ),
                               Padding(
                                   padding: const EdgeInsets.only(top: 8),
                                   child: Flexible(
                                       child: new Text(
-                                    "Health & Environment",
+                                    "Pauline Baterna",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
+                                        color: const Color(0xff295EFF),
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16),
-                                  )))
+                                  ))),
+                              Padding (
+                                    padding: const EdgeInsets.only(top: 8),
+                                        child: Flexible(
+                                            child: new Text(
+                                          "User Experience Designer",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: const Color(0xff295EFF),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        )
+                                      )
+                                    ),
                             ],
                           ),
                         ),
                       ),
                     ),
+                    ]),
+                    TableRow(children: [
                     TableCell(
                       child: GestureDetector(
                         onTap: () {
-                          print("Intercultural Relations");
+                          print("Audrey Picar Github");
                         },
                         child: Container(
                           padding: const EdgeInsets.all(8),
@@ -211,18 +228,32 @@ class _ProductTeam extends State<ProductTeamScreen> {
                                 height: 64,
                                 width: 64,
                                 child: Image.asset(
-                                    'assets/bodies/coa/intercultural-relations.png'),
+                                    'assets/team/auds.png'),
                               ),
                               Padding(
                                   padding: const EdgeInsets.only(top: 8),
                                   child: Flexible(
                                       child: new Text(
-                                    "Intercultural Relations",
+                                    "Audrey Picar",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
+                                        color: const Color(0xff295EFF),
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16),
-                                  )))
+                                  ))),
+                              Padding (
+                                    padding: const EdgeInsets.only(top: 8),
+                                        child: Flexible(
+                                            child: new Text(
+                                          "User Experience Designer",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: const Color(0xff295EFF),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        )
+                                      )
+                                    ),
                             ],
                           ),
                         ),
@@ -231,7 +262,7 @@ class _ProductTeam extends State<ProductTeamScreen> {
                     TableCell(
                         child: GestureDetector(
                       onTap: () {
-                        print("Media & the Creative Arts");
+                        print("Jethro Sia");
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
@@ -242,137 +273,39 @@ class _ProductTeam extends State<ProductTeamScreen> {
                               height: 64,
                               width: 64,
                               child: Image.asset(
-                                  'assets/bodies/coa/media-arts.png'),
+                                  'assets/team/jeth.png'),
                             ),
                             Padding(
                                 padding: const EdgeInsets.only(top: 8),
                                 child: Flexible(
                                     child: new Text(
-                                  "Culture",
+                                  "Jethro Sia",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
+                                      color: const Color(0xff295EFF),
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16),
-                                )))
+                                ))),
+                            Padding (
+                                    padding: const EdgeInsets.only(top: 8),
+                                        child: Flexible(
+                                            child: new Text(
+                                          "Research & Externals",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: const Color(0xff295EFF),
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 12),
+                                        )
+                                      )
+                                    ),
                           ],
                         ),
                       ),
                     )),
                   ]),
-                  TableRow(children: [
-                    TableCell(
-                        child: GestureDetector(
-                      onTap: () {
-                        print("Business");
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.all(8),
-                        alignment: Alignment.center,
-                        child: Column(
-                          children: <Widget>[
-                            SizedBox(
-                              height: 64,
-                              width: 64,
-                              child:
-                                  Image.asset('assets/bodies/coa/business.png'),
-                            ),
-                            Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: Flexible(
-                                    child: new Text(
-                                  "Business",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                )))
-                          ],
-                        ),
-                      ),
-                    )),
-                    TableCell(
-                        child: GestureDetector(
-                      onTap: () {
-                        print("Performing Arts");
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.all(8),
-                        alignment: Alignment.center,
-                        child: Column(
-                          children: <Widget>[
-                            SizedBox(
-                              height: 64,
-                              width: 64,
-                              child: Image.asset(
-                                  'assets/bodies/coa/performing-arts.png'),
-                            ),
-                            Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: Flexible(
-                                    child: new Text(
-                                  "Performing Arts",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                )))
-                          ],
-                        ),
-                      ),
-                    )),
-                    TableCell(
-                      child: GestureDetector(
-                        onTap: () {
-                          print("Sector Based");
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 64,
-                                width: 64,
-                                child: Image.asset(
-                                    'assets/bodies/coa/sector-based.png'),
-                              ),
-                              Padding(
-                                  padding: const EdgeInsets.only(top: 8),
-                                  child: Flexible(
-                                      child: new Text(
-                                    "Sector Based",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
-                                  )))
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ])
                 ],
               )),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
-                child: FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    onPressed: () {
-                      launch("https://lionshub.org/");
-                    },
-                    color: const Color(0xffE84C4C),
-                    child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text('Learn More',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.bold)))),
-              )
             ],
           )),
     );
