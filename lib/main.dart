@@ -10,8 +10,8 @@ Future<void> main() async {
       debugShowCheckedModeBanner: false,
       title: 'ADMU Recweek App',
       theme: ThemeData(
-        fontFamily: 'Nunito',
-        hintColor: Colors.white,
-      ),
+          fontFamily: 'Nunito',
+          hintColor: Colors.white,
+          backgroundColor: Colors.white),
       home: LoginScreen()));
 }
