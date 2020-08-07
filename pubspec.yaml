@@ -55,6 +55,7 @@ flutter:
     - assets/bodies/coa/
     - assets/bodies/cop/
     - assets/bodies/student-groups/
+    - assets/orgs/dsc/
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
