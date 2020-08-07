@@ -29,12 +29,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: Image.network(imageUrl,
                         width: 100, height: 100, fit: BoxFit.cover)),
                 SizedBox(height: 20),
-                Text(displayName,
+                Text( displayName,
                     textAlign: TextAlign.center,
                     
                     style:
                         TextStyle(fontWeight: FontWeight.bold,  fontSize: 16)),
-                SizedBox(height: 20),
+                Padding (padding: EdgeInsets.all(8),),
                 SizedBox (
                   height: 40,
                   width: 224,
@@ -46,15 +46,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         widget._googleSignIn.signOut();
                         Navigator.pop(context, false);
                       },
-                      color: Colors.red[800],
+                      color: const Color(0xffCD0000),
                       child: Padding(
-                          padding: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(8),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              //Icon(Icons.exit_to_app, color: Colors.white),
-                              //SizedBox(width: 10),
                               Text('Sign Out',
                                   style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold))
                             ],
