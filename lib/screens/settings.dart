@@ -21,7 +21,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.white,
-        padding: EdgeInsets.all(50),
+        padding: EdgeInsets.only(top: 48),
         child: Column (
             children: <Widget> [
               Align (
@@ -74,13 +74,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     
                 //   ],
                 // )
-                Padding(
-                    padding: EdgeInsets.only(top: 10.0),
-                      child: Column (
+                
+                       Column (
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget> [
                           Container (
-                            margin: const EdgeInsets.only(top: 8),
+                            // margin: const EdgeInsets.only(top: 8),
                                   decoration: BoxDecoration(
                                     color: Colors.blue,
                                   ),
@@ -88,7 +87,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                   height: 144,
                           )
                         ]
-                    )
+                    
                 ),
                 //],
               )
