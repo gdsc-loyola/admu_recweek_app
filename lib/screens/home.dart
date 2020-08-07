@@ -262,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     
                     ])),
                     Padding (
-                      padding: EdgeInsets.only(top: 25),
+                      padding: EdgeInsets.only(top: 24),
                       child: Text (
                         "Today's Featured Organisations",
                         style: TextStyle(
