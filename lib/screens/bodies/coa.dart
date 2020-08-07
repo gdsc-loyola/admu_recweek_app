@@ -33,8 +33,8 @@ class _COAScreenState extends State<COAScreen> {
                   width: 24.0,
                   height: 24.0,
                   child: bookmark
-                      ? Image.asset('assets/icons/coa_bookmark_active.png')
-                      : Image.asset('assets/icons/coa_bookmark.png'),
+                      ? Image.asset('assets/bodies/coa/bookmark_active.png')
+                      : Image.asset('assets/bodies/coa/bookmark.png'),
                 ),
               ))
         ],
@@ -48,7 +48,7 @@ class _COAScreenState extends State<COAScreen> {
               child: SizedBox(
                 height: 72.0,
                 width: 72.0,
-                child: Image.asset('assets/logos/coa.png'),
+                child: Image.asset('assets/bodies/coa/logo.png'),
               ),
             ),
             Text(
@@ -56,7 +56,7 @@ class _COAScreenState extends State<COAScreen> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             Container(
-                child: Image.asset('assets/images/coa_cover.png'),
+                child: Image.asset('assets/bodies/coa/cover.png'),
                 height: 180,
                 margin: const EdgeInsets.only(bottom: 8, top: 16)),
             Text(
