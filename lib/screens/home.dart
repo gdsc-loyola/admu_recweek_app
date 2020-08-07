@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/screens/bodies/lions.dart';
+import 'package:admu_recweek_app/screens/orgs/lions/dsc.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,16 +18,27 @@ class _HomeScreenState extends State<HomeScreen> {
         //Fix alignment, change to column
         child: Column(
           children: <Widget>[
-            Text(
-              'Hey, ${firstName[0].toUpperCase()}${firstName.substring(1).toLowerCase()}!',
-              textAlign: TextAlign.left,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Container(
+                child: Text(
+                      'Hey, ${firstName[0].toUpperCase()}${firstName.substring(1).toLowerCase()}!',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                    ),
+              ),
             ),
-            Text(
-              'Ready to experience Org Culture?',
-              textAlign: TextAlign.left,
-              style: TextStyle(fontSize: 16),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Container(
+                child: Text(
+                  'Ready to experience Org Culture?',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
             ),
+            
             ConstrainedBox(
                 constraints: new BoxConstraints(
                   maxHeight: 184.0,
@@ -134,14 +146,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Text(
+                                  Text (
                                     '56',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                         color: Colors.black),
                                   ),
-                                  Text(
+                                  Text (
                                     ' Orgs',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
@@ -260,16 +272,23 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
+                    
                     ])),
-            Padding(
-                padding: EdgeInsets.only(top: 24),
-                child: Text(
-                  "Today's Featured Organisations",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                  ),
-                )),
+                    Padding (
+                      padding: EdgeInsets.only(top: 24),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Container(
+                          child: Text (
+                            "Today's Featured Organisations",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold, 
+                              fontSize: 24,
+                            ),
+                          )
+                        ),
+                      ),
+                    ),
           ],
         ));
   }
