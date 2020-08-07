@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/screens/bodies/lions.dart';
-import 'package:admu_recweek_app/screens/orgs/dsc.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -155,11 +154,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => DSCLoyolaScreen()),
-                            );
                             print("COP Body");
                           },
                           child: Container(
@@ -265,7 +259,18 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
+                    
                     ])),
+                    Padding (
+                      padding: EdgeInsets.only(top: 25),
+                      child: Text (
+                        "Today's Featured Organisations",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold, 
+                          fontSize: 24,
+                        ),
+                      )
+                    ),
           ],
         ));
   }
