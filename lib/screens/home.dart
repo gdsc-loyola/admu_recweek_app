@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child:
                                     Image.asset("assets/bodies/lions/logo.png"),
                               ),
-                              Row(
+                              Row (
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -118,6 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                           width: 144.0,
+                          height: 200,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisSize: MainAxisSize.max,

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:admu_recweek_app/models/user.dart';
@@ -20,10 +22,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Container(
         color: Colors.white,
         padding: EdgeInsets.all(50),
-        child: Align(
-            alignment: Alignment.center,
-            child: Column(
+        child: Column (
+            children: <Widget> [
+              Align (
+                alignment: Alignment.center,
+              child: Column (
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 ClipOval(
                     child: Image.network(imageUrl,
@@ -58,6 +63,37 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ],
                         ))))
               ],
-            )));
+            )),
+            Expanded (
+              child: Align (
+                alignment: FractionalOffset.bottomCenter,
+                
+                child: 
+                //   Column (
+                //   children: <Widget>[
+                    
+                //   ],
+                // )
+                Padding(
+                    padding: EdgeInsets.only(top: 10.0),
+                      child: Column (
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget> [
+                          Container (
+                            margin: const EdgeInsets.only(top: 8),
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                  ),
+                                  width: double.infinity,
+                                  height: 144,
+                          )
+                        ]
+                    )
+                ),
+                //],
+              )
+            )
+            ]
+            ));
   }
 }
