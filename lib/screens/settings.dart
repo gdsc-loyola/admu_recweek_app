@@ -31,30 +31,34 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 SizedBox(height: 20),
                 Text(displayName,
                     textAlign: TextAlign.center,
+                    
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
+                        TextStyle(fontWeight: FontWeight.bold,  fontSize: 16)),
                 SizedBox(height: 20),
-                FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    onPressed: () {
-                      widget._googleSignIn.signOut();
-                      Navigator.pop(context, false);
-                    },
-                    color: Colors.red[600],
-                    child: Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            //Icon(Icons.exit_to_app, color: Colors.white),
-                            //SizedBox(width: 10),
-                            Text('Sign Out',
-                                style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold))
-                          ],
-                        )))
+                SizedBox (
+                  height: 40,
+                  width: 224,
+                  child: FlatButton (
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10), 
+                      ),
+                      onPressed: () {
+                        widget._googleSignIn.signOut();
+                        Navigator.pop(context, false);
+                      },
+                      color: Colors.red[800],
+                      child: Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              //Icon(Icons.exit_to_app, color: Colors.white),
+                              //SizedBox(width: 10),
+                              Text('Sign Out',
+                                  style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold))
+                            ],
+                        ))))
               ],
             )));
   }
