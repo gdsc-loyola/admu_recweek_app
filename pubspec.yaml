@@ -62,6 +62,7 @@ flutter:
     - assets/bodies/lions/
     - assets/bodies/student-groups/
     - assets/orgs/dsc/
+    - assets/team/
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
