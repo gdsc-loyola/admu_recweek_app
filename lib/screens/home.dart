@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/screens/bodies/lions.dart';
-import 'package:admu_recweek_app/screens/orgs/lions/dsc.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
