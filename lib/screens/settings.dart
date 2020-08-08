@@ -26,8 +26,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 ClipOval(
-                    child: Image.network(imageUrl,
-                        width: 100, height: 100, fit: BoxFit.cover)),
+                    child: imageUrl == ""
+                        ? Image.asset('assets/images/guest.png')
+                        : Image.network(imageUrl,
+                            width: 100, height: 100, fit: BoxFit.cover)),
                 SizedBox(height: 20),
                 Text('Welcome, this is the Settings Screen,',
                     textAlign: TextAlign.center),
