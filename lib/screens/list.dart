@@ -23,7 +23,6 @@ class ListScreen extends StatefulWidget {
 class _ListScreenState extends State<ListScreen> {
   List<User> userList = [];
   List<String> strList = [];
-  List<Widget> favouriteList = [];
   List<Widget> normalList = [];
   String sortStatus = 'Alphabetical';
 
@@ -32,10 +31,6 @@ class _ListScreenState extends State<ListScreen> {
     for (var i = 0; i < 100; i++) {
       var name = faker.person.name();
       userList.add(User(name, faker.company.name(), false));
-    }
-    for (var i = 0; i < 4; i++) {
-      var name = faker.person.name();
-      userList.add(User(name, faker.company.name(), true));
     }
     userList
         .sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
@@ -49,7 +44,6 @@ class _ListScreenState extends State<ListScreen> {
   filterList() {
     List<User> users = [];
     users.addAll(userList);
-    favouriteList = [];
     normalList = [];
     strList = [];
     if (widget.searchController.text.isNotEmpty) {
@@ -58,86 +52,40 @@ class _ListScreenState extends State<ListScreen> {
           .contains(widget.searchController.text.toLowerCase()));
     }
     users.forEach((user) {
-      if (user.favourite) {
-        favouriteList.add(
-          Slidable(
-            actionPane: SlidableDrawerActionPane(),
-            actionExtentRatio: 0.25,
-            secondaryActions: <Widget>[
-              IconSlideAction(
-                  iconWidget: Image.asset('assets/icons/list_bookmark.png'),
-                  onTap: () {
-                    Fluttertoast.showToast(
-                        msg: "You have bookmarked this organization",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.CENTER,
-                        timeInSecForIosWeb: 1,
-                        backgroundColor: Colors.grey,
-                        textColor: Colors.white,
-                        fontSize: 16.0);
-                  },
-                  color: const Color(0xff7598FF))
-            ],
-            child: ListTile(
-              leading: Stack(
-                children: <Widget>[
-                  CircleAvatar(
-                    backgroundImage:
-                        NetworkImage("http://placeimg.com/200/200/people"),
-                  ),
-                  Container(
-                      height: 40,
-                      width: 40,
-                      child: Center(
-                        child: Icon(
-                          Icons.star,
-                          color: Colors.yellow[100],
-                        ),
-                      ))
-                ],
-              ),
-              title: Text(user.name),
-              subtitle: Text(user.company),
+      normalList.add(
+        Slidable(
+          actionPane: SlidableDrawerActionPane(),
+          actionExtentRatio: 0.25,
+          secondaryActions: <Widget>[
+            IconSlideAction(
+                iconWidget: Image.asset('assets/icons/list_bookmark.png'),
+                onTap: () {
+                  Fluttertoast.showToast(
+                      msg: "You have bookmarked this organization",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.BOTTOM,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.grey,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+                },
+                color: const Color(0xff7598FF))
+          ],
+          child: ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage("http://placeimg.com/200/200/people"),
             ),
+            title: Text(user.name),
+            subtitle: Text(user.company),
           ),
-        );
-      } else {
-        normalList.add(
-          Slidable(
-            actionPane: SlidableDrawerActionPane(),
-            actionExtentRatio: 0.25,
-            secondaryActions: <Widget>[
-              IconSlideAction(
-                  iconWidget: Image.asset('assets/icons/list_bookmark.png'),
-                  onTap: () {
-                    Fluttertoast.showToast(
-                        msg: "You have bookmarked this organization",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
-                        timeInSecForIosWeb: 1,
-                        backgroundColor: Colors.grey,
-                        textColor: Colors.white,
-                        fontSize: 16.0);
-                  },
-                  color: const Color(0xff7598FF))
-            ],
-            child: ListTile(
-              leading: CircleAvatar(
-                backgroundImage:
-                    NetworkImage("http://placeimg.com/200/200/people"),
-              ),
-              title: Text(user.name),
-              subtitle: Text(user.company),
-            ),
-          ),
-        );
-        strList.add(user.name);
-      }
+        ),
+      );
+      strList.add(user.name);
     });
 
     setState(() {
       strList;
-      favouriteList;
       normalList;
       strList;
     });
@@ -191,11 +139,7 @@ class _ListScreenState extends State<ListScreen> {
                       ))
                 ],
               ))
-        ], icon: Icon(Icons.search), indexedHeaderHeight: (index) => 80),
-        // AlphabetScrollListHeader(
-        //     widgetList: favouriteList,
-        //     icon: Icon(Icons.search),
-        //     indexedHeaderHeight: (index) => 80),
+        ], icon: Icon(Icons.sort_by_alpha), indexedHeaderHeight: (index) => 80),
       ],
     );
   }
@@ -243,26 +187,6 @@ class _ListScreenState extends State<ListScreen> {
             onTap: () {
               setState(() {
                 sortStatus = 'Org Bodies';
-              });
-              Navigator.of(context).pop();
-            },
-          ),
-          ListTile(
-            title: Text(
-              'Categories',
-              style: TextStyle(
-                  color: const Color(0xff295EFF),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16),
-            ),
-            leading: SizedBox(
-              child: Image.asset('assets/icons/categories.png'),
-              height: 40,
-              width: 40,
-            ),
-            onTap: () {
-              setState(() {
-                sortStatus = 'Categories';
               });
               Navigator.of(context).pop();
             },
