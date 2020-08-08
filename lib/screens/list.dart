@@ -52,29 +52,66 @@ class _ListScreenState extends State<ListScreen> {
           .contains(widget.searchController.text.toLowerCase()));
     }
     users.forEach((user) {
-      normalList.add(
-        Slidable(
-          actionPane: SlidableDrawerActionPane(),
-          actionExtentRatio: 0.25,
-          secondaryActions: <Widget>[
-            IconSlideAction(
-                iconWidget: Image.asset('assets/icons/list_bookmark.png'),
-                onTap: () {
-                  Fluttertoast.showToast(
-                      msg: "You have bookmarked this organization",
-                      toastLength: Toast.LENGTH_SHORT,
-                      gravity: ToastGravity.BOTTOM,
-                      timeInSecForIosWeb: 1,
-                      backgroundColor: Colors.grey,
-                      textColor: Colors.white,
-                      fontSize: 16.0);
-                },
-                color: const Color(0xff7598FF))
-          ],
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundImage:
-                  NetworkImage("http://placeimg.com/200/200/people"),
+      if (user.favourite) {
+        favouriteList.add(
+          Slidable(
+            actionPane: SlidableDrawerActionPane(),
+            actionExtentRatio: 0.25,
+            secondaryActions: <Widget>[
+              IconSlideAction(
+                iconWidget: Icon(Icons.star),
+                onTap: () {},
+              ),
+              IconSlideAction(
+                iconWidget: Icon(Icons.more_horiz),
+                onTap: () {},
+              ),
+            ],
+            child: ListTile(
+              leading: Stack(
+                children: <Widget>[
+                  CircleAvatar(
+                    backgroundImage:
+                        NetworkImage("http://placeimg.com/200/200/people"),
+                  ),
+                  Container(
+                      height: 40,
+                      width: 40,
+                      child: Center(
+                        child: Icon(
+                          Icons.star,
+                          color: Colors.yellow[100],
+                        ),
+                      ))
+                ],
+              ),
+              title: Text(user.name),
+              subtitle: Text(user.company),
+            ),
+          ),
+        );
+      } else {
+        normalList.add(
+          Slidable(
+            actionPane: SlidableDrawerActionPane(),
+            actionExtentRatio: 0.25,
+            secondaryActions: <Widget>[
+              IconSlideAction(
+                iconWidget: Icon(Icons.star),
+                onTap: () {},
+              ),
+              IconSlideAction(
+                iconWidget: Icon(Icons.more_horiz),
+                onTap: () {},
+              ),
+            ],
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundImage:
+                    NetworkImage("http://placeimg.com/200/200/people"),
+              ),
+              title: Text(user.name),
+              subtitle: Text(user.company),
             ),
             title: Text(user.name),
             subtitle: Text(user.company),
