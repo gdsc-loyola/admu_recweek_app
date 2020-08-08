@@ -7,6 +7,8 @@ import 'package:admu_recweek_app/screens/list.dart';
 import 'package:admu_recweek_app/screens/settings.dart';
 import 'package:admu_recweek_app/screens/tracker.dart';
 
+import 'package:admu_recweek_app/models/screen.dart';
+
 // import 'package:dio/dio.dart';
 
 // ignore: must_be_immutable
@@ -26,16 +28,16 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int selectedPageIndex = 0;
+  static ScrollController scrollController;
+  static TextEditingController _filter = new TextEditingController();
 
   var pages = [
     HomeScreen(),
-    ListScreen(_filter),
+    ListScreen(_filter, scrollController),
     TrackerScreen(),
     SettingsScreen(MainScreen._googleSignIn),
   ];
 
-  static TextEditingController _filter = new TextEditingController();
   // final dio = new Dio();
   String _searchText = "";
   List names = new List();
