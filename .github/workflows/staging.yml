@@ -5,7 +5,7 @@ name: Build and Deploy Staging App
 on:
   push:
     branches:
-      - develop
+      - v1.0.0-staging
 #A workflow run is made up of one or more jobs. Jobs run in parallel by default.
 jobs:
   # test:
