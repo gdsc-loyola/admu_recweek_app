@@ -18,7 +18,7 @@ class MainScreen extends StatefulWidget {
   // ignore: unused_field
   FirebaseUser _user;
 
-  MainScreen(FirebaseUser user, GoogleSignIn signIn) {
+  MainScreen([FirebaseUser user, GoogleSignIn signIn]) {
     _user = user;
     _googleSignIn = signIn;
   }

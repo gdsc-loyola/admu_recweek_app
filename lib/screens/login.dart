@@ -79,7 +79,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: const Color(0xff1C41B2),
                                 fontSize: 16.0)),
                         onTap: () {
-                          onGoogleSignIn(context);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MainScreen()),
+                          );
+                          setState(() {
+                            firstName = "Atenean";
+                            email = "";
+                            imageUrl = "";
+                            displayName = "Guest";
+                          });
                         },
                       ))
                 ],
