@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:admu_recweek_app/models/user.dart';
 
 class LionsScreen extends StatefulWidget {
   @override
@@ -21,24 +22,27 @@ class _LionsScreenState extends State<LionsScreen> {
         backgroundColor: Colors.white,
         elevation: 0.05,
         iconTheme: new IconThemeData(color: const Color(0xffFF801D)),
-        actions: <Widget>[
-          Padding(
-              padding: const EdgeInsets.only(right: 20.0),
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    bookmark = !bookmark;
-                  });
-                },
-                child: SizedBox(
-                  width: 24.0,
-                  height: 24.0,
-                  child: bookmark
-                      ? Image.asset('assets/bodies/lions/bookmark_active.png')
-                      : Image.asset('assets/bodies/lions/bookmark.png'),
-                ),
-              ))
-        ],
+        actions: imageUrl == ""
+            ? null
+            : <Widget>[
+                Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          bookmark = !bookmark;
+                        });
+                      },
+                      child: SizedBox(
+                        width: 24.0,
+                        height: 24.0,
+                        child: bookmark
+                            ? Image.asset(
+                                'assets/bodies/lions/bookmark_active.png')
+                            : Image.asset('assets/bodies/lions/bookmark.png'),
+                      ),
+                    ))
+              ],
       ),
       body: Container(
           padding: const EdgeInsets.all(16.0),

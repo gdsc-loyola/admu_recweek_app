@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:admu_recweek_app/models/user.dart';
 
 class DSCLoyolaScreen extends StatefulWidget {
   @override
@@ -22,24 +23,27 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
           backgroundColor: Colors.white,
           elevation: 0.05,
           iconTheme: new IconThemeData(color: const Color(0xff295EFF)),
-          actions: <Widget>[
-            Padding(
-                padding: const EdgeInsets.only(right: 20.0),
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      bookmark = !bookmark;
-                    });
-                  },
-                  child: SizedBox(
-                    width: 24.0,
-                    height: 24.0,
-                    child: bookmark
-                        ? Image.asset('assets/icons/org_bookmark_active.png')
-                        : Image.asset('assets/icons/org_bookmark.png'),
-                  ),
-                ))
-          ],
+          actions: imageUrl == ""
+              ? null
+              : <Widget>[
+                  Padding(
+                      padding: const EdgeInsets.only(right: 20.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            bookmark = !bookmark;
+                          });
+                        },
+                        child: SizedBox(
+                          width: 24.0,
+                          height: 24.0,
+                          child: bookmark
+                              ? Image.asset(
+                                  'assets/icons/org_bookmark_active.png')
+                              : Image.asset('assets/icons/org_bookmark.png'),
+                        ),
+                      ))
+                ],
         ),
         body: Container(
           color: Colors.white,

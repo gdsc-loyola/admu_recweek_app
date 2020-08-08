@@ -5,6 +5,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:admu_recweek_app/models/org.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:admu_recweek_app/models/user.dart';
 
 // ignore: must_be_immutable
 class ListScreen extends StatefulWidget {
@@ -56,21 +57,23 @@ class _ListScreenState extends State<ListScreen> {
         Slidable(
           actionPane: SlidableDrawerActionPane(),
           actionExtentRatio: 0.25,
-          secondaryActions: <Widget>[
-            IconSlideAction(
-                iconWidget: Image.asset('assets/icons/list_bookmark.png'),
-                onTap: () {
-                  Fluttertoast.showToast(
-                      msg: "You have bookmarked this organization",
-                      toastLength: Toast.LENGTH_SHORT,
-                      gravity: ToastGravity.BOTTOM,
-                      timeInSecForIosWeb: 1,
-                      backgroundColor: Colors.grey,
-                      textColor: Colors.white,
-                      fontSize: 16.0);
-                },
-                color: const Color(0xff7598FF))
-          ],
+          secondaryActions: imageUrl == ""
+              ? null
+              : <Widget>[
+                  IconSlideAction(
+                      iconWidget: Image.asset('assets/icons/list_bookmark.png'),
+                      onTap: () {
+                        Fluttertoast.showToast(
+                            msg: "You have bookmarked this organization",
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.BOTTOM,
+                            timeInSecForIosWeb: 1,
+                            backgroundColor: Colors.grey,
+                            textColor: Colors.white,
+                            fontSize: 16.0);
+                      },
+                      color: const Color(0xff7598FF))
+                ],
           child: ListTile(
             leading: CircleAvatar(
               backgroundImage:
