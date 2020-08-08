@@ -35,10 +35,6 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                 children: [
                   TableRow(children: [
                     TableCell(
-                        child: GestureDetector(
-                            onTap: () {
-                              print("Ceej Atienza Github");
-                            },
                             child: Container(
                               padding: const EdgeInsets.all(8),
                               alignment: Alignment.center,
@@ -76,12 +72,8 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                                     ),
                                 ],
                               ),
-                            ))),
+                            )),
                     TableCell(
-                      child: GestureDetector(
-                          onTap: () {
-                            print("Harvey Sison Github");
-                          },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             alignment: Alignment.center,
@@ -119,15 +111,11 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                                     ),
                               ],
                             ),
-                          )),
+                          ),
                     ),
                     ]),
                     TableRow(children: [
                     TableCell(
-                      child: GestureDetector(
-                          onTap: () {
-                            print("Franz Taborlupa Github");
-                          },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             alignment: Alignment.center,
@@ -165,13 +153,9 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                                     ),
                               ],
                             ),
-                          )),
+                          ),
                     ),
                     TableCell(
-                      child: GestureDetector(
-                        onTap: () {
-                          print("Polly Baterna Github");
-                        },
                         child: Container(
                           padding: const EdgeInsets.all(8),
                           alignment: Alignment.center,
@@ -210,15 +194,10 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                             ],
                           ),
                         ),
-                      ),
                     ),
                     ]),
                     TableRow(children: [
-                    TableCell(
-                      child: GestureDetector(
-                        onTap: () {
-                          print("Audrey Picar Github");
-                        },
+                    TableCell (
                         child: Container(
                           padding: const EdgeInsets.all(8),
                           alignment: Alignment.center,
@@ -257,13 +236,8 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                             ],
                           ),
                         ),
-                      ),
                     ),
                     TableCell(
-                        child: GestureDetector(
-                      onTap: () {
-                        print("Jethro Sia");
-                      },
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         alignment: Alignment.center,
@@ -302,7 +276,7 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                           ],
                         ),
                       ),
-                    )),
+                    ),
                   ]),
                 ],
               )),
