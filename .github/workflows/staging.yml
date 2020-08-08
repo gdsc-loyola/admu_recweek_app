@@ -119,10 +119,10 @@ jobs:
           channel: 'beta'
       #enable linux, macos, windows and  web
       - run: flutter  config --enable-web
-      - run: flutter  config --enable-linux-desktop
-      - run: flutter  config --enable-macos-desktop
-      - run: flutter  config --enable-windows-desktop
-      - run: flutter build macos --debug
+      # - run: flutter  config --enable-linux-desktop
+      # - run: flutter  config --enable-macos-desktop
+      # - run: flutter  config --enable-windows-desktop
+      # - run: flutter build macos --debug
       - run: flutter build apk --debug --split-per-abi
       # This action will create a github release and optionally upload an artifact to it.
       # https://github.com/ncipollo/release-action
