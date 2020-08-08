@@ -118,7 +118,7 @@ jobs:
         with:
           channel: 'stable'
       #enable linux, macos, windows and  web
-      - run: flutter  config --enable-web
+      # - run: flutter  config --enable-web
       # - run: flutter  config --enable-linux-desktop
       # - run: flutter  config --enable-macos-desktop
       # - run: flutter  config --enable-windows-desktop
@@ -126,14 +126,14 @@ jobs:
       - run: flutter build apk --debug --split-per-abi
       # This action will create a github release and optionally upload an artifact to it.
       # https://github.com/ncipollo/release-action
-      # - name: set env
-      #   run: echo "::set-env name=NOW::v$(date +'%Y%m%d.%H%M%S')-staging"
+      - name: set env
+        run: echo "::set-env name=NOW::v$(date +'%Y%m%d.%H%M%S')-staging"
       - name: Create Release APK
         uses: ncipollo/release-action@v1
         with:
           artifacts: 'build/app/outputs/apk/debug/*.apk'
-          # tag: ${{ env.NOW }}
-          tag: v1.0.0-staging
+          tag: ${{ env.NOW }}
+          # tag: v1.0.0-staging
           token: ${{ secrets.TOKEN }}
       # - run: flutter build web
       # # # Handle the deploy process of your project to GitHub Pages.
