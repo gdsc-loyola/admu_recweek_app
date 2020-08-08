@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:alphabet_list_scroll_view/alphabet_list_scroll_view.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:admu_recweek_app/models/org.dart';
 
 // ignore: must_be_immutable
@@ -61,9 +61,18 @@ class _ListScreenState extends State<ListScreen> {
             actionExtentRatio: 0.25,
             secondaryActions: <Widget>[
               IconSlideAction(
-                iconWidget: Image.asset('assets/icons/list_bookmar.png'),
-                onTap: () {},
-              )
+                  iconWidget: Image.asset('assets/icons/list_bookmark.png'),
+                  onTap: () {
+                    Fluttertoast.showToast(
+                        msg: "You have bookmarked this organization",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.grey,
+                        textColor: Colors.white,
+                        fontSize: 16.0);
+                  },
+                  color: const Color(0xff7598FF))
             ],
             child: ListTile(
               leading: Stack(
@@ -95,13 +104,18 @@ class _ListScreenState extends State<ListScreen> {
             actionExtentRatio: 0.25,
             secondaryActions: <Widget>[
               IconSlideAction(
-                iconWidget: Icon(Icons.star),
-                onTap: () {},
-              ),
-              IconSlideAction(
-                iconWidget: Icon(Icons.more_horiz),
-                onTap: () {},
-              ),
+                  iconWidget: Image.asset('assets/icons/list_bookmark.png'),
+                  onTap: () {
+                    Fluttertoast.showToast(
+                        msg: "You have bookmarked this organization",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.grey,
+                        textColor: Colors.white,
+                        fontSize: 16.0);
+                  },
+                  color: const Color(0xff7598FF))
             ],
             child: ListTile(
               leading: CircleAvatar(
