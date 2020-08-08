@@ -1,8 +1,11 @@
 #The name of your workflow.
-name: Build & Deploy Staging App
+name: Build Staging APK App
 # Trigger the workflow on push or pull request
 # on: [push, pull_request]
-on: push
+on:
+  push:
+    branches:
+      - develop
 #A workflow run is made up of one or more jobs. Jobs run in parallel by default.
 jobs:
   # test:
@@ -113,27 +116,28 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          channel: 'stable'
+          channel: 'beta'
       #enable linux, macos, windows and  web
       - run: flutter  config --enable-web
       - run: flutter  config --enable-linux-desktop
       - run: flutter  config --enable-macos-desktop
       - run: flutter  config --enable-windows-desktop
-      #- run: flutter build macos --debug
+      - run: flutter build macos --debug
       - run: flutter build apk --debug --split-per-abi
       # This action will create a github release and optionally upload an artifact to it.
       # https://github.com/ncipollo/release-action
-      - name: set env
-        run: echo "::set-env name=NOW::v$(date +'%Y%m%d.%H%M%S')-staging"
+      # - name: set env
+      #   run: echo "::set-env name=NOW::v$(date +'%Y%m%d.%H%M%S')-staging"
       - name: Create Release APK
         uses: ncipollo/release-action@v1
         with:
           artifacts: 'build/app/outputs/apk/debug/*.apk'
-          tag: ${{ env.NOW }}
+          # tag: ${{ env.NOW }}
+          tag: v1.0.0-staging
           token: ${{ secrets.TOKEN }}
       - run: flutter build web
-      # Handle the deploy process of your project to GitHub Pages.
-      # https://github.com/JamesIves/github-pages-deploy-action
+      # # Handle the deploy process of your project to GitHub Pages.
+      # # https://github.com/JamesIves/github-pages-deploy-action
       - uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}

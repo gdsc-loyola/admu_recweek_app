@@ -56,8 +56,11 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
-    - assets/bodies/
-    - assets/orgs/
+    - assets/bodies/coa/
+    - assets/bodies/cop/
+    - assets/bodies/lions/
+    - assets/bodies/student-groups/
+    - assets/orgs/dsc/
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
