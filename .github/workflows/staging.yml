@@ -116,7 +116,7 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          channel: 'beta'
+          channel: 'stable'
       #enable linux, macos, windows and  web
       - run: flutter  config --enable-web
       # - run: flutter  config --enable-linux-desktop
@@ -135,19 +135,19 @@ jobs:
           # tag: ${{ env.NOW }}
           tag: v1.0.0-staging
           token: ${{ secrets.TOKEN }}
-      - run: flutter build web
-      # # Handle the deploy process of your project to GitHub Pages.
-      # # https://github.com/JamesIves/github-pages-deploy-action
-      - uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BASE_BRANCH: master
-          BRANCH: gh-pages
-          FOLDER: build/web
-      - name: Firebase App Distribution
-        uses: wzieba/Firebase-Distribution-Github-Action@v1.2.1
-        with:
-          appId: ${{secrets.FIREBASE_APP_ID}}
-          token: ${{secrets.FIREBASE_TOKEN}}
-          groups: testers
-          file: app/build/outputs/apk/release/app-release-unsigned.apk
+      # - run: flutter build web
+      # # # Handle the deploy process of your project to GitHub Pages.
+      # # # https://github.com/JamesIves/github-pages-deploy-action
+      # - uses: JamesIves/github-pages-deploy-action@releases/v3
+      #   with:
+      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      #     BASE_BRANCH: master
+      #     BRANCH: gh-pages
+      #     FOLDER: build/web
+      # - name: Firebase App Distribution
+      #   uses: wzieba/Firebase-Distribution-Github-Action@v1.2.1
+      #   with:
+      #     appId: ${{secrets.FIREBASE_APP_ID}}
+      #     token: ${{secrets.FIREBASE_TOKEN}}
+      #     groups: testers
+      #     file: app/build/outputs/apk/release/app-release-unsigned.apk
