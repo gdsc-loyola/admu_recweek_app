@@ -27,18 +27,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
               child: Column (
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                ClipOval(
+              children: <Widget> [
+                Padding (
+                  padding: const EdgeInsets.only(bottom: 20),
+                child: ClipOval(
                     child: Image.network(imageUrl,
                         width: 100, height: 100, fit: BoxFit.cover)),
-                SizedBox(height: 20),
+                ),
                 Text( displayName,
                     textAlign: TextAlign.center,
                     
                     style:
                         TextStyle(fontWeight: FontWeight.bold,  fontSize: 16)),
-                Padding (padding: EdgeInsets.all(8),),
-                SizedBox (
+                Padding (padding: EdgeInsets.all(8),
+                child: SizedBox (
                   height: 40,
                   width: 224,
                   child: FlatButton (
@@ -59,7 +61,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               Text('Sign Out',
                                   style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold))
                             ],
-                        ))))
+                        ))))),
               ],
             )),
             Expanded (
