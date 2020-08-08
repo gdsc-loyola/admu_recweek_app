@@ -32,41 +32,50 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
                     child: ClipOval(
-                        child: Image.network(imageUrl,
-                            width: 100, height: 100, fit: BoxFit.cover)),
+                        child: imageUrl == ""
+                            ? Image.asset('assets/images/guest.png')
+                            : Image.network(imageUrl,
+                                width: 100, height: 100, fit: BoxFit.cover)),
                   ),
                   Text(displayName,
                       textAlign: TextAlign.center,
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                  Padding(
-                      padding: EdgeInsets.all(8),
-                      child: SizedBox(
-                          height: 40,
-                          width: 224,
-                          child: FlatButton(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              onPressed: () {
-                                widget._googleSignIn.signOut();
-                                Navigator.pop(context, false);
-                              },
-                              color: const Color(0xffCD0000),
-                              child: Padding(
-                                  padding: EdgeInsets.all(8),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text('Sign Out',
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold))
-                                    ],
-                                  ))))),
+                  Container(
+                      padding: imageUrl == ""
+                          ? EdgeInsets.symmetric(vertical: 8, horizontal: 30)
+                          : EdgeInsets.all(8),
+                      child: imageUrl == ""
+                          ? Text("Welcome to Pavilion!",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 16))
+                          : SizedBox(
+                              height: 40,
+                              width: 224,
+                              child: FlatButton(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  onPressed: () {
+                                    widget._googleSignIn.signOut();
+                                    Navigator.pop(context, false);
+                                  },
+                                  color: const Color(0xffCD0000),
+                                  child: Padding(
+                                      padding: EdgeInsets.all(8),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text('Sign Out',
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold))
+                                        ],
+                                      ))))),
                 ],
               )),
           Expanded(

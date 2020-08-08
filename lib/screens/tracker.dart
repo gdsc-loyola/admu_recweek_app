@@ -4,6 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:admu_recweek_app/screens/main.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/models/screen.dart';
+import 'package:admu_recweek_app/models/user.dart';
 
 class TrackerScreen extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
   bool isUserSignedIn = false;
-
+  bool maintenance = true;
   int contentState = 0;
 
   @override
@@ -79,92 +80,139 @@ class _TrackerScreenState extends State<TrackerScreen> {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.white,
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 50.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        padding: imageUrl == ""
+            ? const EdgeInsets.symmetric(vertical: 30, horizontal: 60)
+            : null,
+        child: imageUrl == ""
+            ? Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  new GestureDetector(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 24.0, horizontal: 8.0),
-                      decoration: BoxDecoration(
-                        color: contentState == 0
-                            ? const Color.fromRGBO(41, 94, 255, 0.15)
-                            : Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            child: Image.asset('assets/icons/saved.png'),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
-                            child: Text(
-                              "Saved",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: const Color(0xff295EFF),
-                                  fontSize: 24.0),
+                    Text("Sorry for the Inconvenience",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color(0xff295EFF),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold)),
+                    Container(
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        child: Image.asset('assets/images/maintenance.png')),
+                    Text(
+                        "Guests cannot access this screen. Please try signing in with Google",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: const Color(0xff000000),
+                          fontSize: 16,
+                        ))
+                  ])
+            : maintenance == true
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                        Text("This page is under maintenance...",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: const Color(0xff295EFF),
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold)),
+                        Container(
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            child:
+                                Image.asset('assets/images/maintenance.png')),
+                        Text("Coming soon!",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: const Color(0xff295EFF),
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold))
+                      ])
+                : Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 16.0, horizontal: 50.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            new GestureDetector(
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 24.0, horizontal: 8.0),
+                                decoration: BoxDecoration(
+                                  color: contentState == 0
+                                      ? const Color.fromRGBO(41, 94, 255, 0.15)
+                                      : Colors.white,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Column(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      child:
+                                          Image.asset('assets/icons/saved.png'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 8.0),
+                                      child: Text(
+                                        "Saved",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: const Color(0xff295EFF),
+                                            fontSize: 24.0),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              onTap: () {
+                                setState(() {
+                                  contentState = 0;
+                                });
+                              },
                             ),
-                          )
-                        ],
-                      ),
-                    ),
-                    onTap: () {
-                      setState(() {
-                        contentState = 0;
-                      });
-                    },
-                  ),
-                  new GestureDetector(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 24.0, horizontal: 8.0),
-                      decoration: BoxDecoration(
-                        color: contentState == 1
-                            ? const Color.fromRGBO(41, 94, 255, 0.15)
-                            : Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            child: Image.asset('assets/icons/applied.png'),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
-                            child: Text(
-                              "Applied",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: const Color(0xff295EFF),
-                                  fontSize: 24.0),
+                            new GestureDetector(
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 24.0, horizontal: 8.0),
+                                decoration: BoxDecoration(
+                                  color: contentState == 1
+                                      ? const Color.fromRGBO(41, 94, 255, 0.15)
+                                      : Colors.white,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Column(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      child: Image.asset(
+                                          'assets/icons/applied.png'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 8.0),
+                                      child: Text(
+                                        "Applied",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: const Color(0xff295EFF),
+                                            fontSize: 24.0),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              onTap: () {
+                                setState(() {
+                                  contentState = 1;
+                                });
+                              },
                             ),
-                          )
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                    onTap: () {
-                      setState(() {
-                        contentState = 1;
-                      });
-                    },
-                  ),
-                ],
-              ),
-            ),
-            Expanded(
-              child: contentState == 0
-                  ? _savedScreen(context)
-                  : _appliedScreen(context),
-            )
-          ],
-        ));
+                      Expanded(
+                        child: contentState == 0
+                            ? _savedScreen(context)
+                            : _appliedScreen(context),
+                      )
+                    ],
+                  ));
   }
 
   Widget _savedScreen(BuildContext context) {
