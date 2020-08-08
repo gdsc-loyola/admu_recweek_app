@@ -29,77 +29,78 @@ jobs:
       #     token: ${{ secrets.CODECOV_TOKEN }}
       #     file: coverage/lcov.info
 
-  drive_ios:
-    #creates a build matrix for your jobs
-    strategy:
-      #set of different configurations of the virtual environment.
-      matrix:
-        device:
-          - 'iPhone 8 (13.1)'
-          - 'iPhone 11 Pro Max (13.1)'
-      fail-fast: false
-    #if conditional to prevent a job from running
-    if: github.event_name != 'pull_request'
-    runs-on: macos-latest
-    #Identifies any jobs that must complete successfully before this job will run.
-    needs: test
-    steps:
-      - name: List all simulators
-        run: xcrun instruments -s
-      # get UUID  simulator and boot a simulator on mac from  command line
-      - name: Start Simulator
-        run: |
-          UDID=$(
-            xcrun instruments -s |
-            awk \
-              -F ' *[][]' \
-              -v 'device=${{ matrix.device }}' \
-              '$1 == device { print $2 }'
-          )
-          xcrun simctl boot "${UDID:?No Simulator with this name found}"
-      - uses: actions/checkout@v1
-      - uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '1.12.14'
-          channel: 'dev'
-      # Run flutter integrate tests
-      - name: Run Flutter Driver tests
-        run: flutter drive --target=test_driver/app.dart
+  # drive_ios:
+  #   #creates a build matrix for your jobs
+  #   strategy:
+  #     #set of different configurations of the virtual environment.
+  #     matrix:
+  #       device:
+  #         - 'iPhone 8 (13.1)'
+  #         - 'iPhone 11 Pro Max (13.1)'
+  #     fail-fast: false
+  #   #if conditional to prevent a job from running
+  #   if: github.event_name != 'pull_request'
+  #   runs-on: macos-latest
+  #   #Identifies any jobs that must complete successfully before this job will run.
+  #   needs: test
+  #   steps:
+  #     - name: List all simulators
+  #       run: xcrun instruments -s
+  #     # get UUID  simulator and boot a simulator on mac from  command line
+  #     - name: Start Simulator
+  #       run: |
+  #         UDID=$(
+  #           xcrun instruments -s |
+  #           awk \
+  #             -F ' *[][]' \
+  #             -v 'device=${{ matrix.device }}' \
+  #             '$1 == device { print $2 }'
+  #         )
+  #         xcrun simctl boot "${UDID:?No Simulator with this name found}"
+  #     - uses: actions/checkout@v1
+  #     - uses: subosito/flutter-action@v1
+  #       with:
+  #         flutter-version: '1.12.14'
+  #         channel: 'dev'
+  #     # Run flutter integrate tests
+  #     - name: Run Flutter Driver tests
+  #       run: flutter drive --target=test_driver/app.dart
 
-  drive_android:
-    #if conditional to prevent a job from running
-    if: github.event_name != 'pull_request'
-    runs-on: macos-latest
-    #creates a build matrix for your jobs
-    strategy:
-      #set of different configurations of the virtual environment.
-      matrix:
-        api-level: [21, 29]
-        target: [default]
-    needs: test
-    steps:
-      - uses: actions/checkout@v1
-      - uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '1.12.14'
-          channel: 'dev'
-      - name: Run Flutter Driver tests
-        #GitHub Action for installing, configuring and running Android Emulators (work only Mac OS)
-        #https://github.com/ReactiveCircus/android-emulator-runner
-        uses: reactivecircus/android-emulator-runner@v1
-        with:
-          api-level: ${{ matrix.api-level }}
-          target: ${{ matrix.target }}
-          arch: x86_64
-          profile: Nexus 6
-          script: flutter drive --target=test_driver/app.dart
+  # drive_android:
+  #   #if conditional to prevent a job from running
+  #   if: github.event_name != 'pull_request'
+  #   runs-on: macos-latest
+  #   #creates a build matrix for your jobs
+  #   strategy:
+  #     #set of different configurations of the virtual environment.
+  #     matrix:
+  #       api-level: [21, 29]
+  #       target: [default]
+  #   needs: test
+  #   steps:
+  #     - uses: actions/checkout@v1
+  #     - uses: subosito/flutter-action@v1
+  #       with:
+  #         flutter-version: '1.12.14'
+  #         channel: 'dev'
+  #     - name: Run Flutter Driver tests
+  #       #GitHub Action for installing, configuring and running Android Emulators (work only Mac OS)
+  #       #https://github.com/ReactiveCircus/android-emulator-runner
+  #       uses: reactivecircus/android-emulator-runner@v1
+  #       with:
+  #         api-level: ${{ matrix.api-level }}
+  #         target: ${{ matrix.target }}
+  #         arch: x86_64
+  #         profile: Nexus 6
+  #         script: flutter drive --target=test_driver/app.dart
 
   build_deploy:
     #if conditional to prevent a job from running
     if: github.event_name != 'pull_request'
     runs-on: macos-latest
     #Identifies any jobs that must complete successfully before this job will run.
-    needs: [drive_ios, drive_android, test]
+    # needs: [drive_ios, drive_android, test]
+    needs: [test]
     name: Build  apk  and web
     steps:
       - uses: actions/checkout@v1
