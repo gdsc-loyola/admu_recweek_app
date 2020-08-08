@@ -28,14 +28,16 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  static ScrollController scrollController;
+  static TextEditingController _filter = new TextEditingController();
+
   var pages = [
     HomeScreen(),
-    ListScreen(_filter),
+    ListScreen(_filter, scrollController),
     TrackerScreen(),
     SettingsScreen(MainScreen._googleSignIn),
   ];
 
-  static TextEditingController _filter = new TextEditingController();
   // final dio = new Dio();
   String _searchText = "";
   List names = new List();

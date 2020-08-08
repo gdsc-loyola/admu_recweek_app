@@ -4,13 +4,16 @@ import 'package:faker/faker.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:admu_recweek_app/models/org.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 // ignore: must_be_immutable
 class ListScreen extends StatefulWidget {
   TextEditingController searchController;
+  ScrollController scrollController;
 
-  ListScreen(_searchController) {
+  ListScreen(_searchController, _scrollController) {
     searchController = _searchController;
+    scrollController = _scrollController;
   }
 
   @override
@@ -22,6 +25,7 @@ class _ListScreenState extends State<ListScreen> {
   List<String> strList = [];
   List<Widget> favouriteList = [];
   List<Widget> normalList = [];
+  String sortStatus = 'Alphabetical';
 
   @override
   void initState() {
@@ -66,7 +70,7 @@ class _ListScreenState extends State<ListScreen> {
                     Fluttertoast.showToast(
                         msg: "You have bookmarked this organization",
                         toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
+                        gravity: ToastGravity.CENTER,
                         timeInSecForIosWeb: 1,
                         backgroundColor: Colors.grey,
                         textColor: Colors.white,
@@ -150,7 +154,7 @@ class _ListScreenState extends State<ListScreen> {
     return AlphabetListScrollView(
       strList: strList,
       highlightTextStyle: TextStyle(
-        color: Colors.yellow,
+        color: const Color(0xff295EFF),
       ),
       showPreview: true,
       itemBuilder: (context, index) {
@@ -161,27 +165,110 @@ class _ListScreenState extends State<ListScreen> {
       },
       keyboardUsage: true,
       headerWidgetList: <AlphabetScrollListHeader>[
-        // AlphabetScrollListHeader(widgetList: [
-        //   Padding(
-        //     padding: const EdgeInsets.all(16.0),
-        //     child: TextFormField(
-        //       controller: widget.searchController,
-        //       decoration: InputDecoration(
-        //         border: OutlineInputBorder(),
-        //         suffix: Icon(
-        //           Icons.search,
-        //           color: Colors.grey,
-        //         ),
-        //         labelText: "Search",
-        //       ),
-        //     ),
-        //   )
-        // ], icon: Icon(Icons.search), indexedHeaderHeight: (index) => 80),
-        AlphabetScrollListHeader(
-            widgetList: favouriteList,
-            icon: Icon(Icons.search),
-            indexedHeaderHeight: (index) => 80),
+        AlphabetScrollListHeader(widgetList: [
+          Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(sortStatus,
+                      style: TextStyle(
+                          color: const Color(0xff000000),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16)),
+                  InkWell(
+                      onTap: () {
+                        showMaterialModalBottomSheet(
+                          context: context,
+                          builder: (context, scrollController) =>
+                              _sortModal(context, scrollController),
+                        );
+                      },
+                      child: Text(
+                        "Sort",
+                        style: TextStyle(
+                            color: const Color(0xff295EFF), fontSize: 16),
+                      ))
+                ],
+              ))
+        ], icon: Icon(Icons.search), indexedHeaderHeight: (index) => 80),
+        // AlphabetScrollListHeader(
+        //     widgetList: favouriteList,
+        //     icon: Icon(Icons.search),
+        //     indexedHeaderHeight: (index) => 80),
       ],
     );
+  }
+
+  Widget _sortModal(BuildContext context, scrollController) {
+    return Material(
+        child: SafeArea(
+      top: false,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          ListTile(
+            title: Text(
+              'Alphabetical',
+              style: TextStyle(
+                  color: const Color(0xff295EFF),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),
+            ),
+            leading: SizedBox(
+              child: Image.asset('assets/icons/alphabetical.png'),
+              height: 40,
+              width: 40,
+            ),
+            onTap: () {
+              setState(() {
+                sortStatus = 'Alphabetical';
+              });
+              Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
+            title: Text(
+              'Org Bodies',
+              style: TextStyle(
+                  color: const Color(0xff295EFF),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),
+            ),
+            leading: SizedBox(
+              child: Image.asset('assets/icons/org-bodies.png'),
+              height: 40,
+              width: 40,
+            ),
+            onTap: () {
+              setState(() {
+                sortStatus = 'Org Bodies';
+              });
+              Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
+            title: Text(
+              'Categories',
+              style: TextStyle(
+                  color: const Color(0xff295EFF),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),
+            ),
+            leading: SizedBox(
+              child: Image.asset('assets/icons/categories.png'),
+              height: 40,
+              width: 40,
+            ),
+            onTap: () {
+              setState(() {
+                sortStatus = 'Categories';
+              });
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      ),
+    ));
   }
 }
