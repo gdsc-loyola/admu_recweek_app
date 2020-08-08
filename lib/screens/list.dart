@@ -61,9 +61,13 @@ class _ListScreenState extends State<ListScreen> {
             actionExtentRatio: 0.25,
             secondaryActions: <Widget>[
               IconSlideAction(
-                iconWidget: Image.asset('assets/icons/list_bookmar.png'),
+                iconWidget: Icon(Icons.star),
                 onTap: () {},
-              )
+              ),
+              IconSlideAction(
+                iconWidget: Icon(Icons.more_horiz),
+                onTap: () {},
+              ),
             ],
             child: ListTile(
               leading: Stack(
