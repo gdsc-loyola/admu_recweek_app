@@ -118,6 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                           width: 144.0,
+                          height: 200,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisSize: MainAxisSize.max,
@@ -259,18 +260,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                    
                     ])),
-                    Padding (
-                      padding: EdgeInsets.only(top: 24),
-                      child: Text (
-                        "Today's Featured Organisations",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold, 
-                          fontSize: 24,
-                        ),
-                      )
-                    ),
+            Padding(
+                padding: EdgeInsets.only(top: 24),
+                child: Text(
+                  "Today's Featured Organisations",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
+                )),
           ],
         ));
   }
