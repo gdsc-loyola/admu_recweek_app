@@ -119,6 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                           width: 144.0,
+                          height: 200,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisSize: MainAxisSize.max,
@@ -155,11 +156,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => DSCLoyolaScreen()),
-                            );
                             print("COP Body");
                           },
                           child: Container(
