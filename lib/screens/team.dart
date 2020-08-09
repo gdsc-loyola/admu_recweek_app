@@ -69,7 +69,6 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: const Color(0xff000000),
-                              fontWeight: FontWeight.bold,
                               fontSize: 12
                             ),
                           )
@@ -114,7 +113,6 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: const Color(0xff000000),
-                            fontWeight: FontWeight.bold,
                             fontSize: 12
                           ),
                         )
@@ -158,7 +156,6 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: const Color(0xff000000),
-                            fontWeight: FontWeight.bold,
                             fontSize: 12
                           ),
                         )
@@ -202,7 +199,6 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: const Color(0xff000000),
-                            fontWeight: FontWeight.bold,
                             fontSize: 12
                           ),
                         )
@@ -246,7 +242,6 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: const Color(0xff000000),
-                            fontWeight: FontWeight.bold,
                             fontSize: 12
                           ),
                         )
@@ -290,7 +285,6 @@ class _ProductTeamState extends State<ProductTeamScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: const Color(0xff000000),
-                            fontWeight: FontWeight.bold,
                             fontSize: 12
                           ),
                         )
