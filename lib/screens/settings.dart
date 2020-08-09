@@ -126,9 +126,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                             child: Container(
                                                 alignment: Alignment.center,
                                                 child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
+                                                    mainAxisAlignment: MainAxisAlignment.center,
                                                     children: <Widget>[
                                                       Padding(
                                                           padding:
