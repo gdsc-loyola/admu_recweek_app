@@ -61,8 +61,12 @@ flutter:
     - assets/bodies/lions/
     - assets/bodies/student-groups/
     - assets/orgs/dsc/
+<<<<<<< HEAD
     - assets/team/
     - assets/data/
+=======
+    - assets/team
+>>>>>>> 8952ac8... Team screen + pictures
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
