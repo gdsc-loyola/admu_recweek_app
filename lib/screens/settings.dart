@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/screens/orgs/lions/dsc.dart';
-//import 'package:admu_recweek_app/screens/team.dart';
+import 'package:admu_recweek_app/screens/team.dart';
 
 // ignore: must_be_immutable
 class SettingsScreen extends StatefulWidget {
@@ -144,8 +144,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                                                   ),
                                                                   onPressed:
                                                                       () {
-                                                                    print(
-                                                                        "Product Team.");
+                                                                    Navigator
+                                                                        .push(
+                                                                      context,
+                                                                      MaterialPageRoute(
+                                                                          builder: (context) =>
+                                                                            ProductTeamScreen()
+                                                                      ),
+                                                                    );
                                                                   },
                                                                   color: const Color(
                                                                       0xff1C41B2),
