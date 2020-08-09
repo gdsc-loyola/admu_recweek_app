@@ -62,11 +62,15 @@ flutter:
     - assets/bodies/student-groups/
     - assets/orgs/dsc/
 <<<<<<< HEAD
+<<<<<<< HEAD
     - assets/team/
     - assets/data/
 =======
     - assets/team
 >>>>>>> 8952ac8... Team screen + pictures
+=======
+    - assets/team/
+>>>>>>> 3186d6c... Change to Gridview + Minor deisgn fixes
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
