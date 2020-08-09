@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ProductTeamScreen extends StatefulWidget {
+class ProductTeamScreen extends StatelessWidget {
   @override
-  _ProductTeamState createState() => _ProductTeamState();
-}
-
-class _ProductTeamState extends State<ProductTeamScreen> {
-
-  @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
