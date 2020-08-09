@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ProductTeamScreen extends StatelessWidget {
 =======
 class ProductTeamScreen extends StatefulWidget {
@@ -11,7 +12,11 @@ class ProductTeamScreen extends StatefulWidget {
 class _ProductTeamState extends State<ProductTeamScreen> {
 
 >>>>>>> 8952ac8... Team screen + pictures
+=======
+class ProductTeamScreen extends StatelessWidget {
+>>>>>>> 492fed2... Convert to stateless
   @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
