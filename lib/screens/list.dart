@@ -8,6 +8,7 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/models/lions.dart';
 import 'package:admu_recweek_app/models/coa.dart';
+import 'package:admu_recweek_app/templates/lions.dart';
 
 // ignore: must_be_immutable
 class ListScreen extends StatefulWidget {
@@ -126,32 +127,49 @@ class _ListScreenState extends State<ListScreen> {
       // Since, normalList is an WidgetArray = []
       // Here is the adding of Widget that depends on the lenght of the Array in  `users`
       normalList.add(
-        Slidable(
-          actionPane: SlidableDrawerActionPane(),
-          actionExtentRatio: 0.25,
-          secondaryActions: imageUrl == ""
-              ? null
-              : <Widget>[
-                  IconSlideAction(
-                      iconWidget: Image.asset('assets/icons/list_bookmark.png'),
-                      onTap: () {
-                        Fluttertoast.showToast(
-                            msg: "You have bookmarked this organization",
-                            toastLength: Toast.LENGTH_SHORT,
-                            gravity: ToastGravity.BOTTOM,
-                            timeInSecForIosWeb: 1,
-                            backgroundColor: Colors.grey,
-                            textColor: Colors.white,
-                            fontSize: 16.0);
-                      },
-                      color: const Color(0xff7598FF))
-                ],
-          child: ListTile(
-            leading: SizedBox(child: Image.asset('assets/orgs/dsc/logo.png')),
-            title: Text(lion.organization),
-            subtitle: Text("LIONS",
-                style: TextStyle(fontSize: 12, color: const Color(0xffFF801D))),
+        GestureDetector(
+          child: Slidable(
+            actionPane: SlidableDrawerActionPane(),
+            actionExtentRatio: 0.25,
+            secondaryActions: imageUrl == ""
+                ? null
+                : <Widget>[
+                    IconSlideAction(
+                        iconWidget:
+                            Image.asset('assets/icons/list_bookmark.png'),
+                        onTap: () {
+                          Fluttertoast.showToast(
+                              msg: "You have bookmarked this organization",
+                              toastLength: Toast.LENGTH_SHORT,
+                              gravity: ToastGravity.BOTTOM,
+                              timeInSecForIosWeb: 1,
+                              backgroundColor: Colors.grey,
+                              textColor: Colors.white,
+                              fontSize: 16.0);
+                        },
+                        color: const Color(0xff7598FF))
+                  ],
+            child: ListTile(
+              leading: SizedBox(child: Image.asset('assets/orgs/dsc/logo.png')),
+              title: Text(lion.organization),
+              subtitle: Text("LIONS",
+                  style:
+                      TextStyle(fontSize: 12, color: const Color(0xffFF801D))),
+            ),
           ),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LIONSOrgTemplateScreen(
+                      lion.organization,
+                      lion.description,
+                      lion.vision,
+                      lion.mission,
+                      lion.tagline,
+                      lion.facebook),
+                ));
+          },
         ),
       );
       strList.add(lion.organization);

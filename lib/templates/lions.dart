@@ -2,18 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
-class OrgTemplateScreen extends StatefulWidget {
-  static String name;
+class LIONSOrgTemplateScreen extends StatefulWidget {
+  static String _organization;
+  static String _orgLogoPNG;
+  static String _description;
+  static String _advocacy;
+  static String _vision;
+  static String _mission;
+  static String _applicationProcess;
+  static String _featured;
+  static String _photosForEachEvent;
+  static String _tagline;
+  static String _orgPhoto;
+  static String _benefits;
+  static String _flagships;
+  static String _departments;
+  static String _facebook;
+  static String _socMedHandles;
 
-  OrgTemplateScreen({
-    Key key,
-    String name,
-  }) : super(key: key);
+  LIONSOrgTemplateScreen(String organization, String description, String vision,
+      String mission, String tagline, String facebook) {
+    _organization = organization;
+    _description = description;
+    _vision = vision;
+    _mission = mission;
+    _tagline = tagline;
+    _facebook = facebook;
+  }
+
   @override
-  _OrgTemplateScreenState createState() => _OrgTemplateScreenState();
+  _LIONSOrgTemplateScreenState createState() => _LIONSOrgTemplateScreenState();
 }
 
-class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
+class _LIONSOrgTemplateScreenState extends State<LIONSOrgTemplateScreen> {
   bool bookmark = false;
 
   @override
@@ -22,7 +43,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            OrgTemplateScreen.name,
+            LIONSOrgTemplateScreen._organization,
             style: TextStyle(
                 color: const Color(0xff295EFF), fontWeight: FontWeight.bold),
           ),
@@ -74,24 +95,24 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                           child: Image.asset('assets/orgs/dsc/logo.png'),
                         ),
                         Row(children: <Widget>[
-                          InkWell(
-                            child: Image.asset('assets/icons/web.png'),
-                            onTap: () => launch("https://dscadmu.org/"),
-                          ),
-                          InkWell(
-                            child: Image.asset('assets/icons/ig.png'),
-                            onTap: () =>
-                                launch("https://www.instagram.com/dsc.loyola/"),
-                          ),
-                          InkWell(
-                            child: Image.asset('assets/icons/twitter.png'),
-                            onTap: () =>
-                                launch("https://twitter.com/DSCLoyola"),
-                          ),
+                          // InkWell(
+                          //   child: Image.asset('assets/icons/web.png'),
+                          //   onTap: () => launch("https://dscadmu.org/"),
+                          // ),
+                          // InkWell(
+                          //   child: Image.asset('assets/icons/ig.png'),
+                          //   onTap: () =>
+                          //       launch("https://www.instagram.com/dsc.loyola/"),
+                          // ),
+                          // InkWell(
+                          //   child: Image.asset('assets/icons/twitter.png'),
+                          //   onTap: () =>
+                          //       launch("https://twitter.com/DSCLoyola"),
+                          // ),
                           InkWell(
                             child: Image.asset('assets/icons/fb.png'),
                             onTap: () =>
-                                launch("https://www.facebook.com/dscloyola"),
+                                launch(LIONSOrgTemplateScreen._facebook),
                           )
                         ])
                       ],
@@ -102,14 +123,14 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Padding(
                   padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
                   child: Text(
-                    "Developer Student Clubs Loyola",
+                    LIONSOrgTemplateScreen._organization,
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   )),
               Padding(
                   padding:
                       const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                   child: Text(
-                    "“Uplifting communities through technology.”",
+                    LIONSOrgTemplateScreen._tagline,
                     style: TextStyle(fontSize: 16),
                   )),
               // Org Details
@@ -123,7 +144,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   padding:
                       const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                   child: Text(
-                    "Developer Student Clubs Loyola is a student organization in the Ateneo de Manila University powered by Google Developers that aims to build students’ skills and network by giving them access to different technologies, specifically Google Developer technologies like Android, Firebase, Angular, Flutter, Google Cloud Platform and many more. Together, we learn in a peer-to-peer learning environment and build solutions for the community.",
+                    LIONSOrgTemplateScreen._description,
                     style: TextStyle(fontSize: 16),
                   )),
               // Vision
@@ -137,7 +158,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   padding:
                       const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                   child: Text(
-                    "We are a community of developers that are passionate about uplifting communities through technology and innovation.",
+                    LIONSOrgTemplateScreen._vision,
                     style: TextStyle(fontSize: 16),
                   )),
               // Mission
@@ -150,20 +171,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Padding(
                   padding: const EdgeInsets.only(left: 16, right: 16),
                   child: Text(
-                    "Empower - We empower people through technology and programming education.",
-                    style: TextStyle(fontSize: 16),
-                  )),
-              Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16),
-                  child: Text(
-                    "Enlighten - We enlighten people to the power of innovation and problem-solving.",
-                    style: TextStyle(fontSize: 16),
-                  )),
-              Padding(
-                  padding:
-                      const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                  child: Text(
-                    "Nurture - We nurture people to create meaningful technological solutions for the community.",
+                    LIONSOrgTemplateScreen._mission,
                     style: TextStyle(fontSize: 16),
                   )),
               //Events and Projects
