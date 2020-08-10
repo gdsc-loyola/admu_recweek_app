@@ -80,7 +80,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.white,
-        padding: imageUrl == ""
+        padding: imageUrl == "" || maintenance
             ? const EdgeInsets.symmetric(vertical: 30, horizontal: 60)
             : null,
         child: imageUrl == ""
@@ -104,7 +104,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
                           fontSize: 16,
                         ))
                   ])
-            : maintenance == true
+            : maintenance
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
