@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
@@ -5,6 +6,13 @@ import 'package:admu_recweek_app/screens/bodies/lions.dart';
 import 'package:admu_recweek_app/screens/orgs/lions/dsc.dart';
 
 class HomeScreen extends StatefulWidget {
+  static FirebaseUser _user;
+
+  // ignore: non_constant_identifier_names
+  HomeScreen([FirebaseUser user]) {
+    _user = user;
+  }
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -22,10 +30,10 @@ class _HomeScreenState extends State<HomeScreen> {
               alignment: Alignment.topLeft,
               child: Container(
                 child: Text(
-                      'Hey, ${firstName[0].toUpperCase()}${firstName.substring(1).toLowerCase()}!',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                    ),
+                  'Hey, ${firstName[0].toUpperCase()}${firstName.substring(1).toLowerCase()}!',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                ),
               ),
             ),
             Align(
@@ -38,7 +46,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            
             ConstrainedBox(
                 constraints: new BoxConstraints(
                   maxHeight: 184.0,
@@ -53,7 +60,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LionsScreen()),
+                                builder: (context) =>
+                                    LionsScreen(HomeScreen._user)),
                           );
                         },
                         child: Container(
@@ -111,7 +119,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => COAScreen()),
+                                builder: (context) =>
+                                    COAScreen(HomeScreen._user)),
                           );
                         },
                         child: Container(
@@ -146,14 +155,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Text (
+                                  Text(
                                     '56',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                         color: Colors.black),
                                   ),
-                                  Text (
+                                  Text(
                                     ' Orgs',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
@@ -272,23 +281,21 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                    
                     ])),
-                    Padding (
-                      padding: EdgeInsets.only(top: 24),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Container(
-                          child: Text (
-                            "Today's Featured Organisations",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold, 
-                              fontSize: 24,
-                            ),
-                          )
-                        ),
-                      ),
-                    ),
+            Padding(
+              padding: EdgeInsets.only(top: 24),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                    child: Text(
+                  "Today's Featured Organisations",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
+                )),
+              ),
+            ),
           ],
         ));
   }

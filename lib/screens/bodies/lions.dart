@@ -1,14 +1,70 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
 class LionsScreen extends StatefulWidget {
+  static FirebaseUser _user;
+
+  // ignore: non_constant_identifier_names
+  LionsScreen([FirebaseUser user]) {
+    _user = user;
+  }
+
   @override
   _LionsScreenState createState() => _LionsScreenState();
 }
 
 class _LionsScreenState extends State<LionsScreen> {
+  final firestoreInstance = Firestore.instance;
   bool bookmark = false;
+
+  @override
+  void initState() {
+    super.initState();
+    firestoreInstance
+        .collection("bookmarks-2019")
+        .document('${LionsScreen._user.uid}-LIONS')
+        .get()
+        .then((value) {
+      if (value.data["name"] ==
+              "Council of Organizations of the Ateneo - Manila" &&
+          value.data["bookmark"]) {
+        setState(() {
+          bookmark = true;
+        });
+      } else {
+        setState(() {
+          bookmark = false;
+        });
+      }
+    });
+  }
+
+  void _onBookmark() async {
+    if (bookmark) {
+      firestoreInstance
+          .collection("bookmarks-2019")
+          .document('${LionsScreen._user.uid}-LIONS')
+          .delete()
+          .then((_) {
+        print("success!");
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2019")
+          .document('${LionsScreen._user.uid}-LIONS')
+          .setData({
+        "name": "Council of Organizations of the Ateneo - Manila",
+        "abbreviation": "COA",
+        "body": "COA",
+        "bookmark": true,
+      }).then((_) {
+        print("success!");
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +86,7 @@ class _LionsScreenState extends State<LionsScreen> {
                     child: GestureDetector(
                       onTap: () {
                         setState(() {
+                          _onBookmark();
                           bookmark = !bookmark;
                         });
                       },

@@ -16,7 +16,7 @@ class MainScreen extends StatefulWidget {
   // ignore: unused_field
   static GoogleSignIn _googleSignIn;
   // ignore: unused_field
-  FirebaseUser _user;
+  static FirebaseUser _user;
 
   MainScreen([FirebaseUser user, GoogleSignIn signIn]) {
     _user = user;
@@ -32,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
   static TextEditingController _filter = new TextEditingController();
 
   var pages = [
-    HomeScreen(),
+    HomeScreen(MainScreen._user),
     ListScreen(_filter, scrollController),
     TrackerScreen(),
     SettingsScreen(MainScreen._googleSignIn),
