@@ -78,8 +78,7 @@ class _LionsScreenState extends State<LionsScreen> {
                   textAlign: TextAlign.left,
                 ),
               ),
-              Expanded(
-                  child: Table(
+              Table(
                 children: [
                   TableRow(children: [
                     TableCell(
@@ -792,7 +791,7 @@ class _LionsScreenState extends State<LionsScreen> {
                     ),
                   ])
                 ],
-              )),
+              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
