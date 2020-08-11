@@ -77,8 +77,7 @@ class _COAScreenState extends State<COAScreen> {
                   textAlign: TextAlign.left,
                 ),
               ),
-              Expanded(
-                  child: Table(
+              Table(
                 children: [
                   TableRow(children: [
                     TableCell(
@@ -99,14 +98,13 @@ class _COAScreenState extends State<COAScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(top: 8),
-                                      child: Flexible(
-                                          child: new Text(
+                                      child: new Text(
                                         "Analysis & Discourse",
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
-                                      )))
+                                      ))
                                 ],
                               ),
                             ))),
@@ -128,14 +126,13 @@ class _COAScreenState extends State<COAScreen> {
                                 ),
                                 Padding(
                                     padding: const EdgeInsets.only(top: 8),
-                                    child: Flexible(
-                                        child: new Text(
+                                    child: new Text(
                                       "Faith & Formation",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16),
-                                    )))
+                                    ))
                               ],
                             ),
                           )),
@@ -158,14 +155,13 @@ class _COAScreenState extends State<COAScreen> {
                                 ),
                                 Padding(
                                     padding: const EdgeInsets.only(top: 8),
-                                    child: Flexible(
-                                        child: new Text(
+                                    child: new Text(
                                       "Science & Technology",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16),
-                                    )))
+                                    ))
                               ],
                             ),
                           )),
@@ -190,14 +186,13 @@ class _COAScreenState extends State<COAScreen> {
                               ),
                               Padding(
                                   padding: const EdgeInsets.only(top: 8),
-                                  child: Flexible(
-                                      child: new Text(
+                                  child: new Text(
                                     "Health & Environment",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16),
-                                  )))
+                                  ))
                             ],
                           ),
                         ),
@@ -221,14 +216,13 @@ class _COAScreenState extends State<COAScreen> {
                               ),
                               Padding(
                                   padding: const EdgeInsets.only(top: 8),
-                                  child: Flexible(
-                                      child: new Text(
+                                  child: new Text(
                                     "Intercultural Relations",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16),
-                                  )))
+                                  ))
                             ],
                           ),
                         ),
@@ -252,14 +246,13 @@ class _COAScreenState extends State<COAScreen> {
                             ),
                             Padding(
                                 padding: const EdgeInsets.only(top: 8),
-                                child: Flexible(
-                                    child: new Text(
+                                child: new Text(
                                   "Culture",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16),
-                                )))
+                                ))
                           ],
                         ),
                       ),
@@ -284,14 +277,13 @@ class _COAScreenState extends State<COAScreen> {
                             ),
                             Padding(
                                 padding: const EdgeInsets.only(top: 8),
-                                child: Flexible(
-                                    child: new Text(
+                                child: new Text(
                                   "Business",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16),
-                                )))
+                                ))
                           ],
                         ),
                       ),
@@ -313,15 +305,14 @@ class _COAScreenState extends State<COAScreen> {
                                   'assets/bodies/coa/performing-arts.png'),
                             ),
                             Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: Flexible(
-                                    child: new Text(
-                                  "Performing Arts",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                )))
+                              padding: const EdgeInsets.only(top: 8),
+                              child: new Text(
+                                "Performing Arts",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -344,14 +335,13 @@ class _COAScreenState extends State<COAScreen> {
                               ),
                               Padding(
                                   padding: const EdgeInsets.only(top: 8),
-                                  child: Flexible(
-                                      child: new Text(
+                                  child: new Text(
                                     "Sector Based",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16),
-                                  )))
+                                  ))
                             ],
                           ),
                         ),
@@ -359,7 +349,7 @@ class _COAScreenState extends State<COAScreen> {
                     ),
                   ])
                 ],
-              )),
+              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 60, vertical: 30),

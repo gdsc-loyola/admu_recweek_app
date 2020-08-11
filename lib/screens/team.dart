@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class ProductTeamScreen extends StatelessWidget {
   @override
-  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -21,276 +20,210 @@ class ProductTeamScreen extends StatelessWidget {
         ],
       ),
       body: Container(
-          padding: const EdgeInsets.all(8.0),
-          color: Colors.white,
-          child: GridView.count (
-            primary: false,
-            padding: const EdgeInsets.all(20.0),
-            crossAxisSpacing: 12,
-            mainAxisSpacing: 12,
-            crossAxisCount: 2,
-            children: <Widget> [
-              Container(
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Column(
-                  children: <Widget>[
-                    Expanded (
+        padding: const EdgeInsets.all(8.0),
+        color: Colors.white,
+        child: GridView.count(
+          primary: false,
+          padding: const EdgeInsets.all(20.0),
+          crossAxisSpacing: 12,
+          mainAxisSpacing: 12,
+          crossAxisCount: 2,
+          children: <Widget>[
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
                       child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        child: Image.asset(
-                          'assets/team/ceek.png'),
-                      )
-                    ),
-                    Padding(
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset('assets/team/ceek.png'),
+                  )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                        child: new Text(
-                          "Cedric Atienza",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
+                      child: new Text(
+                        "Cedric Atienza",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
-                        )
-                      )
-                    ),
-                    Padding (
+                      )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 0),
-                        child: Flexible(
-                          child: new Text(
-                            "Product Manager & Designer",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: const Color(0xff000000),
-                              fontSize: 12
-                            ),
-                          )
-                        )
-                    ),
-                  ],
-                ),
+                      child: new Text(
+                        "Product Manager & Designer",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color(0xff000000), fontSize: 12),
+                      )),
+                ],
               ),
-
-              Container(
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Column(
-                  children: <Widget>[
-                    Expanded (
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
                       child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        child: Image.asset(
-                          'assets/team/harvs.png'),
-                      )
-                    ),
-                    Padding(
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset('assets/team/harvs.png'),
+                  )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                        child: new Text(
-                          "Harvey Sison",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
+                      child: new Text(
+                        "Harvey Sison",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                          ),
-                        )
-                      )
-                    ),
-                    Padding (
+                            fontSize: 16),
+                      )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                        child: new Text(
-                          "Developer",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: const Color(0xff000000),
-                            fontSize: 12
-                          ),
-                        )
-                      )
-                    ),
-                  ],
-                ),
+                      child: new Text(
+                        "Developer",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color(0xff000000), fontSize: 12),
+                      )),
+                ],
               ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Column(
-                  children: <Widget>[
-                    Expanded (
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
                       child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        child: Image.asset(
-                          'assets/team/franz.png'),
-                      )
-                    ),
-                    Padding(
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset('assets/team/franz.png'),
+                  )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Flexible(
-                        child: new Text(
-                          "Franz Taborlupa",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
+                      child: new Text(
+                        "Franz Taborlupa",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                          ),
-                        )
-                      )
-                    ),
-                    Padding (
+                            fontSize: 16),
+                      )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                        child: new Text(
-                          "Developer",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: const Color(0xff000000),
-                            fontSize: 12
-                          ),
-                        )
-                      )
-                    ),
-                  ],
-                ),
+                      child: new Text(
+                        "Developer",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color(0xff000000), fontSize: 12),
+                      )),
+                ],
               ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Column(
-                  children: <Widget>[
-                    Expanded (
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
                       child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        child: Image.asset(
-                          'assets/team/polly.png'),
-                      )
-                    ),
-                    Padding(
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset('assets/team/polly.png'),
+                  )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Flexible(
-                        child: new Text(
-                          "Pauline Baterna",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
+                      child: new Text(
+                        "Pauline Baterna",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                          ),
-                        )
-                      )
-                    ),
-                    Padding (
+                            fontSize: 16),
+                      )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                        child: new Text(
-                          "User Experience Designer",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: const Color(0xff000000),
-                            fontSize: 12
-                          ),
-                        )
-                      )
-                    ),
-                  ],
-                ),
+                      child: new Text(
+                        "User Experience Designer",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color(0xff000000), fontSize: 12),
+                      )),
+                ],
               ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Column(
-                  children: <Widget>[
-                    Expanded (
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
                       child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        child: Image.asset(
-                          'assets/team/auds.png'),
-                      )
-                    ),
-                    Padding(
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset('assets/team/auds.png'),
+                  )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Flexible(
-                        child: new Text(
-                          "Audrey Picar",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
+                      child: new Text(
+                        "Audrey Picar",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                          ),
-                        )
-                      )
-                    ),
-                    Padding (
+                            fontSize: 16),
+                      )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                        child: new Text(
-                          "User Experience Designer",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: const Color(0xff000000),
-                            fontSize: 12
-                          ),
-                        )
-                      )
-                    ),
-                  ],
-                ),
+                      child: new Text(
+                        "User Experience Designer",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color(0xff000000), fontSize: 12),
+                      )),
+                ],
               ),
-              Container(
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.center,
-                child: Column(
-                  children: <Widget>[
-                    Expanded (
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              alignment: Alignment.center,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
                       child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        child: Image.asset(
-                          'assets/team/jeth.png'),
-                      )
-                    ),
-                    Padding(
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset('assets/team/jeth.png'),
+                  )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 8),
-                      child: Flexible(
-                        child: new Text(
-                          "Jethro Sia",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
+                      child: new Text(
+                        "Jethro Sia",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
                             color: const Color(0xff295EFF),
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                          ),
-                        )
-                      )
-                    ),
-                    Padding (
+                            fontSize: 16),
+                      )),
+                  Padding(
                       padding: const EdgeInsets.only(top: 0),
-                      child: Flexible(
-                        child: new Text(
-                          "Research and Externals",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: const Color(0xff000000),
-                            fontSize: 12
-                          ),
-                        )
-                      )
-                    ),
-                  ],
-                ),
+                      child: new Text(
+                        "Research and Externals",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: const Color(0xff000000), fontSize: 12),
+                      )),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      );
+      ),
+    );
   }
 }
