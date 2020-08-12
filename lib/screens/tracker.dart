@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:admu_recweek_app/screens/main.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/models/screen.dart';
-import 'package:admu_recweek_app/models/user.dart';
 
 class TrackerScreen extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
   bool isUserSignedIn = false;
-  bool maintenance = true;
+  bool maintenance = false;
   int contentState = 0;
 
   @override
@@ -216,90 +217,165 @@ class _TrackerScreenState extends State<TrackerScreen> {
   }
 
   Widget _savedScreen(BuildContext context) {
-    return new Container(
-        margin: const EdgeInsets.symmetric(vertical: 30.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                child: Image.asset('assets/images/saved_empty.png'),
-                padding: const EdgeInsets.only(bottom: 12.0),
-              ),
-            ),
-            Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    'You haven’t saved any org!',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 16.0, color: Colors.black),
-                  ),
-                ),
-                FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    onPressed: () {
-                      onGoogleSignIn(context);
-                      selectedPageIndex = 1;
-                    },
-                    color: const Color(0xff295EFF),
-                    child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text('Find an organization',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.bold))))
-              ],
-            )
+    return new ListView(
+      padding: const EdgeInsets.symmetric(vertical: 30.0),
+      children: [
+        Slidable(
+          actionPane: SlidableDrawerActionPane(),
+          actionExtentRatio: 0.25,
+          secondaryActions: <Widget>[
+            IconSlideAction(
+                iconWidget: Image.asset('assets/icons/delete.png'),
+                onTap: () {
+                  Fluttertoast.showToast(
+                      msg:
+                          "You have remove this organization from your bookmarks",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.BOTTOM,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.grey,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+                },
+                color: const Color(0xffE84C4C)),
+            IconSlideAction(
+                iconWidget: Image.asset('assets/icons/check.png'),
+                onTap: () {
+                  Fluttertoast.showToast(
+                      msg: "You have applied to this organization",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.BOTTOM,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.grey,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+                },
+                color: const Color(0xff7598FF))
           ],
-        ));
+          child: ListTile(
+            leading: SizedBox(child: Image.asset('assets/orgs/dsc/logo.png')),
+            title: Text("Developer Student Clubs Loyola"),
+            subtitle: Text("LIONS",
+                style: TextStyle(fontSize: 12, color: const Color(0xffFF801D))),
+          ),
+        ),
+      ],
+    );
+    // new Container(
+    //     margin: const EdgeInsets.symmetric(vertical: 30.0),
+    //     child: Column(
+    //       mainAxisAlignment: MainAxisAlignment.spaceAround,
+    //       children: <Widget>[
+    //         Expanded(
+    //           child: Container(
+    //             child: Image.asset('assets/images/saved_empty.png'),
+    //             padding: const EdgeInsets.only(bottom: 12.0),
+    //           ),
+    //         ),
+    //         Column(
+    //           children: <Widget>[
+    //             Padding(
+    //               padding: const EdgeInsets.only(bottom: 8.0),
+    //               child: Text(
+    //                 'You haven’t saved any org!',
+    //                 textAlign: TextAlign.center,
+    //                 style: TextStyle(fontSize: 16.0, color: Colors.black),
+    //               ),
+    //             ),
+    //             FlatButton(
+    //                 shape: RoundedRectangleBorder(
+    //                   borderRadius: BorderRadius.circular(15.0),
+    //                 ),
+    //                 onPressed: () {
+    //                   onGoogleSignIn(context);
+    //                   selectedPageIndex = 1;
+    //                 },
+    //                 color: const Color(0xff295EFF),
+    //                 child: Padding(
+    //                     padding: EdgeInsets.all(8.0),
+    //                     child: Text('Find an organization',
+    //                         style: TextStyle(
+    //                             color: Colors.white,
+    //                             fontSize: 24.0,
+    //                             fontWeight: FontWeight.bold))))
+    //           ],
+    //         )
+    //       ],
+    //     ));
   }
 
   Widget _appliedScreen(BuildContext context) {
-    return new Container(
-        margin: const EdgeInsets.symmetric(vertical: 30.0),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Expanded(
-                child: Container(
-                  child: Image.asset('assets/images/applied_empty.png'),
-                  padding: const EdgeInsets.only(bottom: 12.0),
-                ),
-              ),
-              Column(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
-                    child: Text(
-                      'You haven’t applied for any org!',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 16.0, color: Colors.black),
-                    ),
-                  ),
-                  FlatButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          contentState = 0;
-                        });
-                      },
-                      color: const Color(0xff295EFF),
-                      child: Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Update my tracker',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 24.0,
-                                  fontWeight: FontWeight.bold))))
-                ],
-              )
-            ]));
+    return new ListView(
+      padding: const EdgeInsets.symmetric(vertical: 30.0),
+      children: [
+        Slidable(
+          actionPane: SlidableDrawerActionPane(),
+          actionExtentRatio: 0.25,
+          secondaryActions: <Widget>[
+            IconSlideAction(
+                iconWidget: Image.asset('assets/icons/delete.png'),
+                onTap: () {
+                  Fluttertoast.showToast(
+                      msg:
+                          "You have remove this organization from your bookmarks",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.BOTTOM,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.grey,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
+                },
+                color: const Color(0xffE84C4C)),
+          ],
+          child: ListTile(
+            leading: SizedBox(child: Image.asset('assets/orgs/dsc/logo.png')),
+            title: Text("Developer Student Clubs Loyola"),
+            subtitle: Text("LIONS",
+                style: TextStyle(fontSize: 12, color: const Color(0xffFF801D))),
+          ),
+        ),
+      ],
+    );
+    // new Container(
+    //     margin: const EdgeInsets.symmetric(vertical: 30.0),
+    //     child: Column(
+    //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    //         children: <Widget>[
+    //           Expanded(
+    //             child: Container(
+    //               child: Image.asset('assets/images/applied_empty.png'),
+    //               padding: const EdgeInsets.only(bottom: 12.0),
+    //             ),
+    //           ),
+    //           Column(
+    //             children: <Widget>[
+    //               Padding(
+    //                 padding: const EdgeInsets.only(bottom: 8.0),
+    //                 child: Text(
+    //                   'You haven’t applied for any org!',
+    //                   textAlign: TextAlign.center,
+    //                   style: TextStyle(fontSize: 16.0, color: Colors.black),
+    //                 ),
+    //               ),
+    //               FlatButton(
+    //                   shape: RoundedRectangleBorder(
+    //                     borderRadius: BorderRadius.circular(15.0),
+    //                   ),
+    //                   onPressed: () {
+    //                     setState(() {
+    //                       contentState = 0;
+    //                     });
+    //                   },
+    //                   color: const Color(0xff295EFF),
+    //                   child: Padding(
+    //                       padding: EdgeInsets.all(8.0),
+    //                       child: Text('Update my tracker',
+    //                           style: TextStyle(
+    //                               color: Colors.white,
+    //                               fontSize: 24.0,
+    //                               fontWeight: FontWeight.bold))))
+    //             ],
+    //           )
+    //         ]));
   }
 }
