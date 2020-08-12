@@ -289,6 +289,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
+                    Image.asset (
+                      "assets/orgs/dsc/cover.png"
+                    ),
           ],
         ));
   }
