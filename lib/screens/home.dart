@@ -302,8 +302,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Image.asset (
                           "assets/orgs/dsc/cover.png"
                         ),
-                        Expanded(
-                          child: Container (
+                        Container (
                             margin: const EdgeInsets.only(top: 135.0),
                             padding: EdgeInsets.all(2.0),
                             height: 48,
@@ -330,7 +329,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ),
                           ),
-                        ),
                       ]
                     ),
                     )
