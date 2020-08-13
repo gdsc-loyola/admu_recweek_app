@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/screens/bodies/lions.dart';
+import 'package:admu_recweek_app/screens/bodies/cop.dart';
 import 'package:admu_recweek_app/screens/orgs/lions/dsc.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -166,9 +167,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       GestureDetector(
-                          onTap: () {
-                            print("COP Body");
-                          },
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => COPScreen()),
+                          );
+                        },
                           child: Container(
                             margin: const EdgeInsets.only(right: 16),
                             decoration: BoxDecoration(
