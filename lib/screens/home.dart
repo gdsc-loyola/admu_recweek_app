@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           margin: const EdgeInsets.only(right: 16),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: Colors.orange,
+                            color: const Color(0xFFFF801D),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.withOpacity(0.5),
@@ -174,7 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             decoration: BoxDecoration(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20)),
-                              color: Colors.blueGrey,
+                              color: const Color(0xFF002864),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.5),
@@ -226,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: Colors.blue,
+                            color: const Color(0xFF1C41B2),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.withOpacity(0.5),
@@ -275,7 +275,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     
                     ])),
                     Padding (
-                      padding: EdgeInsets.only(top: 24),
+                      padding: EdgeInsets.only(bottom: 8, top: 16),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: Container(
@@ -289,6 +289,49 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder:(context) =>DSCLoyolaScreen()),
+                        );
+                      },
+                    child: Stack (
+                      children: <Widget> [
+                        Image.asset (
+                          "assets/orgs/dsc/cover.png"
+                        ),
+                        Container (
+                            margin: const EdgeInsets.only(top: 135.0),
+                            padding: EdgeInsets.all(2.0),
+                            height: 48,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFFF801D).withOpacity(0.25),
+                            ),
+                            child: Column (
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget> [
+                                Padding (
+                                  padding: EdgeInsets.only(left: 8.0, top: 8.0),
+                                  child: Text (
+                                    "Developers Student Clubs - Loyola",
+                                    style: TextStyle(
+                                        fontSize: 16, 
+                                        fontWeight: FontWeight.bold, 
+                                        color: const Color (0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                      ]
+                    ),
+                    )
           ],
         ));
   }
