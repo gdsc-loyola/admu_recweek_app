@@ -72,7 +72,7 @@ class _COPScreenState extends State<COPScreen> {
                 margin: EdgeInsets.only(top: 12),
                 child: GridView.count(
                   primary: false,
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(0.0),
                   childAspectRatio: (itemWidth / itemHeight),
                   crossAxisSpacing: 32,
                   mainAxisSpacing: 24,
@@ -110,7 +110,7 @@ class _COPScreenState extends State<COPScreen> {
                               fontSize: 12,
                             ),
                             overflow: TextOverflow.ellipsis,
-                            maxLines: 4,
+                            maxLines: 3,
                           ),
                           //),
                         ],
