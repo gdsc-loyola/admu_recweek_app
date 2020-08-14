@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
+import 'package:admu_recweek_app/screens/bodies/sanggu.dart';
 
 class StudentGroupsScreen extends StatefulWidget {
   @override
@@ -296,7 +297,11 @@ class _StudentGroupsScreenState extends State<StudentGroupsScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        print ("Sanggu");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SangguScreen()),
+                          );
                       },
                       child: Column(
                         children: <Widget>[
