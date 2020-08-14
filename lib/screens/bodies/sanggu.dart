@@ -71,24 +71,24 @@ class _SangguScreenState extends State<SangguScreen> {
                 style: TextStyle(fontSize: 16),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 30.0, bottom: 16.0),
+                padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
                 child: Text(
-                  "Clusters",
+                  "Lower Section Placeholder",
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.left,
                 ),
               ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
+                    const EdgeInsets.symmetric(horizontal: 60, vertical: 24),
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      launch("https://lionshub.org/");
+                      launch("https://oursanggu.com/");
                     },
-                    color: const Color(0xffE84C4C),
+                    color: const Color(0xff1C41B2),
                     child: Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text('Learn More',
