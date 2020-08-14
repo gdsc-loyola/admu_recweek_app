@@ -64,71 +64,71 @@ flutter:
     - assets/orgs/dsc/
     - assets/team/
     - assets/data/
-    - assets/orgs/coa/ANALYSIS AND DISCOURSE/ADS
-    - assets/orgs/coa/ANALYSIS AND DISCOURSE/AEA
-    - assets/orgs/coa/ANALYSIS AND DISCOURSE/AEUSS
-    - assets/orgs/coa/ANALYSIS AND DISCOURSE/APAIR
-    - assets/orgs/coa/ANALYSIS AND DISCOURSE/AStat
-    - assets/orgs/coa/ANALYSIS AND DISCOURSE/AteneoEntablado
-    - assets/orgs/coa/ANALYSIS AND DISCOURSE/DevSoc
-    - assets/orgs/coa/ANALYSIS AND DISCOURSE/The Ateneo Assembly
-    - assets/orgs/coa/BUSINESS CLUSTER/ACTM
-    - assets/orgs/coa/BUSINESS CLUSTER/AIESEC
-    - assets/orgs/coa/BUSINESS CLUSTER/AJMA
-    - assets/orgs/coa/BUSINESS CLUSTER/AMA
-    - assets/orgs/coa/BUSINESS CLUSTER/Ateneo BCG
-    - assets/orgs/coa/BUSINESS CLUSTER/Ateneo Lex
-    - assets/orgs/coa/BUSINESS CLUSTER/MACA
-    - assets/orgs/coa/BUSINESS CLUSTER/MEA
-    - assets/orgs/coa/BUSINESS CLUSTER/MEcO
-    - assets/orgs/coa/COP/HEIGHTS Ateneo
-    - assets/orgs/coa/COP/Matanglawin Ateneo
-    - assets/orgs/coa/COP/The GUIDON
-    - assets/orgs/coa/FAITH FORMATION/ACIL
-    - assets/orgs/coa/FAITH FORMATION/ACLC
-    - assets/orgs/coa/FAITH FORMATION/ACMG
-    - assets/orgs/coa/FAITH FORMATION/AtSCA
-    - assets/orgs/coa/FAITH FORMATION/YFC
-    - assets/orgs/coa/HEALTH AND ENVIRONMENT/AESS
-    - assets/orgs/coa/HEALTH AND ENVIRONMENT/ISDA
-    - assets/orgs/coa/HEALTH AND ENVIRONMENT/LM
-    - assets/orgs/coa/HEALTH AND ENVIRONMENT/PEERS
-    - assets/orgs/coa/HEALTH AND ENVIRONMENT/ThePMSA
-    - assets/orgs/coa/INTERCULTURAL RELATIONS/ASEC
-    - assets/orgs/coa/INTERCULTURAL RELATIONS/ATENEO HINOMOTO
-    - assets/orgs/coa/INTERCULTURAL RELATIONS/ATENEO LINGUA ARTS CULTURA
-    - assets/orgs/coa/INTERCULTURAL RELATIONS/BAYBAYIN ATENEO
-    - assets/orgs/coa/INTERCULTURAL RELATIONS/CELADON
-    - assets/orgs/coa/MEDIA AND CREATIVES CLUSTER/ACOMM
-    - assets/orgs/coa/MEDIA AND CREATIVES CLUSTER/AMP
-    - assets/orgs/coa/MEDIA AND CREATIVES CLUSTER/CoSA
-    - assets/orgs/coa/MEDIA AND CREATIVES CLUSTER/LFC
-    - assets/orgs/coa/PERFORMING ARTS CLUSTER/ACGC
-    - assets/orgs/coa/PERFORMING ARTS CLUSTER/BLUEREP
-    - assets/orgs/coa/PERFORMING ARTS CLUSTER/CADS
-    - assets/orgs/coa/PERFORMING ARTS CLUSTER/TA
-    - assets/orgs/coa/SCIENCE AND TECH/ACHES
-    - assets/orgs/coa/SCIENCE AND TECH/AECES
-    - assets/orgs/coa/SCIENCE AND TECH/AMS
-    - assets/orgs/coa/SCIENCE AND TECH/ATENEO PSYCHE
-    - assets/orgs/coa/SCIENCE AND TECH/BOX
-    - assets/orgs/coa/SCIENCE AND TECH/COMPSAT
-    - assets/orgs/coa/SCIENCE AND TECH/LEAPS
-    - assets/orgs/coa/SCIENCE AND TECH/MISA
-    - assets/orgs/coa/SECTOR-BASED/Ateneo CODE
-    - assets/orgs/coa/SECTOR-BASED/Ateneo EDGE
-    - assets/orgs/coa/SECTOR-BASED/Ateneo Gabay
-    - assets/orgs/coa/SECTOR-BASED/Ateneo SPEED
-    - assets/orgs/coa/SECTOR-BASED/Barefoot Philippines
-    - assets/orgs/coa/SECTOR-BASED/KYTHE
-    - assets/orgs/coa/SECTOR-BASED/Musmos Ateneo
-    - assets/orgs/coa/STUDENT GROUPS/AEGIS
-    - assets/orgs/coa/STUDENT GROUPS/Ateneo Commission on Elections
-    - assets/orgs/coa/STUDENT GROUPS/DSWS
-    - assets/orgs/coa/STUDENT GROUPS/LSOPCS
-    - assets/orgs/coa/STUDENT GROUPS/Office of the Ombudsman
-    - assets/orgs/coa/STUDENT GROUPS/Sanggu
-    - assets/orgs/coa/STUDENT GROUPS/SJC
+    - assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ADS/
+    - assets/orgs/coa/ANALYSIS_AND_DISCOURSE/AEA/
+    - assets/orgs/coa/ANALYSIS_AND_DISCOURSE/AEUSS/
+    - assets/orgs/coa/ANALYSIS_AND_DISCOURSE/APAIR/
+    - assets/orgs/coa/ANALYSIS_AND_DISCOURSE/AStat/
+    - assets/orgs/coa/ANALYSIS_AND_DISCOURSE/AteneoEntablado/
+    - assets/orgs/coa/ANALYSIS_AND_DISCOURSE/DevSoc/
+    - assets/orgs/coa/ANALYSIS_AND_DISCOURSE/The_Ateneo_Assembly/
+    - assets/orgs/coa/BUSINESS_CLUSTER/ACTM/
+    - assets/orgs/coa/BUSINESS_CLUSTER/AIESEC/
+    - assets/orgs/coa/BUSINESS_CLUSTER/AJMA/
+    - assets/orgs/coa/BUSINESS_CLUSTER/AMA/
+    - assets/orgs/coa/BUSINESS_CLUSTER/Ateneo_BCG/
+    - assets/orgs/coa/BUSINESS_CLUSTER/Ateneo_Lex/
+    - assets/orgs/coa/BUSINESS_CLUSTER/MACA/
+    - assets/orgs/coa/BUSINESS_CLUSTER/MEA/
+    - assets/orgs/coa/BUSINESS_CLUSTER/MEcO/
+    - assets/orgs/coa/COP/HEIGHTS_Ateneo/
+    - assets/orgs/coa/COP/Matanglawin_Ateneo/
+    - assets/orgs/coa/COP/The_GUIDON/
+    - assets/orgs/coa/FAITH_FORMATION/ACIL/
+    - assets/orgs/coa/FAITH_FORMATION/ACLC/
+    - assets/orgs/coa/FAITH_FORMATION/ACMG/
+    - assets/orgs/coa/FAITH_FORMATION/AtSCA/
+    - assets/orgs/coa/FAITH_FORMATION/YFC/
+    - assets/orgs/coa/HEALTH_AND_ENVIRONMENT/AESS/
+    - assets/orgs/coa/HEALTH_AND_ENVIRONMENT/ISDA/
+    - assets/orgs/coa/HEALTH_AND_ENVIRONMENT/LM/
+    - assets/orgs/coa/HEALTH_AND_ENVIRONMENT/PEERS/
+    - assets/orgs/coa/HEALTH_AND_ENVIRONMENT/ThePMSA/
+    - assets/orgs/coa/INTERCULTURAL_RELATIONS/ASEC/
+    - assets/orgs/coa/INTERCULTURAL_RELATIONS/ATENEO_HINOMOTO/
+    - assets/orgs/coa/INTERCULTURAL_RELATIONS/ATENEO_LINGUA_ARTS_CULTURA/
+    - assets/orgs/coa/INTERCULTURAL_RELATIONS/BAYBAYIN_ATENEO/
+    - assets/orgs/coa/INTERCULTURAL_RELATIONS/CELADON/
+    - assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/ACOMM/
+    - assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/AMP/
+    - assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/CoSA/
+    - assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/LFC/
+    - assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ACGC/
+    - assets/orgs/coa/PERFORMING_ARTS_CLUSTER/BLUEREP/
+    - assets/orgs/coa/PERFORMING_ARTS_CLUSTER/CADS/
+    - assets/orgs/coa/PERFORMING_ARTS_CLUSTER/TA/
+    - assets/orgs/coa/SCIENCE_AND_TECH/ACHES/
+    - assets/orgs/coa/SCIENCE_AND_TECH/AECES/
+    - assets/orgs/coa/SCIENCE_AND_TECH/AMS/
+    - assets/orgs/coa/SCIENCE_AND_TECH/ATENEO_PSYCHE/
+    - assets/orgs/coa/SCIENCE_AND_TECH/BOX/
+    - assets/orgs/coa/SCIENCE_AND_TECH/COMPSAT/
+    - assets/orgs/coa/SCIENCE_AND_TECH/LEAPS/
+    - assets/orgs/coa/SCIENCE_AND_TECH/MISA/
+    - assets/orgs/coa/SECTOR-BASED/Ateneo_CODE/
+    - assets/orgs/coa/SECTOR-BASED/Ateneo_EDGE/
+    - assets/orgs/coa/SECTOR-BASED/Ateneo_Gabay/
+    - assets/orgs/coa/SECTOR-BASED/Ateneo_SPEED/
+    - assets/orgs/coa/SECTOR-BASED/Barefoot_Philippines/
+    - assets/orgs/coa/SECTOR-BASED/KYTHE/
+    - assets/orgs/coa/SECTOR-BASED/Musmos_Ateneo/
+    - assets/orgs/coa/STUDENT_GROUPS/AEGIS/
+    - assets/orgs/coa/STUDENT_GROUPS/Ateneo_Commission_on_Elections/
+    - assets/orgs/coa/STUDENT_GROUPS/DSWS/
+    - assets/orgs/coa/STUDENT_GROUPS/LSOPCS/
+    - assets/orgs/coa/STUDENT_GROUPS/Office_of_the_Ombudsman/
+    - assets/orgs/coa/STUDENT_GROUPS/Sanggu/
+    - assets/orgs/coa/STUDENT_GROUPS/SJC/
   # assets:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
