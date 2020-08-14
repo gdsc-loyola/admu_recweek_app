@@ -3,6 +3,7 @@ import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/screens/bodies/lions.dart';
 import 'package:admu_recweek_app/screens/bodies/cop.dart';
+import 'package:admu_recweek_app/screens/bodies/groups.dart';
 import 'package:admu_recweek_app/screens/orgs/lions/dsc.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -226,7 +227,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           )),
                       GestureDetector(
                         onTap: () {
-                          print("Student Groups");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StudentGroupsScreen()),
+                          );
                         },
                         child: Container(
                           decoration: BoxDecoration(
