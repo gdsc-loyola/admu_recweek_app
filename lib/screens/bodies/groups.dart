@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
-class COPScreen extends StatefulWidget {
+class StudentGroupsScreen extends StatefulWidget {
   @override
-  _COPScreenState createState() => _COPScreenState();
+  _StudentGroupsScreenState createState() => _StudentGroupsScreenState();
 }
 
-class _COPScreenState extends State<COPScreen> {
+class _StudentGroupsScreenState extends State<StudentGroupsScreen> {
   bool bookmark = false;
 
   @override
@@ -20,8 +20,8 @@ class _COPScreenState extends State<COPScreen> {
         title: Text(
           "Student Groups",
           style: TextStyle(
-              color: const Color(0xff1C41B2), 
-              fontWeight: FontWeight.bold
+            color: const Color(0xff1C41B2), 
+            fontWeight: FontWeight.bold
           ),
         ),
         backgroundColor: Colors.white,
@@ -43,8 +43,8 @@ class _COPScreenState extends State<COPScreen> {
                         height: 24.0,
                         child: bookmark
                             ? Image.asset(
-                                'assets/bodies/cop/bookmark_active.png')
-                            : Image.asset('assets/bodies/cop/bookmark.png'),
+                                'assets/bodies/student-groups/bookmark_active.png')
+                            : Image.asset('assets/bodies/student-groups/bookmark.png'),
                       ),
                     ))
               ],
@@ -60,7 +60,7 @@ class _COPScreenState extends State<COPScreen> {
             Align(
               alignment: Alignment.center,
               child: Text(
-                "Confederation of Publications",
+                "Student Groups",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
@@ -80,13 +80,13 @@ class _COPScreenState extends State<COPScreen> {
                   children: <Widget>[
                     GestureDetector(
                         onTap: () {
-                          print ("Heights");
+                          print ("Ateneo SJC");
                         },
                       child: Column(
                         children: <Widget>[
                           Expanded(
                             child: Image.asset(
-                              "assets/bodies/cop/heights.png",
+                              "assets/bodies/student-groups/ateneoSjc.png",
                               fit: BoxFit.cover,
                               width: double.infinity,
                             ),
@@ -96,7 +96,7 @@ class _COPScreenState extends State<COPScreen> {
                             child: Padding(
                                 padding: EdgeInsets.only(top: 8),
                                 child: Text(
-                                  "HEIGHTS Ateneo",
+                                  "Ateneo SJC",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
@@ -104,7 +104,7 @@ class _COPScreenState extends State<COPScreen> {
                                 )),
                           ),
                           Text(
-                            "HEIGHTS Ateneo is the official literary and artistic publication of the Ateneo de Manila University. ",
+                            "The Ateneo Student Judicial Court is the official judicial arm of the Sanggunian.",
                             style: TextStyle(
                               fontSize: 12,
                             ),
@@ -116,13 +116,13 @@ class _COPScreenState extends State<COPScreen> {
                     ),
                     GestureDetector(
                         onTap: () {
-                          print ("Guidon");
+                          print ("DSWS");
                         },
                       child: Column(
                         children: <Widget>[
                           Expanded(
                             child: Image.asset(
-                              "assets/bodies/cop/guidon.png",
+                              "assets/bodies/student-groups/dsws.png",
                               fit: BoxFit.cover,
                               width: double.infinity,
                             ),
@@ -132,7 +132,7 @@ class _COPScreenState extends State<COPScreen> {
                             child: Padding(
                                 padding: EdgeInsets.only(top: 8),
                                 child: Text(
-                                  "The GUIDON",
+                                  "DSWS",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
@@ -140,7 +140,7 @@ class _COPScreenState extends State<COPScreen> {
                                 )),
                           ),
                           Text(
-                            "As the official publication of the Ateneo de Manila University, The GUIDON brings forth...",
+                            "The Department of Student Welfare and Services is the service arm of the Sanggunian.",
                             style: TextStyle(
                               fontSize: 12,
                             ),
@@ -151,15 +151,14 @@ class _COPScreenState extends State<COPScreen> {
                       ),
                     ),
                     GestureDetector(
-                        onTap: () {
-                          print ("Matangalawin");
-                        },
-                      //child:Card(
+                      onTap: () {
+                        print ("AEGIS");
+                      },
                       child: Column(
                         children: <Widget>[
                           Expanded(
                             child: Image.asset(
-                              "assets/bodies/cop/matanglawin.png",
+                              "assets/bodies/student-groups/aegis.png",
                               fit: BoxFit.cover,
                               width: double.infinity,
                             ),
@@ -169,7 +168,7 @@ class _COPScreenState extends State<COPScreen> {
                             child: Padding(
                                 padding: EdgeInsets.only(top: 8),
                                 child: Text(
-                                  "Matanglawin Ateneo",
+                                  "AEGIS",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
@@ -177,7 +176,7 @@ class _COPScreenState extends State<COPScreen> {
                                 )),
                           ),
                           Text(
-                            "Mapanghamon ang ating panahon. Kailangan ang mga MATANG nangangahas...",
+                            "Ateneo AEGIS is the Ateneo de Manila University Loyola Schools' official undergraduate...",
                             style: TextStyle(
                               fontSize: 12,
                             ),
@@ -186,14 +185,155 @@ class _COPScreenState extends State<COPScreen> {
                           ),
                         ],
                       ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        print ("OMB");
+                      },
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            child: Image.asset(
+                              "assets/bodies/student-groups/omb.png",
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                                padding: EdgeInsets.only(top: 8),
+                                child: Text(
+                                  "OMB",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                )),
+                          ),
+                          Text(
+                            "The Loyola Schools Office of the Ombudsman is in-charge of facilitating the check and...",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 4,
+                          ),
+                        ],
                       ),
-                    //),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        print ("LSOPCS");
+                      },
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            child: Image.asset(
+                              "assets/bodies/student-groups/lsopcs.png",
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                                padding: EdgeInsets.only(top: 8),
+                                child: Text(
+                                  "LSOPCS",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                )),
+                          ),
+                          Text(
+                            "LSOPCS is the student arm organization that works with the career advisors of the office.",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 4,
+                          ),
+                        ],
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        print ("COMELEC");
+                      },
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            child: Image.asset(
+                              "assets/bodies/student-groups/comelec.png",
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                                padding: EdgeInsets.only(top: 8),
+                                child: Text(
+                                  "COMELEC",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                )),
+                          ),
+                          Text(
+                            "The Ateneo Commission on Elections is an independent body serving as the electoral...",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 4,
+                          ),
+                        ],
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        print ("Sanggu");
+                      },
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            child: Image.asset(
+                              "assets/bodies/student-groups/sanggu.png",
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                                padding: EdgeInsets.only(top: 8),
+                                child: Text(
+                                  "Sanggu",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                )),
+                          ),
+                          Text(
+                            "The LS Sanggunian is the student government of AdMU that aims to listen and provide...",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 4,
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
             ),
-
-            
           ],
         ),
       ),
