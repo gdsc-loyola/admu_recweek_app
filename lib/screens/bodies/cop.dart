@@ -12,6 +12,11 @@ class _COPScreenState extends State<COPScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
+    /*24 is for notification bar on Android*/
+    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
+    final double itemWidth = size.width / 2;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -47,12 +52,12 @@ class _COPScreenState extends State<COPScreen> {
       body: Container(
         padding: const EdgeInsets.all(16.0),
         color: Colors.white,
-        child: Column (
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Align (
+            Align(
               alignment: Alignment.center,
               child: Text(
                 "Confederation of Publications",
@@ -64,46 +69,133 @@ class _COPScreenState extends State<COPScreen> {
             ),
             Expanded(
               child: Container(
+                margin: EdgeInsets.only(top: 12),
                 child: GridView.count(
                   primary: false,
-                  //padding: const EdgeInsets.all(20.0),
-                  //crossAxisSpacing: 12,
-                  //mainAxisSpacing: 12,
+                  padding: const EdgeInsets.all(8.0),
+                  childAspectRatio: (itemWidth / itemHeight),
+                  crossAxisSpacing: 32,
+                  mainAxisSpacing: 24,
                   crossAxisCount: 2,
-                  children: <Widget> [
-                    Container (
-                      width: double.infinity,
-                      child: Column (
-                        children: <Widget> [
-                          Container (
-                            child: Column (
-                              children: <Widget> [
-                                Image.asset (
-                                  ""
-                                ),
-                                Text (
+                  children: <Widget>[
+                    GestureDetector(
+                        onTap: () {
+                          print ("Heights");
+                        },
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            child: Image.asset(
+                              "assets/bodies/cop/heights.png",
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                                padding: EdgeInsets.only(top: 8),
+                                child: Text(
                                   "HEIGHTS Ateneo",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                   ),
-                                ),
-                                Text (
-                                  "HEIGHTS Ateneo is the official literary and artistic publication of the Ateneo de Manila University. ",
+                                )),
+                          ),
+                          //Expanded(
+                          Text(
+                            "HEIGHTS Ateneo is the official literary and artistic publication of the Ateneo de Manila University. ",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 4,
+                          ),
+                          //),
+                        ],
+                      ),
+                    ),
+                    GestureDetector(
+                        onTap: () {
+                          print ("Guidon");
+                        },
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            child: Image.asset(
+                              "assets/bodies/cop/guidon.png",
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                                padding: EdgeInsets.only(top: 8),
+                                child: Text(
+                                  "The GUIDON",
                                   style: TextStyle(
-                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
                                   ),
-                                )
-                              ],
-                            )
+                                )),
+                          ),
+                          Text(
+                            "As the official publication of the Ateneo de Manila University, The GUIDON brings forth...",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 4,
                           ),
                         ],
                       ),
                     ),
+                    GestureDetector(
+                        onTap: () {
+                          print ("Matangalawin");
+                        },
+                      //child:Card(
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            child: Image.asset(
+                              "assets/bodies/cop/matanglawin.png",
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                                padding: EdgeInsets.only(top: 8),
+                                child: Text(
+                                  "Matanglawin Ateneo",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                )),
+                          ),
+                          Text(
+                            "Mapanghamon ang ating panahon. Kailangan ang mga MATANG nangangahas...",
+                            style: TextStyle(
+                              fontSize: 12,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 4,
+                          ),
+                        ],
+                      ),
+                      ),
+                    //),
                   ],
                 ),
-              )
+              ),
             ),
+
+            
           ],
         ),
       ),
