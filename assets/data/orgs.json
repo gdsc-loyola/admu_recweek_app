@@ -1,6 +1,6 @@
 [
 	{
-		"Cluster": "Analysis and Discourse Cluster (ADC)",
+		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "The Ateneo Assembly: The Political Organization of the Ateneo",
 		"Abbreviation": "The Ateneo Assembly",
 		"Tagline": "The Premiere Political Organization of the Ateneo, and Home Organization of Political Science Majors",
@@ -19,10 +19,11 @@
 		"projectTitleThree": "The Citizen",
 		"projectDescThree": "The Citizen, the official publication of The Ateneo Assembly, provides a platform for political education and strives to encourage political discourse and empowerment through research and analysis.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Analysis and Discourse Cluster (ADC)",
+		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "The Development Society of the Ateneo",
 		"Abbreviation": "DevSoc",
 		"Tagline": "",
@@ -41,10 +42,11 @@
 		"projectTitleThree": "Development Sector Career and Internship Week",
 		"projectDescThree": "This project connects students with the development sector for job opportunities and internships. Various agencies, both public and private, are invited to share their advocacies and openings.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Analysis and Discourse Cluster (ADC)",
+		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "Association of European Studies Students ",
 		"Abbreviation": "AEUSS",
 		"Tagline": "Unity in Diversity",
@@ -63,10 +65,11 @@
 		"projectTitleThree": "Team Building Seminar ",
 		"projectDescThree": "Team Building Seminar program is designed to train young leaders in developing their skills in leadership, teamwork, and problem solving skills by completing a series of challenges.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Analysis and Discourse Cluster (ADC)",
+		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "Ateneo Enterteynment para sa Tao, Bayan, Lansangan at Diyos",
 		"Abbreviation": "Ateneo ENTABLADO",
 		"Tagline": "Enterteynment para sa Tao, Bayan, Lansangan at Diyos",
@@ -85,10 +88,11 @@
 		"projectTitleThree": "Educational Sessions",
 		"projectDescThree": "Nagsisilbing lunsaran ang Educational Sessions upang matalakay at maunawaan ng mga miyembro ang dula. Dahil dito, nagiging mulat at mapagmatyag ang bawat isa sa sosyo-pulitikal na kaganapan sa bansa.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Analysis and Discourse Cluster (ADC)",
+		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "Ateneo Economics Association ",
 		"Abbreviation": "AEA",
 		"Tagline": "Maximize Your Potential ",
@@ -107,10 +111,11 @@
 		"projectTitleThree": "EconTours",
 		"projectDescThree": "EconTours is a one-day exposure trip for all students in the LS community allowing for immersive experiences in different workplaces. In 2019, the Asian Development Bank gracefully hosted our members.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Analysis and Discourse Cluster (ADC)",
+		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "Ateneo Project for Asian and International Relations",
 		"Abbreviation": "APAIR",
 		"Tagline": "The World is Talking, Join the Conversation.",
@@ -129,10 +134,11 @@
 		"projectTitleThree": "Ateneo Model ASEAN Meeting (AMAM)",
 		"projectDescThree": "AMAM is a 3-day conference simulation of the ASEAN Summit & Related Meetings. As one of the most awaited flagship projects, delegates come together to experience the art of diplomacy & negotiation.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Analysis and Discourse Cluster (ADC)",
+		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "Ateneo Debate Society",
 		"Abbreviation": "ADS",
 		"Tagline": "Feel the Speed of Thought",
@@ -151,10 +157,11 @@
 		"projectTitleThree": "Tournaments around The Globe",
 		"projectDescThree": "In pursuit of ADS excellence, our members compete all around the globe. We have travelled to South Africa, Mexico, Greece, Australia, New Zealand, India, Korea, China, Vietnam, Indonesia and more.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Analysis and Discourse Cluster (ADC)",
+		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "Ateneo Statistics Circle",
 		"Abbreviation": "A-Stat",
 		"Tagline": "Where Everyone Counts",
@@ -173,15 +180,16 @@
 		"projectTitleThree": "Stat Cup",
 		"projectDescThree": "Confident in how well you know your statistics? Make a team or go solo! \nHow far can you go? We at A-Stat hosts a competitive three round quiz-bee. Join us in this thrilling Statistics Cup",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "The Ateneo Association for Communications Technology Management ",
 		"Abbreviation": "ACTM",
 		"Tagline": "Move Beyond Ideas ",
 		"Website": "",
-		"Facebook": "www.facebook.com/AteneoACTM/, https://www.facebook.com/mad.actm/ ",
+		"Facebook": "www.facebook.com/AteneoACTM/",
 		"Twitter": "www.twitter.com/AteneoACTM",
 		"Instagram": "https://www.instagram.com/ateneoactm/ ",
 		"Description": "Playful, professional, and ready to move beyond ideas, the Ateneo Association for Communication Technology Management (ACTM) embodies the happy medium between creativity and business. Through its core competency, Integrated Marketing Communications, ACTM seeks to generate disruptive ideas that make a meaningful difference in the field of marketing communications, all the while serving as a home and a supportive community for every ComTech major. ",
@@ -195,10 +203,11 @@
 		"projectTitleThree": "Tambay Week",
 		"projectDescThree": "Tambay Week highlights the home aspect of the organization by providing an avenue for members to gather as one community of ComTech majors and to form bonds beyond their usual social circles.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "Ateneo Lex",
 		"Abbreviation": "ALex",
 		"Tagline": "The Premier Business-Law Organization in the Ateneo. Home Organization of Legal Management Majors.",
@@ -217,10 +226,11 @@
 		"projectTitleThree": "Law School Forum",
 		"projectDescThree": "The Law School Forum allows LS students to get see into a law student and a practicing lawyer's life. The forum invites speakers from law schools/ firms or public offices to share their experience. ",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "Ateneo Junior Marketing Association",
 		"Abbreviation": "AJMA",
 		"Tagline": "We make things happen.",
@@ -231,7 +241,7 @@
 		"Description": "The Ateneo Junior Marketing Association (AJMA) is Ateneo\u2019s premier marketing organization. Since its foundation in 1990, AJMA has successfully reached greater heights through its groundbreaking and highly anticipated events. Now in its 30th year, AJMA is redefining itself to create an environment for members to fully develop themselves through AJMA\u2019s core competencies: Marketing Education and Marketing Practice.  AJMA is dedicated to integrating these core competencies in the development of its leaders to drive value for its stakeholders.  The organization seeks to further its marketing prowess through creative and innovative approaches in its continuous pursuit for excellence.",
 		"Advocacy": "",
 		"Core": "Marketing Education, Marketing Practice",
-		"Awards": "-Recognized by the esteemed Philippines Marketing Association as one of Three Outstanding Student Marketing Associations in the Philippines (TOSMA)\n-First and only business organization in the Ateneo to be included in the Dean\u2019s Awards for Service and Excellence (VP\u2019s Awards)\n-Best Student Marketing Association in the Philippines for five consecutive years\n",
+		"Awards": "#NAME?",
 		"projectTitleOne": "AIMS",
 		"projectDescOne": "The Ateneo Intercollegiate Marketing Seminar is a marketing competition that develops and nurtures the skills of top college students in the field of marketing.",
 		"projectTitleTwo": "Marketing Camp",
@@ -239,10 +249,11 @@
 		"projectTitleThree": "AJMA Week",
 		"projectDescThree": "AJMA Week is the organization\u2019s week-long welcoming event for old and new members, for them to come together and bond through various activities and interactions. ",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "Ateneo Management Association",
 		"Abbreviation": "AMA",
 		"Tagline": "Where Passion Meets Profession",
@@ -261,10 +272,11 @@
 		"projectTitleThree": "AMAwards",
 		"projectDescThree": "AMAwards is a culminating event where the organization recognizes the outstanding performances of its officers, managers, and members who contributed to the organization\u2019s accomplishments for the year",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "The Ateneo Management Economics Organization",
 		"Abbreviation": "MEcO",
 		"Tagline": "All-in",
@@ -283,10 +295,11 @@
 		"projectTitleThree": "Investment Mentorship Program ",
 		"projectDescThree": "Focus group mentorship sessions about the basics of investing conducted by trained and experienced mentors of the Ateneo Management Economics Organization.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "Ateneo Management Engineering Association",
 		"Abbreviation": "MEA",
 		"Tagline": "",
@@ -305,10 +318,11 @@
 		"projectTitleThree": "ALAM",
 		"projectDescThree": "The Academic Learning Arm of MEA (ALAM) aims to provide MEAns with the academic support they may need throughout their ME journey. It strives to help MEAns foster an appreciation for learning.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "Ateneo Management of Applied Chemistry Association",
 		"Abbreviation": "Ateneo MACA",
 		"Tagline": "Brighter Than Ever",
@@ -327,10 +341,11 @@
 		"projectTitleThree": "Creo",
 		"projectDescThree": "Creo is the product-line of Ateneo MACA. Every year, a product is developed and sold to develop innovation among the members, and hone their skills in the field of business.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "AIESEC in AdMU",
 		"Abbreviation": "AIESEC",
 		"Tagline": "Further Your Impact",
@@ -349,10 +364,11 @@
 		"projectTitleThree": "NatCon",
 		"projectDescThree": "AIESEC boasts its network through NatCon which is a week-long event that provides inspiring talks and sessions from global leaders that allow each person to learn and hone their own leadership skills.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Business Cluster (BC)",
+		"Cluster": ["Business Cluster (BC)"],
 		"Name": "Ateneo Blue Consulting Group",
 		"Abbreviation": "Ateneo BCG",
 		"Tagline": "Discover your next move.",
@@ -371,10 +387,11 @@
 		"projectTitleThree": "Mock Engagement Training (MET)",
 		"projectDescThree": "Mock Engagement Training is the primary training program during which new members learn BCG's consulting methodology through a curriculum that combines lecture, theory, and engagement simulation.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Confederation of Publications (COP)",
+		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "HEIGHTS Ateneo",
 		"Abbreviation": "",
 		"Tagline": "",
@@ -393,10 +410,11 @@
 		"projectTitleThree": "Kuwentong Pambata",
 		"projectDescThree": "A children's book grant geared towards using art and literature for stories that empower children in disadvantaged communities by conducting workshops to hone their skills and publishing their works.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COP"
 	},
 	{
-		"Cluster": "Confederation of Publications (COP)",
+		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "The GUIDON",
 		"Abbreviation": " TGDN",
 		"Tagline": "Deeper into the Truth.",
@@ -415,10 +433,11 @@
 		"projectTitleThree": "UAAP Season 82 Basketball Coverage",
 		"projectDescThree": "A few minutes can decide a championship. Be one with the crowd and share in the euphoria. Moments like this are unlike any other.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COP"
 	},
 	{
-		"Cluster": "Confederation of Publications (COP)",
+		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "Matanglawin Ateneo",
 		"Abbreviation": "",
 		"Tagline": "Mamulat. Magmulat. Matanglawin.",
@@ -437,10 +456,11 @@
 		"projectTitleThree": "Bertigo",
 		"projectDescThree": "Isang patimpalak tampok ang paggawa ng tula, sanaysay, paskil para sa mga dokumentaryo, pagkuha ng larawan, at pagtatanghal na bukas sa mga mag-aaral ng iba\u2019t ibang mataas na paraalan sa NCR.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COP"
 	},
 	{
-		"Cluster": "Faith Formation Cluster (FFC)",
+		"Cluster": ["Faith Formation Cluster (FFC)"],
 		"Name": "Ateneo Christian Life Community",
 		"Abbreviation": "ACLC",
 		"Tagline": "Kindled with love, together we journey into the new.",
@@ -459,10 +479,11 @@
 		"projectTitleThree": "Area Family Seminar",
 		"projectDescThree": "Our area families in Payatas will visit Ateneo for a day and participate in activities that would strengthen our bond with each other. AFS aims to give back the love that these families have given us.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Faith Formation Cluster (FFC)",
+		"Cluster": ["Faith Formation Cluster (FFC)"],
 		"Name": "Ateneo Catechetical Instruction League",
 		"Abbreviation": "ACIL",
 		"Tagline": "Ite Et Docete",
@@ -481,10 +502,11 @@
 		"projectTitleThree": "Youth Catechist Camp (YCC)",
 		"projectDescThree": "YCC is an annual 2-day camp that aims to holistically form its participants through various fun events. It is held in the ADMU campus and is participated by youth from across the country.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Faith Formation Cluster (FFC)",
+		"Cluster": ["Faith Formation Cluster (FFC)"],
 		"Name": "Ateneo Student Catholic Action ",
 		"Abbreviation": "AtSCA",
 		"Tagline": "Para sa Diyos. Para sa Kapwa. Para sa Bayan.",
@@ -503,10 +525,11 @@
 		"projectTitleThree": "Induction",
 		"projectDescThree": "A ceremony within a Mass that signifies AtSCAns' commitment to love and serve God and society through rootedness in spirituality, involvement in social advocacy, & genuine concern for the poor.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Faith Formation Cluster (FFC)",
+		"Cluster": ["Faith Formation Cluster (FFC)"],
 		"Name": "Youth For Christ - Ateneo",
 		"Abbreviation": "YFC-A",
 		"Tagline": "\u201cBeing and bringing Christ wherever we go.\u201d",
@@ -525,10 +548,11 @@
 		"projectTitleThree": "Worship Day",
 		"projectDescThree": "Worship Day is an event that showcases different avenues of worship, such as song, dance, spoken word, and bible reflection.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Faith Formation Cluster (FFC)",
+		"Cluster": ["Faith Formation Cluster (FFC)"],
 		"Name": "Ateneo College Ministry Group",
 		"Abbreviation": "ACMG",
 		"Tagline": "Amare et servire, ad majorem Dei gloriam! (Love and serve, for the greater glory of God!)",
@@ -547,10 +571,11 @@
 		"projectTitleThree": "SHIBA (Salamat, Hesus, It's Biyernes Again)",
 		"projectDescThree": "This is part of ACMG Formation. With kumustahan, Bible passages, reflection, and sharing, it is a safe space for members to connect with one another and God as we foster being Kabarkada kay Kristo.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Health and Environment Cluster (HEC)",
+		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "Loyola Mountaineers",
 		"Abbreviation": "LM",
 		"Tagline": "Learn Through Adventure",
@@ -569,10 +594,11 @@
 		"projectTitleThree": "CARefor (Community Action for Reforestation)",
 		"projectDescThree": "CARefor is a reforestation movement that seeks to replenish lost trees along with LM's Adopt-a-Tree, a fund-raising project within the LS campus.\n",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Health and Environment Cluster (HEC)",
+		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "Institute of Skin Divers of Ateneo",
 		"Abbreviation": "ISDA",
 		"Tagline": "We dive for the seas",
@@ -591,10 +617,11 @@
 		"projectTitleThree": "Advanced Underwater Courses (AUCs)",
 		"projectDescThree": "AUCs are learning opportunities headed by members and resources speakers for members to bond and further their skills as skin divers. We constantly encourage growth and development in the member base.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Health and Environment Cluster (HEC)",
+		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "The Pre-Medical Society of the Ateneo",
 		"Abbreviation": "The PMSA",
 		"Tagline": "No other org has lives on the line.",
@@ -613,10 +640,11 @@
 		"projectTitleThree": "First Aid Training",
 		"projectDescThree": "First Aid Training is a seminar-workshop to give members some first-aid basics. Members who complete this training become a part of Blue Cross, the premier student-led first-aider group of the PMSA.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Health and Environment Cluster (HEC)",
+		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "Ateneo Environmental Science Society",
 		"Abbreviation": "AESS",
 		"Tagline": "A Force for Nature",
@@ -635,10 +663,11 @@
 		"projectTitleThree": "Food Security Forum (TALAB)",
 		"projectDescThree": "The Food Security Forum gives Ateneans a holistic understanding of food resource management in the context of climate change by inviting speakers from different sectors to talk about this issue.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Health and Environment Cluster (HEC)",
+		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "Ateneo Peers ",
 		"Abbreviation": "",
 		"Tagline": "Helping others help themselves.",
@@ -657,10 +686,11 @@
 		"projectTitleThree": "The Mentorship Program",
 		"projectDescThree": "The Mentorship Program serves as a support in helping new members learn more about our organization, themselves, and others, with the guidance of an experienced member of Ateneo Peers as a mentor.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Intercultural Relations Cluster (IRC)",
+		"Cluster": ["Intercultural Relations Cluster (IRC)"],
 		"Name": "Ateneo Hinomoto",
 		"Abbreviation": "Hino",
 		"Tagline": "",
@@ -679,10 +709,11 @@
 		"projectTitleThree": "Tea Ceremony",
 		"projectDescThree": "Relax and experience how an authentic Japanese tea ceremony is done with snacks and good company.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Intercultural Relations Cluster (IRC)",
+		"Cluster": ["Intercultural Relations Cluster (IRC)"],
 		"Name": "Ateneo Lingua Ars Cultura",
 		"Abbreviation": "ALAC",
 		"Tagline": "#MakeYourMark",
@@ -701,10 +732,11 @@
 		"projectTitleThree": "ARTiculation",
 		"projectDescThree": "ARTiculation is a week-long interactive arts-centric event meant to showcase various local contemporary forms of art, through various activities and workshops with professionals.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Intercultural Relations Cluster (IRC)",
+		"Cluster": ["Intercultural Relations Cluster (IRC)"],
 		"Name": "Baybayin Ateneo",
 		"Abbreviation": "",
 		"Tagline": "Laging Para sa Bayan / Makinig Tumindig",
@@ -723,10 +755,11 @@
 		"projectTitleThree": "Cultural Trip",
 		"projectDescThree": "A cultural trip is any outing executed within the Philippines that aims to ingrain profound understanding and appreciation of the Filipino culture.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Intercultural Relations Cluster (IRC)",
+		"Cluster": ["Intercultural Relations Cluster (IRC)"],
 		"Name": "Ateneo Celadon",
 		"Abbreviation": "CLDN",
 		"Tagline": "Sharing Culture, Living Stories",
@@ -745,14 +778,15 @@
 		"projectTitleThree": "Binondo Amazing Race",
 		"projectDescThree": "Through the challenging yet exciting Binondo Amazing Race, Celadoneans and non-Celadoneans alike venture to Binondo and its vicinities in a culture-themed journey.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Intercultural Relations Cluster (IRC)",
+		"Cluster": ["Intercultural Relations Cluster (IRC)"],
 		"Name": "Ateneo Student Exchange Council",
 		"Abbreviation": "ASEC",
 		"Tagline": "#ASECONNECT",
-		"Website": "( no \"www.\") asec.ateneo.edu",
+		"Website": "asec.ateneo.edu",
 		"Facebook": "www.facebook.com/officialASEC",
 		"Twitter": "www.twitter.com/ASECWorld",
 		"Instagram": "www.instagram.com/asec.evolve/?hl=en",
@@ -767,14 +801,15 @@
 		"projectTitleThree": "Cultural-Themed Party",
 		"projectDescThree": "Drawing inspiration from international festivals, our Cultural-Themed Party (CTP) is a one-night event where participants get to recreate famous celebrations from all around the world.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Media and Creative Arts Cluster (MCA)",
+		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
 		"Name": "Ateneo Musicians' Pool",
 		"Abbreviation": "AMP",
 		"Tagline": "Bigger than the Sound",
-		"Website": "http://www.ateneomusicianspool.com/   (however do not include www. as it bugs when doing so)",
+		"Website": "http://www.ateneomusicianspool.com/",
 		"Facebook": "https://www.facebook.com/ateneomusicianspool",
 		"Twitter": "https://www.twitter.com/AMPateneo",
 		"Instagram": "https://www.instagram.com/ateneomusicianspool/",
@@ -789,10 +824,11 @@
 		"projectTitleThree": "AMPlugged",
 		"projectDescThree": "AMPlugged is a yearlong project that focuses on garnering more exposure and engagement for AMP\u2019s artists through video production; namely, music videos and interviews.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Media and Creative Arts Cluster (MCA)",
+		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
 		"Name": "Loyola Film Circle",
 		"Abbreviation": "LFC",
 		"Tagline": "Passion through film.",
@@ -811,10 +847,11 @@
 		"projectTitleThree": "IsaPelikula Film Workshop Series and Competition",
 		"projectDescThree": "IsaPelikula is a series of classes on production held by established professionals in the local film industry. Members create their own films based on the tasks given throughout the classes.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Media and Creative Arts Cluster (MCA)",
+		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
 		"Name": "Ateneo Collegiate Society of Advertising",
 		"Abbreviation": "CoSA",
 		"Tagline": "Live Creative!",
@@ -833,10 +870,11 @@
 		"projectTitleThree": "Creative Leadership Camp",
 		"projectDescThree": "A 3-Day Leadership Training seminar engaging members who are aspiring to become leaders in the organization, and empowering them to develop their communication and leadership skills.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Media and Creative Arts Cluster (MCA)",
+		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
 		"Name": "Ateneo Association of Communication Majors ",
 		"Abbreviation": "Ateneo ACOMM",
 		"Tagline": "No Place Like COM",
@@ -855,10 +893,11 @@
 		"projectTitleThree": "Media Month",
 		"projectDescThree": "Media Month, through month-long initiatives, aims to showcase ACOMM\u2019s core competencies namely media discipline and practice, and AB Communication\u2019s four tracks to form excellent media practitioners.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Performing Arts Cluster (PAC)",
+		"Cluster": ["Performing Arts Cluster (PAC)"],
 		"Name": "Company of Ateneo Dancers",
 		"Abbreviation": "CADs",
 		"Tagline": "Groove. Glory. God. Astroboy!",
@@ -877,10 +916,11 @@
 		"projectTitleThree": "Year-End Concert (YEC)",
 		"projectDescThree": "YEC is a major production open to the public, where all efforts are directed toward meaningful dance production. It culminates the year and captures the creativity, talent, and passion of each member.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Performing Arts Cluster (PAC)",
+		"Cluster": ["Performing Arts Cluster (PAC)"],
 		"Name": "Ateneo de Manila College Glee Club",
 		"Abbreviation": "ACGC",
 		"Tagline": "",
@@ -899,10 +939,11 @@
 		"projectTitleThree": "Season Highlight",
 		"projectDescThree": "The Season Highlight is one of ACGC\u2019s most anticipated events. Members and alumni come together through a choral-orchestra concert to advocate for social change and share the beauty of the music.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Performing Arts Cluster (PAC)",
+		"Cluster": ["Performing Arts Cluster (PAC)"],
 		"Name": "Tanghalang Ateneo",
 		"Abbreviation": "TA",
 		"Tagline": "Eloquentia. Sapienta. Humanitas.",
@@ -921,10 +962,11 @@
 		"projectTitleThree": "Mainstage Productions",
 		"projectDescThree": "Mainstage productions are the heart of our organization. We build, collaborate, and deliver quality performances that tackle relevant issues in society, made to call its audiences to think critically.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Performing Arts Cluster (PAC)",
+		"Cluster": ["Performing Arts Cluster (PAC)"],
 		"Name": "Ateneo Blue Repertory",
 		"Abbreviation": "blueREP",
 		"Tagline": "Be anything, be blueREP!",
@@ -943,10 +985,11 @@
 		"projectTitleThree": "Gigs",
 		"projectDescThree": "The gigs of blueREP are short performances made in collaboration with other organizations, encouraging members to explore the three competencies outside of their regular productions.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Science and Technology Cluster (STC)",
+		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo Psyche",
 		"Abbreviation": "",
 		"Tagline": "Where people come first.",
@@ -965,15 +1008,16 @@
 		"projectTitleThree": "RED Letter Day",
 		"projectDescThree": "RED Letter Day is a Valentine\u2019s Day themed talk that aims to discuss the importance of Respect, Equality, and Diversity. We expound on these by delving into different contexts every year.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Science and Technology Cluster (STC)",
+		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo Electronics and Computer Engineering Society",
 		"Abbreviation": "AECES",
 		"Tagline": "Enhancing. Transforming. Adapting.",
 		"Website": "",
-		"Facebook": "www.facebook.com/aeces\nwww.facebook.com/ateneoaeces ",
+		"Facebook": "www.facebook.com/aeces",
 		"Twitter": "",
 		"Instagram": "",
 		"Description": "\"The Ateneo Electronics and Computer Engineering Society, the sole and premier engineering organization of the Ateneo, provides meaningful avenues for its members to engage and grow as leaders and tech enthusiasts ready to adapt to a changing world. By utilizing a member-oriented approach and improving the project management system, the organization fosters an active community that empowers skill development, leadership, and solidarity geared towards social service. AECES aims to reconstruct the current system to be able to adapt to the new changes happening around with a blueprint that slowly forms our future plans: Enhancing our efforts and projects, transforming our systems and adapting to the necessary changes this pandemic entails. Enhancing. Transforming. Adapting.\"",
@@ -987,10 +1031,11 @@
 		"projectTitleThree": "AECES Week",
 		"projectDescThree": "AECES week is a week-long project that allows bonding for all AECES members. It is a place to sleep, play music, and even play video games. Then an Open Mic Session is done at the end of the week.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Science and Technology Cluster (STC)",
+		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo Chemistry Society",
 		"Abbreviation": "ACheS",
 		"Tagline": "Creating Bonds",
@@ -1009,10 +1054,11 @@
 		"projectTitleThree": "Kimikamahika (KKM)",
 		"projectDescThree": "Kimikamahika (KKM) is a year-long initiative of the organization that aims to make children appreciate Science through a Magic show of an array of experiments, and revealing the Chemistry behind them.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Science and Technology Cluster (STC)",
+		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo League of Physicists",
 		"Abbreviation": "LeaPs",
 		"Tagline": "Bring It Home",
@@ -1031,14 +1077,15 @@
 		"projectTitleThree": "PQB (Physics Quiz Bee) ",
 		"projectDescThree": "The quiz bee is an avenue for non-physics majors to showcase their physics competency. Participants are made to answer increasingly harder questions as we try to find who the physics king is.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Science and Technology Cluster (STC)",
+		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Computer Society of Ateneo",
 		"Abbreviation": "CompSAt",
 		"Tagline": "",
-		"Website": "www.compsat.org/",
+		"Website": "www.compsat.org",
 		"Facebook": "www.facebook.com/CompSAteneo/",
 		"Twitter": "www.twitter.com/CompSAt",
 		"Instagram": "www.instagram.com/compsatgear/",
@@ -1053,10 +1100,11 @@
 		"projectTitleThree": "CompSAt eSports",
 		"projectDescThree": "CompSAt eSports consist of tournaments spread throughout the year. Participants compete in tournaments that will feature various video game titles and get the chance to win prizes.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Science and Technology Cluster (STC)",
+		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo Mathematics Society",
 		"Abbreviation": "AMS",
 		"Tagline": "\u201cWhere everybody counts\u201d",
@@ -1075,10 +1123,11 @@
 		"projectTitleThree": "Sports Week",
 		"projectDescThree": "Sports Week is a week-long event for AMS members. There is a \u201ctambay week\u201d where members can get to know one another, study, etc. There is also a sportsfest that anyone in the org can participate in.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Science and Technology Cluster (STC)",
+		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo Management Information Systems Association",
 		"Abbreviation": "MISA",
 		"Tagline": "",
@@ -1097,10 +1146,11 @@
 		"projectTitleThree": "Collaboration Laboratory (Co-Lab)",
 		"projectDescThree": "One of the pioneer initiatives of Ateneo MISA, \u201cCo-Lab\u201d aims for advocating Information Management to a variety of sectors by providing Microsoft Office training and coding tutorials. ",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Science and Technology Cluster (STC)",
+		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo Biological Organization - eXplore.eXperience.eXcel.",
 		"Abbreviation": "Ateneo BOx",
 		"Tagline": "Appreciating life in all forms.",
@@ -1119,10 +1169,11 @@
 		"projectTitleThree": "Open Mic Night",
 		"projectDescThree": "In this event, BOx members further promote our org advocacies by showcasing their talents to our fellow BOx and LS community. Proceeds from this event are donated to a chosen beneficiary organization.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Sector-Based Cluster (SBC)",
+		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "TUGON Ateneo",
 		"Abbreviation": "TUGON",
 		"Tagline": "No excuse for Child Abuse",
@@ -1141,10 +1192,11 @@
 		"projectTitleThree": "Area Visits",
 		"projectDescThree": "Weekly Area Visits give a face to the advocacy. It allows us to help the children by handling play therapy and to destigmatize the labels \u201cabandoned\u201d and \u201csexually abused\u201d in the eyes of our members.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Sector-Based Cluster (SBC)",
+		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "Ateneo Consultants for Organization Development and Empowerment",
 		"Abbreviation": "Ateneo CODE",
 		"Tagline": "For the Youth",
@@ -1163,10 +1215,11 @@
 		"projectTitleThree": "Organization Development Training",
 		"projectDescThree": "Ateneo CODE creates programs to develop its members into effective, deliberate, and co-creative Organization Development practitioners, who are able to apply their skills both within and beyond CODE.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Sector-Based Cluster (SBC)",
+		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "Ateneo Education Geared Towards Empowerment",
 		"Abbreviation": "Ateneo EDGE",
 		"Tagline": "Love learning ",
@@ -1176,7 +1229,7 @@
 		"Instagram": "www.instagram.com/ateneoedge?igshid=1lxb9sd8l7sxc",
 		"Description": " Ateneo EDGE is a sector based organization that advocates for social justice through promoting education as a tool for empowerment. We reach out to children from the Marikina Heights community and teach them supplementary English, Mathematics, and life skills. It is our goal to help them academically, with  fun and interactive modules, to empower them and boost their confidence as individuals. Learning is not limited to the classroom; hence, different opportunities to learn are given:  field trips and alternative class programs. We promote education as a right and not a privilege, since people are more empowered when given equal opportunities. We advocate for awareness of the power of education not only for the children in our partner communities, but also to the Loyola Schools community.",
 		"Advocacy": "As Ateneo EDGE prides itself on the advocacy of providing a fun, learning experience for the community children, we innovate activities that the children will not just learn from, but will also empower them.  With the looming problems in our educational system, we reach out to the youth in the Marikina Heights Community and not just provide fun learning experiences, but encourage them to use their voice and take up space in society.",
-		"Core": "-Community Centeredness: We are very close to our partner community. Whatever the circumstances, we strive to stay connected, and do everything with and for them. \n-Member Development: Members are the future leaders of the organization so we try to tap into each person\u2019s skills to help them grow in the org, and continue to serve in the coming years.\n-Socio-Political Response: Educational inequality is a political issue. We promote safe spaces for discourse on education related issues and the safety of our youth, to learn about these and understand how our advocacy can help.\n-Research and Development: All projects we do, whether for the community or for the members are based on research and feedback. We always get feedback for improvement of long-term projects and goals.",
+		"Core": "#NAME?",
 		"Awards": "",
 		"projectTitleOne": "Area Engagements ",
 		"projectDescOne": "We go to the community to tutor kids, with modules to aid in learning. New normal won\u2019t compromise a fun learning experience; We\u2019ll expand & tackle practical skills alongside academics.",
@@ -1185,10 +1238,11 @@
 		"projectTitleThree": "Kapihan ",
 		"projectDescThree": "Kapihan is a discussion-centered event about a social issue or topic that is relevant today. It produces meaningful discourse with fellow members, gearing towards a better understanding of the world.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Sector-Based Cluster (SBC)",
+		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "Ateneo Gabay",
 		"Abbreviation": "GABAY",
 		"Tagline": "\"Para sa Patuloy na Pagtataya.\"",
@@ -1207,10 +1261,11 @@
 		"projectTitleThree": "Kulito",
 		"projectDescThree": "Kulito is the gadfly of Ateneo Gabay that buzzes around to raise awareness on socio-political issues happening at present from the perspective of education and beyond.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Sector-Based Cluster (SBC)",
+		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "Barefoot Philippines",
 		"Abbreviation": "Barefoot",
 		"Tagline": "\u201cTo nation building, one child at a time.\u201d",
@@ -1229,10 +1284,11 @@
 		"projectTitleThree": "Fundraiser X",
 		"projectDescThree": "As an organization in support of UNICEF, FundX is dedicated to raise funds for UNICEF. It is a week-long event where Ateneans get the opportunity to donate and learn more about their specific efforts.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Sector-Based Cluster (SBC)",
+		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "Ateneo Special Education Society",
 		"Abbreviation": "Ateneo SPEED",
 		"Tagline": "Always for a more inclusive society",
@@ -1251,10 +1307,11 @@
 		"projectTitleThree": "Spectrum",
 		"projectDescThree": "Spectrum is a year-long fundraising effort that focuses on selling merchandise designed by PWSNs and Speple. It shows the core values of SPEED to spread the advocacy and show their talents and skills.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Sector-Based Cluster (SBC)",
+		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "Musmos Ateneo",
 		"Abbreviation": " MUSMOS",
 		"Tagline": "Pangarap, hindi panaginip",
@@ -1273,10 +1330,11 @@
 		"projectTitleThree": "Siklab",
 		"projectDescThree": "Siklab is an overnight camp for the junior leaders (aged 13-14 years old) from both Katipunan and Cubao partner communities serving in Musmos with leadership and camaraderie as the primary goals.\n",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Sector-Based Cluster (SBC)",
+		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "Kythe-Ateneo",
 		"Abbreviation": "Kythe ",
 		"Tagline": "Manifesting Healing through Simple Sharing and Togetherness",
@@ -1295,10 +1353,13 @@
 		"projectTitleThree": "Hospital Modules",
 		"projectDescThree": "\u202aKythe-Ateneo\u2019s Hospital Activities aim to provide psychosocial support, holistic growth, and a normal childhood to its kids despite the limitations that they face in a hospital setting.\u202c",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "COA"
 	},
 	{
-		"Cluster": "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)",
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
 		"Name": "Ateneo Student Judicial Court",
 		"Abbreviation": "",
 		"Tagline": "",
@@ -1317,10 +1378,13 @@
 		"projectTitleThree": "Code of Internal Procedures Competition",
 		"projectDescThree": "The competition is a creative and dynamic method of testing members' knowledge of the Code of Internal Procedures, which explores the duties and responsibilities expected of members of the SJC.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "Student Groups"
 	},
 	{
-		"Cluster": "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)",
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
 		"Name": "Department of Student Welfare and Services",
 		"Abbreviation": "DSWS",
 		"Tagline": "Doing Service With a Smile.",
@@ -1339,10 +1403,13 @@
 		"projectTitleThree": "Front Desk Shifting",
 		"projectDescThree": "DSWS platforms its members to experience a legitimate work environment through front desk shifting. With this, they can interact with fellow students by addressing their needs and providing solutions.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "Student Groups"
 	},
 	{
-		"Cluster": "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)",
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
 		"Name": "Ateneo AEGIS",
 		"Abbreviation": "AEGIS",
 		"Tagline": "Leave your mark.",
@@ -1361,10 +1428,13 @@
 		"projectTitleThree": "Photo Distribution",
 		"projectDescThree": "Hard and framed copies of the seniors' photos taken from the photoshoot are distributed accordingly. This occurs towards the end of the semester, ahead of the yearbook's release.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "Student Groups"
 	},
 	{
-		"Cluster": "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)",
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
 		"Name": "Loyola Schools Office of the Ombudsman",
 		"Abbreviation": "OMB",
 		"Tagline": "Scrutoni Convenire Sepire",
@@ -1374,7 +1444,7 @@
 		"Instagram": "",
 		"Description": "The Loyola Schools Office of the Ombudsman is in-charge of facilitating the check and balance of the Sanggunian and ensure accountability from its members and officers. Alongside the Student Judicial Court and the Commission on Audit, as necessary, to render the accountability of the Sanggunian, its units and its members. We in the Ombudsman do this through adopting our own Code of Internal Procedures, delegating our members authorities to ensure the effective exercises of powers, duties, and responsibilities within the Office, and investigating at our own discretion or on complaint, request official documents and/or testimony from members of the Sanggunian. All of these are done through pursuing legal actions and/or prosecution.",
 		"Advocacy": "Fide Veritates (Faith in the Truth)",
-		"Core": "- Investigation\n- Representation\n- Accountability",
+		"Core": "#NAME?",
 		"Awards": "",
 		"projectTitleOne": "Investigation Seminar",
 		"projectDescOne": "The Investigation Seminar is a prerequisite for all interested Mock Trial participants. In this event, participants are taught the basics of conducting investigations.",
@@ -1383,10 +1453,13 @@
 		"projectTitleThree": "Legal Writing Seminar",
 		"projectDescThree": "The Legal Writing Seminar is aimed towards students interested in the legal profession, by giving them an opportunity to learn how to write like a lawyer and understand the legal jargons and parlance.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "Student Groups"
 	},
 	{
-		"Cluster": "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)",
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
 		"Name": "Council of Organizations of the Ateneo - Manila",
 		"Abbreviation": "COA-M",
 		"Tagline": "Always in Service",
@@ -1405,10 +1478,13 @@
 		"projectTitleThree": "COA National Awards",
 		"projectDescThree": "This is a year-end awards ceremony, where organizations are recognized for their initiatives for the past year. This is a nationwide event, as orgs from other Ateneo campuses are also recognized.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "Student Groups"
 	},
 	{
-		"Cluster": "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)",
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
 		"Name": "Loyola Schools Office of Placement and Career Services",
 		"Abbreviation": "LSOPCS",
 		"Tagline": "Helping you put the pieces together",
@@ -1427,14 +1503,17 @@
 		"projectTitleThree": "Interview Performance Appraisal and Development (IPAD)",
 		"projectDescThree": "IPAD is an event that simulates the experience of an actual job interview. HR representatives from top companies conduct mock interviews to give feedback, train and even potentially hire students.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "Student Groups"
 	},
 	{
-		"Cluster": "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)",
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
 		"Name": "Ateneo Commission on Elections",
 		"Abbreviation": "COMELEC",
 		"Tagline": "With integrity at heart ",
-		"Website": " www.comelecls.wixsite.com/ateneocomelec",
+		"Website": "www.comelecls.wixsite.com/ateneocomelec",
 		"Facebook": "www.facebook.com/ateneocomelec",
 		"Twitter": "www.twitter.com/AteneoCOMELEC",
 		"Instagram": "",
@@ -1449,10 +1528,13 @@
 		"projectTitleThree": "Special Elections",
 		"projectDescThree": "It is defined as elections organized to fill up vacant positions due to a lack of candidates, and also as a remedy to abstention.",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "Student Groups"
 	},
 	{
-		"Cluster": "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)",
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
 		"Name": "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila",
 		"Abbreviation": "Sanggu",
 		"Tagline": "#OurSanggu ",
@@ -1471,10 +1553,11 @@
 		"projectTitleThree": "One Big Pride",
 		"projectDescThree": "One Big Pride is  Sanggu\u2019s way  to send a message and continue the fight for structural change for gender equality in the Philippines. ",
 		"Vision": "",
-		"Mission": ""
+		"Mission": "",
+		"Body": "Student Groups"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Lifestyle"],
 		"Name": "FIT",
 		"Abbreviation": "",
 		"Tagline": "Your community for fitness and wellness",
@@ -1493,10 +1576,11 @@
 		"projectTitleThree": "",
 		"projectDescThree": "",
 		"Vision": "We envision a strong and devoted fitness community that supports everyone\u00e2\u20ac\u2122s goal of self-improvement no matter what stage of fitness they\u00e2\u20ac\u2122re in and has complete access to the proper tools and knowledge for their goals.",
-		"Mission": "Our mission is to provide programs, diet plans and support that every fitness enthusiast or gym goer needs through projects and team building activities geared to promote a health and wellness to its community"
+		"Mission": "Our mission is to provide programs, diet plans and support that every fitness enthusiast or gym goer needs through projects and team building activities geared to promote a health and wellness to its community",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Arts"],
 		"Name": "Blue Bird Improv",
 		"Abbreviation": "",
 		"Tagline": "Be your most authentic self.",
@@ -1515,10 +1599,11 @@
 		"projectTitleThree": "Open Workshops",
 		"projectDescThree": "A workshop for open to everyone in Ateneo to get a small taste of improv",
 		"Vision": "Blue Bird Improv seeks to introduce improvisation as a means for self-improvement inside the Ateneo campus. We seek to form confident and collaborative communicators in our members, who are at the same time capable of bringing out those values and skills in others. We also seek to bring more openness and enthusiasm to the campus and beyond through our shows and workshops. ",
-		"Mission": "Blue Bird Improv aims to provide specialized trainings and workshops to develop the improvisational skills of both members and non-members and promote personal growth. We  host shows and events that showcase the skills of our members and provide an avenue to bring entertainment to the greater community. Through this, we wish to create spaces where anyone is welcome to come as the most authentic version of themselves because anyone can do improv."
+		"Mission": "Blue Bird Improv aims to provide specialized trainings and workshops to develop the improvisational skills of both members and non-members and promote personal growth. We  host shows and events that showcase the skills of our members and provide an avenue to bring entertainment to the greater community. Through this, we wish to create spaces where anyone is welcome to come as the most authentic version of themselves because anyone can do improv.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Arts", "Culture", "Literature"],
 		"Name": "Toushin",
 		"Abbreviation": "",
 		"Tagline": "Let's get GENKI!!",
@@ -1537,10 +1622,11 @@
 		"projectTitleThree": "Tambay WEEB",
 		"projectDescThree": "a week long WEEB-SAFE event where you can hang out with good food, good games, and good company!!",
 		"Vision": "Toushin seeks to build among its members and the Loyola Schools an organization that is passionate for Japanese arts and contemporary culture, setting aside all differences to create a peaceful and accepting environment favorable of experiential growth and fun.",
-		"Mission": "Toushin seeks to build among its members and the Loyola Schools an organization that is passionate for Japanese arts and contemporary culture, setting aside all differences to create a peaceful and accepting environment favorable of experiential growth and fun."
+		"Mission": "Toushin seeks to build among its members and the Loyola Schools an organization that is passionate for Japanese arts and contemporary culture, setting aside all differences to create a peaceful and accepting environment favorable of experiential growth and fun.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Arts", "Culture", "Language", "Literature"],
 		"Name": "Blue Hanguk Society",
 		"Abbreviation": "",
 		"Tagline": "Be anything, be BlueHan!",
@@ -1559,10 +1645,11 @@
 		"projectTitleThree": "",
 		"projectDescThree": "",
 		"Vision": "Blue Hanguk Society aspires to foster a community instilled with an engaged perception of Korean culture, exploring its rich aspects through a worldview perspective in the Filipino community.",
-		"Mission": "Blue Hanguk Society serves as an organization that unites Korean culture enthusiasts from the Ateneo de Manila University while upholding the Filipino identity to healthily open avenues for the celebration of Korean culture."
+		"Mission": "Blue Hanguk Society serves as an organization that unites Korean culture enthusiasts from the Ateneo de Manila University while upholding the Filipino identity to healthily open avenues for the celebration of Korean culture.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Technology"],
 		"Name": "OpenSource",
 		"Abbreviation": "",
 		"Tagline": "Explore Tech with Us",
@@ -1581,10 +1668,11 @@
 		"projectTitleThree": "TechX",
 		"projectDescThree": "Our flagship project, TECHx is a talk and mixer event that discuss how technology is integrated in different areas of society and in our daily lives. We try to foresee the future technology intends to build.",
 		"Vision": "To be the foremost community in Ateneo that champions and advocates for technology as enabling, interdisciplinary, and inclusive.",
-		"Mission": "To provide avenues for students to broaden, advocate and apply their knowledge and appreciation of innovative, relevant, and emerging technology for themselves and their community."
+		"Mission": "To provide avenues for students to broaden, advocate and apply their knowledge and appreciation of innovative, relevant, and emerging technology for themselves and their community.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Community Development"],
 		"Name": "Project KaBUHAYan",
 		"Abbreviation": "",
 		"Tagline": "",
@@ -1603,10 +1691,11 @@
 		"projectTitleThree": "Online Market",
 		"projectDescThree": "The Online Market aims to establish a mini-mart wherein products of the partner communities will be showcased not just every weekend but, every day at online platform. It also aims to increase the  profits of their businesses in light of the situation of COVID-19.",
 		"Vision": "Project KaBUHAYan strives to become the premier student-led, nationwide organization that creates social and economic impact to MSMEs in the Philippines. ",
-		"Mission": "Project KaBUHAYan aims to encourage and provide programs that may enhance the competencies of aspiring and existing MSME entrepreneurs on entrepreneurial development and financial literacy through KaBUHAYan sessions and various student-led initiatives, consequently providing opportunities for the growth of its student advocates. "
+		"Mission": "Project KaBUHAYan aims to encourage and provide programs that may enhance the competencies of aspiring and existing MSME entrepreneurs on entrepreneurial development and financial literacy through KaBUHAYan sessions and various student-led initiatives, consequently providing opportunities for the growth of its student advocates. ",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Culture", "Design"],
 		"Name": "Mokoa Animation Studio",
 		"Abbreviation": "",
 		"Tagline": "Moving together, one frame at a time",
@@ -1625,10 +1714,11 @@
 		"projectTitleThree": "Weekly Show-off Jump!",
 		"projectDescThree": "An optional activity that prompts members weekly to write, illustrate, animate, or voice act under a certain theme. Submissions for the week will be displayed on our online hub and social media accounts with the approval of our members.",
 		"Vision": "Mokoa, as an organization, aspires to create a community for artists and animation enthusiasts to give ample representation to the art of animation. Through the production of animation, Mokoa strives to extend the art and its message to the audience it may reach, instilling a sense of appreciation for the medium and its creators",
-		"Mission": "To bring artists, storytellers, and other animation enthusiasts together to celebrate animation as a medium of expression, form a community that helps develop its members\u00e2\u20ac\u2122 skills through collaborations and projects, and contribute to the formation of a unique identity for Philippine animation by engaging in the process of animation production"
+		"Mission": "To bring artists, storytellers, and other animation enthusiasts together to celebrate animation as a medium of expression, form a community that helps develop its members\u00e2\u20ac\u2122 skills through collaborations and projects, and contribute to the formation of a unique identity for Philippine animation by engaging in the process of animation production",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Arts", "Culture", "Literature"],
 		"Name": "WriterSkill ",
 		"Abbreviation": "",
 		"Tagline": "Excellence in Progress",
@@ -1647,10 +1737,11 @@
 		"projectTitleThree": "WriterSpeac",
 		"projectDescThree": "WriterSpeac is the organization's annual open mic event wherein members may perform dramatic readings of literary works or their own writing, musical acts, and even stand-up comedy. The event encourages confidence and creativity in one's own craft by sharing it with friends and peers in the org who've shared their journey.",
 		"Vision": "WriterSkill envisions a community of writers that aims to share its members' passion for writing and literature not only within itself but also with the outside world. The organization aspires to raise interest for writing and literature in general, with the greater aims of social involvement and responsible advocacy through writing, in support of the country and geared towards progressive nation building.",
-		"Mission": "WriterSkill, driven by its desire to realize its members' writing potential in the four genres of Fiction, Non-Fiction, Poetry, and Drama, as well as in various other literary forms, strives to aid each member in recognizing and developing their capacity for excellence in writing and critiquing through the implementation of various relevant programs, projects, and events."
+		"Mission": "WriterSkill, driven by its desire to realize its members' writing potential in the four genres of Fiction, Non-Fiction, Poetry, and Drama, as well as in various other literary forms, strives to aid each member in recognizing and developing their capacity for excellence in writing and critiquing through the implementation of various relevant programs, projects, and events.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Arts", "Culture", "Design"],
 		"Name": "Blue Indie Komiks",
 		"Abbreviation": "",
 		"Tagline": "Linking People Through Komiks",
@@ -1669,10 +1760,11 @@
 		"projectTitleThree": "BLINK Originals",
 		"projectDescThree": "Every school year, BLINK gives our members the opportunity to work alongside us in creating their own original komik. At the end of the first semester, we accept pitches from our members, which serve as the starting point for their original komiks. For the following three months, we guide our members through the process of turning their komik from idea to reality. After the komiks have been made, we choose one to publish on our Facebook page, as well as in print!",
 		"Vision": "Blue Indie Komiks envisions itself as a community of komik creators and appreciators, that then acts as a positive forcein the greater komiks community. We strive to involve and emphasize our members in the creation of engaging and meaningful content \u00e2\u20ac\u201c content that then serves to expand the perspectives of those within and outside our community. Creating Komiks BLINK envisions the creation of its Komiks as a cooperative act that takes place in an engaging, active environment. This environment will encourage members to work together to create Komiks that promote and display Filipino artistry and Philippine Culture. Through this cooperative act, the members will develop new skills and mindsets, which will then aid them in applying their creativity to any and all tasks they might face. Appreciating Komiks Through the active creation, consumption, and sharing of Komiks and Komiks-related media, it is envisioned that the members of BLINK will be able to deepen their understanding and appreciation of Komiks. This deepened understanding and appreciation will propel the members of BLINK to promote Komiks to others outside of the organization, thus allowing more people to appreciate and consume Komiks.",
-		"Mission": "Blue Indie Komiks achieves its vision by providing projects and opportunities to its members to explore the different aspects of komik creation. Through these varied projects, BLINK members attain the skills necessary to produce komiks that have the capacity to speak beyond the Ateneo community."
+		"Mission": "Blue Indie Komiks achieves its vision by providing projects and opportunities to its members to explore the different aspects of komik creation. Through these varied projects, BLINK members attain the skills necessary to produce komiks that have the capacity to speak beyond the Ateneo community.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Adventure", "Culture", "Lifestyle"],
 		"Name": "THINC",
 		"Abbreviation": "",
 		"Tagline": "Roll with us!",
@@ -1691,10 +1783,11 @@
 		"projectTitleThree": "Tabletop Weekly",
 		"projectDescThree": "A chill weekly gathering where people can drop by at any time, play board games provided by us, and bring their own board games and card games for other people to try out.",
 		"Vision": "To foster a leading community for interested individuals to freely discover, share, and enjoy various tabletop hobbies under the welcoming camaraderie of both old and new tabletop enthusiasts. We aim to explore further the positives that tabletop interests can explore as a medium such as social utility, psychological benefits, cultural relevance and trends, fine arts, and national identity.",
-		"Mission": "To provide a space for a community to explore, discover, and appreciate various tabletop hobbies. We strive to create a healthy and safe social atmosphere where people can freely share hobbies and interests with respect and camaraderie towards each other. We push for the exploration and sharing of tabletop interests as a medium for personal growth, analytic thinking, stress relief, and forging healthy relationships."
+		"Mission": "To provide a space for a community to explore, discover, and appreciate various tabletop hobbies. We strive to create a healthy and safe social atmosphere where people can freely share hobbies and interests with respect and camaraderie towards each other. We push for the exploration and sharing of tabletop interests as a medium for personal growth, analytic thinking, stress relief, and forging healthy relationships.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Business", "Education"],
 		"Name": "Junior Fellowship for Financial Literacy",
 		"Abbreviation": "",
 		"Tagline": "Elevating Financial Literacy",
@@ -1713,10 +1806,11 @@
 		"projectTitleThree": "J Flip",
 		"projectDescThree": "JFeL's exclusive investing mentorship program that focuses on the basics and foundations of investing. Both mentors and mentees will be provided with modules to accompany their teaching/learning. Its goal is to produce financially literate individuals who are able to spot and take advantage of opportunities in the financial markets.",
 		"Vision": "To create a nation of financially proficient citizens who are able to apply their knowledge to their everyday situations. ",
-		"Mission": "To equip both its members, as well as people outside the organization, with sound Financial skills to utilize in everyday Financial situations through its various talks, training seminars, an programs."
+		"Mission": "To equip both its members, as well as people outside the organization, with sound Financial skills to utilize in everyday Financial situations through its various talks, training seminars, an programs.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Home Org", "Technology"],
 		"Name": "BYTE",
 		"Abbreviation": "",
 		"Tagline": "Building Young Tech Entrepreneurs ",
@@ -1735,10 +1829,11 @@
 		"projectTitleThree": "ITECH",
 		"projectDescThree": "An online platform where BYTE members can access various resources that supplement their learning of ITE's 3Hs \u00e2\u20ac\u201d Hacker, Hipster, Hustler. ",
 		"Vision": "BYTE envisions itself to be a technological and entrepreneurial network spearheaded by existing and potential catalysts for change.",
-		"Mission": "BYTE cultivates young entrepreneurs who create innovative and technological solutions that strive for nation-building."
+		"Mission": "BYTE cultivates young entrepreneurs who create innovative and technological solutions that strive for nation-building.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["International", "Spiritual"],
 		"Name": "RC LIFE - Loyola",
 		"Abbreviation": "",
 		"Tagline": "Love Inspired by Faith & Encounter",
@@ -1757,10 +1852,11 @@
 		"projectTitleThree": "Evangelization Missions",
 		"projectDescThree": "Members and visitors will be visiting a marginalized community where they will conduct catechism for the children as well as bible sharing through house-to-house visits.",
 		"Vision": "The vision of RC LIFE is to give the Church in the Philippines passionate young professionals for Christ and His mission.",
-		"Mission": "The mission of RC LIFE is to form the members in a way of life that will enable them to be leader-apostles of the New Evangelization, inspired by faith and encounter."
+		"Mission": "The mission of RC LIFE is to form the members in a way of life that will enable them to be leader-apostles of the New Evangelization, inspired by faith and encounter.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Community Development", "Design", "Education"],
 		"Name": "Project LAAN",
 		"Abbreviation": "",
 		"Tagline": "Fighting Poverty Through Health",
@@ -1779,10 +1875,18 @@
 		"projectTitleThree": "LiPHad",
 		"projectDescThree": "Lessons in Public Health Advocacy - LiPHad: Lessons in Public Health Advocacy is a series of campaigns that aims to tackle sectors and issues beyond the traditionally medical perspective of public health. The campaigns' goal is to identify the pressing issues being faced by these sectors and how the UHC Law affects them. The campaign will have three phases based on issues relevant to the Ateneo Loyola Schools community: environment and disaster management, gender and sexuality, and mental health.",
 		"Vision": "Project LAAN envisions a society where every Filipino, especially the poor and vulnerable, has adept knowledge on public health and is empowered to make informed and appropriate health decisions.",
-		"Mission": "Project LAAN aims to instill and promote public health advocacy, health literacy, and patient empowerment to its partner communities and members."
+		"Mission": "Project LAAN aims to instill and promote public health advocacy, health literacy, and patient empowerment to its partner communities and members.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": [
+			"Business",
+			"Community Development",
+			"Design",
+			"Education",
+			"International",
+			"Technology"
+		],
 		"Name": "User Experience Society",
 		"Abbreviation": "",
 		"Tagline": "",
@@ -1801,10 +1905,11 @@
 		"projectTitleThree": "UX Masters",
 		"projectDescThree": "A special event wherein we invite international speakers to give a talk on their career journey from working with small startups to big brands.",
 		"Vision": "This organization envisions itself as a community of designers, holistically formed to be people for and with others, who are passionate about solving problems in the community through human-centered design.",
-		"Mission": "UX Society empowers people through design education, enlightens them to the power of design, and nurtures them to create meaningful products for the community."
+		"Mission": "UX Society empowers people through design education, enlightens them to the power of design, and nurtures them to create meaningful products for the community.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Music"],
 		"Name": "Blue Symphony Orchestra",
 		"Abbreviation": "",
 		"Tagline": "More than an orchestra.",
@@ -1823,10 +1928,11 @@
 		"projectTitleThree": "Year-Round Gigs",
 		"projectDescThree": "Blue Symphony performs for different events both inside and outside of the Ateneo community. From weddings to concerts, from Rizal Library to PICC, Blue Symphony performs everywhere, all while showcasing the skill and talent of Blue Symphony's members. ",
 		"Vision": "The Blue Symphony Orchestra envisions itself as a community for Filipino artistry \u00e2\u20ac\u201d an organization whose primary focus is the holistic development of its members, deeply rooted in the Ignatian values of service and excellence, through musical performance, production, and arrangement.",
-		"Mission": "Our mission is to cultivate awareness and passion for orchestral music within the Ateneo community through the engagement of our audiences in orchestral performances and the growth of our members in all aspects of music competencies and character formation."
+		"Mission": "Our mission is to cultivate awareness and passion for orchestral music within the Ateneo community through the engagement of our audiences in orchestral performances and the growth of our members in all aspects of music competencies and character formation.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Community Development", "Education", "International"],
 		"Name": "Effective Altruism Blue",
 		"Abbreviation": "",
 		"Tagline": "Using reason and evidence to do the most good.",
@@ -1845,10 +1951,11 @@
 		"projectTitleThree": "EA Virtual Conference",
 		"projectDescThree": "EA Blue members have the opportunity to participate in an EA Virtual Conference. This is a gathering of the effective altruism community around the world ",
 		"Vision": "EA Blue envisions itself to be a welcoming, productive, and robust community of Ateneans who use evidence and reason to figure out how to help others as much as possible, and take action on that basis.",
-		"Mission": "Our mission is to help our members and the wider community use evidence and careful analysis to think about how they can use their careers and resources to achieve a bigger social impact."
+		"Mission": "Our mission is to help our members and the wider community use evidence and careful analysis to think about how they can use their careers and resources to achieve a bigger social impact.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Community Development", "International"],
 		"Name": "Habitat for Humanity Blue Chapter",
 		"Abbreviation": "",
 		"Tagline": "Not One Less",
@@ -1867,10 +1974,11 @@
 		"projectTitleThree": "Habitat Post",
 		"projectDescThree": "A fundraising project that sells postcards in order to build houses for a partner community",
 		"Vision": "Habitat for Humanity Blue Chapter envisions a world where everyone has a decent place to live.",
-		"Mission": "The Blue Chapter works in partnership with Habitat for Humanity Philippines by sharing their goals to eliminate poverty housing. Seeking to put God\u00e2\u20ac\u2122s love into action, Habitat for Humanity Blue Chapter brings people together to build homes, communities, and hope."
+		"Mission": "The Blue Chapter works in partnership with Habitat for Humanity Philippines by sharing their goals to eliminate poverty housing. Seeking to put God\u00e2\u20ac\u2122s love into action, Habitat for Humanity Blue Chapter brings people together to build homes, communities, and hope.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Spiritual"],
 		"Name": "Christ's Youth in Action - Blue",
 		"Abbreviation": "",
 		"Tagline": "Kay Kristo Buong Buhay Habambuhay!",
@@ -1889,10 +1997,11 @@
 		"projectTitleThree": "General Assembly",
 		"projectDescThree": "Students who are interested in getting to know the organization, whether they signed up in RecWeek or not, are encouraged to attend this event to acquaint themselves with the community and its mission.",
 		"Vision": "We envision Filipino Youth who have a growing personal relationship with Jesus Christ, who participate actively in the life and mission of the Catholic Church, and who increasingly become agents of social transformation in society.  Our vision is spelled out in what we may summarize as the 4 C\u00e2\u20ac\u2122s of CYA.  Conversion The individual makes a personal commitment to Christ, entering into a new relationship with Him, and making a decision to continue knowing, loving and serving God.  Community The individual participates more actively in the life and mission of the church. He/She also learns the importance of, and thus, commits himself/herself to be part of smaller communities in which there is mutual care, support and opportunity to serve.  Character The individual is formed and grows in Christian character, in his/her understanding of the Catholic faith, and in service to others.  Commission The individual is \u00e2\u20ac\u0153sent out\u00e2\u20ac\u009d to bear witness to the Gospel by word and example.",
-		"Mission": "To evangelize the youth and train leaders for service to the Church."
+		"Mission": "To evangelize the youth and train leaders for service to the Church.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Literature"],
 		"Name": "League of Atenean Historians (LAHi)",
 		"Abbreviation": "",
 		"Tagline": "Make History Your Story!",
@@ -1911,10 +2020,11 @@
 		"projectTitleThree": "History Talks",
 		"projectDescThree": "Have any questions that your history classes don't cover? Are you interested in hearing about the stories of people that have taken part in large historical events? Or are you just curious about the weird and funny stories about people from long ago? LAHi's got you covered here too! We've got talks from Ateneo's Department of History that scratch that history buff itch! ",
 		"Vision": "To transform the students of the Ateneo de Manila University from passive observers to cultural advocates and nation builders grounded in historicity, to contribute to the increased awareness and enrichment of the identity of the Filipino nation. Furthermore, it seeks to develop an appreciation of Philippine history in the bigger context of global history.",
-		"Mission": "The League of Atenean Historians shall serve as an important link between the Department of History and its majors, aiding in their development as responsible historians that will contribute in enriching the identity of the Filipino nation. As an Atenean organization guided by the Ignatian value of being men and women for others, God, and nation, the League of Atenean Historians shall provide projects, activities, and learning experiences that will instill in its members a sense of importance for the past, a vision for the future, and the enrichment of the present. "
+		"Mission": "The League of Atenean Historians shall serve as an important link between the Department of History and its majors, aiding in their development as responsible historians that will contribute in enriching the identity of the Filipino nation. As an Atenean organization guided by the Ignatian value of being men and women for others, God, and nation, the League of Atenean Historians shall provide projects, activities, and learning experiences that will instill in its members a sense of importance for the past, a vision for the future, and the enrichment of the present. ",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Music"],
 		"Name": "CASA",
 		"Abbreviation": "",
 		"Tagline": "",
@@ -1933,10 +2043,11 @@
 		"projectTitleThree": "Harana",
 		"projectDescThree": "CASA is bringing back the times of serenading your loved ones but as you guessed it, we're going online! We'll be taking requests from people who want us to perform a song for the special person or people in their life!",
 		"Vision": "Striving to always being prepared in facing any kind of situation that comes our way.",
-		"Mission": "We turn hardships into inspiration while fulfilling each member's passion."
+		"Mission": "We turn hardships into inspiration while fulfilling each member's passion.",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Culture", "Lifestyle", "Technology"],
 		"Name": "Loyola Gaming",
 		"Abbreviation": "",
 		"Tagline": "To Follow",
@@ -1955,10 +2066,17 @@
 		"projectTitleThree": "LG Esports Tryouts",
 		"projectDescThree": "Our team, LG Esports, has grown to be one of the highest-tier competitive teams in the collegiate esports scene. Members are given the chance to try out for the representative teams for various Esports titles like League of Legends, DotA 2, Hearthstone, Valorant, and Mobile Legends.",
 		"Vision": "Loyola Gaming seeks to channel the gaming industry\u00e2\u20ac\u2122s untapped and uncharted potential to be a positive driving force in a modern digital society.",
-		"Mission": "Loyola Gaming aims to foster a community of gamers, both within a collegiate setting and beyond, as a sterling example of the positive impacts gaming has to offer. "
+		"Mission": "Loyola Gaming aims to foster a community of gamers, both within a collegiate setting and beyond, as a sterling example of the positive impacts gaming has to offer. ",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": [
+			"Community Development",
+			"Culture",
+			"Education",
+			"International",
+			"Technology"
+		],
 		"Name": "Developer Student Clubs - Loyola",
 		"Abbreviation": "",
 		"Tagline": "Uplifting communities through technology",
@@ -1977,10 +2095,11 @@
 		"projectTitleThree": "HackFest 2020 Online",
 		"projectDescThree": "A week-long series of workshops and seminars, culminating in a two-day hackathon where students can exercise their skills in software development while making an impact on society.",
 		"Vision": "We are a community of developers that are passionate about uplifting communities through technology and innovation.",
-		"Mission": "Empower. Enlighten. Nurture"
+		"Mission": "Empower. Enlighten. Nurture",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Education", "Environment"],
 		"Name": "AGILA",
 		"Abbreviation": "",
 		"Tagline": "Your partner for animal welfare",
@@ -1999,10 +2118,11 @@
 		"projectTitleThree": "AGILA Week",
 		"projectDescThree": "This is a week-long event that aims to advocate Animal Welfare through various activities such as donation drives, talks, and many more.",
 		"Vision": "We, AGILA, envision a society that respects and advocates Animal Welfare. We aim for all animals to be ensured with caring homes and overall well-being.",
-		"Mission": "AGILA seeks to provide an avenue for Ateneans to advocate Animal Welfare through awareness campaigns and sustainable action. It seeks to instill members with compassion for animals and to equip them with the skills necessary for nurturing life. "
+		"Mission": "AGILA seeks to provide an avenue for Ateneans to advocate Animal Welfare through awareness campaigns and sustainable action. It seeks to instill members with compassion for animals and to equip them with the skills necessary for nurturing life. ",
+		"Body": "LIONS"
 	},
 	{
-		"Cluster": "",
+		"Cluster": ["Arts", "Design"],
 		"Name": "DECO",
 		"Abbreviation": "",
 		"Tagline": "Your home for graphic designers. ",
@@ -2021,6 +2141,7 @@
 		"projectTitleThree": "Design Review",
 		"projectDescThree": "",
 		"Vision": "Deco wants to see a flourishing designer community in Ateneo where design is respected as a craft and designers are united in mutual growth and development.",
-		"Mission": "We aim to create a thriving designer community and network in Ateneo, provide designers with substantial resources, support, and opportunities, train and develop creative and professional designers, and stimulate good design within the university."
+		"Mission": "We aim to create a thriving designer community and network in Ateneo, provide designers with substantial resources, support, and opportunities, train and develop creative and professional designers, and stimulate good design within the university.",
+		"Body": "LIONS"
 	}
 ]

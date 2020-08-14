@@ -6,8 +6,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:admu_recweek_app/models/user.dart';
-import 'package:admu_recweek_app/models/lions.dart';
-import 'package:admu_recweek_app/models/coa.dart';
+import 'package:admu_recweek_app/models/orgs.dart';
 
 // ignore: must_be_immutable
 class ListScreen extends StatefulWidget {
@@ -24,8 +23,7 @@ class ListScreen extends StatefulWidget {
 }
 
 class _ListScreenState extends State<ListScreen> {
-  List<LIONS> lionsList = [];
-  List<COA> coaList = [];
+  List<Orgs> orgList = [];
   List<String> strList = [];
   List<Widget> normalList = [];
   String sortStatus = 'Alphabetical';
@@ -33,96 +31,58 @@ class _ListScreenState extends State<ListScreen> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      // await loadLIONS();
-      // await loadCOA();
       await loadJSON();
     });
     super.initState();
   }
 
   loadJSON() async {
-    var lionsResult;
-    var coaResult;
+    var orgResult;
     // Getting the file path of the JSON and Decoding the file into String
-    String lions = await rootBundle.loadString('assets/data/lions.json');
-    String coa = await rootBundle.loadString('assets/data/coa.json');
-    lionsResult = json.decode(lions.toString());
-    coaResult = json.decode(coa.toString());
+    String orgs = await rootBundle.loadString('assets/data/orgs.json');
+    orgResult = json.decode(orgs.toString());
     // OUTPUT : [{name: Jan Salvador Sebastian, company: mclinica}, {name: Harvey sison, company: ateneo}, {name: Juan Dela Cruz, company: null universty}]
     // print(jsonResult);
     // We created a loop for adding the `name` and `company` to the USER class
-    for (int i = 0; i < lionsResult.length; i++) {
-      lionsList.add(LIONS(
-          lionsResult[i]['Representative'],
-          lionsResult[i]['Organization'],
-          lionsResult[i]['Org Logo (PNG)'],
-          lionsResult[i]['Description'],
-          lionsResult[i]['Advocacy'],
-          lionsResult[i]['Vision'],
-          lionsResult[i]['Mission'],
-          lionsResult[i]['Application Process'],
-          lionsResult[i]['Featured'],
-          lionsResult[i]['Photos for each event'],
-          lionsResult[i]['Tagline'],
-          lionsResult[i]['Org Photo'],
-          lionsResult[i]['Benefits'],
-          lionsResult[i]['Flagships'],
-          lionsResult[i]['Departments'],
-          lionsResult[i]['Facebook'],
-          lionsResult[i]['SocMed Handles']));
+    for (int i = 0; i < orgResult.length; i++) {
+      orgList.add(Orgs(
+          orgResult[i]['Name'],
+          orgResult[i]['Abbreviation'],
+          orgResult[i]['Tagline'],
+          orgResult[i]['Website'],
+          orgResult[i]['Facebook'],
+          orgResult[i]['Twitter'],
+          orgResult[i]['Instagram'],
+          orgResult[i]['Description'],
+          orgResult[i]['Advocacy'],
+          orgResult[i]['Core'],
+          orgResult[i]['Awards'],
+          orgResult[i]['projectTitleOne'],
+          orgResult[i]['projectDescOne'],
+          orgResult[i]['projectTitleTwo'],
+          orgResult[i]['projectDescTwo'],
+          orgResult[i]['projectTitleThree'],
+          orgResult[i]['SocMed projectDescThree'],
+          orgResult[i]['Vision'],
+          orgResult[i]['SocMed Mission'],
+          orgResult[i]['Body']));
     }
     // Sorting Area
-    lionsList.sort((x, y) =>
-        x.organization.toLowerCase().compareTo(y.organization.toLowerCase()));
-
-    for (int i = 0; i < coaResult.length; i++) {
-      coaList.add(COA(
-          coaResult[i]['Rep Email'],
-          coaResult[i]['Representative'],
-          coaResult[i]['Institution'],
-          coaResult[i]['Cluster'],
-          coaResult[i]['Name'],
-          coaResult[i]['Abbreviation'],
-          coaResult[i]['Tagline'],
-          coaResult[i]['Org E-mail'],
-          coaResult[i]['Website'],
-          coaResult[i]['Facebook'],
-          coaResult[i]['Twitter'],
-          coaResult[i]['Instagram'],
-          coaResult[i]['Write-up about the Organization'],
-          coaResult[i]['Advocacy'],
-          coaResult[i]['Core Competencies'],
-          coaResult[i]['Awards & Recognitions'],
-          coaResult[i]['President'],
-          coaResult[i]['Pres Email'],
-          coaResult[i]['Project 1'],
-          coaResult[i]['Write-up Project 1'],
-          coaResult[i]['Project 2'],
-          coaResult[i]['Write-up Project 2'],
-          coaResult[i]['Project 3'],
-          coaResult[i]['Write-up Project 3'],
-          coaResult[i]['Upload the Media ZIP File here'],
-          coaResult[i]['Member Limit?'],
-          coaResult[i]['Max Member Count']));
-    }
-
-    // Sorting Area
-    coaList
+    orgList
         .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
 
     filter();
   }
 
   filter() {
-    List<COA> coas = [];
-    List<LIONS> lions = [];
+    List<Orgs> orgs = [];
     normalList = [];
 
     // We added all the userList to the users. for the passing/getting the specific value.
-    lions.addAll(lionsList);
+    orgs.addAll(orgList);
 
     // Loop
-    lions.forEach((lion) {
+    orgs.forEach((org) {
       // Since, normalList is an WidgetArray = []
       // Here is the adding of Widget that depends on the lenght of the Array in  `users`
       normalList.add(
@@ -148,71 +108,21 @@ class _ListScreenState extends State<ListScreen> {
                 ],
           child: ListTile(
             leading: SizedBox(child: Image.asset('assets/orgs/dsc/logo.png')),
-            title: Text(lion.organization),
-            subtitle: Text("LIONS",
-                style: TextStyle(fontSize: 12, color: const Color(0xffFF801D))),
-          ),
-        ),
-      );
-      strList.add(lion.organization);
-      // print(strList);
-    });
-
-    // SetState to change the Value every time is triggers
-    setState(() {
-      // ignore: unnecessary_statements
-      normalList;
-    });
-
-    // We added all the userList to the users. for the passing/getting the specific value.
-    coas.addAll(coaList);
-    // Loop
-    coas.forEach((coa) {
-      // Since, normalList is an WidgetArray = []
-      // Here is the adding of Widget that depends on the lenght of the Array in  `users`
-      normalList.add(
-        Slidable(
-          actionPane: SlidableDrawerActionPane(),
-          actionExtentRatio: 0.25,
-          secondaryActions: imageUrl == ""
-              ? null
-              : <Widget>[
-                  IconSlideAction(
-                      iconWidget: Image.asset('assets/icons/list_bookmark.png'),
-                      onTap: () {
-                        Fluttertoast.showToast(
-                            msg: "You have bookmarked this organization",
-                            toastLength: Toast.LENGTH_SHORT,
-                            gravity: ToastGravity.BOTTOM,
-                            timeInSecForIosWeb: 1,
-                            backgroundColor: Colors.grey,
-                            textColor: Colors.white,
-                            fontSize: 16.0);
-                      },
-                      color: const Color(0xff7598FF))
-                ],
-          child: ListTile(
-            leading: SizedBox(child: Image.asset('assets/orgs/dsc/logo.png')),
-            title: Text(coa.name),
-            subtitle: Text(
-                coa.cluster == "Confederation of Publications (COP)"
-                    ? "COP"
-                    : coa.cluster ==
-                            "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
-                        ? "Student Groups"
-                        : "COA",
+            title: Text(org.name),
+            subtitle: Text(org.body,
                 style: TextStyle(
                     fontSize: 12,
-                    color: coa.cluster == "Confederation of Publications (COP)"
+                    color: org.body == "COP"
                         ? const Color(0xff002864)
-                        : coa.cluster ==
-                                "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+                        : org.body == "Student Groups"
                             ? const Color(0xff1C41B2)
-                            : const Color(0xffE84C4C))),
+                            : org.body == "LIONS"
+                                ? const Color(0xffFF801D)
+                                : const Color(0xffE84C4C))),
           ),
         ),
       );
-      strList.add(coa.name);
+      strList.add(org.name);
       // print(strList);
     });
 
@@ -329,3 +239,5 @@ class _ListScreenState extends State<ListScreen> {
     ));
   }
 }
+
+mixin dyanmic {}
