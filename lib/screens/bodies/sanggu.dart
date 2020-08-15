@@ -80,7 +80,7 @@ class _SangguScreenState extends State<SangguScreen> {
                 style: TextStyle(fontSize: 16),
               ),
               Padding(
-              padding: const EdgeInsets.only(top: 16, bottom: 8 ),
+                padding: const EdgeInsets.only(top: 24, bottom: 16 ),
                 child:Row(
                   children: <Widget>[
                     Expanded(
@@ -164,30 +164,33 @@ class _SangguScreenState extends State<SangguScreen> {
                   ],
                 ),
               ),
-              Row (
-                children: <Widget>[
-                  Expanded(
-                    child: Container(
-                      height: 5,
-                      width: MediaQuery.of(context).size.width/3,
-                      color: state == 0 ? Color(0xff295EFF) : state == 1 ? Color(0xffE5E5E5) : Color(0xffE5E5E5),
+              Padding(
+                padding: EdgeInsets.only(bottom: 24),
+                child: Row (
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                        height: 5,
+                        width: MediaQuery.of(context).size.width/3,
+                        color: state == 0 ? Color(0xff295EFF) : state == 1 ? Color(0xffE5E5E5) : Color(0xffE5E5E5),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      height: 5,
-                      width: MediaQuery.of(context).size.width/3,
-                      color: state == 0 ? Color(0xffE5E5E5) : state == 1 ? Color(0xff295EFF) : Color(0xffE5E5E5),
+                    Expanded(
+                      child: Container(
+                        height: 5,
+                        width: MediaQuery.of(context).size.width/3,
+                        color: state == 0 ? Color(0xffE5E5E5) : state == 1 ? Color(0xff295EFF) : Color(0xffE5E5E5),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      height: 5,
-                      width: MediaQuery.of(context).size.width/3,
-                      color: state == 0 ? Color(0xffE5E5E5) : state == 1 ? Color(0xffE5E5E5) : Color(0xff295EFF),
-                    ),
-                  )
-                ],
+                    Expanded(
+                      child: Container(
+                        height: 5,
+                        width: MediaQuery.of(context).size.width/3,
+                        color: state == 0 ? Color(0xffE5E5E5) : state == 1 ? Color(0xffE5E5E5) : Color(0xff295EFF),
+                      ),
+                    )
+                  ],
+                ),
               ),
               Column(
                 children: <Widget> [
