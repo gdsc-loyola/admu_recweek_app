@@ -1,3 +1,4 @@
+import 'package:admu_recweek_app/widgets/base-widget.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -32,73 +33,78 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        color: Colors.white,
-        padding: const EdgeInsets.symmetric(vertical: 150.0),
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Column(
+    return BaseWidget(builder: (context, sizeInfo) {
+      return Scaffold(
+        body: Container(
+          color: Colors.white,
+          padding: EdgeInsets.symmetric(
+              vertical: MediaQuery.of(context).size.height * 0.1),
+          child: Center(
+            child: BaseWidget(builder: (context, sizeInfo) {
+              return Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Image.asset('assets/images/logo.png'),
-                  Text(
-                    "pavilion",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 56.0,
-                        color: const Color(0xff295EFF)),
-                  )
+                  Column(
+                    children: <Widget>[
+                      Image.asset('assets/images/logo.png'),
+                      Text(
+                        "pavilion",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 56.0,
+                            color: const Color(0xff295EFF)),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      FlatButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          onPressed: () {
+                            onGoogleSignIn(context);
+                          },
+                          color: const Color(0xff295EFF),
+                          child: Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text('Sign in with Google',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 24.0,
+                                      fontWeight: FontWeight.bold)))),
+                      Padding(
+                          padding: const EdgeInsets.only(top: 16.0),
+                          child: GestureDetector(
+                            child: Text("Continue offline",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: const Color(0xff1C41B2),
+                                    fontSize: 16.0)),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MainScreen()),
+                              );
+                              setState(() {
+                                firstName = "Atenean";
+                                email = "";
+                                imageUrl = "";
+                                displayName = "Guest";
+                              });
+                            },
+                          ))
+                    ],
+                  ),
                 ],
-              ),
-              Column(
-                children: <Widget>[
-                  FlatButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      onPressed: () {
-                        onGoogleSignIn(context);
-                      },
-                      color: const Color(0xff295EFF),
-                      child: Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text('Sign in with Google',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 24.0,
-                                  fontWeight: FontWeight.bold)))),
-                  Padding(
-                      padding: const EdgeInsets.only(top: 16.0),
-                      child: GestureDetector(
-                        child: Text("Continue offline",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: const Color(0xff1C41B2),
-                                fontSize: 16.0)),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => MainScreen()),
-                          );
-                          setState(() {
-                            firstName = "Atenean";
-                            email = "";
-                            imageUrl = "";
-                            displayName = "Guest";
-                          });
-                        },
-                      ))
-                ],
-              ),
-            ],
+              );
+            }),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 
   Future<FirebaseUser> _handleSignIn() async {
