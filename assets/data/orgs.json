@@ -1236,7 +1236,8 @@
 		"projectDescThree": "Weekly Area Visits give a face to the advocacy. It allows us to help the children by handling play therapy and to destigmatize the labels \u201cabandoned\u201d and \u201csexually abused\u201d in the eyes of our members.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/SECTOR-BASED/tugon_logo.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1533,7 +1534,8 @@
 		"projectDescThree": "This is a year-end awards ceremony, where organizations are recognized for their initiatives for the past year. This is a nationwide event, as orgs from other Ateneo campuses are also recognized.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "Student Groups"
+		"Body": "COA",
+		"Logo": "assets/bodies/coa/logo.png"
 	},
 	{
 		"Cluster": [
@@ -2225,5 +2227,31 @@
 		"Mission": "We aim to create a thriving designer community and network in Ateneo, provide designers with substantial resources, support, and opportunities, train and develop creative and professional designers, and stimulate good design within the university.",
 		"Body": "LIONS",
 		"Logo": "assets/orgs/lions/logos/DECO.png"
+	},
+	{
+		"Cluster": [
+			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
+		],
+		"Name": "League of Independent Organizations",
+		"Abbreviation": "LIONS",
+		"Tagline": "",
+		"Website": "",
+		"Facebook": "",
+		"Twitter": "",
+		"Instagram": "",
+		"Description": "The League of Independent Organizations (LIONS) is the official autonomous government of unaccredited student organizations in Ateneo de Manila University. LIONS believes that Ateneans have the right to organize; to pursue their respective advocacies and passions for a better society. Recognized by the Loyola Schools in 2017, LIONS aims to empower independent organizations by promoting their creative purposes,  representing them in University bodies, and creating a community that fosters inclusivity, excellence, and integrity. With that — LIONS, together with the Office of Student Activities, welcomes students who wish to join an organization or even start one of their own!",
+		"Advocacy": "",
+		"Core": "",
+		"Awards": "",
+		"projectTitleOne": "",
+		"projectDescOne": "",
+		"projectTitleTwo": "",
+		"projectDescTwo": "",
+		"projectTitleThree": "",
+		"projectDescThree": "",
+		"Vision": "",
+		"Mission": "",
+		"Body": "LIONS",
+		"Logo": "assets/bodies/lions/circle.png"
 	}
 ]
