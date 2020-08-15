@@ -1577,7 +1577,8 @@
 		"projectDescThree": "",
 		"Vision": "We envision a strong and devoted fitness community that supports everyone\u00e2\u20ac\u2122s goal of self-improvement no matter what stage of fitness they\u00e2\u20ac\u2122re in and has complete access to the proper tools and knowledge for their goals.",
 		"Mission": "Our mission is to provide programs, diet plans and support that every fitness enthusiast or gym goer needs through projects and team building activities geared to promote a health and wellness to its community",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/FIT.png"
 	},
 	{
 		"Cluster": ["Arts"],
@@ -1600,7 +1601,8 @@
 		"projectDescThree": "A workshop for open to everyone in Ateneo to get a small taste of improv",
 		"Vision": "Blue Bird Improv seeks to introduce improvisation as a means for self-improvement inside the Ateneo campus. We seek to form confident and collaborative communicators in our members, who are at the same time capable of bringing out those values and skills in others. We also seek to bring more openness and enthusiasm to the campus and beyond through our shows and workshops. ",
 		"Mission": "Blue Bird Improv aims to provide specialized trainings and workshops to develop the improvisational skills of both members and non-members and promote personal growth. We  host shows and events that showcase the skills of our members and provide an avenue to bring entertainment to the greater community. Through this, we wish to create spaces where anyone is welcome to come as the most authentic version of themselves because anyone can do improv.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/BlueBird.png"
 	},
 	{
 		"Cluster": ["Arts", "Culture", "Literature"],
@@ -1623,7 +1625,8 @@
 		"projectDescThree": "a week long WEEB-SAFE event where you can hang out with good food, good games, and good company!!",
 		"Vision": "Toushin seeks to build among its members and the Loyola Schools an organization that is passionate for Japanese arts and contemporary culture, setting aside all differences to create a peaceful and accepting environment favorable of experiential growth and fun.",
 		"Mission": "Toushin seeks to build among its members and the Loyola Schools an organization that is passionate for Japanese arts and contemporary culture, setting aside all differences to create a peaceful and accepting environment favorable of experiential growth and fun.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/TOUSHIN.png"
 	},
 	{
 		"Cluster": ["Arts", "Culture", "Language", "Literature"],
@@ -1646,7 +1649,8 @@
 		"projectDescThree": "",
 		"Vision": "Blue Hanguk Society aspires to foster a community instilled with an engaged perception of Korean culture, exploring its rich aspects through a worldview perspective in the Filipino community.",
 		"Mission": "Blue Hanguk Society serves as an organization that unites Korean culture enthusiasts from the Ateneo de Manila University while upholding the Filipino identity to healthily open avenues for the celebration of Korean culture.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/BlueHangkuk.png"
 	},
 	{
 		"Cluster": ["Technology"],
@@ -1669,7 +1673,8 @@
 		"projectDescThree": "Our flagship project, TECHx is a talk and mixer event that discuss how technology is integrated in different areas of society and in our daily lives. We try to foresee the future technology intends to build.",
 		"Vision": "To be the foremost community in Ateneo that champions and advocates for technology as enabling, interdisciplinary, and inclusive.",
 		"Mission": "To provide avenues for students to broaden, advocate and apply their knowledge and appreciation of innovative, relevant, and emerging technology for themselves and their community.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/OS.png"
 	},
 	{
 		"Cluster": ["Community Development"],
@@ -1692,7 +1697,8 @@
 		"projectDescThree": "The Online Market aims to establish a mini-mart wherein products of the partner communities will be showcased not just every weekend but, every day at online platform. It also aims to increase the  profits of their businesses in light of the situation of COVID-19.",
 		"Vision": "Project KaBUHAYan strives to become the premier student-led, nationwide organization that creates social and economic impact to MSMEs in the Philippines. ",
 		"Mission": "Project KaBUHAYan aims to encourage and provide programs that may enhance the competencies of aspiring and existing MSME entrepreneurs on entrepreneurial development and financial literacy through KaBUHAYan sessions and various student-led initiatives, consequently providing opportunities for the growth of its student advocates. ",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/ProjKabuhayan.png"
 	},
 	{
 		"Cluster": ["Culture", "Design"],
@@ -1715,11 +1721,12 @@
 		"projectDescThree": "An optional activity that prompts members weekly to write, illustrate, animate, or voice act under a certain theme. Submissions for the week will be displayed on our online hub and social media accounts with the approval of our members.",
 		"Vision": "Mokoa, as an organization, aspires to create a community for artists and animation enthusiasts to give ample representation to the art of animation. Through the production of animation, Mokoa strives to extend the art and its message to the audience it may reach, instilling a sense of appreciation for the medium and its creators",
 		"Mission": "To bring artists, storytellers, and other animation enthusiasts together to celebrate animation as a medium of expression, form a community that helps develop its members\u00e2\u20ac\u2122 skills through collaborations and projects, and contribute to the formation of a unique identity for Philippine animation by engaging in the process of animation production",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/MOKOA.png"
 	},
 	{
 		"Cluster": ["Arts", "Culture", "Literature"],
-		"Name": "WriterSkill ",
+		"Name": "WriterSkill",
 		"Abbreviation": "",
 		"Tagline": "Excellence in Progress",
 		"Website": "",
@@ -1738,7 +1745,8 @@
 		"projectDescThree": "WriterSpeac is the organization's annual open mic event wherein members may perform dramatic readings of literary works or their own writing, musical acts, and even stand-up comedy. The event encourages confidence and creativity in one's own craft by sharing it with friends and peers in the org who've shared their journey.",
 		"Vision": "WriterSkill envisions a community of writers that aims to share its members' passion for writing and literature not only within itself but also with the outside world. The organization aspires to raise interest for writing and literature in general, with the greater aims of social involvement and responsible advocacy through writing, in support of the country and geared towards progressive nation building.",
 		"Mission": "WriterSkill, driven by its desire to realize its members' writing potential in the four genres of Fiction, Non-Fiction, Poetry, and Drama, as well as in various other literary forms, strives to aid each member in recognizing and developing their capacity for excellence in writing and critiquing through the implementation of various relevant programs, projects, and events.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/WS.png"
 	},
 	{
 		"Cluster": ["Arts", "Culture", "Design"],
@@ -1761,7 +1769,8 @@
 		"projectDescThree": "Every school year, BLINK gives our members the opportunity to work alongside us in creating their own original komik. At the end of the first semester, we accept pitches from our members, which serve as the starting point for their original komiks. For the following three months, we guide our members through the process of turning their komik from idea to reality. After the komiks have been made, we choose one to publish on our Facebook page, as well as in print!",
 		"Vision": "Blue Indie Komiks envisions itself as a community of komik creators and appreciators, that then acts as a positive forcein the greater komiks community. We strive to involve and emphasize our members in the creation of engaging and meaningful content \u00e2\u20ac\u201c content that then serves to expand the perspectives of those within and outside our community. Creating Komiks BLINK envisions the creation of its Komiks as a cooperative act that takes place in an engaging, active environment. This environment will encourage members to work together to create Komiks that promote and display Filipino artistry and Philippine Culture. Through this cooperative act, the members will develop new skills and mindsets, which will then aid them in applying their creativity to any and all tasks they might face. Appreciating Komiks Through the active creation, consumption, and sharing of Komiks and Komiks-related media, it is envisioned that the members of BLINK will be able to deepen their understanding and appreciation of Komiks. This deepened understanding and appreciation will propel the members of BLINK to promote Komiks to others outside of the organization, thus allowing more people to appreciate and consume Komiks.",
 		"Mission": "Blue Indie Komiks achieves its vision by providing projects and opportunities to its members to explore the different aspects of komik creation. Through these varied projects, BLINK members attain the skills necessary to produce komiks that have the capacity to speak beyond the Ateneo community.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/BLINK.png"
 	},
 	{
 		"Cluster": ["Adventure", "Culture", "Lifestyle"],
@@ -1784,7 +1793,8 @@
 		"projectDescThree": "A chill weekly gathering where people can drop by at any time, play board games provided by us, and bring their own board games and card games for other people to try out.",
 		"Vision": "To foster a leading community for interested individuals to freely discover, share, and enjoy various tabletop hobbies under the welcoming camaraderie of both old and new tabletop enthusiasts. We aim to explore further the positives that tabletop interests can explore as a medium such as social utility, psychological benefits, cultural relevance and trends, fine arts, and national identity.",
 		"Mission": "To provide a space for a community to explore, discover, and appreciate various tabletop hobbies. We strive to create a healthy and safe social atmosphere where people can freely share hobbies and interests with respect and camaraderie towards each other. We push for the exploration and sharing of tabletop interests as a medium for personal growth, analytic thinking, stress relief, and forging healthy relationships.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/THINC.png"
 	},
 	{
 		"Cluster": ["Business", "Education"],
@@ -1807,7 +1817,8 @@
 		"projectDescThree": "JFeL's exclusive investing mentorship program that focuses on the basics and foundations of investing. Both mentors and mentees will be provided with modules to accompany their teaching/learning. Its goal is to produce financially literate individuals who are able to spot and take advantage of opportunities in the financial markets.",
 		"Vision": "To create a nation of financially proficient citizens who are able to apply their knowledge to their everyday situations. ",
 		"Mission": "To equip both its members, as well as people outside the organization, with sound Financial skills to utilize in everyday Financial situations through its various talks, training seminars, an programs.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/JFEL.png"
 	},
 	{
 		"Cluster": ["Home Org", "Technology"],
@@ -1830,7 +1841,8 @@
 		"projectDescThree": "An online platform where BYTE members can access various resources that supplement their learning of ITE's 3Hs \u00e2\u20ac\u201d Hacker, Hipster, Hustler. ",
 		"Vision": "BYTE envisions itself to be a technological and entrepreneurial network spearheaded by existing and potential catalysts for change.",
 		"Mission": "BYTE cultivates young entrepreneurs who create innovative and technological solutions that strive for nation-building.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/byte.png"
 	},
 	{
 		"Cluster": ["International", "Spiritual"],
@@ -1853,7 +1865,8 @@
 		"projectDescThree": "Members and visitors will be visiting a marginalized community where they will conduct catechism for the children as well as bible sharing through house-to-house visits.",
 		"Vision": "The vision of RC LIFE is to give the Church in the Philippines passionate young professionals for Christ and His mission.",
 		"Mission": "The mission of RC LIFE is to form the members in a way of life that will enable them to be leader-apostles of the New Evangelization, inspired by faith and encounter.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/RCLIFE.png"
 	},
 	{
 		"Cluster": ["Community Development", "Design", "Education"],
@@ -1876,7 +1889,8 @@
 		"projectDescThree": "Lessons in Public Health Advocacy - LiPHad: Lessons in Public Health Advocacy is a series of campaigns that aims to tackle sectors and issues beyond the traditionally medical perspective of public health. The campaigns' goal is to identify the pressing issues being faced by these sectors and how the UHC Law affects them. The campaign will have three phases based on issues relevant to the Ateneo Loyola Schools community: environment and disaster management, gender and sexuality, and mental health.",
 		"Vision": "Project LAAN envisions a society where every Filipino, especially the poor and vulnerable, has adept knowledge on public health and is empowered to make informed and appropriate health decisions.",
 		"Mission": "Project LAAN aims to instill and promote public health advocacy, health literacy, and patient empowerment to its partner communities and members.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/ProjLaan.png"
 	},
 	{
 		"Cluster": [
@@ -1906,7 +1920,8 @@
 		"projectDescThree": "A special event wherein we invite international speakers to give a talk on their career journey from working with small startups to big brands.",
 		"Vision": "This organization envisions itself as a community of designers, holistically formed to be people for and with others, who are passionate about solving problems in the community through human-centered design.",
 		"Mission": "UX Society empowers people through design education, enlightens them to the power of design, and nurtures them to create meaningful products for the community.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/UXS.png"
 	},
 	{
 		"Cluster": ["Music"],
@@ -1929,7 +1944,8 @@
 		"projectDescThree": "Blue Symphony performs for different events both inside and outside of the Ateneo community. From weddings to concerts, from Rizal Library to PICC, Blue Symphony performs everywhere, all while showcasing the skill and talent of Blue Symphony's members. ",
 		"Vision": "The Blue Symphony Orchestra envisions itself as a community for Filipino artistry \u00e2\u20ac\u201d an organization whose primary focus is the holistic development of its members, deeply rooted in the Ignatian values of service and excellence, through musical performance, production, and arrangement.",
 		"Mission": "Our mission is to cultivate awareness and passion for orchestral music within the Ateneo community through the engagement of our audiences in orchestral performances and the growth of our members in all aspects of music competencies and character formation.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/BlueSymph.png"
 	},
 	{
 		"Cluster": ["Community Development", "Education", "International"],
@@ -1952,7 +1968,8 @@
 		"projectDescThree": "EA Blue members have the opportunity to participate in an EA Virtual Conference. This is a gathering of the effective altruism community around the world ",
 		"Vision": "EA Blue envisions itself to be a welcoming, productive, and robust community of Ateneans who use evidence and reason to figure out how to help others as much as possible, and take action on that basis.",
 		"Mission": "Our mission is to help our members and the wider community use evidence and careful analysis to think about how they can use their careers and resources to achieve a bigger social impact.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/EffectiveAltruism.png"
 	},
 	{
 		"Cluster": ["Community Development", "International"],
@@ -1975,7 +1992,8 @@
 		"projectDescThree": "A fundraising project that sells postcards in order to build houses for a partner community",
 		"Vision": "Habitat for Humanity Blue Chapter envisions a world where everyone has a decent place to live.",
 		"Mission": "The Blue Chapter works in partnership with Habitat for Humanity Philippines by sharing their goals to eliminate poverty housing. Seeking to put God\u00e2\u20ac\u2122s love into action, Habitat for Humanity Blue Chapter brings people together to build homes, communities, and hope.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/HFH.png"
 	},
 	{
 		"Cluster": ["Spiritual"],
@@ -1998,7 +2016,8 @@
 		"projectDescThree": "Students who are interested in getting to know the organization, whether they signed up in RecWeek or not, are encouraged to attend this event to acquaint themselves with the community and its mission.",
 		"Vision": "We envision Filipino Youth who have a growing personal relationship with Jesus Christ, who participate actively in the life and mission of the Catholic Church, and who increasingly become agents of social transformation in society.  Our vision is spelled out in what we may summarize as the 4 C\u00e2\u20ac\u2122s of CYA.  Conversion The individual makes a personal commitment to Christ, entering into a new relationship with Him, and making a decision to continue knowing, loving and serving God.  Community The individual participates more actively in the life and mission of the church. He/She also learns the importance of, and thus, commits himself/herself to be part of smaller communities in which there is mutual care, support and opportunity to serve.  Character The individual is formed and grows in Christian character, in his/her understanding of the Catholic faith, and in service to others.  Commission The individual is \u00e2\u20ac\u0153sent out\u00e2\u20ac\u009d to bear witness to the Gospel by word and example.",
 		"Mission": "To evangelize the youth and train leaders for service to the Church.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/CYA.png"
 	},
 	{
 		"Cluster": ["Literature"],
@@ -2021,7 +2040,8 @@
 		"projectDescThree": "Have any questions that your history classes don't cover? Are you interested in hearing about the stories of people that have taken part in large historical events? Or are you just curious about the weird and funny stories about people from long ago? LAHi's got you covered here too! We've got talks from Ateneo's Department of History that scratch that history buff itch! ",
 		"Vision": "To transform the students of the Ateneo de Manila University from passive observers to cultural advocates and nation builders grounded in historicity, to contribute to the increased awareness and enrichment of the identity of the Filipino nation. Furthermore, it seeks to develop an appreciation of Philippine history in the bigger context of global history.",
 		"Mission": "The League of Atenean Historians shall serve as an important link between the Department of History and its majors, aiding in their development as responsible historians that will contribute in enriching the identity of the Filipino nation. As an Atenean organization guided by the Ignatian value of being men and women for others, God, and nation, the League of Atenean Historians shall provide projects, activities, and learning experiences that will instill in its members a sense of importance for the past, a vision for the future, and the enrichment of the present. ",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/LAHI.png"
 	},
 	{
 		"Cluster": ["Music"],
@@ -2044,7 +2064,8 @@
 		"projectDescThree": "CASA is bringing back the times of serenading your loved ones but as you guessed it, we're going online! We'll be taking requests from people who want us to perform a song for the special person or people in their life!",
 		"Vision": "Striving to always being prepared in facing any kind of situation that comes our way.",
 		"Mission": "We turn hardships into inspiration while fulfilling each member's passion.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/CASA.png"
 	},
 	{
 		"Cluster": ["Culture", "Lifestyle", "Technology"],
@@ -2067,7 +2088,8 @@
 		"projectDescThree": "Our team, LG Esports, has grown to be one of the highest-tier competitive teams in the collegiate esports scene. Members are given the chance to try out for the representative teams for various Esports titles like League of Legends, DotA 2, Hearthstone, Valorant, and Mobile Legends.",
 		"Vision": "Loyola Gaming seeks to channel the gaming industry\u00e2\u20ac\u2122s untapped and uncharted potential to be a positive driving force in a modern digital society.",
 		"Mission": "Loyola Gaming aims to foster a community of gamers, both within a collegiate setting and beyond, as a sterling example of the positive impacts gaming has to offer. ",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/LGL.png"
 	},
 	{
 		"Cluster": [
@@ -2096,7 +2118,8 @@
 		"projectDescThree": "A week-long series of workshops and seminars, culminating in a two-day hackathon where students can exercise their skills in software development while making an impact on society.",
 		"Vision": "We are a community of developers that are passionate about uplifting communities through technology and innovation.",
 		"Mission": "Empower. Enlighten. Nurture",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/DSC.png"
 	},
 	{
 		"Cluster": ["Education", "Environment"],
@@ -2119,7 +2142,8 @@
 		"projectDescThree": "This is a week-long event that aims to advocate Animal Welfare through various activities such as donation drives, talks, and many more.",
 		"Vision": "We, AGILA, envision a society that respects and advocates Animal Welfare. We aim for all animals to be ensured with caring homes and overall well-being.",
 		"Mission": "AGILA seeks to provide an avenue for Ateneans to advocate Animal Welfare through awareness campaigns and sustainable action. It seeks to instill members with compassion for animals and to equip them with the skills necessary for nurturing life. ",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/AGILA.png"
 	},
 	{
 		"Cluster": ["Arts", "Design"],
@@ -2142,6 +2166,7 @@
 		"projectDescThree": "",
 		"Vision": "Deco wants to see a flourishing designer community in Ateneo where design is respected as a craft and designers are united in mutual growth and development.",
 		"Mission": "We aim to create a thriving designer community and network in Ateneo, provide designers with substantial resources, support, and opportunities, train and develop creative and professional designers, and stimulate good design within the university.",
-		"Body": "LIONS"
+		"Body": "LIONS",
+		"Logo": "assets/orgs/lions/logos/DECO.png"
 	}
 ]

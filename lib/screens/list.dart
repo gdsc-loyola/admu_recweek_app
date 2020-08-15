@@ -65,7 +65,8 @@ class _ListScreenState extends State<ListScreen> {
           orgResult[i]['SocMed projectDescThree'],
           orgResult[i]['Vision'],
           orgResult[i]['SocMed Mission'],
-          orgResult[i]['Body']));
+          orgResult[i]['Body'],
+          orgResult[i]['Logo']));
     }
     // Sorting Area
     orgList
@@ -107,7 +108,9 @@ class _ListScreenState extends State<ListScreen> {
                       color: const Color(0xff7598FF))
                 ],
           child: ListTile(
-            leading: SizedBox(child: Image.asset('assets/orgs/dsc/logo.png')),
+            leading: SizedBox(
+                child: Image.asset(
+                    org.logo != null ? org.logo : 'assets/orgs/dsc/logo.png')),
             title: Text(org.name),
             subtitle: Text(org.body,
                 style: TextStyle(

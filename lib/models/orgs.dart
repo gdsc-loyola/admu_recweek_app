@@ -20,30 +20,31 @@ class Orgs {
   String vision;
   String mission;
   String body;
+  String logo;
 
-  Orgs([
-    this.name,
-    this.abbreviation,
-    this.tagline,
-    this.website,
-    this.facebook,
-    this.twitter,
-    this.instagram,
-    this.description,
-    this.advocacy,
-    this.core,
-    this.awards,
-    this.projectTitleOne,
-    this.projectDescOne,
-    this.projectTitleTwo,
-    this.projectDescTwo,
-    this.projectTitleThree,
-    this.projectDescThree,
-    this.vision,
-    this.mission,
-    this.body,
-    this.cluster,
-  ]);
+  Orgs(
+      [this.name,
+      this.abbreviation,
+      this.tagline,
+      this.website,
+      this.facebook,
+      this.twitter,
+      this.instagram,
+      this.description,
+      this.advocacy,
+      this.core,
+      this.awards,
+      this.projectTitleOne,
+      this.projectDescOne,
+      this.projectTitleTwo,
+      this.projectDescTwo,
+      this.projectTitleThree,
+      this.projectDescThree,
+      this.vision,
+      this.mission,
+      this.body,
+      this.logo,
+      this.cluster]);
 
   // Orgs.fromJson(Map<String, dynamic> json) {
   //   cluster = json['Cluster'].cast<String>();
