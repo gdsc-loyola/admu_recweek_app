@@ -55,8 +55,8 @@ class _SangguScreenState extends State<SangguScreen> {
       body: Container(
           padding: const EdgeInsets.all(16.0),
           color: Colors.white,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
+          child: ListView(
+            primary: false,
             children: <Widget>[
               Align(
                 alignment: Alignment.center,
@@ -189,80 +189,196 @@ class _SangguScreenState extends State<SangguScreen> {
                   )
                 ],
               ),
-              ListView(
-                primary: true,
-                addAutomaticKeepAlives: ,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                padding: const EdgeInsets.all(8.0),
+              Column(
                 children: <Widget> [
                   state == 0 
-                   ? Row(
-                      children: <Widget>[ 
-                        Container( 
-                          height: 48,
-                          width: 48,
-                          decoration: BoxDecoration(
-                            color: Colors.grey,
-                            shape: BoxShape.circle
-                          ),
+                   ? Column (
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(top: 16, bottom: 16),
+                          child: Row(
+                            children: <Widget>[ 
+                              Container( 
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16),
+                              child: Text(
+                                "Department of This That 1",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              ),
+                            ],
+                          ), 
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 16),
-                        child: Text(
-                          "Department of This That",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
+                          padding: EdgeInsets.only(top: 16, bottom: 16),
+                          child: Row(
+                            children: <Widget>[ 
+                              Container( 
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16),
+                              child: Text(
+                                "Department of This That 1.1",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              ),
+                            ],
+                          ), 
                         ),
-                        ),
-                      ],
+                      ]
                     )
                   : state == 1 
-                  ? Row(
-                    children: <Widget>[ 
-                      Container( 
-                        height: 48,
-                        width: 48,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle
+                  ? Column (
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(top: 16, bottom: 16),
+                          child: Row(
+                            children: <Widget>[ 
+                              Container( 
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16),
+                              child: Text(
+                                "Department of This That 2",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              ),
+                            ],
+                          ), 
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 16),
-                      child: Text(
-                        "Department of This That 2",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                        Padding(
+                          padding: EdgeInsets.only(top: 16, bottom: 16),
+                          child: Row(
+                            children: <Widget>[ 
+                              Container( 
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16),
+                              child: Text(
+                                "Department of This That 2.1",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              ),
+                            ],
+                          ), 
                         ),
-                      ),
-                      ),
-                    ],
-                    ) 
-                  : Row(
-                    children: <Widget>[ 
-                      Container( 
-                        height: 48,
-                        width: 48,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle
+                      ]
+                    )
+                  : Column (
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(top: 16, bottom: 16),
+                          child: Row(
+                            children: <Widget>[ 
+                              Container( 
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16),
+                              child: Text(
+                                "Department of This That 3",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              ),
+                            ],
+                          ), 
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 16),
-                      child: Text(
-                        "Department of This That 3",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                        Padding(
+                          padding: EdgeInsets.only(top: 16, bottom: 16),
+                          child: Row(
+                            children: <Widget>[ 
+                              Container( 
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16),
+                                child: Text(
+                                  "Department of This That 3.1",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ), 
                         ),
-                      ),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsets.only(top: 16, bottom: 16),
+                          child: Row(
+                            children: <Widget>[ 
+                              Container( 
+                                height: 48,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  shape: BoxShape.circle
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 16),
+                              child: Text(
+                                "Department of This That 3.2",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              ),
+                            ],
+                          ), 
+                        ),
+                      ]
                     )
                 ],
               ),
