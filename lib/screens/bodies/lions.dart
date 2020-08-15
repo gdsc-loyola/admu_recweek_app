@@ -1,3 +1,4 @@
+import 'package:admu_recweek_app/widgets/base-widget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
@@ -82,51 +83,54 @@ class _LionsScreenState extends State<LionsScreen> {
                 children: [
                   TableRow(children: [
                     TableCell(
-                        child: Padding(
-                      padding: const EdgeInsets.only(bottom: 16, right: 16),
-                      child: GestureDetector(
-                          onTap: () {
-                            print("Adventure");
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
+                              print("Adventure");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/adventure.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: Text(
+                                        "Adventure",
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/adventure.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Adventure",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          )),
-                    )),
+                          );
+                        }),
+                      ),
+                    ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               print("Adventure");
                             },
@@ -163,10 +167,14 @@ class _LionsScreenState extends State<LionsScreen> {
                                       ))
                                 ],
                               ),
-                            )),
+                            ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
+
+                  //TODO: Will continue thi . . .
                   TableRow(children: [
                     TableCell(
                       child: Padding(
