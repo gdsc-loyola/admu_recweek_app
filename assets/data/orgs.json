@@ -500,7 +500,8 @@
 		"projectDescThree": "Our area families in Payatas will visit Ateneo for a day and participate in activities that would strengthen our bond with each other. AFS aims to give back the love that these families have given us.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/aclc_logo.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -523,7 +524,8 @@
 		"projectDescThree": "YCC is an annual 2-day camp that aims to holistically form its participants through various fun events. It is held in the ADMU campus and is participated by youth from across the country.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/acil_logo.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -546,7 +548,8 @@
 		"projectDescThree": "A ceremony within a Mass that signifies AtSCAns' commitment to love and serve God and society through rootedness in spirituality, involvement in social advocacy, & genuine concern for the poor.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/atsca_logo.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -569,7 +572,8 @@
 		"projectDescThree": "Worship Day is an event that showcases different avenues of worship, such as song, dance, spoken word, and bible reflection.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/yfc_logo.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -592,7 +596,8 @@
 		"projectDescThree": "This is part of ACMG Formation. With kumustahan, Bible passages, reflection, and sharing, it is a safe space for members to connect with one another and God as we foster being Kabarkada kay Kristo.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/acmg_logo.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -615,7 +620,8 @@
 		"projectDescThree": "CARefor is a reforestation movement that seeks to replenish lost trees along with LM's Adopt-a-Tree, a fund-raising project within the LS campus.\n",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_logo.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -638,7 +644,8 @@
 		"projectDescThree": "AUCs are learning opportunities headed by members and resources speakers for members to bond and further their skills as skin divers. We constantly encourage growth and development in the member base.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_logo.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -661,7 +668,8 @@
 		"projectDescThree": "First Aid Training is a seminar-workshop to give members some first-aid basics. Members who complete this training become a part of Blue Cross, the premier student-led first-aider group of the PMSA.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_logo.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -684,7 +692,8 @@
 		"projectDescThree": "The Food Security Forum gives Ateneans a holistic understanding of food resource management in the context of climate change by inviting speakers from different sectors to talk about this issue.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_logo.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -707,7 +716,8 @@
 		"projectDescThree": "The Mentorship Program serves as a support in helping new members learn more about our organization, themselves, and others, with the guidance of an experienced member of Ateneo Peers as a mentor.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_logo.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -730,7 +740,8 @@
 		"projectDescThree": "Relax and experience how an authentic Japanese tea ceremony is done with snacks and good company.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_logo.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -753,7 +764,8 @@
 		"projectDescThree": "ARTiculation is a week-long interactive arts-centric event meant to showcase various local contemporary forms of art, through various activities and workshops with professionals.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_logo.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -776,7 +788,8 @@
 		"projectDescThree": "A cultural trip is any outing executed within the Philippines that aims to ingrain profound understanding and appreciation of the Filipino culture.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_logo.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -799,7 +812,8 @@
 		"projectDescThree": "Through the challenging yet exciting Binondo Amazing Race, Celadoneans and non-Celadoneans alike venture to Binondo and its vicinities in a culture-themed journey.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_logo.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -822,7 +836,8 @@
 		"projectDescThree": "Drawing inspiration from international festivals, our Cultural-Themed Party (CTP) is a one-night event where participants get to recreate famous celebrations from all around the world.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_logo.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -845,7 +860,8 @@
 		"projectDescThree": "AMPlugged is a yearlong project that focuses on garnering more exposure and engagement for AMP\u2019s artists through video production; namely, music videos and interviews.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_logo.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -868,7 +884,8 @@
 		"projectDescThree": "IsaPelikula is a series of classes on production held by established professionals in the local film industry. Members create their own films based on the tasks given throughout the classes.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_logo.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -891,7 +908,8 @@
 		"projectDescThree": "A 3-Day Leadership Training seminar engaging members who are aspiring to become leaders in the organization, and empowering them to develop their communication and leadership skills.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_logo.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -914,7 +932,8 @@
 		"projectDescThree": "Media Month, through month-long initiatives, aims to showcase ACOMM\u2019s core competencies namely media discipline and practice, and AB Communication\u2019s four tracks to form excellent media practitioners.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_logo.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -937,7 +956,8 @@
 		"projectDescThree": "YEC is a major production open to the public, where all efforts are directed toward meaningful dance production. It culminates the year and captures the creativity, talent, and passion of each member.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_logo.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -960,7 +980,8 @@
 		"projectDescThree": "The Season Highlight is one of ACGC\u2019s most anticipated events. Members and alumni come together through a choral-orchestra concert to advocate for social change and share the beauty of the music.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_logo.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -983,7 +1004,8 @@
 		"projectDescThree": "Mainstage productions are the heart of our organization. We build, collaborate, and deliver quality performances that tackle relevant issues in society, made to call its audiences to think critically.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_logo.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -1006,7 +1028,8 @@
 		"projectDescThree": "The gigs of blueREP are short performances made in collaboration with other organizations, encouraging members to explore the three competencies outside of their regular productions.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_logo.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1236,7 +1259,8 @@
 		"projectDescThree": "Ateneo CODE creates programs to develop its members into effective, deliberate, and co-creative Organization Development practitioners, who are able to apply their skills both within and beyond CODE.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/SECTOR-BASED/code_logo.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1259,7 +1283,8 @@
 		"projectDescThree": "Kapihan is a discussion-centered event about a social issue or topic that is relevant today. It produces meaningful discourse with fellow members, gearing towards a better understanding of the world.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/SECTOR-BASED/edge_logo.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1282,7 +1307,8 @@
 		"projectDescThree": "Kulito is the gadfly of Ateneo Gabay that buzzes around to raise awareness on socio-political issues happening at present from the perspective of education and beyond.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/SECTOR-BASED/gabay_logo.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1305,7 +1331,8 @@
 		"projectDescThree": "As an organization in support of UNICEF, FundX is dedicated to raise funds for UNICEF. It is a week-long event where Ateneans get the opportunity to donate and learn more about their specific efforts.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/SECTOR-BASED/barefoot_logo.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1328,7 +1355,8 @@
 		"projectDescThree": "Spectrum is a year-long fundraising effort that focuses on selling merchandise designed by PWSNs and Speple. It shows the core values of SPEED to spread the advocacy and show their talents and skills.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/SECTOR-BASED/speed_logo.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1351,7 +1379,8 @@
 		"projectDescThree": "Siklab is an overnight camp for the junior leaders (aged 13-14 years old) from both Katipunan and Cubao partner communities serving in Musmos with leadership and camaraderie as the primary goals.\n",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/SECTOR-BASED/musmos_logo.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1374,7 +1403,8 @@
 		"projectDescThree": "\u202aKythe-Ateneo\u2019s Hospital Activities aim to provide psychosocial support, holistic growth, and a normal childhood to its kids despite the limitations that they face in a hospital setting.\u202c",
 		"Vision": "",
 		"Mission": "",
-		"Body": "COA"
+		"Body": "COA",
+		"Logo": "assets/orgs/coa/SECTOR-BASED/kythe_logo.png"
 	},
 	{
 		"Cluster": [
@@ -1399,7 +1429,8 @@
 		"projectDescThree": "The competition is a creative and dynamic method of testing members' knowledge of the Code of Internal Procedures, which explores the duties and responsibilities expected of members of the SJC.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "Student Groups"
+		"Body": "Student Groups",
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sjc_logo.png"
 	},
 	{
 		"Cluster": [
@@ -1424,7 +1455,8 @@
 		"projectDescThree": "DSWS platforms its members to experience a legitimate work environment through front desk shifting. With this, they can interact with fellow students by addressing their needs and providing solutions.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "Student Groups"
+		"Body": "Student Groups",
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png"
 	},
 	{
 		"Cluster": [
@@ -1449,7 +1481,8 @@
 		"projectDescThree": "Hard and framed copies of the seniors' photos taken from the photoshoot are distributed accordingly. This occurs towards the end of the semester, ahead of the yearbook's release.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "Student Groups"
+		"Body": "Student Groups",
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/aegis_logo.png"
 	},
 	{
 		"Cluster": [
@@ -1474,7 +1507,8 @@
 		"projectDescThree": "The Legal Writing Seminar is aimed towards students interested in the legal profession, by giving them an opportunity to learn how to write like a lawyer and understand the legal jargons and parlance.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "Student Groups"
+		"Body": "Student Groups",
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_logo.png"
 	},
 	{
 		"Cluster": [
@@ -1524,7 +1558,8 @@
 		"projectDescThree": "IPAD is an event that simulates the experience of an actual job interview. HR representatives from top companies conduct mock interviews to give feedback, train and even potentially hire students.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "Student Groups"
+		"Body": "Student Groups",
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_logo.png"
 	},
 	{
 		"Cluster": [
@@ -1549,7 +1584,8 @@
 		"projectDescThree": "It is defined as elections organized to fill up vacant positions due to a lack of candidates, and also as a remedy to abstention.",
 		"Vision": "",
 		"Mission": "",
-		"Body": "Student Groups"
+		"Body": "Student Groups",
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/comelec_logo.png"
 	},
 	{
 		"Cluster": [
@@ -1574,7 +1610,8 @@
 		"projectDescThree": "One Big Pride is  Sanggu\u2019s way  to send a message and continue the fight for structural change for gender equality in the Philippines. ",
 		"Vision": "",
 		"Mission": "",
-		"Body": "Student Groups"
+		"Body": "Student Groups",
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sanggu_logo.png"
 	},
 	{
 		"Cluster": ["Lifestyle"],
