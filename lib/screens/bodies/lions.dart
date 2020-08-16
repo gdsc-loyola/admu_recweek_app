@@ -1,4 +1,5 @@
 import 'package:admu_recweek_app/widgets/base-widget.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
@@ -113,12 +114,14 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Adventure",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
@@ -158,9 +161,108 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
-                                        "Adventure",
+                                      child: AutoSizeText(
+                                        "Art",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                  ]),
+                  TableRow(children: [
+                    TableCell(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
+                              print("Business");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/business.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Business",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                    TableCell(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
+                              print("Community");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/community.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Community",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
@@ -173,103 +275,11 @@ class _LionsScreenState extends State<LionsScreen> {
                       ),
                     ),
                   ]),
-
-                  //TODO: Will continue thi . . .
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
-                            print("Business");
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/business.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Business",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
-                            print("Community");
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/community.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Community",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ]),
-                  TableRow(children: [
-                    TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               print("Culture");
                             },
@@ -297,9 +307,59 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Culture",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                    TableCell(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
+                              print("Design");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/design.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Design",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
@@ -307,58 +367,16 @@ class _LionsScreenState extends State<LionsScreen> {
                                 ],
                               ),
                             ),
-                          )),
-                    ),
-                    TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
-                            print("Design");
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/design.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Design",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               print("Education");
                             },
@@ -386,9 +404,59 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Education",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                    TableCell(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
+                              print("Environment");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/environment.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Environment",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
@@ -396,58 +464,16 @@ class _LionsScreenState extends State<LionsScreen> {
                                 ],
                               ),
                             ),
-                          )),
-                    ),
-                    TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
-                            print("Education");
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/environment.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Environment",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               print("Home Org");
                             },
@@ -475,9 +501,59 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Home Org",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                    TableCell(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
+                              print("International");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/international.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "International",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
@@ -485,58 +561,16 @@ class _LionsScreenState extends State<LionsScreen> {
                                 ],
                               ),
                             ),
-                          )),
-                    ),
-                    TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
-                            print("International");
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/international.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "International",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               print("Language");
                             },
@@ -564,9 +598,59 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Language",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                    TableCell(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
+                              print("Lifestyle");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/lifestyle.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Lifestyle",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
@@ -574,58 +658,16 @@ class _LionsScreenState extends State<LionsScreen> {
                                 ],
                               ),
                             ),
-                          )),
-                    ),
-                    TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
-                            print("Lifestyle");
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/lifestyle.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Lifestyle",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               print("Literature");
                             },
@@ -653,9 +695,59 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Literature",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                    TableCell(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
+                              print("Music");
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/music.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Music",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
@@ -663,58 +755,16 @@ class _LionsScreenState extends State<LionsScreen> {
                                 ],
                               ),
                             ),
-                          )),
-                    ),
-                    TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
-                            print("Music");
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/music.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Music",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               print("Spiritual");
                             },
@@ -742,22 +792,26 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Spiritual",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
                             ),
-                          )),
+                          );
+                        }),
+                      ),
                     ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               print("Technology");
                             },
@@ -785,19 +839,24 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Technology",
                                         overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
                                       ))
                                 ],
                               ),
-                            )),
+                            ),
+                          );
+                        }),
                       ),
                     ),
-                  ])
+                  ]),
                 ],
               ),
               Padding(
@@ -813,10 +872,12 @@ class _LionsScreenState extends State<LionsScreen> {
                     color: const Color(0xffFF801D),
                     child: Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Learn More',
+                        child: AutoSizeText('Learn More',
+                            minFontSize: 20,
+                            maxFontSize: 24,
+                            maxLines: 1,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 24.0,
                                 fontWeight: FontWeight.bold)))),
               )
             ],
