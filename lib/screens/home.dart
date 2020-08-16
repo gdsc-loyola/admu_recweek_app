@@ -44,142 +44,23 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              // Expanded(child:
-              ConstrainedBox(
-                  constraints: new BoxConstraints(
-                    maxHeight: MediaQuery.of(context).size.height / 4.5,
-                    maxWidth: MediaQuery.of(context).size.width,
-                  ),
-                  child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      shrinkWrap: true,
-                      padding: const EdgeInsets.all(8.0),
-                      children: <Widget>[
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => LionsScreen()),
-                            );
-                          },
-                          child: Container(
-                            margin: const EdgeInsets.only(right: 16),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              color: const Color(0xFFFF801D),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            width: 144,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Image.asset(
-                                      "assets/bodies/lions/logo.png"),
-                                ),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text(
-                                      '27',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16,
-                                          color: Colors.white),
-                                    ),
-                                    Text(
-                                      ' Orgs',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 12, color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => COAScreen()),
-                            );
-                          },
-                          child: Container(
-                            margin: const EdgeInsets.only(right: 16),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            width: 144.0,
-                            height: 200,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child:
-                                      Image.asset("assets/bodies/coa/logo.png"),
-                                ),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text(
-                                      '56',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16,
-                                          color: Colors.black),
-                                    ),
-                                    Text(
-                                      ' Orgs',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 12, color: Colors.black),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
+              Expanded(
+                child: ConstrainedBox(
+                    constraints: new BoxConstraints(
+                      maxHeight: MediaQuery.of(context).size.height / 4.5,
+                      maxWidth: MediaQuery.of(context).size.width,
+                    ),
+                    child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        padding: const EdgeInsets.all(8.0),
+                        children: <Widget>[
+                          GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => COPScreen()),
+                                    builder: (context) => LionsScreen()),
                               );
                             },
                             child: Container(
@@ -187,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20)),
-                                color: const Color(0xFF002864),
+                                color: const Color(0xFFFF801D),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.grey.withOpacity(0.5),
@@ -198,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ],
                               ),
-                              width: 144.0,
+                              width: MediaQuery.of(context).size.width / 2,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisSize: MainAxisSize.max,
@@ -207,8 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Image.asset(
-                                      "assets/bodies/cop/logos.png",
-                                      height: 60,
+                                      "assets/bodies/lions/logo.png",
                                     ),
                                   ),
                                   Row(
@@ -217,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       Text(
-                                        '3',
+                                        '27',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16,
@@ -233,69 +113,193 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ],
                               ),
-                            )),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => StudentGroupsScreen()),
-                            );
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20)),
-                              color: const Color(0xFF1C41B2),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
                             ),
-                            width: 144.0,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Image.asset(
-                                    "assets/bodies/student-groups/logos.png",
-                                    height: 60,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => COAScreen()),
+                              );
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 16),
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20)),
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
                                   ),
-                                ),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text(
-                                      '7',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16,
-                                          color: Colors.white),
-                                    ),
-                                    Text(
-                                      ' Orgs',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 12, color: Colors.white),
+                                ],
+                              ),
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Image.asset(
+                                        "assets/bodies/coa/logo.png"),
+                                  ),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text(
+                                        '56',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16,
+                                            color: Colors.black),
+                                      ),
+                                      Text(
+                                        ' Orgs',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.black),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => COPScreen()),
+                                );
+                              },
+                              child: Container(
+                                margin: const EdgeInsets.only(right: 16),
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20)),
+                                  color: const Color(0xFF002864),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 1,
+                                      blurRadius: 3,
+                                      offset: Offset(
+                                          0, 3), // changes position of shadow
                                     ),
                                   ],
                                 ),
-                              ],
+                                width: MediaQuery.of(context).size.width / 2,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        "assets/bodies/cop/logos.png",
+                                        height: 60,
+                                      ),
+                                    ),
+                                    Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          '3',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16,
+                                              color: Colors.white),
+                                        ),
+                                        Text(
+                                          ' Orgs',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        StudentGroupsScreen()),
+                              );
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20)),
+                                color: const Color(0xFF1C41B2),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Image.asset(
+                                      "assets/bodies/student-groups/logos.png",
+                                      height: 60,
+                                    ),
+                                  ),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Text(
+                                        '7',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16,
+                                            color: Colors.white),
+                                      ),
+                                      Text(
+                                        ' Orgs',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.white),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ])),
-              // ),
+                        ])),
+              ),
               Padding(
                 padding: EdgeInsets.only(bottom: 8, top: 16),
                 child: Align(
