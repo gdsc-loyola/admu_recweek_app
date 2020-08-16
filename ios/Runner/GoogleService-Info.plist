@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>950023954633-oam8n3vfac2mu5ch46hdtkn4vpjisksn.apps.googleusercontent.com</string>
+	<string>900423780245-0mrfakrv1rvplm9mj45040kvun2drhnj.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.950023954633-oam8n3vfac2mu5ch46hdtkn4vpjisksn</string>
+	<string>com.googleusercontent.apps.900423780245-0mrfakrv1rvplm9mj45040kvun2drhnj</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>900423780245-u5vbmpvc8j7j971h34hvdch117si76v8.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDjaR6VRIIU0ne7-Jjv_SI6nXSETuWZJ-c</string>
+	<string>AIzaSyAbPZtG7IjZSUOSubQJSx87NCtpQOeBeyY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>950023954633</string>
+	<string>900423780245</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.drcoderz.fluttergoogleauth</string>
+	<string>org.dscadmu.admurecweekapp</string>
 	<key>PROJECT_ID</key>
-	<string>flutterauth-23fd9</string>
+	<string>admu-recweek-app</string>
 	<key>STORAGE_BUCKET</key>
-	<string>flutterauth-23fd9.appspot.com</string>
+	<string>admu-recweek-app.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:950023954633:ios:37b9008c14a5a85b72ed18</string>
+	<string>1:900423780245:ios:aae5b5d8667191cf7fd89c</string>
 	<key>DATABASE_URL</key>
-	<string>https://flutterauth-23fd9.firebaseio.com</string>
+	<string>https://admu-recweek-app.firebaseio.com</string>
 </dict>
 </plist>
