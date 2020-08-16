@@ -112,6 +112,7 @@ class _ListScreenState extends State<ListScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => new OrgTemplateScreen(
+                      ListScreen.user,
                       org.name,
                       org.abbreviation,
                       org.tagline,
@@ -130,6 +131,7 @@ class _ListScreenState extends State<ListScreen> {
                       org.projectDescThree,
                       org.vision,
                       org.mission,
+                      org.body,
                       org.logo),
                 ),
               );

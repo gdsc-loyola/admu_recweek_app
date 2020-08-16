@@ -1,8 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
 class OrgTemplateScreen extends StatefulWidget {
+  final FirebaseUser _user;
   final String _name;
   final String _abbreviation;
   final String _tagline;
@@ -21,9 +24,11 @@ class OrgTemplateScreen extends StatefulWidget {
   final String _projectDescThree;
   final String _vision;
   final String _mission;
+  final String _body;
   final String _logo;
 
   OrgTemplateScreen(
+    this._user,
     this._name,
     this._abbreviation,
     this._tagline,
@@ -42,11 +47,13 @@ class OrgTemplateScreen extends StatefulWidget {
     this._projectDescThree,
     this._vision,
     this._mission,
+    this._body,
     this._logo,
   );
 
   @override
   _OrgTemplateScreenState createState() => _OrgTemplateScreenState(
+        _user,
         _name,
         _abbreviation,
         _tagline,
@@ -65,13 +72,16 @@ class OrgTemplateScreen extends StatefulWidget {
         _projectDescThree,
         _vision,
         _mission,
+        _body,
         _logo,
       );
 }
 
 class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
+  final firestoreInstance = Firestore.instance;
   bool bookmark = false;
 
+  FirebaseUser _user;
   String _name;
   String _abbreviation;
   String _tagline;
@@ -90,8 +100,11 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   String _projectDescThree;
   String _vision;
   String _mission;
+  String _body;
   String _logo;
+
   _OrgTemplateScreenState(
+    this._user,
     this._name,
     this._abbreviation,
     this._tagline,
@@ -110,8 +123,53 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     this._projectDescThree,
     this._vision,
     this._mission,
+    this._body,
     this._logo,
   );
+
+  @override
+  void initState() {
+    super.initState();
+    firestoreInstance
+        .collection("bookmarks-2019")
+        .document('${_user.uid}-$_name')
+        .get()
+        .then((value) {
+      if (value.data["name"] == _name && value.data["bookmark"]) {
+        setState(() {
+          bookmark = true;
+        });
+      } else {
+        setState(() {
+          bookmark = false;
+        });
+      }
+    });
+  }
+
+  void _onBookmark() async {
+    if (bookmark) {
+      firestoreInstance
+          .collection("bookmarks-2019")
+          .document('${_user.uid}-$_name')
+          .delete()
+          .then((_) {
+        print("success!");
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2019")
+          .document('${_user.uid}-$_name')
+          .setData({
+        "name": _name,
+        "abbreviation": _abbreviation,
+        "body": _body,
+        "bookmark": true,
+      }).then((_) {
+        print("success!");
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -134,6 +192,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
+                            _onBookmark();
                             bookmark = !bookmark;
                           });
                         },
