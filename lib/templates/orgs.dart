@@ -3,73 +3,115 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
 class OrgTemplateScreen extends StatefulWidget {
-  static String _name;
-  static String _abbreviation;
-  static String _tagline;
-  static String _website;
-  static String _facebook;
-  static String _twitter;
-  static String _instagram;
-  static String _description;
-  static String _advocacy;
-  static String _core;
-  static String _projectTitleOne;
-  static String _projectDescOne;
-  static String _projectTitleTwo;
-  static String _projectDescTwo;
-  static String _projectTitleThree;
-  static String _projectDescThree;
-  static String _vision;
-  static String _mission;
-  static String _logo;
+  final String _name;
+  final String _abbreviation;
+  final String _tagline;
+  final String _website;
+  final String _facebook;
+  final String _twitter;
+  final String _instagram;
+  final String _description;
+  final String _advocacy;
+  final String _core;
+  final String _projectTitleOne;
+  final String _projectDescOne;
+  final String _projectTitleTwo;
+  final String _projectDescTwo;
+  final String _projectTitleThree;
+  final String _projectDescThree;
+  final String _vision;
+  final String _mission;
+  final String _logo;
 
   OrgTemplateScreen(
-      String name,
-      String abbreviation,
-      String tagline,
-      String website,
-      String facebook,
-      String twitter,
-      String instagram,
-      String description,
-      String advocacy,
-      String core,
-      String projectTitleOne,
-      String projectDescOne,
-      String projectTitleTwo,
-      String projectDescTwo,
-      String projectTitleThree,
-      String projectDescThree,
-      String vision,
-      String mission,
-      String logo) {
-    _name = name;
-    _abbreviation = abbreviation;
-    _tagline = tagline;
-    _website = website;
-    _facebook = facebook;
-    _twitter = twitter;
-    _instagram = instagram;
-    _description = description;
-    _advocacy = advocacy;
-    _core = core;
-    _projectTitleOne = projectTitleOne;
-    _projectDescOne = projectDescOne;
-    _projectTitleTwo = projectTitleTwo;
-    _projectDescTwo = projectDescTwo;
-    _projectTitleThree = projectTitleThree;
-    _projectDescThree = projectDescThree;
-    _vision = vision;
-    _mission = mission;
-    _logo = logo;
-  }
+    this._name,
+    this._abbreviation,
+    this._tagline,
+    this._website,
+    this._facebook,
+    this._twitter,
+    this._instagram,
+    this._description,
+    this._advocacy,
+    this._core,
+    this._projectTitleOne,
+    this._projectDescOne,
+    this._projectTitleTwo,
+    this._projectDescTwo,
+    this._projectTitleThree,
+    this._projectDescThree,
+    this._vision,
+    this._mission,
+    this._logo,
+  );
 
   @override
-  _OrgTemplateScreenState createState() => _OrgTemplateScreenState();
+  _OrgTemplateScreenState createState() => _OrgTemplateScreenState(
+        _name,
+        _abbreviation,
+        _tagline,
+        _website,
+        _facebook,
+        _twitter,
+        _instagram,
+        _description,
+        _advocacy,
+        _core,
+        _projectTitleOne,
+        _projectDescOne,
+        _projectTitleTwo,
+        _projectDescTwo,
+        _projectTitleThree,
+        _projectDescThree,
+        _vision,
+        _mission,
+        _logo,
+      );
 }
 
 class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   bool bookmark = false;
+
+  String _name;
+  String _abbreviation;
+  String _tagline;
+  String _website;
+  String _facebook;
+  String _twitter;
+  String _instagram;
+  String _description;
+  String _advocacy;
+  String _core;
+  String _projectTitleOne;
+  String _projectDescOne;
+  String _projectTitleTwo;
+  String _projectDescTwo;
+  String _projectTitleThree;
+  String _projectDescThree;
+  String _vision;
+  String _mission;
+  String _logo;
+  _OrgTemplateScreenState(
+    this._name,
+    this._abbreviation,
+    this._tagline,
+    this._website,
+    this._facebook,
+    this._twitter,
+    this._instagram,
+    this._description,
+    this._advocacy,
+    this._core,
+    this._projectTitleOne,
+    this._projectDescOne,
+    this._projectTitleTwo,
+    this._projectDescTwo,
+    this._projectTitleThree,
+    this._projectDescThree,
+    this._vision,
+    this._mission,
+    this._logo,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -77,9 +119,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            OrgTemplateScreen._abbreviation != ""
-                ? OrgTemplateScreen._name
-                : OrgTemplateScreen._abbreviation,
+            _abbreviation != "" ? _name : _abbreviation,
             style: TextStyle(
                 color: const Color(0xff295EFF), fontWeight: FontWeight.bold),
           ),
@@ -128,36 +168,32 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                         SizedBox(
                           width: 64,
                           height: 64,
-                          child: Image.asset(OrgTemplateScreen._logo),
+                          child: Image.asset(_logo),
                         ),
                         Row(children: <Widget>[
-                          OrgTemplateScreen._website != ""
+                          _website != ""
                               ? InkWell(
                                   child: Image.asset('assets/icons/web.png'),
-                                  onTap: () =>
-                                      launch(OrgTemplateScreen._website),
+                                  onTap: () => launch(_website),
                                 )
                               : SizedBox.shrink(),
-                          OrgTemplateScreen._instagram != ""
+                          _instagram != ""
                               ? InkWell(
                                   child: Image.asset('assets/icons/ig.png'),
-                                  onTap: () =>
-                                      launch(OrgTemplateScreen._instagram),
+                                  onTap: () => launch(_instagram),
                                 )
                               : SizedBox.shrink(),
-                          OrgTemplateScreen._twitter != ""
+                          _twitter != ""
                               ? InkWell(
                                   child:
                                       Image.asset('assets/icons/twitter.png'),
-                                  onTap: () =>
-                                      launch(OrgTemplateScreen._twitter),
+                                  onTap: () => launch(_twitter),
                                 )
                               : SizedBox.shrink(),
-                          OrgTemplateScreen._facebook != ""
+                          _facebook != ""
                               ? InkWell(
                                   child: Image.asset('assets/icons/fb.png'),
-                                  onTap: () =>
-                                      launch(OrgTemplateScreen._facebook),
+                                  onTap: () => launch(_facebook),
                                 )
                               : SizedBox.shrink(),
                         ])
@@ -169,20 +205,20 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Padding(
                   padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
                   child: Text(
-                    OrgTemplateScreen._name,
+                    widget._name,
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   )),
-              OrgTemplateScreen._tagline != ""
+              _tagline != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
                           bottom: 16, left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._tagline,
+                        _tagline,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),
               // Org Details
-              OrgTemplateScreen._description != ""
+              _description != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
@@ -191,17 +227,17 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ))
                   : SizedBox.shrink(),
-              OrgTemplateScreen._description != ""
+              _description != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
                           bottom: 16, left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._description,
+                        _description,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),
               // Vision
-              OrgTemplateScreen._vision != ""
+              _vision != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
@@ -210,17 +246,17 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ))
                   : SizedBox.shrink(),
-              OrgTemplateScreen._vision != ""
+              _vision != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
                           bottom: 16, left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._vision,
+                        _vision,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),
               // Mission
-              OrgTemplateScreen._mission != ""
+              _mission != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
@@ -229,16 +265,16 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ))
                   : SizedBox.shrink(),
-              OrgTemplateScreen._mission != ""
+              _mission != ""
                   ? Padding(
                       padding: const EdgeInsets.only(left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._mission,
+                        _mission,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),
               // Advocacy
-              OrgTemplateScreen._advocacy != ""
+              _advocacy != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
@@ -247,17 +283,17 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ))
                   : SizedBox.shrink(),
-              OrgTemplateScreen._advocacy != ""
+              _advocacy != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
                           bottom: 16, left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._advocacy,
+                        _advocacy,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),
               // Core Competency
-              OrgTemplateScreen._core != ""
+              _core != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
@@ -266,18 +302,18 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ))
                   : SizedBox.shrink(),
-              OrgTemplateScreen._core != ""
+              _core != ""
                   ? Padding(
                       padding: const EdgeInsets.only(left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._core,
+                        _core,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),
               //Events and Projects
-              OrgTemplateScreen._projectTitleOne != "" &&
-                      OrgTemplateScreen._projectTitleTwo != "" &&
-                      OrgTemplateScreen._projectTitleThree != ""
+              _projectTitleOne != "" &&
+                      _projectTitleTwo != "" &&
+                      _projectTitleThree != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
@@ -292,21 +328,21 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Image.asset('assets/orgs/dsc/csj.png'),
               ),
-              OrgTemplateScreen._projectTitleOne != ""
+              _projectTitleOne != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
-                        OrgTemplateScreen._projectTitleOne,
+                        _projectTitleOne,
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ))
                   : SizedBox.shrink(),
-              OrgTemplateScreen._projectDescOne != ""
+              _projectDescOne != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
                           bottom: 16, left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._projectDescOne,
+                        _projectDescOne,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),
@@ -316,21 +352,21 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Image.asset('assets/orgs/dsc/tah.png'),
               ),
-              OrgTemplateScreen._projectTitleTwo != ""
+              _projectTitleTwo != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
-                        OrgTemplateScreen._projectTitleTwo,
+                        _projectTitleTwo,
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ))
                   : SizedBox.shrink(),
-              OrgTemplateScreen._projectDescTwo != ""
+              _projectDescTwo != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
                           bottom: 16, left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._projectDescTwo,
+                        _projectDescTwo,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),
@@ -340,21 +376,21 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Image.asset('assets/orgs/dsc/hacks.png'),
               ),
-              OrgTemplateScreen._projectTitleThree != ""
+              _projectTitleThree != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
-                        OrgTemplateScreen._projectTitleThree,
+                        _projectTitleThree,
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ))
                   : SizedBox.shrink(),
-              OrgTemplateScreen._projectDescThree != ""
+              _projectDescThree != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
                           bottom: 16, left: 16, right: 16),
                       child: Text(
-                        OrgTemplateScreen._projectDescThree,
+                        _projectDescThree,
                         style: TextStyle(fontSize: 16),
                       ))
                   : SizedBox.shrink(),

@@ -1,5 +1,4 @@
 class Orgs {
-  List<String> cluster;
   String name;
   String abbreviation;
   String tagline;
@@ -21,6 +20,7 @@ class Orgs {
   String mission;
   String body;
   String logo;
+  List<String> cluster;
 
   Orgs(
       [this.name,
