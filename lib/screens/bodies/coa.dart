@@ -8,7 +8,7 @@ class COAScreen extends StatefulWidget {
   static FirebaseUser _user;
 
   // ignore: non_constant_identifier_names
-  COAScreen([FirebaseUser user]) {
+  COAScreen(FirebaseUser user) {
     _user = user;
   }
 

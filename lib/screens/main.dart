@@ -33,7 +33,7 @@ class _MainScreenState extends State<MainScreen> {
 
   var pages = [
     HomeScreen(MainScreen._user),
-    ListScreen(_filter, scrollController),
+    ListScreen(_filter, scrollController, MainScreen._user),
     TrackerScreen(),
     SettingsScreen(MainScreen._googleSignIn),
   ];

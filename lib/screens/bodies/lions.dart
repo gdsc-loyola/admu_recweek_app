@@ -8,7 +8,7 @@ class LionsScreen extends StatefulWidget {
   static FirebaseUser _user;
 
   // ignore: non_constant_identifier_names
-  LionsScreen([FirebaseUser user]) {
+  LionsScreen(FirebaseUser user) {
     _user = user;
   }
 

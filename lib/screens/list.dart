@@ -1,4 +1,7 @@
 import 'dart:convert';
+import 'package:admu_recweek_app/screens/bodies/coa.dart';
+import 'package:admu_recweek_app/screens/bodies/lions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:alphabet_list_scroll_view/alphabet_list_scroll_view.dart';
@@ -7,15 +10,18 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/models/orgs.dart';
+import 'package:admu_recweek_app/templates/orgs.dart';
 
 // ignore: must_be_immutable
 class ListScreen extends StatefulWidget {
   TextEditingController searchController;
   ScrollController scrollController;
+  static FirebaseUser user;
 
-  ListScreen(_searchController, _scrollController) {
+  ListScreen(_searchController, _scrollController, FirebaseUser _user) {
     searchController = _searchController;
     scrollController = _scrollController;
+    user = _user;
   }
 
   @override
@@ -87,41 +93,82 @@ class _ListScreenState extends State<ListScreen> {
       // Since, normalList is an WidgetArray = []
       // Here is the adding of Widget that depends on the lenght of the Array in  `users`
       normalList.add(
-        Slidable(
-          actionPane: SlidableDrawerActionPane(),
-          actionExtentRatio: 0.25,
-          secondaryActions: imageUrl == ""
-              ? null
-              : <Widget>[
-                  IconSlideAction(
-                      iconWidget: Image.asset('assets/icons/list_bookmark.png'),
-                      onTap: () {
-                        Fluttertoast.showToast(
-                            msg: "You have bookmarked this organization",
-                            toastLength: Toast.LENGTH_SHORT,
-                            gravity: ToastGravity.BOTTOM,
-                            timeInSecForIosWeb: 1,
-                            backgroundColor: Colors.grey,
-                            textColor: Colors.white,
-                            fontSize: 16.0);
-                      },
-                      color: const Color(0xff7598FF))
-                ],
-          child: ListTile(
-            leading: SizedBox(
-                child: Image.asset(
-                    org.logo != null ? org.logo : 'assets/orgs/dsc/logo.png')),
-            title: Text(org.name),
-            subtitle: Text(org.body,
-                style: TextStyle(
-                    fontSize: 12,
-                    color: org.body == "COP"
-                        ? const Color(0xff002864)
-                        : org.body == "Student Groups"
-                            ? const Color(0xff1C41B2)
-                            : org.body == "LIONS"
-                                ? const Color(0xffFF801D)
-                                : const Color(0xffE84C4C))),
+        GestureDetector(
+          onTap: () {
+            if (org.abbreviation == "COA-M") {
+              return Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => new COAScreen(ListScreen.user)),
+              );
+            } else if (org.abbreviation == "LIONS") {
+              return Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => new LionsScreen(ListScreen.user)),
+              );
+            } else {
+              return Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => new OrgTemplateScreen(
+                        org.name,
+                        org.abbreviation,
+                        org.tagline,
+                        org.website,
+                        org.facebook,
+                        org.twitter,
+                        org.instagram,
+                        org.description,
+                        org.advocacy,
+                        org.core,
+                        org.projectTitleOne,
+                        org.projectDescOne,
+                        org.projectTitleTwo,
+                        org.projectDescTwo,
+                        org.projectTitleThree,
+                        org.projectDescThree,
+                        org.vision,
+                        org.mission,
+                        org.logo)),
+              );
+            }
+          },
+          child: Slidable(
+            actionPane: SlidableDrawerActionPane(),
+            actionExtentRatio: 0.25,
+            secondaryActions: imageUrl == ""
+                ? null
+                : <Widget>[
+                    IconSlideAction(
+                        iconWidget:
+                            Image.asset('assets/icons/list_bookmark.png'),
+                        onTap: () {
+                          Fluttertoast.showToast(
+                              msg: "You have bookmarked this organization",
+                              toastLength: Toast.LENGTH_SHORT,
+                              gravity: ToastGravity.BOTTOM,
+                              timeInSecForIosWeb: 1,
+                              backgroundColor: Colors.grey,
+                              textColor: Colors.white,
+                              fontSize: 16.0);
+                        },
+                        color: const Color(0xff7598FF))
+                  ],
+            child: ListTile(
+              leading: SizedBox(child: Image.asset(org.logo)),
+              title: Text(org.name),
+              subtitle: Text(org.body,
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: org.body == "COP"
+                          ? const Color(0xff002864)
+                          : org.body == "Student Groups"
+                              ? const Color(0xff1C41B2)
+                              : org.body == "LIONS"
+                                  ? const Color(0xffFF801D)
+                                  : const Color(0xffE84C4C))),
+            ),
           ),
         ),
       );

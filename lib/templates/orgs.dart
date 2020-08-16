@@ -3,31 +3,65 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
 class OrgTemplateScreen extends StatefulWidget {
-  static String _organization;
-  static String _orgLogoPNG;
+  static String _name;
+  static String _abbreviation;
+  static String _tagline;
+  static String _website;
+  static String _facebook;
+  static String _twitter;
+  static String _instagram;
   static String _description;
   static String _advocacy;
+  static String _core;
+  static String _projectTitleOne;
+  static String _projectDescOne;
+  static String _projectTitleTwo;
+  static String _projectDescTwo;
+  static String _projectTitleThree;
+  static String _projectDescThree;
   static String _vision;
   static String _mission;
-  static String _applicationProcess;
-  static String _featured;
-  static String _photosForEachEvent;
-  static String _tagline;
-  static String _orgPhoto;
-  static String _benefits;
-  static String _flagships;
-  static String _departments;
-  static String _facebook;
-  static String _socMedHandles;
+  static String _logo;
 
-  OrgTemplateScreen(String organization, String description, String vision,
-      String mission, String tagline, String facebook) {
-    _organization = organization;
+  OrgTemplateScreen(
+      String name,
+      String abbreviation,
+      String tagline,
+      String website,
+      String facebook,
+      String twitter,
+      String instagram,
+      String description,
+      String advocacy,
+      String core,
+      String projectTitleOne,
+      String projectDescOne,
+      String projectTitleTwo,
+      String projectDescTwo,
+      String projectTitleThree,
+      String projectDescThree,
+      String vision,
+      String mission,
+      String logo) {
+    _name = name;
+    _abbreviation = abbreviation;
+    _tagline = tagline;
+    _website = website;
+    _facebook = facebook;
+    _twitter = twitter;
+    _instagram = instagram;
     _description = description;
+    _advocacy = advocacy;
+    _core = core;
+    _projectTitleOne = projectTitleOne;
+    _projectDescOne = projectDescOne;
+    _projectTitleTwo = projectTitleTwo;
+    _projectDescTwo = projectDescTwo;
+    _projectTitleThree = projectTitleThree;
+    _projectDescThree = projectDescThree;
     _vision = vision;
     _mission = mission;
-    _tagline = tagline;
-    _facebook = facebook;
+    _logo = logo;
   }
 
   @override
@@ -43,7 +77,9 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            OrgTemplateScreen._organization,
+            OrgTemplateScreen._abbreviation != ""
+                ? OrgTemplateScreen._name
+                : OrgTemplateScreen._abbreviation,
             style: TextStyle(
                 color: const Color(0xff295EFF), fontWeight: FontWeight.bold),
           ),
@@ -92,27 +128,38 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                         SizedBox(
                           width: 64,
                           height: 64,
-                          child: Image.asset('assets/orgs/dsc/logo.png'),
+                          child: Image.asset(OrgTemplateScreen._logo),
                         ),
                         Row(children: <Widget>[
-                          // InkWell(
-                          //   child: Image.asset('assets/icons/web.png'),
-                          //   onTap: () => launch("https://dscadmu.org/"),
-                          // ),
-                          // InkWell(
-                          //   child: Image.asset('assets/icons/ig.png'),
-                          //   onTap: () =>
-                          //       launch("https://www.instagram.com/dsc.loyola/"),
-                          // ),
-                          // InkWell(
-                          //   child: Image.asset('assets/icons/twitter.png'),
-                          //   onTap: () =>
-                          //       launch("https://twitter.com/DSCLoyola"),
-                          // ),
-                          InkWell(
-                            child: Image.asset('assets/icons/fb.png'),
-                            onTap: () => launch(OrgTemplateScreen._facebook),
-                          )
+                          OrgTemplateScreen._website != ""
+                              ? InkWell(
+                                  child: Image.asset('assets/icons/web.png'),
+                                  onTap: () =>
+                                      launch(OrgTemplateScreen._website),
+                                )
+                              : SizedBox.shrink(),
+                          OrgTemplateScreen._instagram != ""
+                              ? InkWell(
+                                  child: Image.asset('assets/icons/ig.png'),
+                                  onTap: () =>
+                                      launch(OrgTemplateScreen._instagram),
+                                )
+                              : SizedBox.shrink(),
+                          OrgTemplateScreen._twitter != ""
+                              ? InkWell(
+                                  child:
+                                      Image.asset('assets/icons/twitter.png'),
+                                  onTap: () =>
+                                      launch(OrgTemplateScreen._twitter),
+                                )
+                              : SizedBox.shrink(),
+                          OrgTemplateScreen._facebook != ""
+                              ? InkWell(
+                                  child: Image.asset('assets/icons/fb.png'),
+                                  onTap: () =>
+                                      launch(OrgTemplateScreen._facebook),
+                                )
+                              : SizedBox.shrink(),
                         ])
                       ],
                     ),
@@ -122,121 +169,195 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Padding(
                   padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
                   child: Text(
-                    OrgTemplateScreen._organization,
+                    OrgTemplateScreen._name,
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   )),
-              Padding(
-                  padding:
-                      const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                  child: Text(
-                    OrgTemplateScreen._tagline,
-                    style: TextStyle(fontSize: 16),
-                  )),
+              OrgTemplateScreen._tagline != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._tagline,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
               // Org Details
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Org Details",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  )),
-              Padding(
-                  padding:
-                      const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                  child: Text(
-                    OrgTemplateScreen._description,
-                    style: TextStyle(fontSize: 16),
-                  )),
+              OrgTemplateScreen._description != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Org Details",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
+              OrgTemplateScreen._description != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._description,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
               // Vision
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Vision",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  )),
-              Padding(
-                  padding:
-                      const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                  child: Text(
-                    OrgTemplateScreen._vision,
-                    style: TextStyle(fontSize: 16),
-                  )),
+              OrgTemplateScreen._vision != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Vision",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
+              OrgTemplateScreen._vision != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._vision,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
               // Mission
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Mission",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  )),
-              Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16),
-                  child: Text(
-                    OrgTemplateScreen._mission,
-                    style: TextStyle(fontSize: 16),
-                  )),
+              OrgTemplateScreen._mission != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Mission",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
+              OrgTemplateScreen._mission != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._mission,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
+              // Advocacy
+              OrgTemplateScreen._advocacy != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Advocacy",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
+              OrgTemplateScreen._advocacy != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._advocacy,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
+              // Core Competency
+              OrgTemplateScreen._core != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Core Competency",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
+              OrgTemplateScreen._core != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._core,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
               //Events and Projects
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Events and Projects",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  )),
+              OrgTemplateScreen._projectTitleOne != "" &&
+                      OrgTemplateScreen._projectTitleTwo != "" &&
+                      OrgTemplateScreen._projectTitleThree != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Events and Projects",
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
               // Event/Project # 1
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Image.asset('assets/orgs/dsc/csj.png'),
               ),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Cloud Study Jams",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  )),
-              Padding(
-                  padding:
-                      const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                  child: Text(
-                    "A series of workshops with topics ranging from Machine Learning, BigQuery, to Kubernetes. These workshops are tailored to fit members’ diverse skill levels and aims to provide them with practical knowledge on Google Cloud Technology.",
-                    style: TextStyle(fontSize: 16),
-                  )),
+              OrgTemplateScreen._projectTitleOne != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        OrgTemplateScreen._projectTitleOne,
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
+              OrgTemplateScreen._projectDescOne != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._projectDescOne,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
               // Event/Project # 2
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Image.asset('assets/orgs/dsc/tah.png'),
               ),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Tech at Home",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  )),
-              Padding(
-                  padding:
-                      const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                  child: Text(
-                    "A student-led online technology seminar series that teaches new technologies, especially Google technologies to a wide and diverse audience.",
-                    style: TextStyle(fontSize: 16),
-                  )),
+              OrgTemplateScreen._projectTitleTwo != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        OrgTemplateScreen._projectTitleTwo,
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
+              OrgTemplateScreen._projectDescTwo != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._projectDescTwo,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
               // Event/Project # 3
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Image.asset('assets/orgs/dsc/hacks.png'),
               ),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Text(
-                    "Eagle Hacks",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  )),
-              Padding(
-                  padding:
-                      const EdgeInsets.only(bottom: 16, left: 16, right: 16),
-                  child: Text(
-                    "A week-long series of workshops and seminars, culminating in a two-day hackathon where students can exercise their skills in software development while making an impact on society.",
-                    style: TextStyle(fontSize: 16),
-                  )),
+              OrgTemplateScreen._projectTitleThree != ""
+                  ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        OrgTemplateScreen._projectTitleThree,
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ))
+                  : SizedBox.shrink(),
+              OrgTemplateScreen._projectDescThree != ""
+                  ? Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
+                      child: Text(
+                        OrgTemplateScreen._projectDescThree,
+                        style: TextStyle(fontSize: 16),
+                      ))
+                  : SizedBox.shrink(),
               //Learn More Button
               Padding(
                 padding:
