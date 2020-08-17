@@ -1,14 +1,88 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
 class COAScreen extends StatefulWidget {
+  static FirebaseUser _user;
+
+  // ignore: non_constant_identifier_names
+  COAScreen(FirebaseUser user) {
+    _user = user;
+  }
+
   @override
   _COAScreenState createState() => _COAScreenState();
 }
 
 class _COAScreenState extends State<COAScreen> {
+  final firestoreInstance = Firestore.instance;
   bool bookmark = false;
+
+  @override
+  void initState() {
+    super.initState();
+    firestoreInstance
+        .collection("bookmarks-2020-2021")
+        .document('${COAScreen._user.uid}-COA')
+        .get()
+        .then((value) {
+      if (value.data["name"] ==
+              "Council of Organizations of the Ateneo - Manila" &&
+          value.data["bookmark"]) {
+        setState(() {
+          bookmark = true;
+        });
+      } else {
+        setState(() {
+          bookmark = false;
+        });
+      }
+    });
+  }
+
+  void _onBookmark() async {
+    if (bookmark) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${COAScreen._user.uid}-COA')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg:
+                "You have unbookmarked Council of Organizations of the Ateneo - Manila",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${COAScreen._user.uid}-COA')
+          .setData({
+        "id": COAScreen._user.uid,
+        "name": "Council of Organizations of the Ateneo - Manila",
+        "abbreviation": "COA",
+        "body": "COA",
+        "bookmark": true,
+      }).then((_) {
+        Fluttertoast.showToast(
+            msg:
+                "You have bookmarked Council of Organizations of the Ateneo - Manila",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +104,7 @@ class _COAScreenState extends State<COAScreen> {
                     child: GestureDetector(
                       onTap: () {
                         setState(() {
+                          _onBookmark();
                           bookmark = !bookmark;
                         });
                       },
@@ -39,7 +114,9 @@ class _COAScreenState extends State<COAScreen> {
                         child: bookmark
                             ? Image.asset(
                                 'assets/bodies/coa/bookmark_active.png')
-                            : Image.asset('assets/bodies/coa/bookmark.png'),
+                            : !bookmark
+                                ? Image.asset('assets/bodies/coa/bookmark.png')
+                                : null,
                       ),
                     ))
               ],
@@ -66,7 +143,7 @@ class _COAScreenState extends State<COAScreen> {
                   height: 180,
                   margin: const EdgeInsets.only(bottom: 8, top: 16)),
               Text(
-                "Description of COA. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "Description of COA. The Council of Organizations of the Ateneo - Manila (COA-M) is the sole, autonomous, confederation of all fifty-six (56) duly-accredited student organizations in the Ateneo de Manila University Loyola Schools. COA-M is united in developing Ateneans to become active, competent, and holistically formed leaders who contribute to nation-building through the Ignatian tradition of service and excellence. COA-M works to promote a vibrant and flourishing organization life in the Ateneo through its roles in being a representative, administrative, formative, collaborative, and unitive body for student organizations in the Loyola Schools.",
                 style: TextStyle(fontSize: 18),
               ),
               Padding(

@@ -1,12 +1,29 @@
+import 'dart:convert';
+
+import 'package:admu_recweek_app/models/orgs.dart';
+import 'package:admu_recweek_app/models/screen.dart';
+import 'package:admu_recweek_app/screens/main.dart';
+import 'package:admu_recweek_app/templates/orgs.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:admu_recweek_app/models/user.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:admu_recweek_app/screens/main.dart';
-import 'package:admu_recweek_app/models/user.dart';
-import 'package:admu_recweek_app/models/screen.dart';
-import 'package:admu_recweek_app/models/user.dart';
+
+import 'bodies/coa.dart';
+import 'bodies/lions.dart';
 
 class TrackerScreen extends StatefulWidget {
+  static FirebaseUser _user;
+
+  // ignore: non_constant_identifier_names
+  TrackerScreen(FirebaseUser user) {
+    _user = user;
+  }
+
   @override
   _TrackerScreenState createState() => _TrackerScreenState();
 }
@@ -14,15 +31,311 @@ class TrackerScreen extends StatefulWidget {
 class _TrackerScreenState extends State<TrackerScreen> {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final firestoreInstance = Firestore.instance;
   bool isUserSignedIn = false;
-  bool maintenance = true;
+  bool maintenance = false;
   int contentState = 0;
+
+  List<String> bookmarkList = [];
+  List<Widget> bookmarkWidgets = [];
+  List<Orgs> orgList = [];
+  List<String> appliedList = [];
+  List<Widget> appliedWidgets = [];
 
   @override
   void initState() {
     contentState = 0;
-    super.initState();
     checkIfUserIsSignedIn();
+    firebaseReloader();
+    super.initState();
+  }
+
+  firebaseReloader() async {
+    bookmarkList = [];
+    bookmarkWidgets = [];
+    orgList = [];
+    appliedList = [];
+    appliedWidgets = [];
+
+    firestoreInstance
+        .collection("bookmarks-2020-2021")
+        .where("id", isEqualTo: TrackerScreen._user.uid)
+        .getDocuments()
+        .then((value) {
+      value.documents.forEach((result) {
+        print(result.data['name']);
+        bookmarkList.add(result.data['name']);
+      });
+
+      setState(() {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          await loadJSON();
+        });
+      });
+    });
+
+    firestoreInstance
+        .collection("applied-2020-2021")
+        .where("id", isEqualTo: TrackerScreen._user.uid)
+        .getDocuments()
+        .then((value) {
+      value.documents.forEach((result) {
+        print(result.data['name']);
+        appliedList.add(result.data['name']);
+      });
+      setState(() {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          await loadJSON();
+        });
+      });
+    });
+  }
+
+  loadJSON() async {
+    var orgResult;
+    // Getting the file path of the JSON and Decoding the file into String
+    String orgs = await rootBundle.loadString('assets/data/orgs.json');
+    orgResult = json.decode(orgs.toString());
+    orgList = [];
+
+    for (int i = 0; i < orgResult.length; i++) {
+      orgList.add(Orgs(
+          orgResult[i]['Name'],
+          orgResult[i]['Abbreviation'],
+          orgResult[i]['Tagline'],
+          orgResult[i]['Website'],
+          orgResult[i]['Facebook'],
+          orgResult[i]['Twitter'],
+          orgResult[i]['Instagram'],
+          orgResult[i]['Description'],
+          orgResult[i]['Advocacy'],
+          orgResult[i]['Core'],
+          orgResult[i]['Awards'],
+          orgResult[i]['projectTitleOne'],
+          orgResult[i]['projectDescOne'],
+          orgResult[i]['projectTitleTwo'],
+          orgResult[i]['projectDescTwo'],
+          orgResult[i]['projectTitleThree'],
+          orgResult[i]['projectDescThree'],
+          orgResult[i]['Vision'],
+          orgResult[i]['Mission'],
+          orgResult[i]['Body'],
+          orgResult[i]['Logo']));
+    }
+    // Sorting Area
+    orgList
+        .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
+
+    filterBookmarks();
+    filterApplied();
+  }
+
+  filterBookmarks() {
+    List<Orgs> orgs = [];
+    bookmarkWidgets = [];
+
+    // We added all the userList to the users. for the passing/getting the specific value.
+    orgs.addAll(orgList);
+
+    // Loop
+    orgs.forEach((org) {
+      // Since, normalList is an WidgetArray = []
+      // Here is the adding of Widget that depends on the lenght of the Array in  `users`
+
+      bookmarkList.forEach((i) {
+        if (i == org.name) {
+          bookmarkWidgets.add(
+            GestureDetector(
+              onTap: () {
+                if (org.abbreviation == "COA-M") {
+                  return Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            new COAScreen(TrackerScreen._user)),
+                  );
+                } else if (org.abbreviation == "LIONS") {
+                  return Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            new LionsScreen(TrackerScreen._user)),
+                  );
+                } else {
+                  return Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => new OrgTemplateScreen(
+                          TrackerScreen._user,
+                          org.name,
+                          org.abbreviation,
+                          org.tagline,
+                          org.website,
+                          org.facebook,
+                          org.twitter,
+                          org.instagram,
+                          org.description,
+                          org.advocacy,
+                          org.core,
+                          org.projectTitleOne,
+                          org.projectDescOne,
+                          org.projectTitleTwo,
+                          org.projectDescTwo,
+                          org.projectTitleThree,
+                          org.projectDescThree,
+                          org.vision,
+                          org.mission,
+                          org.body,
+                          org.logo),
+                    ),
+                  );
+                }
+              },
+              child: Slidable(
+                actionPane: SlidableDrawerActionPane(),
+                actionExtentRatio: 0.25,
+                secondaryActions: imageUrl == ""
+                    ? null
+                    : <Widget>[
+                        IconSlideAction(
+                            iconWidget: Image.asset('assets/icons/delete.png'),
+                            onTap: () {
+                              _removeBookmarks(
+                                  org.name, org.abbreviation, org.body);
+                            },
+                            color: const Color(0xffE84C4C)),
+                        IconSlideAction(
+                            iconWidget: Image.asset('assets/icons/check.png'),
+                            onTap: () {
+                              _onApplied(org.name, org.abbreviation, org.body);
+                            },
+                            color: const Color(0xff7598FF))
+                      ],
+                child: ListTile(
+                  leading: SizedBox(child: Image.asset(org.logo)),
+                  title: Text(org.name),
+                  subtitle: Text(org.body,
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: org.body == "COP"
+                              ? const Color(0xff002864)
+                              : org.body == "Student Groups"
+                                  ? const Color(0xff1C41B2)
+                                  : org.body == "LIONS"
+                                      ? const Color(0xffFF801D)
+                                      : const Color(0xffE84C4C))),
+                ),
+              ),
+            ),
+          );
+        }
+      });
+    });
+
+    // SetState to change the Value every time is triggers
+    setState(() {
+      // ignore: unnecessary_statements
+      bookmarkWidgets;
+    });
+  }
+
+  filterApplied() {
+    List<Orgs> orgs = [];
+    appliedWidgets = [];
+
+    // We added all the userList to the users. for the passing/getting the specific value.
+    orgs.addAll(orgList);
+
+    // Loop
+    orgs.forEach((org) {
+      // Since, normalList is an WidgetArray = []
+      // Here is the adding of Widget that depends on the lenght of the Array in  `users`
+
+      appliedList.forEach((i) {
+        if (i == org.name) {
+          appliedWidgets.add(
+            GestureDetector(
+                onTap: () {
+                  if (org.abbreviation == "COA-M") {
+                    return Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              new COAScreen(TrackerScreen._user)),
+                    );
+                  } else if (org.abbreviation == "LIONS") {
+                    return Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              new LionsScreen(TrackerScreen._user)),
+                    );
+                  } else {
+                    return Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => new OrgTemplateScreen(
+                            TrackerScreen._user,
+                            org.name,
+                            org.abbreviation,
+                            org.tagline,
+                            org.website,
+                            org.facebook,
+                            org.twitter,
+                            org.instagram,
+                            org.description,
+                            org.advocacy,
+                            org.core,
+                            org.projectTitleOne,
+                            org.projectDescOne,
+                            org.projectTitleTwo,
+                            org.projectDescTwo,
+                            org.projectTitleThree,
+                            org.projectDescThree,
+                            org.vision,
+                            org.mission,
+                            org.body,
+                            org.logo),
+                      ),
+                    );
+                  }
+                },
+                child: Slidable(
+                  actionPane: SlidableDrawerActionPane(),
+                  actionExtentRatio: 0.25,
+                  secondaryActions: <Widget>[
+                    IconSlideAction(
+                        iconWidget: Image.asset('assets/icons/delete.png'),
+                        onTap: () {
+                          _removeApplied(org.name, org.abbreviation, org.body);
+                        },
+                        color: const Color(0xffE84C4C)),
+                  ],
+                  child: ListTile(
+                    leading: SizedBox(child: Image.asset(org.logo)),
+                    title: Text(org.name),
+                    subtitle: Text(org.body,
+                        style: TextStyle(
+                            fontSize: 12,
+                            color: org.body == "COP"
+                                ? const Color(0xff002864)
+                                : org.body == "Student Groups"
+                                    ? const Color(0xff1C41B2)
+                                    : org.body == "LIONS"
+                                        ? const Color(0xffFF801D)
+                                        : const Color(0xffE84C4C))),
+                  ),
+                )),
+          );
+        }
+      });
+    });
+
+    // SetState to change the Value every time is triggers
+    setState(() {
+      // ignore: unnecessary_statements
+      appliedWidgets;
+    });
   }
 
   void checkIfUserIsSignedIn() async {
@@ -74,6 +387,101 @@ class _TrackerScreenState extends State<TrackerScreen> {
     setState(() {
       isUserSignedIn = userSignedIn == null ? true : false;
     });
+  }
+
+  void _removeBookmarks(name, abbreviation, body) async {
+    firestoreInstance
+        .collection("bookmarks-2020-2021")
+        .document('${TrackerScreen._user.uid}-$name')
+        .delete()
+        .then((_) {
+      Fluttertoast.showToast(
+          msg: "You have remove $name in your bookmark list",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.grey,
+          textColor: Colors.white,
+          fontSize: 16.0);
+      setState(() {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          firebaseReloader();
+        });
+      });
+    });
+  }
+
+  void _removeApplied(name, abbreviation, body) async {
+    firestoreInstance
+        .collection("applied-2020-2021")
+        .document('${TrackerScreen._user.uid}-$name')
+        .delete()
+        .then((_) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${TrackerScreen._user.uid}-$name')
+          .setData({
+        "id": TrackerScreen._user.uid,
+        "name": name,
+        "abbreviation": abbreviation,
+        "body": body,
+        "bookmark": true,
+      }).then((_) {
+        Fluttertoast.showToast(
+            msg: "You removed $name in your applied list",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+      setState(() {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          firebaseReloader();
+        });
+      });
+    });
+  }
+
+  void _onApplied(
+    name,
+    abbreviation,
+    body,
+  ) async {
+    firestoreInstance
+        .collection("applied-2020-2021")
+        .document('${TrackerScreen._user.uid}-$name')
+        .setData({
+      "id": TrackerScreen._user.uid,
+      "name": name,
+      "abbreviation": abbreviation,
+      "body": body,
+      "applied": true,
+    }).then((_) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${TrackerScreen._user.uid}-$name')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have applied in $name",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+      setState(() {
+        firebaseReloader();
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 
   @override
@@ -216,58 +624,15 @@ class _TrackerScreenState extends State<TrackerScreen> {
   }
 
   Widget _savedScreen(BuildContext context) {
-    return new Container(
-        margin: const EdgeInsets.symmetric(vertical: 30.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                child: Image.asset('assets/images/saved_empty.png'),
-                padding: const EdgeInsets.only(bottom: 12.0),
-              ),
-            ),
-            Column(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text(
-                    'You haven’t saved any org!',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 16.0, color: Colors.black),
-                  ),
-                ),
-                FlatButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    onPressed: () {
-                      onGoogleSignIn(context);
-                      selectedPageIndex = 1;
-                    },
-                    color: const Color(0xff295EFF),
-                    child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text('Find an organization',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.bold))))
-              ],
-            )
-          ],
-        ));
-  }
-
-  Widget _appliedScreen(BuildContext context) {
-    return new Container(
-        margin: const EdgeInsets.symmetric(vertical: 30.0),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    if (bookmarkWidgets.length == 0) {
+      return new Container(
+          margin: const EdgeInsets.symmetric(vertical: 30.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Expanded(
                 child: Container(
-                  child: Image.asset('assets/images/applied_empty.png'),
+                  child: Image.asset('assets/images/saved_empty.png'),
                   padding: const EdgeInsets.only(bottom: 12.0),
                 ),
               ),
@@ -276,7 +641,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
                     child: Text(
-                      'You haven’t applied for any org!',
+                      'You haven’t saved any org!',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 16.0, color: Colors.black),
                     ),
@@ -286,20 +651,81 @@ class _TrackerScreenState extends State<TrackerScreen> {
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       onPressed: () {
-                        setState(() {
-                          contentState = 0;
-                        });
+                        onGoogleSignIn(context);
+                        selectedPageIndex = 1;
                       },
                       color: const Color(0xff295EFF),
                       child: Padding(
                           padding: EdgeInsets.all(8.0),
-                          child: Text('Update my tracker',
+                          child: Text('Find an organization',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 24.0,
                                   fontWeight: FontWeight.bold))))
                 ],
               )
-            ]));
+            ],
+          ));
+    } else {
+      return new ListView.builder(
+          padding: const EdgeInsets.symmetric(vertical: 30.0),
+          itemCount: bookmarkWidgets.length,
+          itemBuilder: (BuildContext ctxt, int index) {
+            return bookmarkWidgets[index];
+          });
+    }
+  }
+
+  Widget _appliedScreen(BuildContext context) {
+    if (appliedWidgets.length == 0) {
+      return new Container(
+          margin: const EdgeInsets.symmetric(vertical: 30.0),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    child: Image.asset('assets/images/applied_empty.png'),
+                    padding: const EdgeInsets.only(bottom: 12.0),
+                  ),
+                ),
+                Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Text(
+                        'You haven’t applied for any org!',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 16.0, color: Colors.black),
+                      ),
+                    ),
+                    FlatButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            contentState = 0;
+                          });
+                        },
+                        color: const Color(0xff295EFF),
+                        child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text('Update my tracker',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24.0,
+                                    fontWeight: FontWeight.bold))))
+                  ],
+                )
+              ]));
+    } else {
+      return new ListView.builder(
+          padding: const EdgeInsets.symmetric(vertical: 30.0),
+          itemCount: appliedWidgets.length,
+          itemBuilder: (BuildContext ctxt, int index) {
+            return appliedWidgets[index];
+          });
+    }
   }
 }
