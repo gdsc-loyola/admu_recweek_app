@@ -45,9 +45,6 @@ class _TrackerScreenState extends State<TrackerScreen> {
   @override
   void initState() {
     contentState = 0;
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await loadJSON();
-    });
     checkIfUserIsSignedIn();
 
     firestoreInstance
@@ -58,6 +55,12 @@ class _TrackerScreenState extends State<TrackerScreen> {
       value.documents.forEach((result) {
         print(result.data['name']);
         bookmarkList.add(result.data['name']);
+      });
+
+      setState(() {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          await loadJSON();
+        });
       });
     });
 
@@ -70,7 +73,13 @@ class _TrackerScreenState extends State<TrackerScreen> {
         print(result.data['name']);
         appliedList.add(result.data['name']);
       });
+      setState(() {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          await loadJSON();
+        });
+      });
     });
+
     super.initState();
   }
 
@@ -79,6 +88,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
     // Getting the file path of the JSON and Decoding the file into String
     String orgs = await rootBundle.loadString('assets/data/orgs.json');
     orgResult = json.decode(orgs.toString());
+    orgList = [];
 
     for (int i = 0; i < orgResult.length; i++) {
       orgList.add(Orgs(
