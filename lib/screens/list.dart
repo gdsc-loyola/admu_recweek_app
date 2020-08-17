@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/screens/bodies/lions.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,7 @@ class _ListScreenState extends State<ListScreen> {
   List<String> strList = [];
   List<Widget> normalList = [];
   String sortStatus = 'Alphabetical';
+  final firestoreInstance = Firestore.instance;
 
   @override
   void initState() {
@@ -147,14 +149,7 @@ class _ListScreenState extends State<ListScreen> {
                         iconWidget:
                             Image.asset('assets/icons/list_bookmark.png'),
                         onTap: () {
-                          Fluttertoast.showToast(
-                              msg: "You have bookmarked this organization",
-                              toastLength: Toast.LENGTH_SHORT,
-                              gravity: ToastGravity.BOTTOM,
-                              timeInSecForIosWeb: 1,
-                              backgroundColor: Colors.grey,
-                              textColor: Colors.white,
-                              fontSize: 16.0);
+                          _onBookmark(org.name, org.abbreviation, org.body);
                         },
                         color: const Color(0xff7598FF))
                   ],
@@ -189,6 +184,61 @@ class _ListScreenState extends State<ListScreen> {
   @override
   void dispose() {
     super.dispose();
+  }
+
+  void _onBookmark(name, abbreviation, body) async {
+    bool bookmark = false;
+    firestoreInstance
+        .collection("bookmarks-2020-2021")
+        .document('${ListScreen.user.uid}-$name')
+        .get()
+        .then((value) {
+      if (value.data["name"] == name && value.data["bookmark"]) {
+        setState(() {
+          bookmark = true;
+        });
+      } else {
+        setState(() {
+          bookmark = false;
+        });
+      }
+    });
+    if (bookmark) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${ListScreen.user.uid}-$name')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have unbookmarked $name",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${ListScreen.user.uid}-$name')
+          .setData({
+        "id": ListScreen.user.uid,
+        "name": name,
+        "abbreviation": abbreviation,
+        "body": body,
+        "bookmark": true,
+      }).then((_) {
+        Fluttertoast.showToast(
+            msg: "You have bookmarked $name",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    }
   }
 
   @override

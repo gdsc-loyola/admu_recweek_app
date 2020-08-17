@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
@@ -131,7 +132,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   void initState() {
     super.initState();
     firestoreInstance
-        .collection("bookmarks-2019")
+        .collection("bookmarks-2020-2021")
         .document('${_user.uid}-$_name')
         .get()
         .then((value) {
@@ -150,15 +151,22 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   void _onBookmark() async {
     if (bookmark) {
       firestoreInstance
-          .collection("bookmarks-2019")
+          .collection("bookmarks-2020-2021")
           .document('${_user.uid}-$_name')
           .delete()
           .then((_) {
-        print("success!");
+        Fluttertoast.showToast(
+            msg: "You have unbookmarked $_name",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
       });
     } else {
       firestoreInstance
-          .collection("bookmarks-2019")
+          .collection("bookmarks-2020-2021")
           .document('${_user.uid}-$_name')
           .setData({
         "id": _user.uid,
@@ -167,7 +175,14 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
         "body": _body,
         "bookmark": true,
       }).then((_) {
-        print("success!");
+        Fluttertoast.showToast(
+            msg: "You have bookmarked $_name",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
       });
     }
   }
