@@ -56,9 +56,10 @@ class _LionsScreenState extends State<LionsScreen> {
           .collection("bookmarks-2019")
           .document('${LionsScreen._user.uid}-LIONS')
           .setData({
-        "name": "Council of Organizations of the Ateneo - Manila",
-        "abbreviation": "COA",
-        "body": "COA",
+        "id": LionsScreen._user.uid,
+        "name": "League of Independent Organizations",
+        "abbreviation": "LIONS",
+        "body": "LIONS",
         "bookmark": true,
       }).then((_) {
         print("success!");

@@ -161,6 +161,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
           .collection("bookmarks-2019")
           .document('${_user.uid}-$_name')
           .setData({
+        "id": _user.uid,
         "name": _name,
         "abbreviation": _abbreviation,
         "body": _body,

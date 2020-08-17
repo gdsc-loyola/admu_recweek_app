@@ -56,6 +56,7 @@ class _COAScreenState extends State<COAScreen> {
           .collection("bookmarks-2019")
           .document('${COAScreen._user.uid}-COA')
           .setData({
+        "id": COAScreen._user.uid,
         "name": "Council of Organizations of the Ateneo - Manila",
         "abbreviation": "COA",
         "body": "COA",
