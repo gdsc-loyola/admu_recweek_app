@@ -46,6 +46,16 @@ class _TrackerScreenState extends State<TrackerScreen> {
   void initState() {
     contentState = 0;
     checkIfUserIsSignedIn();
+    firebaseReloader();
+    super.initState();
+  }
+
+  firebaseReloader() async {
+    bookmarkList = [];
+    bookmarkWidgets = [];
+    orgList = [];
+    appliedList = [];
+    appliedWidgets = [];
 
     firestoreInstance
         .collection("bookmarks-2020-2021")
@@ -79,8 +89,6 @@ class _TrackerScreenState extends State<TrackerScreen> {
         });
       });
     });
-
-    super.initState();
   }
 
   loadJSON() async {
@@ -395,6 +403,11 @@ class _TrackerScreenState extends State<TrackerScreen> {
           backgroundColor: Colors.grey,
           textColor: Colors.white,
           fontSize: 16.0);
+      setState(() {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          firebaseReloader();
+        });
+      });
     });
   }
 
@@ -422,6 +435,11 @@ class _TrackerScreenState extends State<TrackerScreen> {
             backgroundColor: Colors.grey,
             textColor: Colors.white,
             fontSize: 16.0);
+      });
+      setState(() {
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          firebaseReloader();
+        });
       });
     });
   }
@@ -454,6 +472,9 @@ class _TrackerScreenState extends State<TrackerScreen> {
             backgroundColor: Colors.grey,
             textColor: Colors.white,
             fontSize: 16.0);
+      });
+      setState(() {
+        firebaseReloader();
       });
     });
   }
