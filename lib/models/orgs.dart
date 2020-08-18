@@ -20,7 +20,7 @@ class Orgs {
   String mission;
   String body;
   String logo;
-  List<String> cluster;
+  List<dynamic> cluster;
 
   Orgs(
       [this.name,
