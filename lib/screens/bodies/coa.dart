@@ -1,9 +1,14 @@
+import 'dart:convert';
+
+import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
+import 'package:admu_recweek_app/templates/groups.dart';
 
 class COAScreen extends StatefulWidget {
   static FirebaseUser _user;
@@ -20,9 +25,22 @@ class COAScreen extends StatefulWidget {
 class _COAScreenState extends State<COAScreen> {
   final firestoreInstance = Firestore.instance;
   bool bookmark = false;
+  List<Orgs> orgList = [];
+  List<Orgs> analysisList = [];
+  List<Orgs> faithList = [];
+  List<Orgs> techList = [];
+  List<Orgs> healthList = [];
+  List<Orgs> cultureList = [];
+  List<Orgs> creativeList = [];
+  List<Orgs> bizList = [];
+  List<Orgs> playList = [];
+  List<Orgs> sectorList = [];
 
   @override
   void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await loadJSON();
+    });
     super.initState();
     firestoreInstance
         .collection("bookmarks-2020-2021")
@@ -82,6 +100,73 @@ class _COAScreenState extends State<COAScreen> {
             fontSize: 16.0);
       });
     }
+  }
+
+  loadJSON() async {
+    var orgResult;
+    // Getting the file path of the JSON and Decoding the file into String
+    String orgs = await rootBundle.loadString('assets/data/orgs.json');
+    orgResult = json.decode(orgs.toString());
+    // OUTPUT : [{name: Jan Salvador Sebastian, company: mclinica}, {name: Harvey sison, company: ateneo}, {name: Juan Dela Cruz, company: null universty}]
+    // print(jsonResult);
+    // We created a loop for adding the `name` and `company` to the USER class
+    for (int i = 0; i < orgResult.length; i++) {
+      orgList.add(Orgs(
+        orgResult[i]['Name'],
+        orgResult[i]['Abbreviation'],
+        orgResult[i]['Tagline'],
+        orgResult[i]['Website'],
+        orgResult[i]['Facebook'],
+        orgResult[i]['Twitter'],
+        orgResult[i]['Instagram'],
+        orgResult[i]['Description'],
+        orgResult[i]['Advocacy'],
+        orgResult[i]['Core'],
+        orgResult[i]['Awards'],
+        orgResult[i]['projectTitleOne'],
+        orgResult[i]['projectDescOne'],
+        orgResult[i]['projectTitleTwo'],
+        orgResult[i]['projectDescTwo'],
+        orgResult[i]['projectTitleThree'],
+        orgResult[i]['projectDescThree'],
+        orgResult[i]['Vision'],
+        orgResult[i]['Mission'],
+        orgResult[i]['Body'],
+        orgResult[i]['Logo'],
+        orgResult[i]['Cluster'],
+      ));
+    }
+    // Sorting Area
+    orgList
+        .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
+
+    //filter Area
+    analysisList.addAll(orgList.where(
+        (i) => i.cluster.contains("Analysis and Discourse Cluster (ADC)")));
+
+    faithList.addAll(orgList
+        .where((i) => i.cluster.contains("Faith Formation Cluster (FFC)")));
+
+    techList.addAll(orgList.where(
+        (i) => i.cluster.contains("Science and Technology Cluster (STC)")));
+
+    healthList.addAll(orgList.where(
+        (i) => i.cluster.contains("Health and Environment Cluster (HEC)")));
+
+    cultureList.addAll(orgList.where(
+        (i) => i.cluster.contains("Intercultural Relations Cluster (IRC)")));
+
+    creativeList.addAll(orgList.where(
+        (i) => i.cluster.contains("Media and Creative Arts Cluster (MCA)")));
+
+    bizList.addAll(
+        orgList.where((i) => i.cluster.contains("Business Cluster (BC)")));
+
+    playList.addAll(orgList
+        .where((i) => i.cluster.contains("Performing Arts Cluster (PAC)")));
+
+    sectorList.addAll(
+        orgList.where((i) => i.cluster.contains("Sector-Based Cluster (SBC)")));
   }
 
   @override
@@ -160,7 +245,15 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                         child: GestureDetector(
                             onTap: () {
-                              print("Analysis & Discourse");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        COAScreen._user,
+                                        "Analysis & Discourse",
+                                        "COA",
+                                        analysisList)),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -188,7 +281,15 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                       child: GestureDetector(
                           onTap: () {
-                            print("Faith & Formation");
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new GroupsScreen(
+                                      COAScreen._user,
+                                      "Faith & Formation",
+                                      "COA",
+                                      faithList)),
+                            );
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
@@ -217,7 +318,15 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                       child: GestureDetector(
                           onTap: () {
-                            print("Science & Technology");
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new GroupsScreen(
+                                      COAScreen._user,
+                                      "Science & Technology",
+                                      "COA",
+                                      techList)),
+                            );
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
@@ -248,7 +357,15 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                       child: GestureDetector(
                         onTap: () {
-                          print("Health & Environment");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new GroupsScreen(
+                                    COAScreen._user,
+                                    "Health & Environment",
+                                    "COA",
+                                    healthList)),
+                          );
                         },
                         child: Container(
                           padding: const EdgeInsets.all(8),
@@ -278,7 +395,15 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                       child: GestureDetector(
                         onTap: () {
-                          print("Intercultural Relations");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new GroupsScreen(
+                                    COAScreen._user,
+                                    "Intercultural Relations",
+                                    "COA",
+                                    cultureList)),
+                          );
                         },
                         child: Container(
                           padding: const EdgeInsets.all(8),
@@ -308,7 +433,15 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                         child: GestureDetector(
                       onTap: () {
-                        print("Media & the Creative Arts");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => new GroupsScreen(
+                                  COAScreen._user,
+                                  "Media & the Creative Arts",
+                                  "COA",
+                                  creativeList)),
+                        );
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
@@ -324,7 +457,7 @@ class _COAScreenState extends State<COAScreen> {
                             Padding(
                                 padding: const EdgeInsets.only(top: 8),
                                 child: new Text(
-                                  "Culture",
+                                  "Media & the Creative Arts",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
@@ -339,7 +472,12 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                         child: GestureDetector(
                       onTap: () {
-                        print("Business");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => new GroupsScreen(
+                                  COAScreen._user, "Business", "COA", bizList)),
+                        );
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
@@ -368,7 +506,15 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                         child: GestureDetector(
                       onTap: () {
-                        print("Performing Arts");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => new GroupsScreen(
+                                  COAScreen._user,
+                                  "Performing Arts",
+                                  "COA",
+                                  playList)),
+                        );
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
@@ -397,7 +543,15 @@ class _COAScreenState extends State<COAScreen> {
                     TableCell(
                       child: GestureDetector(
                         onTap: () {
-                          print("Sector Based");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => new GroupsScreen(
+                                    COAScreen._user,
+                                    "Sector-Based",
+                                    "COA",
+                                    sectorList)),
+                          );
                         },
                         child: Container(
                           padding: const EdgeInsets.all(8),
