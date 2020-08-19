@@ -1,4 +1,5 @@
 import 'package:admu_recweek_app/widgets/base-widget.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -537,7 +538,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.symmetric(
-                              vertical: 16.0, horizontal: 50.0),
+                              vertical: 16.0, horizontal: 30.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
@@ -556,17 +557,29 @@ class _TrackerScreenState extends State<TrackerScreen> {
                                     children: <Widget>[
                                       SizedBox(
                                         child: Image.asset(
-                                            'assets/icons/saved.png'),
+                                          'assets/icons/saved.png',
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                              5,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width /
+                                              3,
+                                        ),
                                       ),
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(top: 8.0),
-                                        child: Text(
+                                        child: AutoSizeText(
                                           "Saved",
+                                          minFontSize: 20,
+                                          maxFontSize: 24,
+                                          maxLines: 1,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
-                                              color: const Color(0xff295EFF),
-                                              fontSize: 24.0),
+                                            color: const Color(0xff295EFF),
+                                          ),
                                         ),
                                       )
                                     ],
@@ -593,17 +606,29 @@ class _TrackerScreenState extends State<TrackerScreen> {
                                     children: <Widget>[
                                       SizedBox(
                                         child: Image.asset(
-                                            'assets/icons/applied.png'),
+                                          'assets/icons/applied.png',
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                              5,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width /
+                                              3,
+                                        ),
                                       ),
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(top: 8.0),
-                                        child: Text(
+                                        child: AutoSizeText(
                                           "Applied",
+                                          minFontSize: 20,
+                                          maxFontSize: 24,
+                                          maxLines: 1,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
-                                              color: const Color(0xff295EFF),
-                                              fontSize: 24.0),
+                                            color: const Color(0xff295EFF),
+                                          ),
                                         ),
                                       )
                                     ],
