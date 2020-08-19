@@ -1,16 +1,88 @@
 import 'package:admu_recweek_app/widgets/base-widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
 class LionsScreen extends StatefulWidget {
+  static FirebaseUser _user;
+
+  // ignore: non_constant_identifier_names
+  LionsScreen(FirebaseUser user) {
+    _user = user;
+  }
+
   @override
   _LionsScreenState createState() => _LionsScreenState();
 }
 
 class _LionsScreenState extends State<LionsScreen> {
+  final firestoreInstance = Firestore.instance;
   bool bookmark = false;
+
+  @override
+  void initState() {
+    super.initState();
+    firestoreInstance
+        .collection("bookmarks-2020-2021")
+        .document('${LionsScreen._user.uid}-LIONS')
+        .get()
+        .then((value) {
+      if (value.data["name"] ==
+              "Council of Organizations of the Ateneo - Manila" &&
+          value.data["bookmark"]) {
+        setState(() {
+          bookmark = true;
+        });
+      } else {
+        setState(() {
+          bookmark = false;
+        });
+      }
+    });
+  }
+
+  void _onBookmark() async {
+    if (bookmark) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${LionsScreen._user.uid}-LIONS')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have unbookmarked League of Independent Organizations",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${LionsScreen._user.uid}-LIONS')
+          .setData({
+        "id": LionsScreen._user.uid,
+        "name": "League of Independent Organizations",
+        "abbreviation": "LIONS",
+        "body": "LIONS",
+        "bookmark": true,
+      }).then((_) {
+        Fluttertoast.showToast(
+            msg: "You have bookmarked League of Independent Organizations",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +104,7 @@ class _LionsScreenState extends State<LionsScreen> {
                     child: GestureDetector(
                       onTap: () {
                         setState(() {
+                          _onBookmark();
                           bookmark = !bookmark;
                         });
                       },
@@ -69,7 +142,7 @@ class _LionsScreenState extends State<LionsScreen> {
                   height: 180,
                   margin: const EdgeInsets.only(bottom: 8, top: 16)),
               Text(
-                "Description of LIONS. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+                "Description of LIONS. The League of Independent Organizations (LIONS) is the official autonomous government of unaccredited student organizations in Ateneo de Manila University. LIONS believes that Ateneans have the right to organize; to pursue their respective advocacies and passions for a better society. Recognized by the Loyola Schools in 2017, LIONS aims to empower independent organizations by promoting their creative purposes,  representing them in University bodies, and creating a community that fosters inclusivity, excellence, and integrity. With that — LIONS, together with the Office of Student Activities, welcomes students who wish to join an organization or even start one of their own!",
                 style: TextStyle(fontSize: 18),
               ),
               Padding(
