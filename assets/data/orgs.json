@@ -1347,7 +1347,7 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/edge_logo.png",
-		"Cover": "assets/orgs/coa/SECTOR-BASED/edge_cover.png"
+		"Cover": "assets/orgs/coa/SECTOR-BASED/edge_cover.jpg"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1929,7 +1929,8 @@
 		"Vision": "To foster a leading community for interested individuals to freely discover, share, and enjoy various tabletop hobbies under the welcoming camaraderie of both old and new tabletop enthusiasts. We aim to explore further the positives that tabletop interests can explore as a medium such as social utility, psychological benefits, cultural relevance and trends, fine arts, and national identity.",
 		"Mission": "To provide a space for a community to explore, discover, and appreciate various tabletop hobbies. We strive to create a healthy and safe social atmosphere where people can freely share hobbies and interests with respect and camaraderie towards each other. We push for the exploration and sharing of tabletop interests as a medium for personal growth, analytic thinking, stress relief, and forging healthy relationships.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/THINC.png"
+		"Logo": "assets/orgs/lions/logos/THINC.png",
+		"Cover": "assets/orgs/lions/covers/THINC.jpg"
 	},
 	{
 		"Cluster": ["Business", "Education"],
@@ -2278,7 +2279,8 @@
 		"Vision": "We, AGILA, envision a society that respects and advocates Animal Welfare. We aim for all animals to be ensured with caring homes and overall well-being.",
 		"Mission": "AGILA seeks to provide an avenue for Ateneans to advocate Animal Welfare through awareness campaigns and sustainable action. It seeks to instill members with compassion for animals and to equip them with the skills necessary for nurturing life. ",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/AGILA.png"
+		"Logo": "assets/orgs/lions/logos/AGILA.png",
+		"Cover": "assets/orgs/lions/covers/AGILA.png"
 	},
 	{
 		"Cluster": ["Arts", "Design"],
@@ -2302,7 +2304,8 @@
 		"Vision": "Deco wants to see a flourishing designer community in Ateneo where design is respected as a craft and designers are united in mutual growth and development.",
 		"Mission": "We aim to create a thriving designer community and network in Ateneo, provide designers with substantial resources, support, and opportunities, train and develop creative and professional designers, and stimulate good design within the university.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/DECO.png"
+		"Logo": "assets/orgs/lions/logos/DECO.png",
+		"Cover": "assets/orgs/lions/covers/DECO.jpg"
 	},
 	{
 		"Cluster": [
