@@ -1,10 +1,8 @@
 import 'dart:convert';
+
 import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:admu_recweek_app/widgets/base-widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'dart:convert';
-
-import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -156,8 +154,7 @@ class _LionsScreenState extends State<LionsScreen> {
 
     businessList.addAll(orgList.where((i) => i.cluster.contains("Business")));
 
-    communityList.addAll(
-        orgList.where((i) => i.cluster.contains("Community Development")));
+    communityList.addAll(orgList.where((i) => i.cluster.contains("Community Development")));
 
     cultureList.addAll(orgList.where((i) => i.cluster.contains("Culture")));
 
@@ -165,13 +162,11 @@ class _LionsScreenState extends State<LionsScreen> {
 
     educationList.addAll(orgList.where((i) => i.cluster.contains("Arts")));
 
-    environmentList
-        .addAll(orgList.where((i) => i.cluster.contains("Environment")));
+    environmentList.addAll(orgList.where((i) => i.cluster.contains("Environment")));
 
     homeList.addAll(orgList.where((i) => i.cluster.contains("Home Org")));
 
-    internationalList
-        .addAll(orgList.where((i) => i.cluster.contains("International")));
+    internationalList.addAll(orgList.where((i) => i.cluster.contains("International")));
 
     languageList.addAll(orgList.where((i) => i.cluster.contains("Language")));
 
@@ -181,8 +176,7 @@ class _LionsScreenState extends State<LionsScreen> {
 
     spiritualList.addAll(orgList.where((i) => i.cluster.contains("Spiritual")));
 
-    technologyList
-        .addAll(orgList.where((i) => i.cluster.contains("Technology")));
+    technologyList.addAll(orgList.where((i) => i.cluster.contains("Technology")));
   }
 
   @override
