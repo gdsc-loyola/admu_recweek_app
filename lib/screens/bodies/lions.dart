@@ -1,9 +1,14 @@
+import 'dart:convert';
+
+import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
+import 'package:admu_recweek_app/templates/groups.dart';
 
 class LionsScreen extends StatefulWidget {
   static FirebaseUser _user;
@@ -20,9 +25,29 @@ class LionsScreen extends StatefulWidget {
 class _LionsScreenState extends State<LionsScreen> {
   final firestoreInstance = Firestore.instance;
   bool bookmark = false;
+  List<Orgs> orgList = [];
+  List<Orgs> adventureList = [];
+  List<Orgs> artsList = [];
+  List<Orgs> businessList = [];
+  List<Orgs> communityList = [];
+  List<Orgs> cultureList = [];
+  List<Orgs> designList = [];
+  List<Orgs> educationList = [];
+  List<Orgs> environmentList = [];
+  List<Orgs> homeList = [];
+  List<Orgs> internationalList = [];
+  List<Orgs> languageList = [];
+  List<Orgs> lifestyleList = [];
+  List<Orgs> literatureList = [];
+  List<Orgs> musicList = [];
+  List<Orgs> spiritualList = [];
+  List<Orgs> technologyList = [];
 
   @override
   void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await loadJSON();
+    });
     super.initState();
     firestoreInstance
         .collection("bookmarks-2020-2021")
@@ -30,7 +55,7 @@ class _LionsScreenState extends State<LionsScreen> {
         .get()
         .then((value) {
       if (value.data["name"] ==
-              "Council of Organizations of the Ateneo - Manila" &&
+              "League of Independent Organizations" &&
           value.data["bookmark"]) {
         setState(() {
           bookmark = true;
@@ -80,6 +105,92 @@ class _LionsScreenState extends State<LionsScreen> {
             fontSize: 16.0);
       });
     }
+  }
+
+  loadJSON() async {
+    var orgResult;
+    // Getting the file path of the JSON and Decoding the file into String
+    String orgs = await rootBundle.loadString('assets/data/orgs.json');
+    orgResult = json.decode(orgs.toString());
+    // OUTPUT : [{name: Jan Salvador Sebastian, company: mclinica}, {name: Harvey sison, company: ateneo}, {name: Juan Dela Cruz, company: null universty}]
+    // print(jsonResult);
+    // We created a loop for adding the `name` and `company` to the USER class
+    for (int i = 0; i < orgResult.length; i++) {
+      orgList.add(Orgs(
+        orgResult[i]['Name'],
+        orgResult[i]['Abbreviation'],
+        orgResult[i]['Tagline'],
+        orgResult[i]['Website'],
+        orgResult[i]['Facebook'],
+        orgResult[i]['Twitter'],
+        orgResult[i]['Instagram'],
+        orgResult[i]['Description'],
+        orgResult[i]['Advocacy'],
+        orgResult[i]['Core'],
+        orgResult[i]['Awards'],
+        orgResult[i]['projectTitleOne'],
+        orgResult[i]['projectDescOne'],
+        orgResult[i]['projectTitleTwo'],
+        orgResult[i]['projectDescTwo'],
+        orgResult[i]['projectTitleThree'],
+        orgResult[i]['projectDescThree'],
+        orgResult[i]['Vision'],
+        orgResult[i]['Mission'],
+        orgResult[i]['Body'],
+        orgResult[i]['Logo'],
+        orgResult[i]['Cluster'],
+      ));
+    }
+    // Sorting Area
+    orgList
+        .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
+
+    //filter Area
+    adventureList.addAll(orgList.where(
+        (i) => i.cluster.contains("Adventure")));
+
+    artsList.addAll(orgList.where(
+        (i) => i.cluster.contains("Arts")));
+
+    businessList.addAll(orgList.where(
+        (i) => i.cluster.contains("Business")));
+
+    communityList.addAll(orgList.where(
+        (i) => i.cluster.contains("Community Development")));
+
+    cultureList.addAll(orgList.where(
+        (i) => i.cluster.contains("Culture")));
+
+    designList.addAll(orgList.where(
+        (i) => i.cluster.contains("Design")));
+
+    educationList.addAll(orgList.where(
+        (i) => i.cluster.contains("Arts")));
+
+    environmentList.addAll(orgList.where(
+        (i) => i.cluster.contains("Environment")));
+
+    homeList.addAll(orgList.where(
+        (i) => i.cluster.contains("Home Org")));
+
+    internationalList.addAll(orgList.where(
+        (i) => i.cluster.contains("International")));
+
+    languageList.addAll(orgList.where(
+        (i) => i.cluster.contains("Language")));
+    
+    lifestyleList.addAll(orgList.where(
+        (i) => i.cluster.contains("Lifestyle")));
+    
+    musicList.addAll(orgList.where(
+        (i) => i.cluster.contains("Music")));
+    
+    spiritualList.addAll(orgList.where(
+        (i) => i.cluster.contains("Spiritual")));
+
+    technologyList.addAll(orgList.where(
+        (i) => i.cluster.contains("Technology")));
+
   }
 
   @override
@@ -159,8 +270,18 @@ class _LionsScreenState extends State<LionsScreen> {
                       padding: const EdgeInsets.only(bottom: 16, right: 16),
                       child: GestureDetector(
                           onTap: () {
-                            print("Adventure");
-                          },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Adventure",
+                                        "LIONS",
+                                        adventureList
+                                      )
+                                    ),
+                              );
+                            },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
@@ -170,8 +291,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                   color: Colors.grey.withOpacity(0.05),
                                   spreadRadius: 1,
                                   blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
+                                  offset: Offset(0, 3), // changes position of shadow
                                 ),
                               ],
                             ),
@@ -201,7 +321,17 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                             onTap: () {
-                              print("Adventure");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Arts",
+                                        "LIONS",
+                                        artsList
+                                      )
+                                    ),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -228,7 +358,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
                                       child: Text(
-                                        "Adventure",
+                                        "Arts",
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
@@ -246,8 +376,18 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                           onTap: () {
-                            print("Business");
-                          },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Business",
+                                        "LIONS",
+                                        businessList
+                                      )
+                                    ),
+                              );
+                            },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
@@ -290,8 +430,18 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                           onTap: () {
-                            print("Community");
-                          },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Community Development",
+                                        "LIONS",
+                                        communityList
+                                      )
+                                    ),
+                              );
+                            },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
@@ -336,7 +486,17 @@ class _LionsScreenState extends State<LionsScreen> {
                           padding: const EdgeInsets.only(bottom: 16, right: 16),
                           child: GestureDetector(
                             onTap: () {
-                              print("Culture");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Culture",
+                                        "LIONS",
+                                        cultureList
+                                      )
+                                    ),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -379,8 +539,18 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                           onTap: () {
-                            print("Design");
-                          },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Design",
+                                        "LIONS",
+                                        designList
+                                      )
+                                    ),
+                              );
+                            },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
@@ -425,7 +595,17 @@ class _LionsScreenState extends State<LionsScreen> {
                           padding: const EdgeInsets.only(bottom: 16, right: 16),
                           child: GestureDetector(
                             onTap: () {
-                              print("Education");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Education",
+                                        "LIONS",
+                                        educationList
+                                      )
+                                    ),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -468,8 +648,18 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                           onTap: () {
-                            print("Education");
-                          },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Environment",
+                                        "LIONS",
+                                        environmentList
+                                      )
+                                    ),
+                              );
+                            },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
@@ -514,7 +704,17 @@ class _LionsScreenState extends State<LionsScreen> {
                           padding: const EdgeInsets.only(bottom: 16, right: 16),
                           child: GestureDetector(
                             onTap: () {
-                              print("Home Org");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Home Orgs",
+                                        "LIONS",
+                                        homeList
+                                      )
+                                    ),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -557,8 +757,18 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                           onTap: () {
-                            print("International");
-                          },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "International",
+                                        "LIONS",
+                                        internationalList
+                                      )
+                                    ),
+                              );
+                            },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
@@ -603,7 +813,17 @@ class _LionsScreenState extends State<LionsScreen> {
                           padding: const EdgeInsets.only(bottom: 16, right: 16),
                           child: GestureDetector(
                             onTap: () {
-                              print("Language");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Language",
+                                        "LIONS",
+                                        languageList
+                                      )
+                                    ),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -646,8 +866,18 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                           onTap: () {
-                            print("Lifestyle");
-                          },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Lifestyle",
+                                        "LIONS",
+                                        lifestyleList
+                                      )
+                                    ),
+                              );
+                            },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
@@ -692,7 +922,17 @@ class _LionsScreenState extends State<LionsScreen> {
                           padding: const EdgeInsets.only(bottom: 16, right: 16),
                           child: GestureDetector(
                             onTap: () {
-                              print("Literature");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Literature",
+                                        "LIONS",
+                                        literatureList
+                                      )
+                                    ),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -735,8 +975,18 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                           onTap: () {
-                            print("Music");
-                          },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Music",
+                                        "LIONS",
+                                        musicList
+                                      )
+                                    ),
+                              );
+                            },
                           child: Container(
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
@@ -781,7 +1031,17 @@ class _LionsScreenState extends State<LionsScreen> {
                           padding: const EdgeInsets.only(bottom: 16, right: 16),
                           child: GestureDetector(
                             onTap: () {
-                              print("Spiritual");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Spiritual",
+                                        "LIONS",
+                                        spiritualList
+                                      )
+                                    ),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -824,7 +1084,17 @@ class _LionsScreenState extends State<LionsScreen> {
                         padding: const EdgeInsets.only(bottom: 16, right: 16),
                         child: GestureDetector(
                             onTap: () {
-                              print("Technology");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => new GroupsScreen(
+                                        LionsScreen._user,
+                                        "Technology",
+                                        "LIONS",
+                                        technologyList
+                                      )
+                                    ),
+                              );
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
