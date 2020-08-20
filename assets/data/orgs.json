@@ -1693,7 +1693,7 @@
 	{
 		"Cluster": ["Lifestyle"],
 		"Name": "FIT",
-		"Abbreviation": "",
+		"Abbreviation": "FIT",
 		"Tagline": "Your community for fitness and wellness",
 		"Website": "",
 		"Facebook": "https://web.facebook.com/FITteamCommunity",
@@ -1718,7 +1718,7 @@
 	{
 		"Cluster": ["Arts"],
 		"Name": "Blue Bird Improv",
-		"Abbreviation": "",
+		"Abbreviation": "Blue Bird Improv",
 		"Tagline": "Be your most authentic self.",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/bluebirdimprov/",
@@ -1743,7 +1743,7 @@
 	{
 		"Cluster": ["Arts", "Culture", "Literature"],
 		"Name": "Toushin",
-		"Abbreviation": "",
+		"Abbreviation": "Toushin",
 		"Tagline": "Let's get GENKI!!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/toushin.org/",
@@ -1768,7 +1768,7 @@
 	{
 		"Cluster": ["Arts", "Culture", "Language", "Literature"],
 		"Name": "Blue Hanguk Society",
-		"Abbreviation": "",
+		"Abbreviation": "Blue Hanguk Society",
 		"Tagline": "Be anything, be BlueHan!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/BlueHangukSociety",
@@ -1793,7 +1793,7 @@
 	{
 		"Cluster": ["Technology"],
 		"Name": "OpenSource",
-		"Abbreviation": "",
+		"Abbreviation": "OpenSource",
 		"Tagline": "Explore Tech with Us",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/OpenSourceADMU/",
@@ -1818,7 +1818,7 @@
 	{
 		"Cluster": ["Community Development"],
 		"Name": "Project KaBUHAYan",
-		"Abbreviation": "",
+		"Abbreviation": "Project KaBUHAYan",
 		"Tagline": "",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/ProjectKaBUHAYan",
@@ -1838,12 +1838,12 @@
 		"Mission": "Project KaBUHAYan aims to encourage and provide programs that may enhance the competencies of aspiring and existing MSME entrepreneurs on entrepreneurial development and financial literacy through KaBUHAYan sessions and various student-led initiatives, consequently providing opportunities for the growth of its student advocates. ",
 		"Body": "LIONS",
 		"Logo": "assets/orgs/lions/logos/ProjKabuhayan.png",
-		"Cover": "assets/orgs/lions/covers/ProjKabuhayan.jpeg"
+		"Cover": "assets/orgs/lions/covers/ProjKabuhayan.jpg"
 	},
 	{
 		"Cluster": ["Culture", "Design"],
 		"Name": "Mokoa Animation Studio",
-		"Abbreviation": "",
+		"Abbreviation": "MOKOA",
 		"Tagline": "Moving together, one frame at a time",
 		"Website": "https://mokoa.org/ ",
 		"Facebook": "https://www.facebook.com/mokoa.animation/?eid=ARAug9E4PQcxIWu4XGgm7yLUg0SAfYIPLRPrIGvLLq75s4V1MwJ2VdXVoR2f0ig5niVU7Rmo7wzdcfoO",
@@ -1868,7 +1868,7 @@
 	{
 		"Cluster": ["Arts", "Culture", "Literature"],
 		"Name": "WriterSkill",
-		"Abbreviation": "",
+		"Abbreviation": "WriterSkill",
 		"Tagline": "Excellence in Progress",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/writerskill/",
@@ -1893,7 +1893,7 @@
 	{
 		"Cluster": ["Arts", "Culture", "Design"],
 		"Name": "Blue Indie Komiks",
-		"Abbreviation": "",
+		"Abbreviation": "Blue Indie Komiks",
 		"Tagline": "Linking People Through Komiks",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/blueindiekomiks",
@@ -1918,7 +1918,7 @@
 	{
 		"Cluster": ["Adventure", "Culture", "Lifestyle"],
 		"Name": "THINC",
-		"Abbreviation": "",
+		"Abbreviation": "THINC",
 		"Tagline": "Roll with us!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/ThincHobbiesThincInterests/",
@@ -1943,7 +1943,7 @@
 	{
 		"Cluster": ["Business", "Education"],
 		"Name": "Junior Fellowship for Financial Literacy",
-		"Abbreviation": "",
+		"Abbreviation": "JFeL",
 		"Tagline": "Elevating Financial Literacy",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/jfelonline/",
@@ -1968,7 +1968,7 @@
 	{
 		"Cluster": ["Home Org", "Technology"],
 		"Name": "BYTE",
-		"Abbreviation": "",
+		"Abbreviation": "BYTE",
 		"Tagline": "Building Young Tech Entrepreneurs ",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/byteadmu/",
@@ -1993,7 +1993,7 @@
 	{
 		"Cluster": ["International", "Spiritual"],
 		"Name": "RC LIFE - Loyola",
-		"Abbreviation": "",
+		"Abbreviation": "RC LIFE - Loyola",
 		"Tagline": "Love Inspired by Faith & Encounter",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/RCLIFELoyola/",
@@ -2018,7 +2018,7 @@
 	{
 		"Cluster": ["Community Development", "Design", "Education"],
 		"Name": "Project LAAN",
-		"Abbreviation": "",
+		"Abbreviation": "Project LAAN",
 		"Tagline": "Fighting Poverty Through Health",
 		"Website": "https://projectlaan.org/",
 		"Facebook": "https://www.facebook.com/projectlaan",
@@ -2050,7 +2050,7 @@
 			"Technology"
 		],
 		"Name": "User Experience Society",
-		"Abbreviation": "",
+		"Abbreviation": "UXS",
 		"Tagline": "",
 		"Website": "https://uxsociety.org/",
 		"Facebook": "https://www.facebook.com/UXSoc",
@@ -2075,7 +2075,7 @@
 	{
 		"Cluster": ["Music"],
 		"Name": "Blue Symphony Orchestra",
-		"Abbreviation": "",
+		"Abbreviation": "Blue Symphony",
 		"Tagline": "More than an orchestra.",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/thebluesymphony/",
@@ -2100,7 +2100,7 @@
 	{
 		"Cluster": ["Community Development", "Education", "International"],
 		"Name": "Effective Altruism Blue",
-		"Abbreviation": "",
+		"Abbreviation": "EA Blue",
 		"Tagline": "Using reason and evidence to do the most good.",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/eablue.ph/",
@@ -2125,7 +2125,7 @@
 	{
 		"Cluster": ["Community Development", "International"],
 		"Name": "Habitat for Humanity Blue Chapter",
-		"Abbreviation": "",
+		"Abbreviation": "HFH",
 		"Tagline": "Not One Less",
 		"Website": "",
 		"Facebook": "https://facebook.com/HFHAteneo",
@@ -2150,7 +2150,7 @@
 	{
 		"Cluster": ["Spiritual"],
 		"Name": "Christ's Youth in Action - Blue",
-		"Abbreviation": "",
+		"Abbreviation": "CYA",
 		"Tagline": "Kay Kristo Buong Buhay Habambuhay!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/cya.admu",
@@ -2175,7 +2175,7 @@
 	{
 		"Cluster": ["Literature"],
 		"Name": "League of Atenean Historians (LAHi)",
-		"Abbreviation": "",
+		"Abbreviation": "LAHi",
 		"Tagline": "Make History Your Story!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/lahionline/",
@@ -2200,7 +2200,7 @@
 	{
 		"Cluster": ["Music"],
 		"Name": "CASA",
-		"Abbreviation": "",
+		"Abbreviation": "CASA",
 		"Tagline": "",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/musikaCASA/",
@@ -2225,7 +2225,7 @@
 	{
 		"Cluster": ["Culture", "Lifestyle", "Technology"],
 		"Name": "Loyola Gaming",
-		"Abbreviation": "",
+		"Abbreviation": "LGL",
 		"Tagline": "To Follow",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/loyolagaming/",
@@ -2256,7 +2256,7 @@
 			"Technology"
 		],
 		"Name": "Developer Student Clubs - Loyola",
-		"Abbreviation": "",
+		"Abbreviation": "DSC Loyola",
 		"Tagline": "Uplifting communities through technology",
 		"Website": "https://dscadmu.org/",
 		"Facebook": "https://www.facebook.com/dscloyola",
@@ -2281,7 +2281,7 @@
 	{
 		"Cluster": ["Education", "Environment"],
 		"Name": "AGILA",
-		"Abbreviation": "",
+		"Abbreviation": "AGILA",
 		"Tagline": "Your partner for animal welfare",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/AteneanAgila",
@@ -2306,7 +2306,7 @@
 	{
 		"Cluster": ["Arts", "Design"],
 		"Name": "DECO",
-		"Abbreviation": "",
+		"Abbreviation": "DECO",
 		"Tagline": "Your home for graphic designers. ",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/deco.designercommunity",
