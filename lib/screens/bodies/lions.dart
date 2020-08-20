@@ -1,6 +1,7 @@
 import 'dart:convert';
-
 import 'package:admu_recweek_app/models/orgs.dart';
+import 'package:admu_recweek_app/widgets/base-widget.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -54,8 +55,7 @@ class _LionsScreenState extends State<LionsScreen> {
         .document('${LionsScreen._user.uid}-LIONS')
         .get()
         .then((value) {
-      if (value.data["name"] ==
-              "League of Independent Organizations" &&
+      if (value.data["name"] == "League of Independent Organizations" &&
           value.data["bookmark"]) {
         setState(() {
           bookmark = true;
@@ -146,51 +146,39 @@ class _LionsScreenState extends State<LionsScreen> {
         .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
 
     //filter Area
-    adventureList.addAll(orgList.where(
-        (i) => i.cluster.contains("Adventure")));
+    adventureList.addAll(orgList.where((i) => i.cluster.contains("Adventure")));
 
-    artsList.addAll(orgList.where(
-        (i) => i.cluster.contains("Arts")));
+    artsList.addAll(orgList.where((i) => i.cluster.contains("Arts")));
 
-    businessList.addAll(orgList.where(
-        (i) => i.cluster.contains("Business")));
+    businessList.addAll(orgList.where((i) => i.cluster.contains("Business")));
 
-    communityList.addAll(orgList.where(
-        (i) => i.cluster.contains("Community Development")));
+    communityList.addAll(
+        orgList.where((i) => i.cluster.contains("Community Development")));
 
-    cultureList.addAll(orgList.where(
-        (i) => i.cluster.contains("Culture")));
+    cultureList.addAll(orgList.where((i) => i.cluster.contains("Culture")));
 
-    designList.addAll(orgList.where(
-        (i) => i.cluster.contains("Design")));
+    designList.addAll(orgList.where((i) => i.cluster.contains("Design")));
 
-    educationList.addAll(orgList.where(
-        (i) => i.cluster.contains("Arts")));
+    educationList.addAll(orgList.where((i) => i.cluster.contains("Arts")));
 
-    environmentList.addAll(orgList.where(
-        (i) => i.cluster.contains("Environment")));
+    environmentList
+        .addAll(orgList.where((i) => i.cluster.contains("Environment")));
 
-    homeList.addAll(orgList.where(
-        (i) => i.cluster.contains("Home Org")));
+    homeList.addAll(orgList.where((i) => i.cluster.contains("Home Org")));
 
-    internationalList.addAll(orgList.where(
-        (i) => i.cluster.contains("International")));
+    internationalList
+        .addAll(orgList.where((i) => i.cluster.contains("International")));
 
-    languageList.addAll(orgList.where(
-        (i) => i.cluster.contains("Language")));
-    
-    lifestyleList.addAll(orgList.where(
-        (i) => i.cluster.contains("Lifestyle")));
-    
-    musicList.addAll(orgList.where(
-        (i) => i.cluster.contains("Music")));
-    
-    spiritualList.addAll(orgList.where(
-        (i) => i.cluster.contains("Spiritual")));
+    languageList.addAll(orgList.where((i) => i.cluster.contains("Language")));
 
-    technologyList.addAll(orgList.where(
-        (i) => i.cluster.contains("Technology")));
+    lifestyleList.addAll(orgList.where((i) => i.cluster.contains("Lifestyle")));
 
+    musicList.addAll(orgList.where((i) => i.cluster.contains("Music")));
+
+    spiritualList.addAll(orgList.where((i) => i.cluster.contains("Spiritual")));
+
+    technologyList
+        .addAll(orgList.where((i) => i.cluster.contains("Technology")));
   }
 
   @override
@@ -266,10 +254,10 @@ class _LionsScreenState extends State<LionsScreen> {
                 children: [
                   TableRow(children: [
                     TableCell(
-                        child: Padding(
-                      padding: const EdgeInsets.only(bottom: 16, right: 16),
-                      child: GestureDetector(
-                          onTap: () {
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -277,49 +265,53 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Adventure",
                                         "LIONS",
-                                        adventureList
-                                      )
-                                    ),
+                                        adventureList)),
                               );
                             },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(0, 3), // changes position of shadow
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/adventure.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Adventure",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/adventure.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Adventure",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          )),
-                    )),
+                          );
+                        }),
+                      ),
+                    ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -328,9 +320,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Arts",
                                         "LIONS",
-                                        artsList
-                                      )
-                                    ),
+                                        artsList)),
                               );
                             },
                             child: Container(
@@ -357,25 +347,29 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Arts",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
-                            )),
+                            ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -383,53 +377,54 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Business",
                                         "LIONS",
-                                        businessList
-                                      )
-                                    ),
+                                        businessList)),
                               );
                             },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/business.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Business",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/business.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Business",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -437,54 +432,56 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Community Development",
                                         "LIONS",
-                                        communityList
-                                      )
-                                    ),
+                                        communityList)),
                               );
                             },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/community.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Community",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/community.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Community",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -493,9 +490,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Culture",
                                         "LIONS",
-                                        cultureList
-                                      )
-                                    ),
+                                        cultureList)),
                               );
                             },
                             child: Container(
@@ -522,23 +517,27 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Culture",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
                             ),
-                          )),
+                          );
+                        }),
+                      ),
                     ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -546,54 +545,56 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Design",
                                         "LIONS",
-                                        designList
-                                      )
-                                    ),
+                                        designList)),
                               );
                             },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/design.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Design",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/design.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Design",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -602,9 +603,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Education",
                                         "LIONS",
-                                        educationList
-                                      )
-                                    ),
+                                        educationList)),
                               );
                             },
                             child: Container(
@@ -631,23 +630,27 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Education",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
                             ),
-                          )),
+                          );
+                        }),
+                      ),
                     ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -655,54 +658,56 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Environment",
                                         "LIONS",
-                                        environmentList
-                                      )
-                                    ),
+                                        environmentList)),
                               );
                             },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/environment.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Environment",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/environment.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Environment",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -711,9 +716,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Home Orgs",
                                         "LIONS",
-                                        homeList
-                                      )
-                                    ),
+                                        homeList)),
                               );
                             },
                             child: Container(
@@ -740,23 +743,27 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Home Org",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
                             ),
-                          )),
+                          );
+                        }),
+                      ),
                     ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -764,54 +771,56 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "International",
                                         "LIONS",
-                                        internationalList
-                                      )
-                                    ),
+                                        internationalList)),
                               );
                             },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/international.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "International",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/international.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "International",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -820,9 +829,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Language",
                                         "LIONS",
-                                        languageList
-                                      )
-                                    ),
+                                        languageList)),
                               );
                             },
                             child: Container(
@@ -849,23 +856,27 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Language",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
                             ),
-                          )),
+                          );
+                        }),
+                      ),
                     ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -873,54 +884,56 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Lifestyle",
                                         "LIONS",
-                                        lifestyleList
-                                      )
-                                    ),
+                                        lifestyleList)),
                               );
                             },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/lifestyle.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Lifestyle",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/lifestyle.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Lifestyle",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -929,9 +942,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Literature",
                                         "LIONS",
-                                        literatureList
-                                      )
-                                    ),
+                                        literatureList)),
                               );
                             },
                             child: Container(
@@ -958,23 +969,27 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Literature",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
                             ),
-                          )),
+                          );
+                        }),
+                      ),
                     ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
-                          onTap: () {
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
+                            onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -982,54 +997,56 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Music",
                                         "LIONS",
-                                        musicList
-                                      )
-                                    ),
+                                        musicList)),
                               );
                             },
-                          child: Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.05),
-                                  spreadRadius: 1,
-                                  blurRadius: 3,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.05),
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        0, 3), // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 32,
+                                    width: 32,
+                                    child: Image.asset(
+                                        'assets/bodies/lions/music.png'),
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.only(left: 16),
+                                      child: AutoSizeText(
+                                        "Music",
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 16),
+                                      ))
+                                ],
+                              ),
                             ),
-                            child: Row(
-                              children: <Widget>[
-                                SizedBox(
-                                  height: 32,
-                                  width: 32,
-                                  child: Image.asset(
-                                      'assets/bodies/lions/music.png'),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.only(left: 16),
-                                    child: Text(
-                                      "Music",
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ))
-                              ],
-                            ),
-                          ),
-                        ),
+                          );
+                        }),
                       ),
                     ),
                   ]),
                   TableRow(children: [
                     TableCell(
-                      child: Padding(
-                          padding: const EdgeInsets.only(bottom: 16, right: 16),
-                          child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -1038,9 +1055,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Spiritual",
                                         "LIONS",
-                                        spiritualList
-                                      )
-                                    ),
+                                        spiritualList)),
                               );
                             },
                             child: Container(
@@ -1067,22 +1082,26 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Spiritual",
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontWeight: FontWeight.bold),
                                       ))
                                 ],
                               ),
                             ),
-                          )),
+                          );
+                        }),
+                      ),
                     ),
                     TableCell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(bottom: 16, right: 16),
-                        child: GestureDetector(
+                      child: Container(
+                        child: BaseWidget(builder: (context, sizeInfo) {
+                          return GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -1091,9 +1110,7 @@ class _LionsScreenState extends State<LionsScreen> {
                                         LionsScreen._user,
                                         "Technology",
                                         "LIONS",
-                                        technologyList
-                                      )
-                                    ),
+                                        technologyList)),
                               );
                             },
                             child: Container(
@@ -1120,19 +1137,24 @@ class _LionsScreenState extends State<LionsScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(left: 16),
-                                      child: Text(
+                                      child: AutoSizeText(
                                         "Technology",
                                         overflow: TextOverflow.ellipsis,
+                                        maxLines: 1,
+                                        minFontSize: 10,
+                                        maxFontSize: 14,
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16),
                                       ))
                                 ],
                               ),
-                            )),
+                            ),
+                          );
+                        }),
                       ),
                     ),
-                  ])
+                  ]),
                 ],
               ),
               Padding(
@@ -1148,10 +1170,12 @@ class _LionsScreenState extends State<LionsScreen> {
                     color: const Color(0xffFF801D),
                     child: Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Learn More',
+                        child: AutoSizeText('Learn More',
+                            minFontSize: 20,
+                            maxFontSize: 24,
+                            maxLines: 1,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 24.0,
                                 fontWeight: FontWeight.bold)))),
               )
             ],
