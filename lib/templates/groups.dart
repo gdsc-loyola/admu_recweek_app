@@ -117,12 +117,18 @@ class _GroupsScreenState extends State<GroupsScreen> {
                 child: Column(
                   children: <Widget>[
                     Expanded(
-                      child: Image.asset(
+                      child: 
+                      _orgs[index].cover != ""
+                      ? Image.asset(
                         _orgs[index].cover,
                         width: double.infinity,
                         height: double.infinity,
                         fit: BoxFit.fitHeight,
-                      ),
+                      )
+                      : Image.asset("assets/bodies/sanggu/cover.png", 
+                        width: double.infinity,
+                        height: double.infinity,
+                        fit: BoxFit.fitHeight,)
                     ),
                     Align(
                       alignment: Alignment.topLeft,

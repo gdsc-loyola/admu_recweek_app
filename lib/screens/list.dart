@@ -74,8 +74,7 @@ class _ListScreenState extends State<ListScreen> {
           orgResult[i]['Vision'],
           orgResult[i]['Mission'],
           orgResult[i]['Body'],
-          orgResult[i]['Logo'],
-          orgResult[i]['Cover']));
+          orgResult[i]['Logo']));
     }
     // Sorting Area
     orgList
