@@ -267,7 +267,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                         SizedBox(
                           width: 64,
                           height: 64,
-                          child: Image.asset(_cover),
+                          child: Image.asset(_logo),
                         ),
                         Row(children: <Widget>[
                           _website != ""
