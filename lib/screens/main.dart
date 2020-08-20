@@ -3,12 +3,10 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
 import 'package:admu_recweek_app/screens/home.dart';
 import 'package:admu_recweek_app/screens/list.dart';
 import 'package:admu_recweek_app/screens/settings.dart';
 import 'package:admu_recweek_app/screens/tracker.dart';
-
 import 'package:admu_recweek_app/models/screen.dart';
 
 // import 'package:dio/dio.dart';
@@ -51,7 +49,6 @@ class _MainScreenState extends State<MainScreen> {
           fontWeight: FontWeight.bold,
           fontSize: 32.0));
 
-  final Firestore _db = Firestore.instance;
   final FirebaseMessaging _fcm = FirebaseMessaging();
 
   _MainScreenState() {
