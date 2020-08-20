@@ -2,6 +2,9 @@ import 'dart:convert';
 import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:admu_recweek_app/widgets/base-widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'dart:convert';
+
+import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
