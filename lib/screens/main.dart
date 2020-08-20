@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -49,6 +51,9 @@ class _MainScreenState extends State<MainScreen> {
           fontWeight: FontWeight.bold,
           fontSize: 32.0));
 
+  final Firestore _db = Firestore.instance;
+  final FirebaseMessaging _fcm = FirebaseMessaging();
+
   _MainScreenState() {
     _filter.addListener(() {
       if (_filter.text.isEmpty) {
@@ -66,8 +71,51 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void initState() {
-    // this._getNames();
     super.initState();
+    _fcm.configure(
+      onMessage: (Map<String, dynamic> message) async {
+        print("onMessage: $message");
+
+        // Snackbar
+        // final snackbar = SnackBar(
+        //   content: Text(message['notification']['title']),
+        //   action: SnackBarAction(
+        //     label: '',
+        //     onPressed: null,
+        //   ),
+        // );
+        // Scaffold.of(context).showSnackBar(snackbar);
+
+        // AlertDialog
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            content: ListTile(
+              title: Text(
+                message['notification']['title'],
+              ),
+              subtitle: Text(
+                message['notification']['body'],
+              ),
+            ),
+            actions: [
+              FlatButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text("Close"),
+              )
+            ],
+          ),
+        );
+      },
+
+      // onResume and on Launch (Optional)
+      onResume: (Map<String, dynamic> message) async {
+        print("onResume: $message");
+      },
+      onLaunch: (Map<String, dynamic> message) async {
+        print("onLaunch: $message");
+      },
+    );
   }
 
   Widget build(BuildContext context) {
