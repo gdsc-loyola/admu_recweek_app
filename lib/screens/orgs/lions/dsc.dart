@@ -58,7 +58,6 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                   Container(
                     alignment: Alignment.bottomCenter,
                     height: 184,
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[

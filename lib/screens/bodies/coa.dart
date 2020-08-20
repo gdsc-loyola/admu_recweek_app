@@ -1,5 +1,5 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'dart:convert';
-
 import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -219,8 +219,9 @@ class _COAScreenState extends State<COAScreen> {
                   child: Image.asset('assets/bodies/coa/logo.png'),
                 ),
               ),
-              Text(
+              AutoSizeText(
                 "Council of Organizations - Ateneo",
+                maxLines: 1,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               Container(
@@ -268,12 +269,15 @@ class _COAScreenState extends State<COAScreen> {
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(top: 8),
-                                      child: new Text(
+                                      child: new AutoSizeText(
                                         "Analysis & Discourse",
+                                        maxLines: 2,
+                                        minFontSize: 15,
+                                        maxFontSize: 16,
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ))
                                 ],
                               ),
@@ -304,12 +308,15 @@ class _COAScreenState extends State<COAScreen> {
                                 ),
                                 Padding(
                                     padding: const EdgeInsets.only(top: 8),
-                                    child: new Text(
+                                    child: new AutoSizeText(
                                       "Faith & Formation",
+                                      maxLines: 2,
+                                      minFontSize: 15,
+                                      maxFontSize: 16,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ))
                               ],
                             ),
@@ -341,12 +348,15 @@ class _COAScreenState extends State<COAScreen> {
                                 ),
                                 Padding(
                                     padding: const EdgeInsets.only(top: 8),
-                                    child: new Text(
+                                    child: new AutoSizeText(
                                       "Science & Technology",
+                                      maxLines: 2,
+                                      minFontSize: 15,
+                                      maxFontSize: 16,
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ))
                               ],
                             ),
@@ -380,12 +390,15 @@ class _COAScreenState extends State<COAScreen> {
                               ),
                               Padding(
                                   padding: const EdgeInsets.only(top: 8),
-                                  child: new Text(
+                                  child: new AutoSizeText(
                                     "Health & Environment",
+                                    maxLines: 2,
+                                    minFontSize: 15,
+                                    maxFontSize: 16,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ))
                             ],
                           ),
@@ -418,12 +431,15 @@ class _COAScreenState extends State<COAScreen> {
                               ),
                               Padding(
                                   padding: const EdgeInsets.only(top: 8),
-                                  child: new Text(
+                                  child: new AutoSizeText(
                                     "Intercultural Relations",
+                                    maxLines: 2,
+                                    minFontSize: 15,
+                                    maxFontSize: 16,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ))
                             ],
                           ),
@@ -456,12 +472,15 @@ class _COAScreenState extends State<COAScreen> {
                             ),
                             Padding(
                                 padding: const EdgeInsets.only(top: 8),
-                                child: new Text(
+                                child: new AutoSizeText(
                                   "Media & the Creative Arts",
+                                  maxLines: 2,
+                                  minFontSize: 15,
+                                  maxFontSize: 16,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ))
                           ],
                         ),
@@ -492,12 +511,15 @@ class _COAScreenState extends State<COAScreen> {
                             ),
                             Padding(
                                 padding: const EdgeInsets.only(top: 8),
-                                child: new Text(
+                                child: new AutoSizeText(
                                   "Business",
+                                  maxLines: 2,
+                                  minFontSize: 15,
+                                  maxFontSize: 16,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ))
                           ],
                         ),
@@ -529,11 +551,15 @@ class _COAScreenState extends State<COAScreen> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 8),
-                              child: new Text(
+                              child: new AutoSizeText(
                                 "Performing Arts",
+                                maxLines: 2,
+                                minFontSize: 15,
+                                maxFontSize: 16,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 16),
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ],
@@ -566,12 +592,15 @@ class _COAScreenState extends State<COAScreen> {
                               ),
                               Padding(
                                   padding: const EdgeInsets.only(top: 8),
-                                  child: new Text(
+                                  child: new AutoSizeText(
                                     "Sector Based",
+                                    maxLines: 2,
+                                    minFontSize: 15,
+                                    maxFontSize: 16,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ))
                             ],
                           ),
@@ -594,11 +623,14 @@ class _COAScreenState extends State<COAScreen> {
                     color: const Color(0xffE84C4C),
                     child: Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Learn More',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.bold)))),
+                        child: AutoSizeText(
+                          'Learn More',
+                          minFontSize: 20,
+                          maxFontSize: 24,
+                          maxLines: 1,
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ))),
               )
             ],
           )),
