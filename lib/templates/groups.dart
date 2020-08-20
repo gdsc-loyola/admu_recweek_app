@@ -57,7 +57,7 @@ class _GroupsScreenState extends State<GroupsScreen> {
         child: GridView.builder(
           itemCount: _orgs.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: (itemWidth / itemHeight), crossAxisCount: 2),
+              childAspectRatio: (itemWidth / itemHeight), crossAxisCount: 2, crossAxisSpacing: 32, mainAxisSpacing: 24,),
           itemBuilder: (BuildContext context, int index) {
             return new GestureDetector(
               onTap: () {
@@ -99,6 +99,19 @@ class _GroupsScreenState extends State<GroupsScreen> {
               },
               child: Container(
                 padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(5)),
+                  color: const Color(0xffFFFFFF),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0xff000000).withOpacity(0.05),
+                      spreadRadius: 1,
+                      blurRadius: 2,
+                      offset:
+                        Offset(0, 4), // changes position of shadow
+                      ),
+                  ],
+                ),
                 child: Column(
                   children: <Widget>[
                     Expanded(
