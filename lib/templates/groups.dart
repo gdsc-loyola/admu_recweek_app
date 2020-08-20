@@ -92,7 +92,9 @@ class _GroupsScreenState extends State<GroupsScreen> {
                           _orgs[index].vision,
                           _orgs[index].mission,
                           _orgs[index].body,
-                          _orgs[index].logo),
+                          _orgs[index].logo,
+                          _orgs[index].cover,
+                      ),
                     ),
                   );
                 }
@@ -116,7 +118,7 @@ class _GroupsScreenState extends State<GroupsScreen> {
                   children: <Widget>[
                     Expanded(
                       child: Image.asset(
-                        _orgs[index].logo,
+                        _orgs[index].cover,
                         width: double.infinity,
                       ),
                     ),

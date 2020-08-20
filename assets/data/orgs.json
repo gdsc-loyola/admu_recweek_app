@@ -21,7 +21,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_cover.jpg"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -45,7 +46,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_cover.png"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -69,7 +71,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_cover.png"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -93,7 +96,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_cover.jpg"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -117,7 +121,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_cover.png"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -141,7 +146,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_cover.JPG"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -165,7 +171,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_cover.JPG"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -189,7 +196,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -213,7 +221,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/actm_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/actm_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/actm_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -237,7 +246,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/lex_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/lex_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/lex_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -261,7 +271,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ajma_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ajma_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ajma_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -285,7 +296,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ama_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ama_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ama_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -309,7 +321,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/meco_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/meco_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/meco_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -333,7 +346,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/mea_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/mea_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/mea_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -357,7 +371,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/maca_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/maca_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/maca_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -381,7 +396,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/aiesec_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/aiesec_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/aiesec_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -405,7 +421,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/bcg_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/bcg_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/bcg_cover.png"
 	},
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
@@ -429,7 +446,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COP",
-		"Logo": "assets/orgs/coa/COP/heights_logo.jpg"
+		"Logo": "assets/orgs/coa/COP/heights_logo.jpg",
+		"Cover": "assets/orgs/coa/COP/heights_cover.png"
 	},
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
@@ -453,7 +471,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COP",
-		"Logo": "assets/orgs/coa/COP/guidon_logo.png"
+		"Logo": "assets/orgs/coa/COP/guidon_logo.png",
+		"Cover": "assets/orgs/coa/COP/guidon_cover.png"
 	},
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
@@ -477,7 +496,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COP",
-		"Logo": "assets/orgs/coa/COP/matanglawin_logo.png"
+		"Logo": "assets/orgs/coa/COP/matanglawin_logo.png",
+		"Cover": "assets/orgs/coa/COP/matanglawin_cover.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -501,7 +521,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/aclc_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/aclc_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/aclc_cover.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -525,7 +546,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/acil_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/acil_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/acil_cover.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -549,7 +571,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/atsca_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/atsca_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/atsca_cover.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -573,7 +596,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/yfc_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/yfc_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/yfc_cover.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -597,7 +621,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/acmg_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/acmg_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/acmg_cover.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -621,7 +646,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_cover.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -645,7 +671,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_cover.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -669,7 +696,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_cover.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -693,7 +721,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_cover.png"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -717,7 +746,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_cover.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -741,7 +771,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_cover.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -765,7 +796,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_cover.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -789,7 +821,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_cover.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -813,7 +846,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_cover.png"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -837,7 +871,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_cover.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -861,7 +896,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_logo.png"
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_logo.png",
+		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_cover.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -885,7 +921,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_logo.png"
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_logo.png",
+		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_cover.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -909,7 +946,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_logo.png"
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_logo.png",
+		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_cover.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -933,7 +971,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_logo.png"
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_logo.png",
+		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_cover.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -957,7 +996,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_logo.png"
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_logo.png",
+		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_cover.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -981,7 +1021,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_logo.png"
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_logo.png",
+		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_cover.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -1005,7 +1046,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_logo.png"
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_logo.png",
+		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_cover.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -1029,7 +1071,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_logo.png"
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_logo.png",
+		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1053,7 +1096,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/psyche_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/psyche_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/psyche_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1077,7 +1121,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aeces_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aeces_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/aeces_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1101,7 +1146,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aches_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aches_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/aches_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1125,7 +1171,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/leaps_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/leaps_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/leaps_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1149,7 +1196,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/compsat_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/compsat_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/compsat_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1173,7 +1221,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/ams_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/ams_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/ams_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1197,7 +1246,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/misa_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/misa_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/misa_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1221,7 +1271,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/box_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/box_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/box_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1245,7 +1296,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/tugon_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/tugon_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/tugon_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1269,7 +1321,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/code_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/code_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/code_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1293,7 +1346,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/edge_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/edge_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/edge_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1317,7 +1371,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/gabay_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/gabay_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/gabay_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1341,7 +1396,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/barefoot_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/barefoot_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/barefoot_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1365,7 +1421,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/speed_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/speed_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/speed_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1389,7 +1446,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/musmos_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/musmos_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/musmos_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1413,7 +1471,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/kythe_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/kythe_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/kythe_cover.png"
 	},
 	{
 		"Cluster": [
@@ -1439,7 +1498,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sjc_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sjc_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/sjc_cover.png"
 	},
 	{
 		"Cluster": [
@@ -1465,7 +1525,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/dsws_cover.png"
 	},
 	{
 		"Cluster": [
@@ -1491,7 +1552,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/aegis_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/aegis_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/aegis_cover.png"
 	},
 	{
 		"Cluster": [
@@ -1517,7 +1579,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_cover.png"
 	},
 	{
 		"Cluster": [
@@ -1543,7 +1606,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/bodies/coa/logo.png"
+		"Logo": "assets/bodies/coa/logo.png",
+		"Cover": "assets/orgs/coa/coa_cover.png"
 	},
 	{
 		"Cluster": [
@@ -1569,7 +1633,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_cover.png"
 	},
 	{
 		"Cluster": [
@@ -1595,7 +1660,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/comelec_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/comelec_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/comelec_cover.png"
 	},
 	{
 		"Cluster": [
@@ -1621,7 +1687,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sanggu_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sanggu_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/sanggu_cover.png"
 	},
 	{
 		"Cluster": ["Lifestyle"],
@@ -1645,7 +1712,8 @@
 		"Vision": "We envision a strong and devoted fitness community that supports everyone\u00e2\u20ac\u2122s goal of self-improvement no matter what stage of fitness they\u00e2\u20ac\u2122re in and has complete access to the proper tools and knowledge for their goals.",
 		"Mission": "Our mission is to provide programs, diet plans and support that every fitness enthusiast or gym goer needs through projects and team building activities geared to promote a health and wellness to its community",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/FIT.png"
+		"Logo": "assets/orgs/lions/logos/FIT.png",
+		"Cover": "assets/orgs/lions/logos/FIT.png"
 	},
 	{
 		"Cluster": ["Arts"],

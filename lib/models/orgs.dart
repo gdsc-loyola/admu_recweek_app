@@ -20,6 +20,7 @@ class Orgs {
   String mission;
   String body;
   String logo;
+  String cover;
   List<dynamic> cluster;
 
   Orgs(
@@ -44,7 +45,8 @@ class Orgs {
       this.mission,
       this.body,
       this.logo,
-      this.cluster]);
+      this.cluster,
+      this.cover,]);
 
   // Orgs.fromJson(Map<String, dynamic> json) {
   //   cluster = json['Cluster'].cast<String>();

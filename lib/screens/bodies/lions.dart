@@ -142,6 +142,7 @@ class _LionsScreenState extends State<LionsScreen> {
         orgResult[i]['Body'],
         orgResult[i]['Logo'],
         orgResult[i]['Cluster'],
+        orgResult[i]['Cover'],
       ));
     }
     // Sorting Area

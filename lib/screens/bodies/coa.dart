@@ -134,6 +134,7 @@ class _COAScreenState extends State<COAScreen> {
         orgResult[i]['Body'],
         orgResult[i]['Logo'],
         orgResult[i]['Cluster'],
+        orgResult[i]['Cover'],
       ));
     }
     // Sorting Area

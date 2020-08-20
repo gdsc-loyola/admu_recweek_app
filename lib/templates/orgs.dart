@@ -27,6 +27,7 @@ class OrgTemplateScreen extends StatefulWidget {
   final String _mission;
   final String _body;
   final String _logo;
+  final String _cover;
 
   OrgTemplateScreen(
     this._user,
@@ -50,6 +51,7 @@ class OrgTemplateScreen extends StatefulWidget {
     this._mission,
     this._body,
     this._logo,
+    this._cover,
   );
 
   @override
@@ -75,6 +77,7 @@ class OrgTemplateScreen extends StatefulWidget {
         _mission,
         _body,
         _logo,
+        _cover,
       );
 }
 
@@ -103,6 +106,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   String _mission;
   String _body;
   String _logo;
+  String _cover;
 
   _OrgTemplateScreenState(
     this._user,
@@ -126,6 +130,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     this._mission,
     this._body,
     this._logo,
+    this._cover,
   );
 
   @override
@@ -230,7 +235,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Stack(
                 children: <Widget>[
                   SizedBox(
-                    child: Image.asset('assets/orgs/dsc/cover.png'),
+                    child: Image.asset(_cover),
                     height: 200,
                   ),
                   Container(
@@ -243,7 +248,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                         SizedBox(
                           width: 64,
                           height: 64,
-                          child: Image.asset(_logo),
+                          child: Image.asset(_cover),
                         ),
                         Row(children: <Widget>[
                           _website != ""
