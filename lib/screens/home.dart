@@ -385,7 +385,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   alignment: Alignment.topLeft,
                   child: Container(
                       child: AutoSizeText(
-                    "Today's Featured Organisations",
+                    "Today's Featured Organizations",
                     minFontSize: 20,
                     maxFontSize: 24,
                     maxLines: 1,
