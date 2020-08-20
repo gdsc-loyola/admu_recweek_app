@@ -120,6 +120,8 @@ class _GroupsScreenState extends State<GroupsScreen> {
                       child: Image.asset(
                         _orgs[index].cover,
                         width: double.infinity,
+                        height: double.infinity,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     Align(

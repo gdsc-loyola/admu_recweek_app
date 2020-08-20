@@ -235,8 +235,9 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Stack(
                 children: <Widget>[
                   SizedBox(
-                    child: Image.asset(_cover),
+                    child: Image.asset(_cover, fit: BoxFit.fill,),
                     height: 200,
+                    width: double.infinity,
                   ),
                   Container(
                     alignment: Alignment.bottomCenter,
@@ -248,7 +249,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                         SizedBox(
                           width: 64,
                           height: 64,
-                          child: Image.asset(_cover),
+                          child: Image.asset(_logo),
                         ),
                         Row(children: <Widget>[
                           _website != ""
