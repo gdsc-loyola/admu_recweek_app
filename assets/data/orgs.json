@@ -58,9 +58,9 @@
 		"Facebook": "www.facebook.com/AteneoAEUSS",
 		"Twitter": "www.twitter.com/AteneoAEuSS",
 		"Instagram": "www.instagram.com/ateneoaeuss",
-		"Description": "The Ateneo Association of European Studies Students is the premier organization for the training and development of students in the inter sectional disciplines of business, politics, and culture by using a multidisciplinary approach aligned with the goals and values of the European Union. With a strong emphasis on international relations and business, and in the creation of a global community, the organization aims to mold students into future leaders who are globally competent in various fields for the further development of the country as a formidable player in the international community. \n",
+		"Description": "The Ateneo Association of European Studies Students is the premier organization for the training and development of students in the inter sectional disciplines of business, politics, and culture by using a multidisciplinary approach aligned with the goals and values of the European Union. With a strong emphasis on international relations and business, and in the creation of a global community, the organization aims to mold students into future leaders who are globally competent in various fields for the further development of the country as a formidable player in the international community.",
 		"Advocacy": "promotion of responsible citizenship, critical analysis on European political and economic perspectives and the broadening of world vision and its relation to the Philippine context",
-		"Core": "diplomacy, friendship and unity in diversity, professionalism and nation-building",
+		"Core": "Diplomacy, friendship and unity in diversity, professionalism and nation-building",
 		"Awards": "",
 		"projectTitleOne": "jEUpardy",
 		"projectDescOne": "jEUpardy is a game show style quiz competition in which contestants are presented with general knowledge clues about EU in the form of answers and must phrase their responses in the form of questions\n",
@@ -427,7 +427,7 @@
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "HEIGHTS Ateneo",
-		"Abbreviation": "",
+		"Abbreviation": "HEIGHTS",
 		"Tagline": "",
 		"Website": "www.heights-ateneo.com",
 		"Facebook": " www.facebook.com/HeightsAteneo",
@@ -452,7 +452,7 @@
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "The GUIDON",
-		"Abbreviation": " TGDN",
+		"Abbreviation": "The GUIDON",
 		"Tagline": "Deeper into the Truth.",
 		"Website": " www.theguidon.com/1112/main ",
 		"Facebook": "www.facebook.com/TheGUIDON",
@@ -477,7 +477,7 @@
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "Matanglawin Ateneo",
-		"Abbreviation": "",
+		"Abbreviation": "Matanglawin Ateneo",
 		"Tagline": "Mamulat. Magmulat. Matanglawin.",
 		"Website": "",
 		"Facebook": "www.facebook.com/MatanglawinAteneo",
@@ -627,7 +627,7 @@
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "Loyola Mountaineers",
-		"Abbreviation": "LM",
+		"Abbreviation": "Loyola Mountaineers",
 		"Tagline": "Learn Through Adventure",
 		"Website": "",
 		"Facebook": "www.facebook.com/loyolamountaineers/",
@@ -727,7 +727,7 @@
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "Ateneo Peers ",
-		"Abbreviation": "",
+		"Abbreviation": "Ateneo Peers",
 		"Tagline": "Helping others help themselves.",
 		"Website": "",
 		"Facebook": "www.facebook.com/AteneoPeers",
@@ -1077,7 +1077,7 @@
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo Psyche",
-		"Abbreviation": "",
+		"Abbreviation": "Ateneo Psyche",
 		"Tagline": "Where people come first.",
 		"Website": "",
 		"Facebook": "www.facebook.com/AteneoPsyche",
@@ -1479,7 +1479,7 @@
 			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
 		],
 		"Name": "Ateneo Student Judicial Court",
-		"Abbreviation": "",
+		"Abbreviation": "Ateneo SJC",
 		"Tagline": "",
 		"Website": "",
 		"Facebook": "www.facebook.com/ateneo.sjc",
@@ -2307,7 +2307,7 @@
 		"Cluster": ["Arts", "Design"],
 		"Name": "DECO",
 		"Abbreviation": "DECO",
-		"Tagline": "Your home for graphic designers. ",
+		"Tagline": "Your home for graphic designers.",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/deco.designercommunity",
 		"Twitter": "",

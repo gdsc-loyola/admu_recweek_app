@@ -174,7 +174,7 @@ class _GroupsScreenState extends State<GroupsScreen> {
                     Padding(
                       padding: EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
                       child: Text(
-                        _orgs[index].description,
+                        _orgs[index].description + "\n",
                         style: TextStyle(
                           fontSize: 12,
                         ),
