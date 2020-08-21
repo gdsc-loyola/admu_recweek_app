@@ -257,6 +257,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       : Image.asset("assets/bodies/sanggu/cover.png", fit: BoxFit.cover,)
                   ),
                   ),
+                  ),
                   Container(
                     alignment: Alignment.bottomCenter,
                     height: 184,
