@@ -41,6 +41,7 @@ class _MainScreenState extends State<MainScreen> {
   ];
 
   // final dio = new Dio();
+  String _searchText = "";
   List names = new List();
   List filteredNames = new List();
   Icon _searchIcon = new Icon(Icons.search);
