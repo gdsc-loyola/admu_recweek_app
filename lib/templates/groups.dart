@@ -39,7 +39,9 @@ class _GroupsScreenState extends State<GroupsScreen> {
                   ? const Color(0xffE84C4C)
                   : _body == "LIONS"
                       ? const Color(0xffFF801D)
-                      : const Color(0xff1C41B2),
+                      : _body == "COP"
+                        ? const Color(0xff1C41B2)
+                        : const Color(0xff1C41B2),
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.white,
@@ -49,7 +51,9 @@ class _GroupsScreenState extends State<GroupsScreen> {
                 ? const Color(0xffE84C4C)
                 : _body == "LIONS"
                     ? const Color(0xffFF801D)
-                    : const Color(0xff1C41B2)),
+                      : _body == "COP"
+                        ? const Color(0xff002864)
+                        : const Color(0xff1C41B2),),
       ),
       body: Container(
         padding: const EdgeInsets.all(16.0),

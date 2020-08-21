@@ -233,7 +233,7 @@ class _LionsScreenState extends State<LionsScreen> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               Container(
-                  child: Image.asset('assets/images/placeholder.png'),
+                  child: Image.asset('assets/orgs/lions/logos/lions.jpg', fit: BoxFit.cover),
                   height: 180,
                   margin: const EdgeInsets.only(bottom: 8, top: 16)),
               Text(

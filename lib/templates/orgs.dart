@@ -234,13 +234,28 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
             children: <Widget>[
               Stack(
                 children: <Widget>[
-                  SizedBox(
+                  Container(
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    color: const Color(0xffFFFFFF),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xff000000).withOpacity(0.05),
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        offset:
+                          Offset(0, 4), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: SizedBox(
                     height: 200,
                     width: double.infinity,
                     child: 
                     _cover != ""
                       ? Image.asset(_cover, fit: BoxFit.fill,)
                       : Image.asset("assets/bodies/sanggu/cover.png", fit: BoxFit.fill,)
+                  ),
                   ),
                   Container(
                     alignment: Alignment.bottomCenter,
