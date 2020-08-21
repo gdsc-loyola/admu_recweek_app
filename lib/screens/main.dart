@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +41,6 @@ class _MainScreenState extends State<MainScreen> {
   ];
 
   // final dio = new Dio();
-  String _searchText = "";
   List names = new List();
   List filteredNames = new List();
   Icon _searchIcon = new Icon(Icons.search);
@@ -69,20 +70,17 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
+
+    // iOS Notification Permission
+    if (Platform.isIOS) {
+      _fcm.requestNotificationPermissions(
+        IosNotificationSettings(),
+      );
+    }
+
     _fcm.configure(
       onMessage: (Map<String, dynamic> message) async {
         print("onMessage: $message");
-
-        // Snackbar
-        // final snackbar = SnackBar(
-        //   content: Text(message['notification']['title']),
-        //   action: SnackBarAction(
-        //     label: '',
-        //     onPressed: null,
-        //   ),
-        // );
-        // Scaffold.of(context).showSnackBar(snackbar);
-
         // AlertDialog
         showDialog(
           context: context,
