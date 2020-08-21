@@ -206,12 +206,73 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                       ])))),
                       Align(
                           alignment: Alignment.center,
-                          child: SizedBox(
+                          child: FlatButton(
+                            child: SizedBox(
                             height: 48,
                             width: 48,
                             child: Image.asset("assets/images/DSCL logo.png"),
-                          ))
-                    ])
+                          ),
+                          onPressed: () {
+                          Navigator.of(context).push(
+                            // We will now use PageRouteBuilder
+                            PageRouteBuilder(
+                              opaque: false,
+                              pageBuilder: (BuildContext context, __, ___) {
+                                return new Scaffold(
+                                  backgroundColor: Colors.black45,
+                                  body: new Container( 
+                                    height: MediaQuery.of(context).size.height /4,
+                                    width: MediaQuery.of(context).size.width /1.5,
+                                     margin: EdgeInsets.symmetric(
+                                        horizontal: MediaQuery.of(context).size.width /5, vertical: MediaQuery.of(context).size.height /3.8 ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      border: Border.all(width: 1.0, color: const Color(0xff000000)),
+                                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Padding (
+                                      padding: EdgeInsets.all(4.0),
+                                      child: Column (
+                                      children: <Widget> [
+                                        SizedBox(
+                                          height: 48,
+                                          width: 48,
+                                          child: Image.asset("assets/images/DSCL logo.png"),
+                                        ),
+                                        Text (
+                                          "Like this mobile app? Want more products like this from DSC Loyola? Feel free to support us below!",
+                                          style: TextStyle (
+                                            fontWeight: FontWeight.bold,
+                                          )
+                                        ),
+                                        Row (children: <Widget> [
+                                          new FlatButton(
+                                          child: Text('Donate'),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          }
+                                        ), 
+                                        new FlatButton(
+                                          child: Text('Join Us!'),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          }
+                                        ), 
+                                        ],)
+                                        
+
+                                      ]
+                                    ),
+                                    ),// FlatButton
+                                  ), // Container
+                                ); // Scaffold
+                              }
+                            )
+                          ); // PageRouteBuilder
+                        }
+                      )
+                    )])
                   ]),
             ),
           )
