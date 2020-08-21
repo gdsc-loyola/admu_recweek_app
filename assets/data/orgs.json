@@ -1499,7 +1499,7 @@
 		"Mission": "",
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sjc_logo.png",
-		"Cover": "assets/orgs/coa/STUDENT_GROUPS/sjc_cover.png"
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/sjc_cover.jpeg"
 	},
 	{
 		"Cluster": [
@@ -1526,7 +1526,7 @@
 		"Mission": "",
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png",
-		"Cover": "assets/orgs/coa/STUDENT_GROUPS/dsws_cover.png"
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/dsws_cover.JPG"
 	},
 	{
 		"Cluster": [
@@ -1553,7 +1553,7 @@
 		"Mission": "",
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/aegis_logo.png",
-		"Cover": "assets/orgs/coa/STUDENT_GROUPS/aegis_cover.png"
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/aegis_cover.JPG"
 	},
 	{
 		"Cluster": [
@@ -1580,7 +1580,7 @@
 		"Mission": "",
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_logo.png",
-		"Cover": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_cover.png"
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_cover.jpg"
 	},
 	{
 		"Cluster": [
@@ -1607,7 +1607,7 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/bodies/coa/logo.png",
-		"Cover": "assets/orgs/coa/coa_cover.png"
+		"Cover": "assets/bodies/coa/cover.png"
 	},
 	{
 		"Cluster": [
@@ -1634,7 +1634,7 @@
 		"Mission": "",
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_logo.png",
-		"Cover": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_cover.png"
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_cover.jpg"
 	},
 	{
 		"Cluster": [
@@ -1661,7 +1661,7 @@
 		"Mission": "",
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/comelec_logo.png",
-		"Cover": "assets/orgs/coa/STUDENT_GROUPS/comelec_cover.png"
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/comelec_cover.jpg"
 	},
 	{
 		"Cluster": [
@@ -2353,6 +2353,6 @@
 		"Mission": "",
 		"Body": "LIONS",
 		"Logo": "assets/bodies/lions/circle.png",
-		"Cover": ""
+		"Cover": "assets/orgs/lions/logos/lions.jpg"
 	}
 ]

@@ -68,6 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
         orgResult[i]['Body'],
         orgResult[i]['Logo'],
         orgResult[i]['Cluster'],
+        orgResult[i]['Cover'],
       ));
     }
     // Sorting Area
