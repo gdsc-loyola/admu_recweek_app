@@ -42,7 +42,7 @@ class _GroupsScreenState extends State<GroupsScreen> {
                   : _body == "LIONS"
                       ? const Color(0xffFF801D)
                       : _body == "COP"
-                          ? const Color(0xff1C41B2)
+                          ? const Color(0xff002864)
                           : const Color(0xff1C41B2),
               fontWeight: FontWeight.bold),
         ),
@@ -123,7 +123,6 @@ class _GroupsScreenState extends State<GroupsScreen> {
                 }
               },
               child: Container(
-                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                   color: const Color(0xffFFFFFF),
@@ -139,23 +138,31 @@ class _GroupsScreenState extends State<GroupsScreen> {
                 child: Column(
                   children: <Widget>[
                     Expanded(
-                        child: _orgs[index].cover != ""
-                            ? Image.asset(
-                                _orgs[index].cover,
-                                width: double.infinity,
-                                height: double.infinity,
-                                fit: BoxFit.fitHeight,
-                              )
-                            : Image.asset(
-                                "assets/bodies/sanggu/cover.png",
-                                width: double.infinity,
-                                height: double.infinity,
-                                fit: BoxFit.fitHeight,
-                              )),
+                      child: 
+                      _orgs[index].cover != ""
+                      ? ClipRRect(
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
+                          child: Image.asset(
+                            _orgs[index].cover,
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.fitHeight,
+                          )
+                      )
+                      : ClipRRect(
+                          borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
+                          child: Image.asset(
+                            "assets/bodies/sanggu/cover.png",
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.fitHeight,
+                          )
+                      )
+                    ),
                     Align(
                       alignment: Alignment.topLeft,
                       child: Padding(
-                          padding: EdgeInsets.only(top: 8),
+                          padding: EdgeInsets.only(top: 8, left: 8.0, right: 8.0),
                           child: Text(
                             _orgs[index].abbreviation,
                             style: TextStyle(
@@ -164,13 +171,16 @@ class _GroupsScreenState extends State<GroupsScreen> {
                             ),
                           )),
                     ),
-                    Text(
-                      _orgs[index].description,
-                      style: TextStyle(
-                        fontSize: 12,
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
+                      child: Text(
+                        _orgs[index].description,
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 3,
                       ),
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 3,
                     ),
                   ],
                 ),
