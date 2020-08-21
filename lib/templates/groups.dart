@@ -146,7 +146,7 @@ class _GroupsScreenState extends State<GroupsScreen> {
                             _orgs[index].cover,
                             width: double.infinity,
                             height: double.infinity,
-                            fit: BoxFit.fitHeight,
+                            fit: BoxFit.cover,
                           )
                       )
                       : ClipRRect(
