@@ -47,7 +47,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-                      Image.asset('assets/images/logo.png'),
+                      Padding (
+                        padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
+                        child: Image.asset('assets/images/logo.png'),
+                      ),
                       Text(
                         "pavilion",
                         style: TextStyle(

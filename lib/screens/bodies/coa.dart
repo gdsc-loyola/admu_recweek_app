@@ -134,6 +134,7 @@ class _COAScreenState extends State<COAScreen> {
         orgResult[i]['Body'],
         orgResult[i]['Logo'],
         orgResult[i]['Cluster'],
+        orgResult[i]['Cover'],
       ));
     }
     // Sorting Area
@@ -229,7 +230,7 @@ class _COAScreenState extends State<COAScreen> {
                   height: 180,
                   margin: const EdgeInsets.only(bottom: 8, top: 16)),
               Text(
-                "Description of COA. The Council of Organizations of the Ateneo - Manila (COA-M) is the sole, autonomous, confederation of all fifty-six (56) duly-accredited student organizations in the Ateneo de Manila University Loyola Schools. COA-M is united in developing Ateneans to become active, competent, and holistically formed leaders who contribute to nation-building through the Ignatian tradition of service and excellence. COA-M works to promote a vibrant and flourishing organization life in the Ateneo through its roles in being a representative, administrative, formative, collaborative, and unitive body for student organizations in the Loyola Schools.",
+                "The Council of Organizations of the Ateneo - Manila (COA-M) is the sole, autonomous, confederation of all fifty-six (56) duly-accredited student organizations in the Ateneo de Manila University Loyola Schools. COA-M is united in developing Ateneans to become active, competent, and holistically formed leaders who contribute to nation-building through the Ignatian tradition of service and excellence. COA-M works to promote a vibrant and flourishing organization life in the Ateneo through its roles in being a representative, administrative, formative, collaborative, and unitive body for student organizations in the Loyola Schools.",
                 style: TextStyle(fontSize: 18),
               ),
               Padding(

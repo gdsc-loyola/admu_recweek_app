@@ -79,6 +79,7 @@ flutter:
     - assets/orgs/coa/SECTOR-BASED/
     - assets/orgs/coa/STUDENT_GROUPS/
     - assets/orgs/lions/logos/
+    - assets/orgs/lions/covers/
     
   # assets:
   #  - images/a_dot_burr.jpeg

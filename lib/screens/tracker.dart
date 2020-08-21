@@ -186,7 +186,8 @@ class _TrackerScreenState extends State<TrackerScreen> {
                           org.vision,
                           org.mission,
                           org.body,
-                          org.logo),
+                          org.logo,
+                          org.cover),
                     ),
                   );
                 }
@@ -295,7 +296,9 @@ class _TrackerScreenState extends State<TrackerScreen> {
                             org.vision,
                             org.mission,
                             org.body,
-                            org.logo),
+                            org.logo,
+                            org.cover
+                          ),
                       ),
                     );
                   }

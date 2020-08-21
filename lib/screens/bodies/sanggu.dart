@@ -1,20 +1,87 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
 class SangguScreen extends StatefulWidget {
+  static FirebaseUser _user;
+
+  SangguScreen(FirebaseUser user) {
+    _user = user;
+  }
+
   @override
   _SangguScreenState createState() => _SangguScreenState();
 }
 
 class _SangguScreenState extends State<SangguScreen> {
+  final firestoreInstance = Firestore.instance;
   bool bookmark = false;
-  int state = 0;    
-  
+  int state = 0;
+
   @override
   void initState() {
     state = 0;
     super.initState();
+    firestoreInstance
+        .collection("bookmarks-2020-2021")
+        .document('${SangguScreen._user.uid}-LIONS')
+        .get()
+        .then((value) {
+      if (value.data["name"] ==
+              "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila" &&
+          value.data["bookmark"]) {
+        setState(() {
+          bookmark = true;
+        });
+      } else {
+        setState(() {
+          bookmark = false;
+        });
+      }
+    });
+  }
+
+  void _onBookmark() async {
+    if (bookmark) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${SangguScreen._user.uid}-Sanggu')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have unbookmarked Sanggu",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${SangguScreen._user.uid}-Sanggu')
+          .setData({
+        "id": SangguScreen._user.uid,
+        "name":
+            "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila",
+        "abbreviation": "Sanggu",
+        "body": "Student Groups",
+        "bookmark": true,
+      }).then((_) {
+        Fluttertoast.showToast(
+            msg: "You have bookmarked Sanggu",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    }
   }
 
   @override
@@ -37,6 +104,7 @@ class _SangguScreenState extends State<SangguScreen> {
                     child: GestureDetector(
                       onTap: () {
                         setState(() {
+                          _onBookmark();
                           bookmark = !bookmark;
                         });
                       },
@@ -45,9 +113,9 @@ class _SangguScreenState extends State<SangguScreen> {
                         height: 24.0,
                         child: bookmark
                             ? Image.asset(
-                                'assets/bodies/student-groups/bookmark_active.png'
-                              )
-                            : Image.asset('assets/bodies/student-groups/bookmark.png'),
+                                'assets/bodies/student-groups/bookmark_active.png')
+                            : Image.asset(
+                                'assets/bodies/student-groups/bookmark.png'),
                       ),
                     ))
               ],
@@ -80,85 +148,82 @@ class _SangguScreenState extends State<SangguScreen> {
                 style: TextStyle(fontSize: 16),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 24, bottom: 16 ),
-                child:Row(
+                padding: const EdgeInsets.only(top: 24, bottom: 16),
+                child: Row(
                   children: <Widget>[
                     Expanded(
-                    child: GestureDetector(
+                      child: GestureDetector(
                         onTap: () {
-                          setState( () {
+                          setState(() {
                             state = 0;
                           });
                         },
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: Container(
-                          width: MediaQuery.of(context).size.width/3,
-                          height: 48,
-                              child: Text (
+                        child: Align(
+                            alignment: Alignment.center,
+                            child: Container(
+                              width: MediaQuery.of(context).size.width / 3,
+                              height: 48,
+                              child: Text(
                                 "Office of the President",
-                                style: TextStyle (
+                                style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16, 
+                                  fontSize: 16,
                                 ),
                                 textAlign: TextAlign.center,
                                 overflow: TextOverflow.ellipsis,
-                                maxLines: 2, 
+                                maxLines: 2,
                               ),
-                          )
+                            )),
                       ),
-                    ),
                     ),
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          setState( () {
+                          setState(() {
                             state = 1;
                           });
                         },
                         child: Align(
-                          alignment: Alignment.center,
-                          child: Container(
-                            width: MediaQuery.of(context).size.width/3,
-                            height: 48,
-                                child: Text (
-                                  "Office of the Vice President",
-                                  style: TextStyle (
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 2,                           
+                            alignment: Alignment.center,
+                            child: Container(
+                              width: MediaQuery.of(context).size.width / 3,
+                              height: 48,
+                              child: Text(
+                                "Office of the Vice President",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
                                 ),
-                            )
-                        ),
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 2,
+                              ),
+                            )),
                       ),
                     ),
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
-                          setState( () {
+                          setState(() {
                             state = 2;
                           });
                         },
                         child: Align(
-                          alignment: Alignment.center,
-                          child: Container(
-                            width: MediaQuery.of(context).size.width/3,
-                            height: 48,
-                                child: Text (
-                                  "School  \n Sanggu",
-                                  style: TextStyle (
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 2, 
+                            alignment: Alignment.center,
+                            child: Container(
+                              width: MediaQuery.of(context).size.width / 3,
+                              height: 48,
+                              child: Text(
+                                "School  \n Sanggu",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
                                 ),
-                            )
-                        ),
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 2,
+                              ),
+                            )),
                       ),
                     ),
                   ],
@@ -166,223 +231,222 @@ class _SangguScreenState extends State<SangguScreen> {
               ),
               Padding(
                 padding: EdgeInsets.only(bottom: 24),
-                child: Row (
+                child: Row(
                   children: <Widget>[
                     Expanded(
                       child: Container(
                         height: 5,
-                        width: MediaQuery.of(context).size.width/3,
-                        color: state == 0 ? Color(0xff295EFF) : state == 1 ? Color(0xffE5E5E5) : Color(0xffE5E5E5),
+                        width: MediaQuery.of(context).size.width / 3,
+                        color: state == 0
+                            ? Color(0xff295EFF)
+                            : state == 1
+                                ? Color(0xffE5E5E5)
+                                : Color(0xffE5E5E5),
                       ),
                     ),
                     Expanded(
                       child: Container(
                         height: 5,
-                        width: MediaQuery.of(context).size.width/3,
-                        color: state == 0 ? Color(0xffE5E5E5) : state == 1 ? Color(0xff295EFF) : Color(0xffE5E5E5),
+                        width: MediaQuery.of(context).size.width / 3,
+                        color: state == 0
+                            ? Color(0xffE5E5E5)
+                            : state == 1
+                                ? Color(0xff295EFF)
+                                : Color(0xffE5E5E5),
                       ),
                     ),
                     Expanded(
                       child: Container(
                         height: 5,
-                        width: MediaQuery.of(context).size.width/3,
-                        color: state == 0 ? Color(0xffE5E5E5) : state == 1 ? Color(0xffE5E5E5) : Color(0xff295EFF),
+                        width: MediaQuery.of(context).size.width / 3,
+                        color: state == 0
+                            ? Color(0xffE5E5E5)
+                            : state == 1
+                                ? Color(0xffE5E5E5)
+                                : Color(0xff295EFF),
                       ),
                     )
                   ],
                 ),
               ),
               Column(
-                children: <Widget> [
-                  state == 0 
-                   ? Column (
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(top: 16, bottom: 16),
-                          child: Row(
-                            children: <Widget>[ 
-                              Container( 
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle
+                children: <Widget>[
+                  state == 0
+                      ? Column(children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                              child: Text(
-                                "Department of This That 1",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              ),
-                            ],
-                          ), 
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 16, bottom: 16),
-                          child: Row(
-                            children: <Widget>[ 
-                              Container( 
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                              child: Text(
-                                "Department of This That 1.1",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              ),
-                            ],
-                          ), 
-                        ),
-                      ]
-                    )
-                  : state == 1 
-                  ? Column (
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(top: 16, bottom: 16),
-                          child: Row(
-                            children: <Widget>[ 
-                              Container( 
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                              child: Text(
-                                "Department of This That 2",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              ),
-                            ],
-                          ), 
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 16, bottom: 16),
-                          child: Row(
-                            children: <Widget>[ 
-                              Container( 
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                              child: Text(
-                                "Department of This That 2.1",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              ),
-                            ],
-                          ), 
-                        ),
-                      ]
-                    )
-                  : Column (
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(top: 16, bottom: 16),
-                          child: Row(
-                            children: <Widget>[ 
-                              Container( 
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                              child: Text(
-                                "Department of This That 3",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              ),
-                            ],
-                          ), 
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 16, bottom: 16),
-                          child: Row(
-                            children: <Widget>[ 
-                              Container( 
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 16),
-                                child: Text(
-                                  "Department of This That 3.1",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Text(
+                                    "Department of This That 1",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ), 
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 16, bottom: 16),
-                          child: Row(
-                            children: <Widget>[ 
-                              Container( 
-                                height: 48,
-                                width: 48,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Text(
+                                    "Department of This That 1.1",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ])
+                      : state == 1
+                          ? Column(children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(top: 16, bottom: 16),
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey,
+                                          shape: BoxShape.circle),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 16),
+                                      child: Text(
+                                        "Department of This That 2",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.only(left: 16),
-                              child: Text(
-                                "Department of This That 3.2",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                                padding: EdgeInsets.only(top: 16, bottom: 16),
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey,
+                                          shape: BoxShape.circle),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 16),
+                                      child: Text(
+                                        "Department of This That 2.1",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
+                            ])
+                          : Column(children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(top: 16, bottom: 16),
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey,
+                                          shape: BoxShape.circle),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 16),
+                                      child: Text(
+                                        "Department of This That 3",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ],
-                          ), 
-                        ),
-                      ]
-                    )
+                              Padding(
+                                padding: EdgeInsets.only(top: 16, bottom: 16),
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey,
+                                          shape: BoxShape.circle),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 16),
+                                      child: Text(
+                                        "Department of This That 3.1",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 16, bottom: 16),
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey,
+                                          shape: BoxShape.circle),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 16),
+                                      child: Text(
+                                        "Department of This That 3.2",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ])
                 ],
               ),
               Padding(
@@ -405,8 +469,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 fontWeight: FontWeight.bold)))),
               )
             ],
-          )
-        ),
+          )),
     );
   }
 }

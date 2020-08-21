@@ -2,7 +2,7 @@
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
 		"Name": "The Ateneo Assembly: The Political Organization of the Ateneo",
-		"Abbreviation": "The Ateneo Assembly",
+		"Abbreviation": "Ateneo Assembly",
 		"Tagline": "The Premiere Political Organization of the Ateneo, and Home Organization of Political Science Majors",
 		"Website": "",
 		"Facebook": "http://www.facebook.com/TheAteneoAssembly",
@@ -21,7 +21,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_cover.jpg"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -45,7 +46,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_cover.jpg"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -56,9 +58,9 @@
 		"Facebook": "www.facebook.com/AteneoAEUSS",
 		"Twitter": "www.twitter.com/AteneoAEuSS",
 		"Instagram": "www.instagram.com/ateneoaeuss",
-		"Description": "The Ateneo Association of European Studies Students is the premier organization for the training and development of students in the inter sectional disciplines of business, politics, and culture by using a multidisciplinary approach aligned with the goals and values of the European Union. With a strong emphasis on international relations and business, and in the creation of a global community, the organization aims to mold students into future leaders who are globally competent in various fields for the further development of the country as a formidable player in the international community. \n",
+		"Description": "The Ateneo Association of European Studies Students is the premier organization for the training and development of students in the inter sectional disciplines of business, politics, and culture by using a multidisciplinary approach aligned with the goals and values of the European Union. With a strong emphasis on international relations and business, and in the creation of a global community, the organization aims to mold students into future leaders who are globally competent in various fields for the further development of the country as a formidable player in the international community.",
 		"Advocacy": "promotion of responsible citizenship, critical analysis on European political and economic perspectives and the broadening of world vision and its relation to the Philippine context",
-		"Core": "diplomacy, friendship and unity in diversity, professionalism and nation-building",
+		"Core": "Diplomacy, friendship and unity in diversity, professionalism and nation-building",
 		"Awards": "",
 		"projectTitleOne": "jEUpardy",
 		"projectDescOne": "jEUpardy is a game show style quiz competition in which contestants are presented with general knowledge clues about EU in the form of answers and must phrase their responses in the form of questions\n",
@@ -69,7 +71,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_cover.png"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -93,7 +96,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_cover.jpg"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -117,7 +121,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_cover.png"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -141,7 +146,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_cover.JPG"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -165,7 +171,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_cover.JPG"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -189,7 +196,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_logo.png"
+		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -213,7 +221,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/actm_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/actm_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/actm_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -237,7 +246,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/lex_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/lex_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/lex_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -261,7 +271,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ajma_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ajma_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ajma_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -285,7 +296,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ama_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ama_logo.png",
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ama_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -309,7 +321,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/meco_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/meco_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/meco_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -333,7 +346,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/mea_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/mea_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/mea_cover.png"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -357,7 +371,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/maca_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/maca_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/maca_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -381,7 +396,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/aiesec_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/aiesec_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/aiesec_cover.JPG"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -405,12 +421,13 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/bcg_logo.png"
+		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/bcg_logo.png",
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/bcg_cover.jpg"
 	},
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "HEIGHTS Ateneo",
-		"Abbreviation": "",
+		"Abbreviation": "HEIGHTS",
 		"Tagline": "",
 		"Website": "www.heights-ateneo.com",
 		"Facebook": " www.facebook.com/HeightsAteneo",
@@ -429,18 +446,19 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COP",
-		"Logo": "assets/orgs/coa/COP/heights_logo.jpg"
+		"Logo": "assets/orgs/coa/COP/heights_logo.jpg",
+		"Cover": "assets/orgs/coa/COP/heights_cover.JPG"
 	},
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "The GUIDON",
-		"Abbreviation": " TGDN",
+		"Abbreviation": "The GUIDON",
 		"Tagline": "Deeper into the Truth.",
 		"Website": " www.theguidon.com/1112/main ",
 		"Facebook": "www.facebook.com/TheGUIDON",
 		"Twitter": "www.twitter.com/TheGUIDON",
 		"Instagram": "www.instagram.com/theguidon ",
-		"Description": "\nAs the official publication of the Ateneo de Manila University, The GUIDON brings forth balanced, critical, and eye-opening narratives through writers, artists, and managers who are committed to continue our unwavering fight to hold and to speak Truth to power. As it enters its 91st year, The GUIDON takes its audiences behind the headlines and guides them in navigating the complex information landscapes of our time. With the Truth under heavy siege, The GUIDON endeavors to amplify unheard voices, engage in powerful discourse, and catalyze positive social change.",
+		"Description": "As the official publication of the Ateneo de Manila University, The GUIDON brings forth balanced, critical, and eye-opening narratives through writers, artists, and managers who are committed to continue our unwavering fight to hold and to speak Truth to power. As it enters its 91st year, The GUIDON takes its audiences behind the headlines and guides them in navigating the complex information landscapes of our time. With the Truth under heavy siege, The GUIDON endeavors to amplify unheard voices, engage in powerful discourse, and catalyze positive social change.",
 		"Advocacy": "The GUIDON continues its unwavering fight to hold and to speak Truth to power in the service of communities within and beyond the Loyola Schools.",
 		"Core": "Integrity, Professionalism, Excellence, Dedication, and Camaraderie",
 		"Awards": "Loyola Schools Awards for Leadership and Service - Finalist, Most Outstanding Student Group\nLoyola Schools Awards for Leadership and Service - Most Outstanding Student Project (Marawi Immersive Journalism Project)\nThe 5th UST National Campus Journalism Awards - Editorial Category",
@@ -453,12 +471,13 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COP",
-		"Logo": "assets/orgs/coa/COP/guidon_logo.png"
+		"Logo": "assets/orgs/coa/COP/guidon_logo.png",
+		"Cover": "assets/orgs/coa/COP/guidon_cover.jpg"
 	},
 	{
 		"Cluster": ["Confederation of Publications (COP)"],
 		"Name": "Matanglawin Ateneo",
-		"Abbreviation": "",
+		"Abbreviation": "Matanglawin Ateneo",
 		"Tagline": "Mamulat. Magmulat. Matanglawin.",
 		"Website": "",
 		"Facebook": "www.facebook.com/MatanglawinAteneo",
@@ -477,7 +496,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COP",
-		"Logo": "assets/orgs/coa/COP/matanglawin_logo.png"
+		"Logo": "assets/orgs/coa/COP/matanglawin_logo.png",
+		"Cover": "assets/orgs/coa/COP/matanglawin_cover.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -501,7 +521,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/aclc_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/aclc_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/aclc_cover.jpg"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -525,7 +546,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/acil_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/acil_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/acil_cover.png"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -549,7 +571,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/atsca_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/atsca_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/atsca_cover.jpg"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -573,7 +596,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/yfc_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/yfc_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/yfc_cover.jpg"
 	},
 	{
 		"Cluster": ["Faith Formation Cluster (FFC)"],
@@ -597,12 +621,13 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/FAITH_FORMATION/acmg_logo.png"
+		"Logo": "assets/orgs/coa/FAITH_FORMATION/acmg_logo.png",
+		"Cover": "assets/orgs/coa/FAITH_FORMATION/acmg_cover.jpg"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "Loyola Mountaineers",
-		"Abbreviation": "LM",
+		"Abbreviation": "Loyola Mountaineers",
 		"Tagline": "Learn Through Adventure",
 		"Website": "",
 		"Facebook": "www.facebook.com/loyolamountaineers/",
@@ -621,7 +646,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_cover.JPG"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -645,7 +671,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_cover.jpg"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -669,7 +696,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_cover.JPG"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
@@ -693,12 +721,13 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_cover.jpg"
 	},
 	{
 		"Cluster": ["Health and Environment Cluster (HEC)"],
 		"Name": "Ateneo Peers ",
-		"Abbreviation": "",
+		"Abbreviation": "Ateneo Peers",
 		"Tagline": "Helping others help themselves.",
 		"Website": "",
 		"Facebook": "www.facebook.com/AteneoPeers",
@@ -717,7 +746,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_logo.png"
+		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_logo.png",
+		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_cover.jpg"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -741,7 +771,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_cover.jpg"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -765,7 +796,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_cover.jpg"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -789,7 +821,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_cover.jpg"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -813,7 +846,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_cover.JPG"
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
@@ -837,7 +871,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_logo.png"
+		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_logo.png",
+		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_cover.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -861,7 +896,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_logo.png"
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_logo.png",
+		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_cover.jpg"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -885,7 +921,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_logo.png"
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_logo.png",
+		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_cover.png"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -909,7 +946,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_logo.png"
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_logo.png",
+		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_cover.JPG"
 	},
 	{
 		"Cluster": ["Media and Creative Arts Cluster (MCA)"],
@@ -933,7 +971,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_logo.png"
+		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_logo.png",
+		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_cover.jpg"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -957,7 +996,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_logo.png"
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_logo.png",
+		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_cover.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -981,7 +1021,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_logo.png"
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_logo.png",
+		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_cover.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -1005,7 +1046,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_logo.png"
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_logo.png",
+		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_cover.png"
 	},
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
@@ -1029,12 +1071,13 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_logo.png"
+		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_logo.png",
+		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
 		"Name": "Ateneo Psyche",
-		"Abbreviation": "",
+		"Abbreviation": "Ateneo Psyche",
 		"Tagline": "Where people come first.",
 		"Website": "",
 		"Facebook": "www.facebook.com/AteneoPsyche",
@@ -1053,7 +1096,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/psyche_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/psyche_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/psyche_cover.jpg"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1077,7 +1121,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aeces_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aeces_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/aeces_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1101,7 +1146,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aches_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aches_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/aches_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1125,7 +1171,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/leaps_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/leaps_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/leaps_cover.jpg"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1149,7 +1196,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/compsat_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/compsat_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/compsat_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1173,7 +1221,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/ams_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/ams_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/ams_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1197,7 +1246,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/misa_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/misa_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/misa_cover.png"
 	},
 	{
 		"Cluster": ["Science and Technology Cluster (STC)"],
@@ -1221,7 +1271,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/box_logo.png"
+		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/box_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/box_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1245,7 +1296,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/tugon_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/tugon_logo.png",
+		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/tugon_cover.jpg"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1269,7 +1321,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/code_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/code_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/code_cover.png"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1293,7 +1346,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/edge_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/edge_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/edge_cover.jpg"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1317,7 +1371,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/gabay_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/gabay_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/gabay_cover.jpg"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1341,7 +1396,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/barefoot_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/barefoot_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/barefoot_cover.jpg"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1365,7 +1421,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/speed_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/speed_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/speed_cover.jpg"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1389,7 +1446,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/musmos_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/musmos_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/musmos_cover.jpg"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -1413,14 +1471,15 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/orgs/coa/SECTOR-BASED/kythe_logo.png"
+		"Logo": "assets/orgs/coa/SECTOR-BASED/kythe_logo.png",
+		"Cover": "assets/orgs/coa/SECTOR-BASED/kythe_cover.jpg"
 	},
 	{
 		"Cluster": [
 			"Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)"
 		],
 		"Name": "Ateneo Student Judicial Court",
-		"Abbreviation": "",
+		"Abbreviation": "Ateneo SJC",
 		"Tagline": "",
 		"Website": "",
 		"Facebook": "www.facebook.com/ateneo.sjc",
@@ -1439,7 +1498,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sjc_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sjc_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/sjc_cover.jpeg"
 	},
 	{
 		"Cluster": [
@@ -1465,7 +1525,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/dsws_cover.JPG"
 	},
 	{
 		"Cluster": [
@@ -1491,7 +1552,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/aegis_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/aegis_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/aegis_cover.JPG"
 	},
 	{
 		"Cluster": [
@@ -1517,7 +1579,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_cover.jpg"
 	},
 	{
 		"Cluster": [
@@ -1543,7 +1606,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "COA",
-		"Logo": "assets/bodies/coa/logo.png"
+		"Logo": "assets/bodies/coa/logo.png",
+		"Cover": "assets/bodies/coa/cover.png"
 	},
 	{
 		"Cluster": [
@@ -1569,7 +1633,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_cover.jpg"
 	},
 	{
 		"Cluster": [
@@ -1595,7 +1660,8 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/comelec_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/comelec_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/comelec_cover.jpg"
 	},
 	{
 		"Cluster": [
@@ -1621,12 +1687,13 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "Student Groups",
-		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sanggu_logo.png"
+		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sanggu_logo.png",
+		"Cover": "assets/orgs/coa/STUDENT_GROUPS/sanggu_cover.png"
 	},
 	{
 		"Cluster": ["Lifestyle"],
 		"Name": "FIT",
-		"Abbreviation": "",
+		"Abbreviation": "FIT",
 		"Tagline": "Your community for fitness and wellness",
 		"Website": "",
 		"Facebook": "https://web.facebook.com/FITteamCommunity",
@@ -1645,12 +1712,13 @@
 		"Vision": "We envision a strong and devoted fitness community that supports everyone\u00e2\u20ac\u2122s goal of self-improvement no matter what stage of fitness they\u00e2\u20ac\u2122re in and has complete access to the proper tools and knowledge for their goals.",
 		"Mission": "Our mission is to provide programs, diet plans and support that every fitness enthusiast or gym goer needs through projects and team building activities geared to promote a health and wellness to its community",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/FIT.png"
+		"Logo": "assets/orgs/lions/logos/FIT.png",
+		"Cover": ""
 	},
 	{
 		"Cluster": ["Arts"],
 		"Name": "Blue Bird Improv",
-		"Abbreviation": "",
+		"Abbreviation": "Blue Bird Improv",
 		"Tagline": "Be your most authentic self.",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/bluebirdimprov/",
@@ -1669,12 +1737,13 @@
 		"Vision": "Blue Bird Improv seeks to introduce improvisation as a means for self-improvement inside the Ateneo campus. We seek to form confident and collaborative communicators in our members, who are at the same time capable of bringing out those values and skills in others. We also seek to bring more openness and enthusiasm to the campus and beyond through our shows and workshops. ",
 		"Mission": "Blue Bird Improv aims to provide specialized trainings and workshops to develop the improvisational skills of both members and non-members and promote personal growth. We  host shows and events that showcase the skills of our members and provide an avenue to bring entertainment to the greater community. Through this, we wish to create spaces where anyone is welcome to come as the most authentic version of themselves because anyone can do improv.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/BlueBird.png"
+		"Logo": "assets/orgs/lions/logos/BlueBird.png",
+		"Cover": ""
 	},
 	{
 		"Cluster": ["Arts", "Culture", "Literature"],
 		"Name": "Toushin",
-		"Abbreviation": "",
+		"Abbreviation": "Toushin",
 		"Tagline": "Let's get GENKI!!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/toushin.org/",
@@ -1693,12 +1762,13 @@
 		"Vision": "Toushin seeks to build among its members and the Loyola Schools an organization that is passionate for Japanese arts and contemporary culture, setting aside all differences to create a peaceful and accepting environment favorable of experiential growth and fun.",
 		"Mission": "Toushin seeks to build among its members and the Loyola Schools an organization that is passionate for Japanese arts and contemporary culture, setting aside all differences to create a peaceful and accepting environment favorable of experiential growth and fun.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/TOUSHIN.png"
+		"Logo": "assets/orgs/lions/logos/TOUSHIN.png",
+		"Cover": ""
 	},
 	{
 		"Cluster": ["Arts", "Culture", "Language", "Literature"],
 		"Name": "Blue Hanguk Society",
-		"Abbreviation": "",
+		"Abbreviation": "Blue Hanguk Society",
 		"Tagline": "Be anything, be BlueHan!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/BlueHangukSociety",
@@ -1717,12 +1787,13 @@
 		"Vision": "Blue Hanguk Society aspires to foster a community instilled with an engaged perception of Korean culture, exploring its rich aspects through a worldview perspective in the Filipino community.",
 		"Mission": "Blue Hanguk Society serves as an organization that unites Korean culture enthusiasts from the Ateneo de Manila University while upholding the Filipino identity to healthily open avenues for the celebration of Korean culture.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/BlueHangkuk.png"
+		"Logo": "assets/orgs/lions/logos/BlueHangkuk.png",
+		"Cover": "assets/orgs/lions/covers/BlueHanguk.jpg"
 	},
 	{
 		"Cluster": ["Technology"],
 		"Name": "OpenSource",
-		"Abbreviation": "",
+		"Abbreviation": "OpenSource",
 		"Tagline": "Explore Tech with Us",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/OpenSourceADMU/",
@@ -1741,12 +1812,13 @@
 		"Vision": "To be the foremost community in Ateneo that champions and advocates for technology as enabling, interdisciplinary, and inclusive.",
 		"Mission": "To provide avenues for students to broaden, advocate and apply their knowledge and appreciation of innovative, relevant, and emerging technology for themselves and their community.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/OS.png"
+		"Logo": "assets/orgs/lions/logos/OS.png",
+		"Cover": "assets/orgs/lions/covers/OS.jpg"
 	},
 	{
 		"Cluster": ["Community Development"],
 		"Name": "Project KaBUHAYan",
-		"Abbreviation": "",
+		"Abbreviation": "Project KaBUHAYan",
 		"Tagline": "",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/ProjectKaBUHAYan",
@@ -1765,12 +1837,13 @@
 		"Vision": "Project KaBUHAYan strives to become the premier student-led, nationwide organization that creates social and economic impact to MSMEs in the Philippines. ",
 		"Mission": "Project KaBUHAYan aims to encourage and provide programs that may enhance the competencies of aspiring and existing MSME entrepreneurs on entrepreneurial development and financial literacy through KaBUHAYan sessions and various student-led initiatives, consequently providing opportunities for the growth of its student advocates. ",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/ProjKabuhayan.png"
+		"Logo": "assets/orgs/lions/logos/ProjKabuhayan.png",
+		"Cover": "assets/orgs/lions/covers/ProjKabuhayan.jpg"
 	},
 	{
 		"Cluster": ["Culture", "Design"],
 		"Name": "Mokoa Animation Studio",
-		"Abbreviation": "",
+		"Abbreviation": "MOKOA",
 		"Tagline": "Moving together, one frame at a time",
 		"Website": "https://mokoa.org/ ",
 		"Facebook": "https://www.facebook.com/mokoa.animation/?eid=ARAug9E4PQcxIWu4XGgm7yLUg0SAfYIPLRPrIGvLLq75s4V1MwJ2VdXVoR2f0ig5niVU7Rmo7wzdcfoO",
@@ -1789,12 +1862,13 @@
 		"Vision": "Mokoa, as an organization, aspires to create a community for artists and animation enthusiasts to give ample representation to the art of animation. Through the production of animation, Mokoa strives to extend the art and its message to the audience it may reach, instilling a sense of appreciation for the medium and its creators",
 		"Mission": "To bring artists, storytellers, and other animation enthusiasts together to celebrate animation as a medium of expression, form a community that helps develop its members\u00e2\u20ac\u2122 skills through collaborations and projects, and contribute to the formation of a unique identity for Philippine animation by engaging in the process of animation production",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/MOKOA.png"
+		"Logo": "assets/orgs/lions/logos/MOKOA.png",
+		"Cover": "assets/orgs/lions/covers/MOKOA.png"
 	},
 	{
 		"Cluster": ["Arts", "Culture", "Literature"],
 		"Name": "WriterSkill",
-		"Abbreviation": "",
+		"Abbreviation": "WriterSkill",
 		"Tagline": "Excellence in Progress",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/writerskill/",
@@ -1813,12 +1887,13 @@
 		"Vision": "WriterSkill envisions a community of writers that aims to share its members' passion for writing and literature not only within itself but also with the outside world. The organization aspires to raise interest for writing and literature in general, with the greater aims of social involvement and responsible advocacy through writing, in support of the country and geared towards progressive nation building.",
 		"Mission": "WriterSkill, driven by its desire to realize its members' writing potential in the four genres of Fiction, Non-Fiction, Poetry, and Drama, as well as in various other literary forms, strives to aid each member in recognizing and developing their capacity for excellence in writing and critiquing through the implementation of various relevant programs, projects, and events.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/WS.png"
+		"Logo": "assets/orgs/lions/logos/WS.png",
+		"Cover": "assets/orgs/lions/covers/WS.jpeg"
 	},
 	{
 		"Cluster": ["Arts", "Culture", "Design"],
 		"Name": "Blue Indie Komiks",
-		"Abbreviation": "",
+		"Abbreviation": "Blue Indie Komiks",
 		"Tagline": "Linking People Through Komiks",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/blueindiekomiks",
@@ -1837,12 +1912,13 @@
 		"Vision": "Blue Indie Komiks envisions itself as a community of komik creators and appreciators, that then acts as a positive forcein the greater komiks community. We strive to involve and emphasize our members in the creation of engaging and meaningful content \u00e2\u20ac\u201c content that then serves to expand the perspectives of those within and outside our community. Creating Komiks BLINK envisions the creation of its Komiks as a cooperative act that takes place in an engaging, active environment. This environment will encourage members to work together to create Komiks that promote and display Filipino artistry and Philippine Culture. Through this cooperative act, the members will develop new skills and mindsets, which will then aid them in applying their creativity to any and all tasks they might face. Appreciating Komiks Through the active creation, consumption, and sharing of Komiks and Komiks-related media, it is envisioned that the members of BLINK will be able to deepen their understanding and appreciation of Komiks. This deepened understanding and appreciation will propel the members of BLINK to promote Komiks to others outside of the organization, thus allowing more people to appreciate and consume Komiks.",
 		"Mission": "Blue Indie Komiks achieves its vision by providing projects and opportunities to its members to explore the different aspects of komik creation. Through these varied projects, BLINK members attain the skills necessary to produce komiks that have the capacity to speak beyond the Ateneo community.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/BLINK.png"
+		"Logo": "assets/orgs/lions/logos/BLINK.png",
+		"Cover": "assets/orgs/lions/covers/BLINK.jpg"
 	},
 	{
 		"Cluster": ["Adventure", "Culture", "Lifestyle"],
 		"Name": "THINC",
-		"Abbreviation": "",
+		"Abbreviation": "THINC",
 		"Tagline": "Roll with us!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/ThincHobbiesThincInterests/",
@@ -1861,12 +1937,13 @@
 		"Vision": "To foster a leading community for interested individuals to freely discover, share, and enjoy various tabletop hobbies under the welcoming camaraderie of both old and new tabletop enthusiasts. We aim to explore further the positives that tabletop interests can explore as a medium such as social utility, psychological benefits, cultural relevance and trends, fine arts, and national identity.",
 		"Mission": "To provide a space for a community to explore, discover, and appreciate various tabletop hobbies. We strive to create a healthy and safe social atmosphere where people can freely share hobbies and interests with respect and camaraderie towards each other. We push for the exploration and sharing of tabletop interests as a medium for personal growth, analytic thinking, stress relief, and forging healthy relationships.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/THINC.png"
+		"Logo": "assets/orgs/lions/logos/THINC.png",
+		"Cover": ""
 	},
 	{
 		"Cluster": ["Business", "Education"],
 		"Name": "Junior Fellowship for Financial Literacy",
-		"Abbreviation": "",
+		"Abbreviation": "JFeL",
 		"Tagline": "Elevating Financial Literacy",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/jfelonline/",
@@ -1885,12 +1962,13 @@
 		"Vision": "To create a nation of financially proficient citizens who are able to apply their knowledge to their everyday situations. ",
 		"Mission": "To equip both its members, as well as people outside the organization, with sound Financial skills to utilize in everyday Financial situations through its various talks, training seminars, an programs.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/JFEL.png"
+		"Logo": "assets/orgs/lions/logos/JFEL.png",
+		"Cover": ""
 	},
 	{
 		"Cluster": ["Home Org", "Technology"],
 		"Name": "BYTE",
-		"Abbreviation": "",
+		"Abbreviation": "BYTE",
 		"Tagline": "Building Young Tech Entrepreneurs ",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/byteadmu/",
@@ -1909,12 +1987,13 @@
 		"Vision": "BYTE envisions itself to be a technological and entrepreneurial network spearheaded by existing and potential catalysts for change.",
 		"Mission": "BYTE cultivates young entrepreneurs who create innovative and technological solutions that strive for nation-building.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/byte.png"
+		"Logo": "assets/orgs/lions/logos/byte.png",
+		"Cover": "assets/orgs/lions/covers/byte.JPG"
 	},
 	{
 		"Cluster": ["International", "Spiritual"],
 		"Name": "RC LIFE - Loyola",
-		"Abbreviation": "",
+		"Abbreviation": "RC LIFE - Loyola",
 		"Tagline": "Love Inspired by Faith & Encounter",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/RCLIFELoyola/",
@@ -1933,12 +2012,13 @@
 		"Vision": "The vision of RC LIFE is to give the Church in the Philippines passionate young professionals for Christ and His mission.",
 		"Mission": "The mission of RC LIFE is to form the members in a way of life that will enable them to be leader-apostles of the New Evangelization, inspired by faith and encounter.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/RCLIFE.png"
+		"Logo": "assets/orgs/lions/logos/RCLIFE.png",
+		"Cover": "assets/orgs/lions/covers/RCLIFE.jpg"
 	},
 	{
 		"Cluster": ["Community Development", "Design", "Education"],
 		"Name": "Project LAAN",
-		"Abbreviation": "",
+		"Abbreviation": "Project LAAN",
 		"Tagline": "Fighting Poverty Through Health",
 		"Website": "https://projectlaan.org/",
 		"Facebook": "https://www.facebook.com/projectlaan",
@@ -1957,7 +2037,8 @@
 		"Vision": "Project LAAN envisions a society where every Filipino, especially the poor and vulnerable, has adept knowledge on public health and is empowered to make informed and appropriate health decisions.",
 		"Mission": "Project LAAN aims to instill and promote public health advocacy, health literacy, and patient empowerment to its partner communities and members.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/ProjLaan.png"
+		"Logo": "assets/orgs/lions/logos/ProjLaan.png",
+		"Cover": "assets/orgs/lions/covers/ProjLaan.png"
 	},
 	{
 		"Cluster": [
@@ -1969,7 +2050,7 @@
 			"Technology"
 		],
 		"Name": "User Experience Society",
-		"Abbreviation": "",
+		"Abbreviation": "UXS",
 		"Tagline": "",
 		"Website": "https://uxsociety.org/",
 		"Facebook": "https://www.facebook.com/UXSoc",
@@ -1988,12 +2069,13 @@
 		"Vision": "This organization envisions itself as a community of designers, holistically formed to be people for and with others, who are passionate about solving problems in the community through human-centered design.",
 		"Mission": "UX Society empowers people through design education, enlightens them to the power of design, and nurtures them to create meaningful products for the community.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/UXS.png"
+		"Logo": "assets/orgs/lions/logos/UXS.png",
+		"Cover": "assets/orgs/lions/covers/UXS.jpg"
 	},
 	{
 		"Cluster": ["Music"],
 		"Name": "Blue Symphony Orchestra",
-		"Abbreviation": "",
+		"Abbreviation": "Blue Symphony",
 		"Tagline": "More than an orchestra.",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/thebluesymphony/",
@@ -2012,12 +2094,13 @@
 		"Vision": "The Blue Symphony Orchestra envisions itself as a community for Filipino artistry \u00e2\u20ac\u201d an organization whose primary focus is the holistic development of its members, deeply rooted in the Ignatian values of service and excellence, through musical performance, production, and arrangement.",
 		"Mission": "Our mission is to cultivate awareness and passion for orchestral music within the Ateneo community through the engagement of our audiences in orchestral performances and the growth of our members in all aspects of music competencies and character formation.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/BlueSymph.png"
+		"Logo": "assets/orgs/lions/logos/BlueSymph.png",
+		"Cover": "assets/orgs/lions/covers/BlueSymph.jpg"
 	},
 	{
 		"Cluster": ["Community Development", "Education", "International"],
 		"Name": "Effective Altruism Blue",
-		"Abbreviation": "",
+		"Abbreviation": "EA Blue",
 		"Tagline": "Using reason and evidence to do the most good.",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/eablue.ph/",
@@ -2036,12 +2119,13 @@
 		"Vision": "EA Blue envisions itself to be a welcoming, productive, and robust community of Ateneans who use evidence and reason to figure out how to help others as much as possible, and take action on that basis.",
 		"Mission": "Our mission is to help our members and the wider community use evidence and careful analysis to think about how they can use their careers and resources to achieve a bigger social impact.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/EffectiveAltruism.png"
+		"Logo": "assets/orgs/lions/logos/EffectiveAltruism.png",
+		"Cover": "assets/orgs/lions/covers/EffectiveAltruism.jpg"
 	},
 	{
 		"Cluster": ["Community Development", "International"],
 		"Name": "Habitat for Humanity Blue Chapter",
-		"Abbreviation": "",
+		"Abbreviation": "HFH",
 		"Tagline": "Not One Less",
 		"Website": "",
 		"Facebook": "https://facebook.com/HFHAteneo",
@@ -2060,12 +2144,13 @@
 		"Vision": "Habitat for Humanity Blue Chapter envisions a world where everyone has a decent place to live.",
 		"Mission": "The Blue Chapter works in partnership with Habitat for Humanity Philippines by sharing their goals to eliminate poverty housing. Seeking to put God\u00e2\u20ac\u2122s love into action, Habitat for Humanity Blue Chapter brings people together to build homes, communities, and hope.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/HFH.png"
+		"Logo": "assets/orgs/lions/logos/HFH.png",
+		"Cover": "assets/orgs/lions/covers/HFH.jpg"
 	},
 	{
 		"Cluster": ["Spiritual"],
 		"Name": "Christ's Youth in Action - Blue",
-		"Abbreviation": "",
+		"Abbreviation": "CYA",
 		"Tagline": "Kay Kristo Buong Buhay Habambuhay!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/cya.admu",
@@ -2084,12 +2169,13 @@
 		"Vision": "We envision Filipino Youth who have a growing personal relationship with Jesus Christ, who participate actively in the life and mission of the Catholic Church, and who increasingly become agents of social transformation in society.  Our vision is spelled out in what we may summarize as the 4 C\u00e2\u20ac\u2122s of CYA.  Conversion The individual makes a personal commitment to Christ, entering into a new relationship with Him, and making a decision to continue knowing, loving and serving God.  Community The individual participates more actively in the life and mission of the church. He/She also learns the importance of, and thus, commits himself/herself to be part of smaller communities in which there is mutual care, support and opportunity to serve.  Character The individual is formed and grows in Christian character, in his/her understanding of the Catholic faith, and in service to others.  Commission The individual is \u00e2\u20ac\u0153sent out\u00e2\u20ac\u009d to bear witness to the Gospel by word and example.",
 		"Mission": "To evangelize the youth and train leaders for service to the Church.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/CYA.png"
+		"Logo": "assets/orgs/lions/logos/CYA.png",
+		"Cover": "assets/orgs/lions/covers/CYA.JPG"
 	},
 	{
 		"Cluster": ["Literature"],
 		"Name": "League of Atenean Historians (LAHi)",
-		"Abbreviation": "",
+		"Abbreviation": "LAHi",
 		"Tagline": "Make History Your Story!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/lahionline/",
@@ -2108,12 +2194,13 @@
 		"Vision": "To transform the students of the Ateneo de Manila University from passive observers to cultural advocates and nation builders grounded in historicity, to contribute to the increased awareness and enrichment of the identity of the Filipino nation. Furthermore, it seeks to develop an appreciation of Philippine history in the bigger context of global history.",
 		"Mission": "The League of Atenean Historians shall serve as an important link between the Department of History and its majors, aiding in their development as responsible historians that will contribute in enriching the identity of the Filipino nation. As an Atenean organization guided by the Ignatian value of being men and women for others, God, and nation, the League of Atenean Historians shall provide projects, activities, and learning experiences that will instill in its members a sense of importance for the past, a vision for the future, and the enrichment of the present. ",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/LAHI.png"
+		"Logo": "assets/orgs/lions/logos/LAHI.png",
+		"Cover": "assets/orgs/lions/covers/LAHI.jpg"
 	},
 	{
 		"Cluster": ["Music"],
 		"Name": "CASA",
-		"Abbreviation": "",
+		"Abbreviation": "CASA",
 		"Tagline": "",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/musikaCASA/",
@@ -2132,12 +2219,13 @@
 		"Vision": "Striving to always being prepared in facing any kind of situation that comes our way.",
 		"Mission": "We turn hardships into inspiration while fulfilling each member's passion.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/CASA.png"
+		"Logo": "assets/orgs/lions/logos/CASA.png",
+		"Cover": "assets/orgs/lions/covers/CASA.jpg"
 	},
 	{
 		"Cluster": ["Culture", "Lifestyle", "Technology"],
 		"Name": "Loyola Gaming",
-		"Abbreviation": "",
+		"Abbreviation": "LGL",
 		"Tagline": "To Follow",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/loyolagaming/",
@@ -2156,7 +2244,8 @@
 		"Vision": "Loyola Gaming seeks to channel the gaming industry\u00e2\u20ac\u2122s untapped and uncharted potential to be a positive driving force in a modern digital society.",
 		"Mission": "Loyola Gaming aims to foster a community of gamers, both within a collegiate setting and beyond, as a sterling example of the positive impacts gaming has to offer. ",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/LGL.png"
+		"Logo": "assets/orgs/lions/logos/LGL.png",
+		"Cover": "assets/orgs/lions/covers/LGL.jpeg"
 	},
 	{
 		"Cluster": [
@@ -2167,7 +2256,7 @@
 			"Technology"
 		],
 		"Name": "Developer Student Clubs - Loyola",
-		"Abbreviation": "",
+		"Abbreviation": "DSC Loyola",
 		"Tagline": "Uplifting communities through technology",
 		"Website": "https://dscadmu.org/",
 		"Facebook": "https://www.facebook.com/dscloyola",
@@ -2186,12 +2275,13 @@
 		"Vision": "We are a community of developers that are passionate about uplifting communities through technology and innovation.",
 		"Mission": "Empower. Enlighten. Nurture",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/DSC.png"
+		"Logo": "assets/orgs/lions/logos/DSC.png",
+		"Cover": "assets/orgs/lions/covers/DSC.jpg"
 	},
 	{
 		"Cluster": ["Education", "Environment"],
 		"Name": "AGILA",
-		"Abbreviation": "",
+		"Abbreviation": "AGILA",
 		"Tagline": "Your partner for animal welfare",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/AteneanAgila",
@@ -2210,13 +2300,14 @@
 		"Vision": "We, AGILA, envision a society that respects and advocates Animal Welfare. We aim for all animals to be ensured with caring homes and overall well-being.",
 		"Mission": "AGILA seeks to provide an avenue for Ateneans to advocate Animal Welfare through awareness campaigns and sustainable action. It seeks to instill members with compassion for animals and to equip them with the skills necessary for nurturing life. ",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/AGILA.png"
+		"Logo": "assets/orgs/lions/logos/AGILA.png",
+		"Cover": "assets/orgs/lions/covers/AGILA.png"
 	},
 	{
 		"Cluster": ["Arts", "Design"],
 		"Name": "DECO",
-		"Abbreviation": "",
-		"Tagline": "Your home for graphic designers. ",
+		"Abbreviation": "DECO",
+		"Tagline": "Your home for graphic designers.",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/deco.designercommunity",
 		"Twitter": "",
@@ -2234,7 +2325,8 @@
 		"Vision": "Deco wants to see a flourishing designer community in Ateneo where design is respected as a craft and designers are united in mutual growth and development.",
 		"Mission": "We aim to create a thriving designer community and network in Ateneo, provide designers with substantial resources, support, and opportunities, train and develop creative and professional designers, and stimulate good design within the university.",
 		"Body": "LIONS",
-		"Logo": "assets/orgs/lions/logos/DECO.png"
+		"Logo": "assets/orgs/lions/logos/DECO.png",
+		"Cover": "assets/orgs/lions/covers/DECO.jpg"
 	},
 	{
 		"Cluster": [
@@ -2260,6 +2352,7 @@
 		"Vision": "",
 		"Mission": "",
 		"Body": "LIONS",
-		"Logo": "assets/bodies/lions/circle.png"
+		"Logo": "assets/bodies/lions/circle.png",
+		"Cover": "assets/orgs/lions/logos/lions.jpg"
 	}
 ]

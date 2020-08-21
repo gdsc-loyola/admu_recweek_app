@@ -134,7 +134,8 @@ class _ListScreenState extends State<ListScreen> {
                       org.vision,
                       org.mission,
                       org.body,
-                      org.logo),
+                      org.logo,
+                      org.cover),
                 ),
               );
             }
