@@ -66,8 +66,7 @@ class _SangguScreenState extends State<SangguScreen> {
           .document('${SangguScreen._user.uid}-Sanggu')
           .setData({
         "id": SangguScreen._user.uid,
-        "name":
-            "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila",
+        "name": "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila",
         "abbreviation": "Sanggu",
         "body": "Student Groups",
         "bookmark": true,
@@ -140,11 +139,15 @@ class _SangguScreenState extends State<SangguScreen> {
                 textAlign: TextAlign.center,
               ),
               Container(
-                  child: Image.asset('assets/bodies/sanggu/cover.png'),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    child: Image.asset('assets/orgs/coa/STUDENT_GROUPS/sanggu_cover.png', fit: BoxFit.cover,),
+                  ),
                   height: 180,
-                  margin: const EdgeInsets.only(bottom: 8, top: 16)),
+                  margin: const EdgeInsets.only(bottom: 8, top: 12)
+              ),
               Text(
-                "Description of Sanggu. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "The LS Sanggunian is the student government of AdMU that aims to listen and provide a voice to each Loyola School student in the hopes to create an empowered community. The Sanggunian aims to build a community wherein individuals are engaged not only in school affairs, but also towards the Philippine nation and the global community.  Aside from these, it hopes to foster leaders with an unconditional type of service through its numerous projects and initiatives including but not limited to the recently concluded MHAW and the annual One Big Pride. Moreover, the different School Sanggunians are all geared towards catering to the different needs of their respective students.",
                 style: TextStyle(fontSize: 16),
               ),
               Padding(
@@ -214,7 +217,7 @@ class _SangguScreenState extends State<SangguScreen> {
                               width: MediaQuery.of(context).size.width / 3,
                               height: 48,
                               child: Text(
-                                "School  \n Sanggu",
+                                "School \n Sanggu",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
@@ -284,10 +287,37 @@ class _SangguScreenState extends State<SangguScreen> {
                                       color: Colors.grey,
                                       shape: BoxShape.circle),
                                 ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 16),
+                                    child: Text(
+                                      "Commission on Anti Sexual Misconduct and Violence",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                      overflow: TextOverflow.fade,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
                                   child: Text(
-                                    "Department of This That 1",
+                                    "Commission on Gender Equality",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
@@ -311,7 +341,203 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
                                   child: Text(
-                                    "Department of This That 1.1",
+                                    "Commission on Mental Health",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 16, right: 16),
+                                    child: Text(
+                                      "Commission on Persons with Special Needs Inclusion",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Text(
+                                    "Commission on Mental Health",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Text(
+                                    "Department of Administrative Affairs",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Text(
+                                    "Department of Budget and Management",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Text(
+                                    "Department of Communications",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Text(
+                                    "Department of External Affairs",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsets.only(left: 16),
+                                    child: Text(
+                                      "Department of Student Welfare and Services",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 48,
+                                  width: 48,
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey,
+                                      shape: BoxShape.circle),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 16),
+                                  child: Text(
+                                    "Presidential Support Team",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
@@ -338,7 +564,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
                                       child: Text(
-                                        "Department of This That 2",
+                                        "Central Assembly Secretariat",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
@@ -362,7 +588,30 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
                                       child: Text(
-                                        "Department of This That 2.1",
+                                        "Internals Division",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),Padding(
+                                padding: EdgeInsets.only(top: 16, bottom: 16),
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey,
+                                          shape: BoxShape.circle),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 16,),
+                                      child: Text(
+                                        "Strategy and Development Division",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
@@ -388,7 +637,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
                                       child: Text(
-                                        "Department of This That 3",
+                                        "SOH Sanggunian",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
@@ -412,7 +661,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
                                       child: Text(
-                                        "Department of This That 3.1",
+                                        "JGSOM Sanggunian",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
@@ -436,7 +685,31 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
                                       child: Text(
-                                        "Department of This That 3.2",
+                                        "SOSE Sanggunian",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 16, bottom: 16),
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 48,
+                                      width: 48,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey,
+                                          shape: BoxShape.circle),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 16),
+                                      child: Text(
+                                        "SOSS Sanggunian",
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
