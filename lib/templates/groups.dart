@@ -117,6 +117,9 @@ class _GroupsScreenState extends State<GroupsScreen> {
                         _orgs[index].body,
                         _orgs[index].logo,
                         _orgs[index].cover,
+                        _orgs[index].projectImageOne,
+                        _orgs[index].projectImageTwo,
+                        _orgs[index].projectImageThree,
                       ),
                     ),
                   );
@@ -138,31 +141,32 @@ class _GroupsScreenState extends State<GroupsScreen> {
                 child: Column(
                   children: <Widget>[
                     Expanded(
-                      child: 
-                      _orgs[index].cover != ""
-                      ? ClipRRect(
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
-                          child: Image.asset(
-                            _orgs[index].cover,
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          )
-                      )
-                      : ClipRRect(
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(5), topRight: Radius.circular(5)),
-                          child: Image.asset(
-                            "assets/bodies/sanggu/cover.png",
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.fitHeight,
-                          )
-                      )
-                    ),
+                        child: _orgs[index].cover != ""
+                            ? ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(5),
+                                    topRight: Radius.circular(5)),
+                                child: Image.asset(
+                                  _orgs[index].cover,
+                                  width: double.infinity,
+                                  height: double.infinity,
+                                  fit: BoxFit.cover,
+                                ))
+                            : ClipRRect(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(5),
+                                    topRight: Radius.circular(5)),
+                                child: Image.asset(
+                                  "assets/bodies/sanggu/cover.png",
+                                  width: double.infinity,
+                                  height: double.infinity,
+                                  fit: BoxFit.fitHeight,
+                                ))),
                     Align(
                       alignment: Alignment.topLeft,
                       child: Padding(
-                          padding: EdgeInsets.only(top: 8, left: 8.0, right: 8.0),
+                          padding:
+                              EdgeInsets.only(top: 8, left: 8.0, right: 8.0),
                           child: Text(
                             _orgs[index].abbreviation,
                             style: TextStyle(
@@ -172,7 +176,8 @@ class _GroupsScreenState extends State<GroupsScreen> {
                           )),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
+                      padding:
+                          EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
                       child: Text(
                         _orgs[index].description + "\n",
                         style: TextStyle(

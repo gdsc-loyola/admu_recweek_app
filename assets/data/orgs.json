@@ -22,7 +22,10 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_cover.jpg"
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_cover.jpg",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fassembly%2FimageOne.jpg?alt=media&token=b2ee3a5a-0016-4d3b-9879-a2b3dd22e26f",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fassembly%2FimageTwo.jpg?alt=media&token=c3ba66e1-8fa1-4473-b9c9-d6294174ce56",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fassembly%2FimageThree.jpg?alt=media&token=257b2505-5ebe-468a-897e-f4e68a66df5a"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -47,7 +50,10 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_cover.jpg"
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_cover.jpg",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2FdevSoc%2FimageOne.jpg?alt=media&token=360c9e12-c334-4963-92a6-17dced8193c8",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2FdevSoc%2FimageTwo.jpg?alt=media&token=ceccb098-daac-4c4f-b99a-cad28852520a",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2FdevSoc%2FimageThree.jpg?alt=media&token=7cebacea-2dc1-4635-88ea-cbf28f9b2fe4"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -72,7 +78,10 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_cover.png"
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_cover.png",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2FdevSoc%2FimageOne.jpg?alt=media&token=360c9e12-c334-4963-92a6-17dced8193c8",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2FdevSoc%2FimageTwo.jpg?alt=media&token=ceccb098-daac-4c4f-b99a-cad28852520a",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2FdevSoc%2FimageThree.jpg?alt=media&token=7cebacea-2dc1-4635-88ea-cbf28f9b2fe4"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -97,7 +106,10 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_cover.jpg"
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_cover.jpg",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fenta%2FimageOne.jpg?alt=media&token=234dfae1-beec-4129-a4fa-bb9ed6927b9d",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fenta%2FimageTwo.jpg?alt=media&token=aff49c8c-11f7-4a66-b35b-268cd0d570f8",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fenta%2FimageThree.jpg?alt=media&token=7937dc5e-687b-49ae-94ef-dfbebd6e82f5"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -122,7 +134,10 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_cover.png"
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_cover.png",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Faea%2FimageOne.png?alt=media&token=720fb2a0-c655-4a44-a06f-f1058f07de3c",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Faea%2FimageTwo.png?alt=media&token=b7669369-5e25-4b60-8d36-881b57e5d1a2",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Faea%2FimageThree.png?alt=media&token=ab1e248d-07b3-4993-af14-c8e692bcbe12"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -147,7 +162,10 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_cover.JPG"
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_cover.JPG",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fapair%2FimageOne.JPG?alt=media&token=ccc93a9b-5d35-4732-983a-2c17d3cf0184",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fapair%2FimageTwo.jpg?alt=media&token=52a53d44-1ae0-4b9d-a62b-c6057d86500f",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fapair%2FimageThree.JPG?alt=media&token=5e6b1aef-f3a7-4c4d-b62b-6cdf7a1a67b1"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -172,7 +190,10 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_cover.JPG"
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_cover.JPG",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fads%2FimageOne.jpg?alt=media&token=277c78b8-0769-4558-9d79-c0931152ab7e",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fads%2FimageTwo.JPG?alt=media&token=c0adf118-5f2e-471c-9409-93068dd7759d",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fads%2FimageThree.JPG?alt=media&token=d479f734-9721-4656-8cbd-5cd5ff58de3e"
 	},
 	{
 		"Cluster": ["Analysis and Discourse Cluster (ADC)"],
@@ -197,7 +218,10 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_cover.png"
+		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_cover.png",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fastat%2FimageOne.jpg?alt=media&token=b35afd0b-3493-48ff-b185-e6febce9bd00",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fastat%2FimageTwo.png?alt=media&token=da9cc302-3c08-41a4-a660-a9dd1ee8099b",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fanalysis-discourse%2Fastat%2FimageThree.png?alt=media&token=fd736810-39ef-4040-89df-33cece17fd7f"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
