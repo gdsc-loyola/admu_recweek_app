@@ -51,6 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future loadJSON() async {
     var orgResult;
+
     String orgs = await rootBundle.loadString('assets/data/orgs.json');
     orgResult = json.decode(orgs.toString());
     for (int i = 0; i < orgResult.length; i++) {
@@ -83,6 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
     // Sorting Area
     orgList
         .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
+    print(orgList.length);
 
     copList.addAll(orgList.where(
         (i) => i.cluster.contains("Confederation of Publications (COP)")));
@@ -90,8 +92,13 @@ class _LoginScreenState extends State<LoginScreen> {
     groupList.addAll(orgList.where((i) => i.cluster.contains(
         "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)")));
 
+    // Added this to prevent duplication of Data
+    orgList = [];
+    copList = [];
+    groupList = [];
+
     // Return something here, to prevent `Null` in Snapshot Validation below.
-    return Future.value("Success");
+    return Future.value(groupList);
   }
 
   filter() {
