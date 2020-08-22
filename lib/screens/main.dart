@@ -1,3 +1,4 @@
+import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -13,28 +14,42 @@ import 'package:admu_recweek_app/models/screen.dart';
 
 // ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
-  // ignore: unused_field
   static GoogleSignIn _googleSignIn;
-  // ignore: unused_field
   static FirebaseUser _user;
+  static List<Orgs> _orgList;
+  static List<String> _strList;
+  static List<Widget> _normalList;
 
-  MainScreen([FirebaseUser user, GoogleSignIn signIn]) {
+  MainScreen(
+      [List<Orgs> orgList,
+      List<String> normalList,
+      List<Widget> strList,
+      FirebaseUser user,
+      GoogleSignIn signIn]) {
     _user = user;
     _googleSignIn = signIn;
+    _orgList = orgList;
+    _strList = normalList;
+    _normalList = strList;
   }
 
   @override
-  _MainScreenState createState() => new _MainScreenState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
   static ScrollController scrollController;
   static TextEditingController _filter = new TextEditingController();
+  List<Orgs> orgList;
+  List<String> strList;
+  List<Widget> normalList;
 
   var pages = [
     HomeScreen(MainScreen._user),
-    ListScreen(_filter, scrollController, MainScreen._user),
-    TrackerScreen(MainScreen._user),
+    ListScreen(_filter, scrollController, MainScreen._user, MainScreen._orgList,
+        MainScreen._strList, MainScreen._normalList),
+    TrackerScreen(MainScreen._user, MainScreen._orgList, MainScreen._strList,
+        MainScreen._normalList),
     SettingsScreen(MainScreen._googleSignIn),
   ];
 

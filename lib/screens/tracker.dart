@@ -17,15 +17,17 @@ import 'bodies/coa.dart';
 import 'bodies/lions.dart';
 
 class TrackerScreen extends StatefulWidget {
-  static FirebaseUser _user;
+  final List<Orgs> orgList;
+  final List<String> strList;
+  final List<Widget> normalList;
+  final FirebaseUser user;
 
   // ignore: non_constant_identifier_names
-  TrackerScreen(FirebaseUser user) {
-    _user = user;
-  }
+  TrackerScreen(this.user, this.orgList, this.strList, this.normalList);
 
   @override
-  _TrackerScreenState createState() => _TrackerScreenState();
+  _TrackerScreenState createState() =>
+      _TrackerScreenState(user, orgList, strList, normalList);
 }
 
 class _TrackerScreenState extends State<TrackerScreen> {
@@ -35,12 +37,16 @@ class _TrackerScreenState extends State<TrackerScreen> {
   bool isUserSignedIn = false;
   bool maintenance = false;
   int contentState = 0;
-
+  List<Orgs> orgList;
+  List<String> strList;
+  List<Widget> normalList;
+  FirebaseUser user;
   List<String> bookmarkList = [];
   List<Widget> bookmarkWidgets = [];
-  List<Orgs> orgList = [];
   List<String> appliedList = [];
   List<Widget> appliedWidgets = [];
+
+  _TrackerScreenState(this.user, this.orgList, this.strList, this.normalList);
 
   @override
   void initState() {
@@ -59,7 +65,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
 
     firestoreInstance
         .collection("bookmarks-2020-2021")
-        .where("id", isEqualTo: TrackerScreen._user.uid)
+        .where("id", isEqualTo: user.uid)
         .getDocuments()
         .then((value) {
       value.documents.forEach((result) {
@@ -76,7 +82,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
 
     firestoreInstance
         .collection("applied-2020-2021")
-        .where("id", isEqualTo: TrackerScreen._user.uid)
+        .where("id", isEqualTo: user.uid)
         .getDocuments()
         .then((value) {
       value.documents.forEach((result) {
@@ -151,22 +157,20 @@ class _TrackerScreenState extends State<TrackerScreen> {
                   return Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) =>
-                            new COAScreen(TrackerScreen._user)),
+                        builder: (context) => new COAScreen(user)),
                   );
                 } else if (org.abbreviation == "LIONS") {
                   return Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) =>
-                            new LionsScreen(TrackerScreen._user)),
+                        builder: (context) => new LionsScreen(user)),
                   );
                 } else {
                   return Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => new OrgTemplateScreen(
-                          TrackerScreen._user,
+                          user,
                           org.name,
                           org.abbreviation,
                           org.tagline,
@@ -261,22 +265,20 @@ class _TrackerScreenState extends State<TrackerScreen> {
                     return Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>
-                              new COAScreen(TrackerScreen._user)),
+                          builder: (context) => new COAScreen(user)),
                     );
                   } else if (org.abbreviation == "LIONS") {
                     return Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>
-                              new LionsScreen(TrackerScreen._user)),
+                          builder: (context) => new LionsScreen(user)),
                     );
                   } else {
                     return Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => new OrgTemplateScreen(
-                            TrackerScreen._user,
+                            user,
                             org.name,
                             org.abbreviation,
                             org.tagline,
@@ -297,8 +299,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
                             org.mission,
                             org.body,
                             org.logo,
-                            org.cover
-                          ),
+                            org.cover),
                       ),
                     );
                   }
@@ -384,7 +385,9 @@ class _TrackerScreenState extends State<TrackerScreen> {
     FirebaseUser user = await _handleSignIn();
     var userSignedIn = await Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => MainScreen(user, _googleSignIn)),
+      MaterialPageRoute(
+          builder: (context) =>
+              MainScreen(orgList, strList, normalList, user, _googleSignIn)),
     );
 
     setState(() {
@@ -395,7 +398,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
   void _removeBookmarks(name, abbreviation, body) async {
     firestoreInstance
         .collection("bookmarks-2020-2021")
-        .document('${TrackerScreen._user.uid}-$name')
+        .document('${user.uid}-$name')
         .delete()
         .then((_) {
       Fluttertoast.showToast(
@@ -417,14 +420,14 @@ class _TrackerScreenState extends State<TrackerScreen> {
   void _removeApplied(name, abbreviation, body) async {
     firestoreInstance
         .collection("applied-2020-2021")
-        .document('${TrackerScreen._user.uid}-$name')
+        .document('${user.uid}-$name')
         .delete()
         .then((_) {
       firestoreInstance
           .collection("bookmarks-2020-2021")
-          .document('${TrackerScreen._user.uid}-$name')
+          .document('${user.uid}-$name')
           .setData({
-        "id": TrackerScreen._user.uid,
+        "id": user.uid,
         "name": name,
         "abbreviation": abbreviation,
         "body": body,
@@ -454,9 +457,9 @@ class _TrackerScreenState extends State<TrackerScreen> {
   ) async {
     firestoreInstance
         .collection("applied-2020-2021")
-        .document('${TrackerScreen._user.uid}-$name')
+        .document('${user.uid}-$name')
         .setData({
-      "id": TrackerScreen._user.uid,
+      "id": user.uid,
       "name": name,
       "abbreviation": abbreviation,
       "body": body,
@@ -464,7 +467,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
     }).then((_) {
       firestoreInstance
           .collection("bookmarks-2020-2021")
-          .document('${TrackerScreen._user.uid}-$name')
+          .document('${user.uid}-$name')
           .delete()
           .then((_) {
         Fluttertoast.showToast(
