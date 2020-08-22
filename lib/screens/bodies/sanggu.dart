@@ -138,14 +138,44 @@ class _SangguScreenState extends State<SangguScreen> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 textAlign: TextAlign.center,
               ),
-              Container(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    child: Image.asset('assets/orgs/coa/STUDENT_GROUPS/sanggu_cover.png', fit: BoxFit.cover,),
+              Stack(
+                children: <Widget> [
+                  Container(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        child: Image.asset('assets/orgs/coa/STUDENT_GROUPS/sanggu_cover.png', fit: BoxFit.cover,),
+                      ),
+                      height: 180,
+                      width: double.infinity,
+                      margin: const EdgeInsets.only(bottom: 8, top: 12)
                   ),
-                  height: 180,
-                  margin: const EdgeInsets.only(bottom: 8, top: 12)
+                  Container(
+                    height: 184, 
+                    alignment: Alignment.bottomCenter,
+                    //padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        InkWell(
+                            //TODO: Download assets in colour of Sanggu
+                            child: Image.asset('assets/icons/web.png'),
+                            onTap: () => launch('https://www.oursanggu.com'),
+                        ),
+                        InkWell(
+                          child: Image.asset('assets/icons/twitter.png'),
+                          onTap: () => launch('https://www.twitter.com/ADMUSanggu'),
+                        ),
+                        InkWell(
+                          child: Image.asset('assets/icons/fb.png'),
+                          onTap: () => launch('https://www.facebook.com/ADMUSanggu'),
+                        ),
+                      ]
+                    ),
+                  ),
+                ],
               ),
+
               Text(
                 "The LS Sanggunian is the student government of AdMU that aims to listen and provide a voice to each Loyola School student in the hopes to create an empowered community. The Sanggunian aims to build a community wherein individuals are engaged not only in school affairs, but also towards the Philippine nation and the global community.  Aside from these, it hopes to foster leaders with an unconditional type of service through its numerous projects and initiatives including but not limited to the recently concluded MHAW and the annual One Big Pride. Moreover, the different School Sanggunians are all geared towards catering to the different needs of their respective students.",
                 style: TextStyle(fontSize: 16),
@@ -291,6 +321,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                   child: Padding(
                                     padding: EdgeInsets.only(left: 16),
                                     child: Text(
+                                      //TODO: Download icons
                                       "Commission on Anti Sexual Misconduct and Violence",
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
