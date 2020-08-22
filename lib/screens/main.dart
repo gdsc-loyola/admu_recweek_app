@@ -19,11 +19,15 @@ class MainScreen extends StatefulWidget {
   static List<Orgs> _orgList;
   static List<String> _strList;
   static List<Widget> _normalList;
+  static List<Orgs> _copList = [];
+  static List<Orgs> _groupList = [];
 
   MainScreen(
       [List<Orgs> orgList,
       List<String> normalList,
       List<Widget> strList,
+      List<Orgs> copList,
+      List<Orgs> groupList,
       FirebaseUser user,
       GoogleSignIn signIn]) {
     _user = user;
@@ -31,6 +35,8 @@ class MainScreen extends StatefulWidget {
     _orgList = orgList;
     _strList = normalList;
     _normalList = strList;
+    _copList = copList;
+    _groupList = groupList;
   }
 
   @override
@@ -40,16 +46,19 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   static ScrollController scrollController;
   static TextEditingController _filter = new TextEditingController();
-  List<Orgs> orgList;
-  List<String> strList;
-  List<Widget> normalList;
 
   var pages = [
-    HomeScreen(MainScreen._user),
+    HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._user),
     ListScreen(_filter, scrollController, MainScreen._user, MainScreen._orgList,
         MainScreen._strList, MainScreen._normalList),
-    TrackerScreen(MainScreen._user, MainScreen._orgList, MainScreen._strList,
-        MainScreen._normalList),
+    TrackerScreen(
+      MainScreen._user,
+      MainScreen._orgList,
+      MainScreen._strList,
+      MainScreen._normalList,
+      MainScreen._copList,
+      MainScreen._groupList,
+    ),
     SettingsScreen(MainScreen._googleSignIn),
   ];
 

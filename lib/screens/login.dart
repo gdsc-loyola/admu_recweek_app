@@ -31,6 +31,8 @@ class _LoginScreenState extends State<LoginScreen> {
   List<Orgs> orgList = [];
   List<String> strList = [];
   List<Widget> normalList = [];
+  List<Orgs> copList = [];
+  List<Orgs> groupList = [];
 
   @override
   void initState() {
@@ -82,7 +84,11 @@ class _LoginScreenState extends State<LoginScreen> {
     orgList
         .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
 
-    return orgList;
+    copList.addAll(orgList.where(
+        (i) => i.cluster.contains("Confederation of Publications (COP)")));
+
+    groupList.addAll(orgList.where((i) => i.cluster.contains(
+        "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)")));
   }
 
   filter() {
@@ -313,7 +319,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => MainScreen(
-                                              orgList, strList, normalList)),
+                                                orgList,
+                                                strList,
+                                                normalList,
+                                                copList,
+                                                groupList,
+                                              )),
                                     );
                                     setState(() {
                                       firstName = "Atenean";
@@ -373,8 +384,8 @@ class _LoginScreenState extends State<LoginScreen> {
     var userSignedIn = await Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) =>
-              MainScreen(orgList, strList, normalList, user, _googleSignIn)),
+          builder: (context) => MainScreen(orgList, strList, normalList,
+              copList, groupList, user, _googleSignIn)),
     );
 
     setState(() {
