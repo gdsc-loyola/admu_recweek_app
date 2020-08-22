@@ -75,7 +75,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
         .getDocuments()
         .then((value) {
       value.documents.forEach((result) {
-        print(result.data['name']);
+        // print(result.data['name']);
         bookmarkList.add(result.data['name']);
       });
 
@@ -92,7 +92,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
         .getDocuments()
         .then((value) {
       value.documents.forEach((result) {
-        print(result.data['name']);
+        // print(result.data['name']);
         appliedList.add(result.data['name']);
       });
       setState(() {
