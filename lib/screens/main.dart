@@ -1,3 +1,4 @@
+import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -13,18 +14,33 @@ import 'package:admu_recweek_app/models/screen.dart';
 
 // ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
-  // ignore: unused_field
   static GoogleSignIn _googleSignIn;
-  // ignore: unused_field
   static FirebaseUser _user;
+  static List<Orgs> _orgList;
+  static List<String> _strList;
+  static List<Widget> _normalList;
+  static List<Orgs> _copList = [];
+  static List<Orgs> _groupList = [];
 
-  MainScreen([FirebaseUser user, GoogleSignIn signIn]) {
+  MainScreen(
+      [List<Orgs> orgList,
+      List<String> normalList,
+      List<Widget> strList,
+      List<Orgs> copList,
+      List<Orgs> groupList,
+      FirebaseUser user,
+      GoogleSignIn signIn]) {
     _user = user;
     _googleSignIn = signIn;
+    _orgList = orgList;
+    _strList = normalList;
+    _normalList = strList;
+    _copList = copList;
+    _groupList = groupList;
   }
 
   @override
-  _MainScreenState createState() => new _MainScreenState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
@@ -32,9 +48,17 @@ class _MainScreenState extends State<MainScreen> {
   static TextEditingController _filter = new TextEditingController();
 
   var pages = [
-    HomeScreen(MainScreen._user),
-    ListScreen(_filter, scrollController, MainScreen._user),
-    TrackerScreen(MainScreen._user),
+    HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._user),
+    ListScreen(_filter, scrollController, MainScreen._user, MainScreen._orgList,
+        MainScreen._strList, MainScreen._normalList),
+    TrackerScreen(
+      MainScreen._user,
+      MainScreen._orgList,
+      MainScreen._strList,
+      MainScreen._normalList,
+      MainScreen._copList,
+      MainScreen._groupList,
+    ),
     SettingsScreen(MainScreen._googleSignIn),
   ];
 

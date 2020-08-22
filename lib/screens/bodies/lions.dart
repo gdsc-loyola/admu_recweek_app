@@ -154,7 +154,8 @@ class _LionsScreenState extends State<LionsScreen> {
 
     businessList.addAll(orgList.where((i) => i.cluster.contains("Business")));
 
-    communityList.addAll(orgList.where((i) => i.cluster.contains("Community Development")));
+    communityList.addAll(
+        orgList.where((i) => i.cluster.contains("Community Development")));
 
     cultureList.addAll(orgList.where((i) => i.cluster.contains("Culture")));
 
@@ -162,11 +163,13 @@ class _LionsScreenState extends State<LionsScreen> {
 
     educationList.addAll(orgList.where((i) => i.cluster.contains("Arts")));
 
-    environmentList.addAll(orgList.where((i) => i.cluster.contains("Environment")));
+    environmentList
+        .addAll(orgList.where((i) => i.cluster.contains("Environment")));
 
     homeList.addAll(orgList.where((i) => i.cluster.contains("Home Org")));
 
-    internationalList.addAll(orgList.where((i) => i.cluster.contains("International")));
+    internationalList
+        .addAll(orgList.where((i) => i.cluster.contains("International")));
 
     languageList.addAll(orgList.where((i) => i.cluster.contains("Language")));
 
@@ -176,7 +179,8 @@ class _LionsScreenState extends State<LionsScreen> {
 
     spiritualList.addAll(orgList.where((i) => i.cluster.contains("Spiritual")));
 
-    technologyList.addAll(orgList.where((i) => i.cluster.contains("Technology")));
+    technologyList
+        .addAll(orgList.where((i) => i.cluster.contains("Technology")));
   }
 
   @override
@@ -233,7 +237,8 @@ class _LionsScreenState extends State<LionsScreen> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               Container(
-                  child: Image.asset('assets/orgs/lions/logos/lions.jpg', fit: BoxFit.cover),
+                  child: Image.asset('assets/orgs/lions/logos/lions.jpg',
+                      fit: BoxFit.cover),
                   height: 180,
                   margin: const EdgeInsets.only(bottom: 8, top: 16)),
               Text(
