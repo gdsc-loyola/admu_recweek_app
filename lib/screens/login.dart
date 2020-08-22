@@ -89,6 +89,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
     groupList.addAll(orgList.where((i) => i.cluster.contains(
         "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)")));
+
+    // Return something here, to prevent `Null` in Snapshot Validation below.
+    return Future.value("Success");
   }
 
   filter() {
