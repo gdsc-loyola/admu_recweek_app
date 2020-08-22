@@ -3,10 +3,14 @@
 import 'package:admu_recweek_app/screens/team.dart';
 import 'package:flutter/material.dart';
 
-class BaseWidget extends StatelessWidget {
-  
-  Widget build(BuildContext context) {
-    
+class Modal extends StatefulWidget {
+  @override
+  _ModalState createState() => _ModalState();
+}
+  class _ModalState extends State<Modal> {
+    bool show = false;
+    @override
+    Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.center,
       child: FlatButton(
@@ -71,13 +75,7 @@ class BaseWidget extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                          ProductTeamScreen()
-                                        ),
-                                      );
+                                      setState(() => show = !show);
                                     },
                                     color: const Color(0xff1C41B2),
                                     child: Padding(
@@ -99,7 +97,10 @@ class BaseWidget extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                                 onPressed: () {
-                                   print('DSC Loyola');
+                                    MaterialPageRoute(
+                                          builder: (context) =>
+                                          ProductTeamScreen()
+                                    );
                                 },
                                 color: const Color(0xffFFFFFF),
                                 child: Padding(
