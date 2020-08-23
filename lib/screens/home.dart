@@ -393,7 +393,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => DSCLoyolaScreen()),
+                    MaterialPageRoute(
+                        builder: (context) => DSCLoyolaScreen(user)),
                   );
                 },
                 child: Stack(children: <Widget>[

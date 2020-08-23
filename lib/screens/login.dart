@@ -84,7 +84,6 @@ class _LoginScreenState extends State<LoginScreen> {
     // Sorting Area
     orgList
         .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
-    print(orgList.length);
 
     copList.addAll(orgList.where(
         (i) => i.cluster.contains("Confederation of Publications (COP)")));
@@ -189,8 +188,6 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       strList.add(org.name);
     });
-    print(strList);
-    print(normalList);
     // SetState to change the Value every time is triggers
     setState(() {
       // ignore: unnecessary_statements
