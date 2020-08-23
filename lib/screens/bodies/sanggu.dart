@@ -159,15 +159,15 @@ class _SangguScreenState extends State<SangguScreen> {
                       children: <Widget>[
                         InkWell(
                             //TODO: Download assets in colour of Sanggu
-                            child: Image.asset('assets/icons/web.png'),
+                            child: Image.asset('assets/icons/websiteSanggu.png'),
                             onTap: () => launch('https://www.oursanggu.com'),
                         ),
                         InkWell(
-                          child: Image.asset('assets/icons/twitter.png'),
+                          child: Image.asset('assets/icons/twitSanggu.png'),
                           onTap: () => launch('https://www.twitter.com/ADMUSanggu'),
                         ),
                         InkWell(
-                          child: Image.asset('assets/icons/fb.png'),
+                          child: Image.asset('assets/icons/fbSanggu.png'),
                           onTap: () => launch('https://www.facebook.com/ADMUSanggu'),
                         ),
                       ]
@@ -313,9 +313,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/bodies/sanggu/casmv.png'),
                                 ),
                                 Expanded(
                                   child: Padding(
@@ -341,9 +339,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/bodies/sanggu/cge.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -365,9 +361,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/bodies/sanggu/cmh.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -389,9 +383,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/bodies/sanggu/cpsni.png'),
                                 ),
                                 Expanded(
                                   child: Padding(
@@ -415,33 +407,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 16),
-                                  child: Text(
-                                    "Commission on Mental Health",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 16, bottom: 16),
-                            child: Row(
-                              children: <Widget>[
-                                Container(
-                                  height: 48,
-                                  width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/bodies/sanggu/daa.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -463,9 +429,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/bodies/sanggu/dbm.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -487,9 +451,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/bodies/sanggu/doc.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -511,9 +473,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/bodies/sanggu/dea.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -535,9 +495,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  child: Image.asset('assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png'),
                                 ),
                                 Expanded(
                                   child: Padding(
@@ -561,9 +519,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      shape: BoxShape.circle),
+                                  //child: Image.asset('assets/bodies/sanggu/doc.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -588,9 +544,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          shape: BoxShape.circle),
+                                      //child: Image.asset('assets/bodies/sanggu/doc.png'),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -612,9 +566,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          shape: BoxShape.circle),
+                                      child: Image.asset('assets/bodies/sanggu/Internals.png'),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -635,9 +587,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          shape: BoxShape.circle),
+                                      child: Image.asset('assets/bodies/sanggu/StratandDev.png'),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16,),
@@ -661,9 +611,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          shape: BoxShape.circle),
+                                      child: Image.asset('assets/bodies/sanggu/soh.png'),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -685,9 +633,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          shape: BoxShape.circle),
+                                      child: Image.asset('assets/bodies/sanggu/som.png'),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -709,9 +655,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          shape: BoxShape.circle),
+                                      child: Image.asset('assets/bodies/sanggu/sose.png'),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -733,9 +677,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          shape: BoxShape.circle),
+                                      child: Image.asset('assets/bodies/sanggu/soss.png'),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
