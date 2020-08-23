@@ -519,7 +519,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  //child: Image.asset('assets/bodies/sanggu/doc.png'),
+                                  //child: Image.asset('assets/bodies/sanggu/LegalAffairs.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -544,7 +544,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      //child: Image.asset('assets/bodies/sanggu/doc.png'),
+                                      child: Image.asset('assets/bodies/sanggu/LegalAffairs.png'),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
