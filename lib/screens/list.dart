@@ -42,8 +42,6 @@ class _ListScreenState extends State<ListScreen> {
   void initState() {
     super.initState();
     filter();
-    print("${orgList.length}");
-    print("${normalList.length}");
   }
 
   filter() {
