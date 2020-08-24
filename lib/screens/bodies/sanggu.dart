@@ -313,7 +313,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/casmv.png'),
+                                  child: Image.asset('assets/bodies/sanggu/casmv.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Expanded(
                                   child: Padding(
@@ -339,7 +339,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/cge.png'),
+                                  child: Image.asset('assets/bodies/sanggu/cge.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -361,7 +361,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/cmh.png'),
+                                  child: Image.asset('assets/bodies/sanggu/cmh.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -383,7 +383,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/cpsni.png'),
+                                  child: Image.asset('assets/bodies/sanggu/cpsni.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Expanded(
                                   child: Padding(
@@ -407,7 +407,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/daa.png'),
+                                  child: Image.asset('assets/bodies/sanggu/daa.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -429,7 +429,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/dbm.png'),
+                                  child: Image.asset('assets/bodies/sanggu/dbm.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -451,7 +451,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/doc.png'),
+                                  child: Image.asset('assets/bodies/sanggu/doc.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -473,7 +473,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/dea.png'),
+                                  child: Image.asset('assets/bodies/sanggu/dea.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -495,7 +495,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png'),
+                                  child: Image.asset('assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png', cacheWidth: 96, cacheHeight: 96,),
                                 ),
                                 Expanded(
                                   child: Padding(
@@ -544,7 +544,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      child: Image.asset('assets/bodies/sanggu/LegalAffairs.png'),
+                                      child: Image.asset('assets/bodies/sanggu/LegalAffairs.png', cacheWidth: 96, cacheHeight: 96,),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -566,7 +566,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      child: Image.asset('assets/bodies/sanggu/Internals.png'),
+                                      child: Image.asset('assets/bodies/sanggu/Internals.png', cacheWidth: 96, cacheHeight: 96,),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -587,7 +587,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      child: Image.asset('assets/bodies/sanggu/StratandDev.png'),
+                                      child: Image.asset('assets/bodies/sanggu/StratandDev.png', cacheWidth: 96, cacheHeight: 96,),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16,),
@@ -611,7 +611,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      child: Image.asset('assets/bodies/sanggu/soh.png'),
+                                      child: Image.asset('assets/bodies/sanggu/soh.png', cacheWidth: 96, cacheHeight: 96,),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -633,7 +633,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      child: Image.asset('assets/bodies/sanggu/som.png'),
+                                      child: Image.asset('assets/bodies/sanggu/som.png', cacheWidth: 96, cacheHeight: 96,),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -655,7 +655,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      child: Image.asset('assets/bodies/sanggu/sose.png'),
+                                      child: Image.asset('assets/bodies/sanggu/sose.png', cacheWidth: 96, cacheHeight: 96,),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
@@ -677,7 +677,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     Container(
                                       height: 48,
                                       width: 48,
-                                      child: Image.asset('assets/bodies/sanggu/soss.png'),
+                                      child: Image.asset('assets/bodies/sanggu/soss.png', cacheWidth: 96, cacheHeight: 96,),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(left: 16),
