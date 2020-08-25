@@ -10,13 +10,10 @@ class Orgs {
   String advocacy;
   String core;
   String awards;
-  String projectImageOne;
   String projectTitleOne;
   String projectDescOne;
-  String projectImageTwo;
   String projectTitleTwo;
   String projectDescTwo;
-  String projectImageThree;
   String projectTitleThree;
   String projectDescThree;
   String vision;
@@ -24,6 +21,9 @@ class Orgs {
   String body;
   String logo;
   String cover;
+  String projectImageOne;
+  String projectImageTwo;
+  String projectImageThree;
   List<dynamic> cluster;
 
   Orgs(
@@ -38,13 +38,10 @@ class Orgs {
       this.advocacy,
       this.core,
       this.awards,
-      this.projectImageOne,
       this.projectTitleOne,
       this.projectDescOne,
-      this.projectImageTwo,
       this.projectTitleTwo,
       this.projectDescTwo,
-      this.projectImageThree,
       this.projectTitleThree,
       this.projectDescThree,
       this.vision,
@@ -52,5 +49,8 @@ class Orgs {
       this.body,
       this.logo,
       this.cluster,
-      this.cover,]);
+      this.cover,
+      this.projectImageOne,
+      this.projectImageTwo,
+      this.projectImageThree]);
 }
