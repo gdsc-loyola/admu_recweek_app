@@ -120,9 +120,6 @@ class _GroupsScreenState extends State<GroupsScreen> {
                         _orgs[index].body,
                         _orgs[index].logo,
                         _orgs[index].cover,
-                        _orgs[index].projectImageOne,
-                        _orgs[index].projectImageTwo,
-                        _orgs[index].projectImageThree,
                       ),
                     ),
                   );
