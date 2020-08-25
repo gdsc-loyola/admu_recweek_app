@@ -17,10 +17,13 @@ class OrgTemplateScreen extends StatefulWidget {
   final String _description;
   final String _advocacy;
   final String _core;
+  final String _projectImageOne;
   final String _projectTitleOne;
   final String _projectDescOne;
+  final String _projectImageTwo;
   final String _projectTitleTwo;
   final String _projectDescTwo;
+  final String _projectImageThree;
   final String _projectTitleThree;
   final String _projectDescThree;
   final String _vision;
@@ -41,10 +44,13 @@ class OrgTemplateScreen extends StatefulWidget {
     this._description,
     this._advocacy,
     this._core,
+    this._projectImageOne,
     this._projectTitleOne,
     this._projectDescOne,
+    this._projectImageTwo,
     this._projectTitleTwo,
     this._projectDescTwo,
+    this._projectImageThree,
     this._projectTitleThree,
     this._projectDescThree,
     this._vision,
@@ -67,10 +73,13 @@ class OrgTemplateScreen extends StatefulWidget {
         _description,
         _advocacy,
         _core,
+        _projectImageOne,
         _projectTitleOne,
         _projectDescOne,
+        _projectImageTwo,
         _projectTitleTwo,
         _projectDescTwo,
+        _projectImageThree,
         _projectTitleThree,
         _projectDescThree,
         _vision,
@@ -96,10 +105,13 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   String _description;
   String _advocacy;
   String _core;
+  String _projectImageOne;
   String _projectTitleOne;
   String _projectDescOne;
+  String _projectImageTwo;
   String _projectTitleTwo;
   String _projectDescTwo;
+  String _projectImageThree;
   String _projectTitleThree;
   String _projectDescThree;
   String _vision;
@@ -120,10 +132,13 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     this._description,
     this._advocacy,
     this._core,
+    this._projectImageOne,
     this._projectTitleOne,
     this._projectDescOne,
+    this._projectImageTwo,
     this._projectTitleTwo,
     this._projectDescTwo,
+    this._projectImageThree,
     this._projectTitleThree,
     this._projectDescThree,
     this._vision,
@@ -425,7 +440,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.asset('assets/orgs/dsc/csj.png', fit: BoxFit.cover,),
+                child: Image.network(_projectImageOne, fit: BoxFit.cover,),
               ),
               _projectTitleOne != ""
                   ? Padding(

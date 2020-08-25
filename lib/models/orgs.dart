@@ -10,10 +10,13 @@ class Orgs {
   String advocacy;
   String core;
   String awards;
+  String projectImageOne;
   String projectTitleOne;
   String projectDescOne;
+  String projectImageTwo;
   String projectTitleTwo;
   String projectDescTwo;
+  String projectImageThree;
   String projectTitleThree;
   String projectDescThree;
   String vision;
@@ -35,10 +38,13 @@ class Orgs {
       this.advocacy,
       this.core,
       this.awards,
+      this.projectImageOne,
       this.projectTitleOne,
       this.projectDescOne,
+      this.projectImageTwo,
       this.projectTitleTwo,
       this.projectDescTwo,
+      this.projectImageThree,
       this.projectTitleThree,
       this.projectDescThree,
       this.vision,
