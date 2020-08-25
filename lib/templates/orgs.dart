@@ -251,26 +251,29 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                 children: <Widget>[
                   Container(
                     decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: const Color(0xffFFFFFF),
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0xff000000).withOpacity(0.05),
-                        spreadRadius: 1,
-                        blurRadius: 2,
-                        offset:
-                          Offset(0, 4), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: SizedBox(
-                    height: 200,
-                    width: double.infinity,
-                    child: 
-                    _cover != ""
-                      ? Image.asset(_cover, fit: BoxFit.cover,)
-                      : Image.asset("assets/bodies/sanggu/cover.png", fit: BoxFit.cover,)
-                  ),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      color: const Color(0xffFFFFFF),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xff000000).withOpacity(0.05),
+                          spreadRadius: 1,
+                          blurRadius: 2,
+                          offset: Offset(0, 4), // changes position of shadow
+                        ),
+                      ],
+                    ),
+                    child: SizedBox(
+                        height: 200,
+                        width: double.infinity,
+                        child: _cover != ""
+                            ? Image.asset(
+                                _cover,
+                                fit: BoxFit.cover,
+                              )
+                            : Image.asset(
+                                "assets/bodies/sanggu/cover.png",
+                                fit: BoxFit.cover,
+                              )),
                   ),
                   Container(
                     alignment: Alignment.bottomCenter,
@@ -343,11 +346,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _description != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(
-                          left: 16, right: 16),
+                      padding: const EdgeInsets.only(left: 16, right: 16),
                       child: Text(
                         _description,
-                        style: TextStyle(fontSize: 16,),
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
                       ))
                   : SizedBox.shrink(),
               // Vision
@@ -399,8 +403,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _advocacy != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(
-                          left: 16, right: 16),
+                      padding: const EdgeInsets.only(left: 16, right: 16),
                       child: Text(
                         _advocacy,
                         style: TextStyle(fontSize: 16),
@@ -418,7 +421,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _core != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16, bottom: 24),
+                      padding: const EdgeInsets.only(
+                          left: 16, right: 16, bottom: 24),
                       child: Text(
                         _core,
                         style: TextStyle(fontSize: 16),
@@ -440,7 +444,10 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.network(_projectImageOne, fit: BoxFit.cover,),
+                child: Image.network(
+                  _projectImageOne,
+                  fit: BoxFit.cover,
+                ),
               ),
               _projectTitleOne != ""
                   ? Padding(
@@ -453,8 +460,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _projectDescOne != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(
-                          left: 16, right: 16),
+                      padding: const EdgeInsets.only(left: 16, right: 16),
                       child: Text(
                         _projectDescOne,
                         style: TextStyle(fontSize: 16),
@@ -464,7 +470,10 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.asset('assets/orgs/dsc/tah.png', fit: BoxFit.cover,),
+                child: Image.network(
+                  _projectImageTwo,
+                  fit: BoxFit.cover,
+                ),
               ),
               _projectTitleTwo != ""
                   ? Padding(
@@ -488,7 +497,10 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.asset('assets/orgs/dsc/hacks.png', fit: BoxFit.cover,),
+                child: Image.network(
+                  _projectImageThree,
+                  fit: BoxFit.cover,
+                ),
               ),
               _projectTitleThree != ""
                   ? Padding(
