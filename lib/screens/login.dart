@@ -267,43 +267,49 @@ class _LoginScreenState extends State<LoginScreen> {
             if (snapshot.connectionState == ConnectionState.waiting)
               //Enter Splash Screen here
 
-              // return const Center(
-              //   child: CircularProgressIndicator(),
-              // );
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
               
-              return Container(
-                color: Colors.white,
-                padding: EdgeInsets.symmetric(
-                  vertical: MediaQuery.of(context).size.height * 0.1
-                ),
-                child: Center(
-                  child: BaseWidget(builder: (context, sizeInfo) {
-                    return Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(
-                                top: MediaQuery.of(context).size.height * 0.1
-                              ),
-                              child: Image.asset(
-                                'assets/images/logo.png', 
-                                width: MediaQuery.of(context).size.height
-                              ),
-                            ),
-                            Text(
-                              "pavilion",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 56.0,
-                                  color: const Color(0xff295EFF)),
-                            )
-                          ],
-                        ),
-                      ]);
-                })));
+              // return Container(
+              //   color: Colors.white,
+              //   padding: EdgeInsets.symmetric(
+              //     vertical: MediaQuery.of(context).size.height * 0.1
+              //   ),
+              //   child: Center(
+              //     child: BaseWidget(builder: (context, sizeInfo) {
+              //       return Column(
+              //         mainAxisSize: MainAxisSize.max,
+              //         mainAxisAlignment: MainAxisAlignment.center,
+              //         children: <Widget>[
+              //           Container(
+              //             alignment: Alignment.topLeft,
+              //             width: 60,
+              //             height: 60,
+              //             decoration: BoxDecoration(
+              //                 shape: BoxShape.circle,
+              //                 color: Color(0xff295EFF)),
+              //           ),
+                        
+              //           Image.asset(
+              //                   'assets/images/logo.png', 
+              //                   width: MediaQuery.of(context).size.height,
+              //           ),
+                          
+              //           Column(
+              //             children: <Widget>[
+                            
+              //               Text(
+              //                 "pavilion",
+              //                 style: TextStyle(
+              //                     fontWeight: FontWeight.bold,
+              //                     fontSize: 56.0,
+              //                     color: const Color(0xff295EFF)),
+              //               )
+              //             ],
+              //           ),
+              //         ]);
+              //   })));
 
             if (snapshot.hasData)
               return Container(
