@@ -93,9 +93,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                   'Made by:',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                    color: Colors.grey,
+                                    color: Color(0xff787979),
                                     fontSize: 12,
-                                    fontFamily: "Google Sans",
+                                    fontFamily: 'Google Sans',
                                   ),
                                 ),
                               ),

@@ -113,3 +113,6 @@ flutter:
         - asset: assets/fonts/Nunito-Regular.ttf
         - asset: assets/fonts/Nunito-Italic.ttf
           style: italic
+    - family: Google Sans
+      fonts:
+        - asset: assets/fonts/GoogleSans-Regular-v1.27.ttf
