@@ -29,10 +29,10 @@ class _LoginScreenState extends State<LoginScreen> {
   FirebaseUser user;
   bool isUserSignedIn = false;
   List<Orgs> orgList = [];
-  List<String> strList = [];
-  List<Widget> normalList = [];
   List<Orgs> copList = [];
   List<Orgs> groupList = [];
+  List<String> strList = [];
+  List<Widget> normalList = [];
 
   @override
   void initState() {
@@ -51,7 +51,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future loadJSON() async {
     var orgResult;
-
     String orgs = await rootBundle.loadString('assets/data/orgs.json');
     orgResult = json.decode(orgs.toString());
     for (int i = 0; i < orgResult.length; i++) {
@@ -79,6 +78,9 @@ class _LoginScreenState extends State<LoginScreen> {
         orgResult[i]['Logo'],
         orgResult[i]['Cluster'],
         orgResult[i]['Cover'],
+        orgResult[i]['projectImageOne'],
+        orgResult[i]['projectImageTwo'],
+        orgResult[i]['projectImageThree'],
       ));
     }
     // Sorting Area
@@ -130,28 +132,32 @@ class _LoginScreenState extends State<LoginScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => new OrgTemplateScreen(
-                      user,
-                      org.name,
-                      org.abbreviation,
-                      org.tagline,
-                      org.website,
-                      org.facebook,
-                      org.twitter,
-                      org.instagram,
-                      org.description,
-                      org.advocacy,
-                      org.core,
-                      org.projectTitleOne,
-                      org.projectDescOne,
-                      org.projectTitleTwo,
-                      org.projectDescTwo,
-                      org.projectTitleThree,
-                      org.projectDescThree,
-                      org.vision,
-                      org.mission,
-                      org.body,
-                      org.logo,
-                      org.cover),
+                    user,
+                    org.name,
+                    org.abbreviation,
+                    org.tagline,
+                    org.website,
+                    org.facebook,
+                    org.twitter,
+                    org.instagram,
+                    org.description,
+                    org.advocacy,
+                    org.core,
+                    org.projectTitleOne,
+                    org.projectDescOne,
+                    org.projectTitleTwo,
+                    org.projectDescTwo,
+                    org.projectTitleThree,
+                    org.projectDescThree,
+                    org.vision,
+                    org.mission,
+                    org.body,
+                    org.logo,
+                    org.cover,
+                    org.projectImageOne,
+                    org.projectImageTwo,
+                    org.projectImageThree,
+                  ),
                 ),
               );
             }
