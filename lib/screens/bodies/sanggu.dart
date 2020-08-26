@@ -158,7 +158,6 @@ class _SangguScreenState extends State<SangguScreen> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
                         InkWell(
-                            //TODO: Download assets in colour of Sanggu
                             child: Image.asset('assets/icons/websiteSanggu.png'),
                             onTap: () => launch('https://www.oursanggu.com'),
                         ),
