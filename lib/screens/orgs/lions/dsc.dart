@@ -1,14 +1,87 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 
 class DSCLoyolaScreen extends StatefulWidget {
+  final FirebaseUser user;
+
+  // ignore: non_constant_identifier_names
+  DSCLoyolaScreen(this.user);
+
   @override
-  _DSCLoyolaState createState() => _DSCLoyolaState();
+  _DSCLoyolaState createState() => _DSCLoyolaState(user);
 }
 
 class _DSCLoyolaState extends State<DSCLoyolaScreen> {
   bool bookmark = false;
+  FirebaseUser user;
+  final firestoreInstance = Firestore.instance;
+
+  _DSCLoyolaState(this.user);
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    firestoreInstance
+        .collection("bookmarks-2020-2021")
+        .document('${user.uid}-Developer Student Clubs - Loyola')
+        .get()
+        .then((value) {
+      if (value.data["name"] == "Developer Student Clubs - Loyola" &&
+          value.data["bookmark"]) {
+        setState(() {
+          bookmark = true;
+        });
+      } else {
+        setState(() {
+          bookmark = false;
+        });
+      }
+    });
+  }
+
+  void _onBookmark() async {
+    if (bookmark) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${user.uid}-Developer Student Clubs - Loyola')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have unbookmarked League of Independent Organizations",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${user.uid}-DSC Loyola')
+          .setData({
+        "id": user.uid,
+        "name": "Developer Student Clubs - Loyola",
+        "abbreviation": "DSC Loyola",
+        "body": "LIONS",
+        "bookmark": true,
+      }).then((_) {
+        Fluttertoast.showToast(
+            msg: "You have bookmarked League of Independent Organizations",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +104,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
+                            _onBookmark();
                             bookmark = !bookmark;
                           });
                         },

@@ -59,7 +59,7 @@ class _MainScreenState extends State<MainScreen> {
       MainScreen._copList,
       MainScreen._groupList,
     ),
-    SettingsScreen(MainScreen._googleSignIn),
+    SettingsScreen(MainScreen._googleSignIn, MainScreen._user),
   ];
 
   // final dio = new Dio();
