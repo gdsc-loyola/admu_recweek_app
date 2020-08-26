@@ -267,9 +267,32 @@ class _LoginScreenState extends State<LoginScreen> {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting)
               //Enter Splash Screen here
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
+              // return const Center(
+              //   child: CircularProgressIndicator(),
+              // );
+
+              return Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Column(
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  top:
+                                      MediaQuery.of(context).size.height * 0.1),
+                              child: Image.asset('assets/images/logo.png'),
+                            ),
+                            Text(
+                              "pavilion",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 56.0,
+                                  color: const Color(0xff295EFF)),
+                            )
+                          ],
+                        ),
+                      ]);
 
             if (snapshot.hasData)
               return Container(
