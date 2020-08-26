@@ -33,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
   List<Widget> normalList = [];
   List<Orgs> copList = [];
   List<Orgs> groupList = [];
+  int counter = 0;
 
   @override
   void initState() {
@@ -79,6 +80,9 @@ class _LoginScreenState extends State<LoginScreen> {
         orgResult[i]['Logo'],
         orgResult[i]['Cluster'],
         orgResult[i]['Cover'],
+        orgResult[i]['projectImageOne'],
+        orgResult[i]['projectImageTwo'],
+        orgResult[i]['projectImageThree'],
       ));
     }
     // Sorting Area
@@ -91,26 +95,27 @@ class _LoginScreenState extends State<LoginScreen> {
     groupList.addAll(orgList.where((i) => i.cluster.contains(
         "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)")));
 
+    if (counter == 0) {
+      filter();
+      counter++;
+    }
+
     // Added this to prevent duplication of Data
     orgList = [];
     copList = [];
     groupList = [];
 
     // Return something here, to prevent `Null` in Snapshot Validation below.
-    return Future.value(groupList);
+    return orgList;
   }
 
   filter() {
     List<Orgs> orgs = [];
     normalList = [];
 
-    // We added all the userList to the users. for the passing/getting the specific value.
     orgs.addAll(orgList);
 
-    // Loop
     orgs.forEach((org) {
-      // Since, normalList is an WidgetArray = []
-      // Here is the adding of Widget that depends on the lenght of the Array in  `users`
       normalList.add(
         GestureDetector(
           onTap: () {
@@ -129,28 +134,32 @@ class _LoginScreenState extends State<LoginScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => new OrgTemplateScreen(
-                      user,
-                      org.name,
-                      org.abbreviation,
-                      org.tagline,
-                      org.website,
-                      org.facebook,
-                      org.twitter,
-                      org.instagram,
-                      org.description,
-                      org.advocacy,
-                      org.core,
-                      org.projectTitleOne,
-                      org.projectDescOne,
-                      org.projectTitleTwo,
-                      org.projectDescTwo,
-                      org.projectTitleThree,
-                      org.projectDescThree,
-                      org.vision,
-                      org.mission,
-                      org.body,
-                      org.logo,
-                      org.cover),
+                    user,
+                    org.name,
+                    org.abbreviation,
+                    org.tagline,
+                    org.website,
+                    org.facebook,
+                    org.twitter,
+                    org.instagram,
+                    org.description,
+                    org.advocacy,
+                    org.core,
+                    org.projectTitleOne,
+                    org.projectDescOne,
+                    org.projectTitleTwo,
+                    org.projectDescTwo,
+                    org.projectTitleThree,
+                    org.projectDescThree,
+                    org.vision,
+                    org.mission,
+                    org.body,
+                    org.logo,
+                    org.cover,
+                    org.projectImageOne,
+                    org.projectImageTwo,
+                    org.projectImageThree,
+                  ),
                 ),
               );
             }
@@ -188,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       strList.add(org.name);
     });
-    // SetState to change the Value every time is triggers
+
     setState(() {
       // ignore: unnecessary_statements
       normalList;
