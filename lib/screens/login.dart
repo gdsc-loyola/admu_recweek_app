@@ -29,10 +29,10 @@ class _LoginScreenState extends State<LoginScreen> {
   FirebaseUser user;
   bool isUserSignedIn = false;
   List<Orgs> orgList = [];
-  List<Orgs> copList = [];
-  List<Orgs> groupList = [];
   List<String> strList = [];
   List<Widget> normalList = [];
+  List<Orgs> copList = [];
+  List<Orgs> groupList = [];
 
   @override
   void initState() {
@@ -51,6 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future loadJSON() async {
     var orgResult;
+
     String orgs = await rootBundle.loadString('assets/data/orgs.json');
     orgResult = json.decode(orgs.toString());
     for (int i = 0; i < orgResult.length; i++) {
@@ -86,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
     // Sorting Area
     orgList
         .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
-    // print(orgList.length);
+    print(orgList.length);
 
     copList.addAll(orgList.where(
         (i) => i.cluster.contains("Confederation of Publications (COP)")));
@@ -100,20 +101,16 @@ class _LoginScreenState extends State<LoginScreen> {
     groupList = [];
 
     // Return something here, to prevent `Null` in Snapshot Validation below.
-    return Future.value(groupList);
+    return orgList;
   }
 
   filter() {
     List<Orgs> orgs = [];
     normalList = [];
 
-    // We added all the userList to the users. for the passing/getting the specific value.
     orgs.addAll(orgList);
 
-    // Loop
     orgs.forEach((org) {
-      // Since, normalList is an WidgetArray = []
-      // Here is the adding of Widget that depends on the lenght of the Array in  `users`
       normalList.add(
         GestureDetector(
           onTap: () {
