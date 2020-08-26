@@ -119,7 +119,7 @@ packages:
       name: device_preview
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.7"
+    version: "0.4.8"
   fake_async:
     dependency: transitive
     description:
@@ -202,6 +202,11 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.5"
+  flutter_localizations:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   flutter_slidable:
     dependency: "direct main"
     description:
@@ -246,7 +251,7 @@ packages:
       name: google_sign_in
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.5.1"
+    version: "4.5.3"
   google_sign_in_platform_interface:
     dependency: transitive
     description:
@@ -344,7 +349,7 @@ packages:
       name: path_provider_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.3"
   pedantic:
     dependency: transitive
     description:
@@ -414,14 +419,14 @@ packages:
       name: shared_preferences
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.8"
+    version: "0.5.10"
   shared_preferences_linux:
     dependency: transitive
     description:
       name: shared_preferences_linux
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.2+1"
+    version: "0.0.2+2"
   shared_preferences_macos:
     dependency: transitive
     description:
@@ -531,7 +536,7 @@ packages:
       name: url_launcher_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.2"
+    version: "0.1.2+1"
   vector_math:
     dependency: transitive
     description:

@@ -33,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
   List<Widget> normalList = [];
   List<Orgs> copList = [];
   List<Orgs> groupList = [];
+  int counter = 0;
 
   @override
   void initState() {
@@ -94,6 +95,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
     groupList.addAll(orgList.where((i) => i.cluster.contains(
         "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)")));
+
+    if (counter == 0) {
+      filter();
+      counter++;
+    }
 
     // Added this to prevent duplication of Data
     orgList = [];
