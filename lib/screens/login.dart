@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'dart:async';
 import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/templates/orgs.dart';
@@ -37,7 +37,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-
     checkIfUserIsSignedIn();
   }
 
@@ -267,21 +266,32 @@ class _LoginScreenState extends State<LoginScreen> {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting)
               //Enter Splash Screen here
+
               // return const Center(
               //   child: CircularProgressIndicator(),
               // );
-
-              return Column(
+              
+              return Container(
+                color: Colors.white,
+                padding: EdgeInsets.symmetric(
+                  vertical: MediaQuery.of(context).size.height * 0.1
+                ),
+                child: Center(
+                  child: BaseWidget(builder: (context, sizeInfo) {
+                    return Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Column(
                           children: <Widget>[
                             Padding(
                               padding: EdgeInsets.only(
-                                  top:
-                                      MediaQuery.of(context).size.height * 0.1),
-                              child: Image.asset('assets/images/logo.png'),
+                                top: MediaQuery.of(context).size.height * 0.1
+                              ),
+                              child: Image.asset(
+                                'assets/images/logo.png', 
+                                width: MediaQuery.of(context).size.height
+                              ),
                             ),
                             Text(
                               "pavilion",
@@ -293,6 +303,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ],
                         ),
                       ]);
+                })));
 
             if (snapshot.hasData)
               return Container(
@@ -309,16 +320,19 @@ class _LoginScreenState extends State<LoginScreen> {
                           children: <Widget>[
                             Padding(
                               padding: EdgeInsets.only(
-                                  top:
-                                      MediaQuery.of(context).size.height * 0.1),
-                              child: Image.asset('assets/images/logo.png'),
+                                top: MediaQuery.of(context).size.height * 0.1
+                              ),
+                              child: Image.asset(
+                                'assets/images/logo.png'
+                              ),
                             ),
                             Text(
                               "pavilion",
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 56.0,
-                                  color: const Color(0xff295EFF)),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 56.0,
+                                color: const Color(0xff295EFF)
+                              ),
                             )
                           ],
                         ),

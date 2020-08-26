@@ -15,14 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      builder: DevicePreview.appBuilder,
-      title: 'Pavilion',
-      theme: ThemeData(
-        fontFamily: 'Nunito',
-        hintColor: Colors.white,
-        backgroundColor: Colors.white
-      ),
+      // debugShowCheckedModeBanner: false,
+      // builder: DevicePreview.appBuilder,
+      // title: 'Pavilion',
+      // theme: ThemeData(
+      //   fontFamily: 'Nunito',
+      //   hintColor: Colors.white,
+      //   backgroundColor: Colors.white
+      // ),
       home: SplashScreen(),
     );
   }
