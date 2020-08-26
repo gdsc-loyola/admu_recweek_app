@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 5),
+    Timer(Duration(seconds: 3),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -47,35 +47,31 @@ class _SplashScreenState extends State<SplashScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+      body: Container(
                 color: Colors.white,
                 // padding: EdgeInsets.symmetric(
                 //   vertical: MediaQuery.of(context).size.height * 0.1
                 // ),
+                height: double.infinity,
+                width: double.infinity,
                 child: Center(
-                  child: BaseWidget(builder: (context, sizeInfo) {
-                    return Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                  child: BaseWidget(
+                    builder: (context, sizeInfo) {
+                    return Expanded(
+                      child:Column(
+                      //mainAxisSize: MainAxisSize.max,
+                      //mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Expanded(
-                        child: Container(
-                          alignment: Alignment.topLeft,
-                          width: 60,
-                          height: 60,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Color(0xff295EFF)),
-                        ),
-                        ),
-                        
-                        Image.asset(
+                          child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Image.asset(
                                 'assets/images/logo.png', 
                                 //width: MediaQuery.of(context).size.height,
-                        ),
-                          
-                        Column(
-                          children: <Widget>[
+                            ),
                             Text(
                               "pavilion",
                               style: TextStyle(
@@ -86,7 +82,41 @@ class _SplashScreenState extends State<SplashScreen> {
                             )
                           ],
                         ),
-                      ]);
-                })));
+                        ),
+                        Align (
+                          alignment: Alignment.bottomLeft,
+                          child: Column(
+                            children: <Widget> [
+                              Padding(
+                                padding: EdgeInsets.only(left: 8.0, bottom: 4.0),
+                                child: Text(
+                                  'Made by:',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 12,
+                                    fontFamily: "Google Sans",
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        ),
+                        Align (
+                          alignment: Alignment.bottomLeft,
+                          child: Padding(
+                                padding: EdgeInsets.only(left: 8.0, bottom: 24.0),
+                                child: Image.asset(
+                                  'assets/images/dscl_horizontal.png',
+                                  width: MediaQuery.of(context).size.width * 0.5,
+                                ),
+                              )
+                        ),
+                      ]));
+                    }
+                  )
+        )
+      )
+    );
   }
 }

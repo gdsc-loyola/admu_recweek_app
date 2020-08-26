@@ -188,8 +188,8 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       strList.add(org.name);
     });
-    print(strList);
-    print(normalList);
+    // print(strList);
+    // print(normalList);
     // SetState to change the Value every time is triggers
     setState(() {
       // ignore: unnecessary_statements
@@ -263,10 +263,10 @@ class _LoginScreenState extends State<LoginScreen> {
       return Scaffold(
         body: FutureBuilder(
           future: loadJSON(),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting)
-              //Enter Splash Screen here
 
+          builder: (context, snapshot) {
+            //new Future.delayed(const Duration(seconds: 5));
+            if (snapshot.connectionState == ConnectionState.waiting)
               return const Center(
                 child: CircularProgressIndicator(),
               );
@@ -282,30 +282,22 @@ class _LoginScreenState extends State<LoginScreen> {
               //         mainAxisSize: MainAxisSize.max,
               //         mainAxisAlignment: MainAxisAlignment.center,
               //         children: <Widget>[
-              //           Container(
-              //             alignment: Alignment.topLeft,
-              //             width: 60,
-              //             height: 60,
-              //             decoration: BoxDecoration(
-              //                 shape: BoxShape.circle,
-              //                 color: Color(0xff295EFF)),
-              //           ),
-                        
-              //           Image.asset(
-              //                   'assets/images/logo.png', 
-              //                   width: MediaQuery.of(context).size.height,
-              //           ),
-                          
               //           Column(
               //             children: <Widget>[
-                            
+              //               Image.asset(
+              //                 'assets/images/logo.png', 
+              //                 // width: MediaQuery.of(context).size.height,
+              //               ),
               //               Text(
               //                 "pavilion",
               //                 style: TextStyle(
               //                     fontWeight: FontWeight.bold,
               //                     fontSize: 56.0,
               //                     color: const Color(0xff295EFF)),
-              //               )
+              //               ),
+              //               Image.asset(
+              //                 'assets/images/DSCL logo.png',
+              //               ),
               //             ],
               //           ),
               //         ]);
