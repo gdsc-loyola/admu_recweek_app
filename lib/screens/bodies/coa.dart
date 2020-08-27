@@ -135,6 +135,9 @@ class _COAScreenState extends State<COAScreen> {
         orgResult[i]['Logo'],
         orgResult[i]['Cluster'],
         orgResult[i]['Cover'],
+        orgResult[i]['projectImageOne'],
+        orgResult[i]['projectImageTwo'],
+        orgResult[i]['projectImageThree'],
       ));
     }
     // Sorting Area
@@ -225,10 +228,46 @@ class _COAScreenState extends State<COAScreen> {
                 maxLines: 1,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
-              Container(
-                  child: Image.asset('assets/bodies/coa/cover.png'),
-                  height: 180,
-                  margin: const EdgeInsets.only(bottom: 8, top: 16)),
+              Stack(
+                children: <Widget> [
+                  Container(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: Image.asset('assets/bodies/coa/cover.png', fit: BoxFit.cover,),
+                    ),
+                    height: 180,
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 8, top: 16)
+                  ),
+                  Container(
+                    height: 184, 
+                    alignment: Alignment.bottomCenter,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        // InkWell(
+                        //     child: Image.asset('assets/icons/website.png'),
+                        //     //TODO: Add COA website link
+                        //     onTap: () => launch(''),
+                        // ),
+                        InkWell(
+                          child: Image.asset('assets/bodies/coa/ig.png'),
+                          onTap: () => launch('https://www.instagram.com/coamanila'),
+                        ),
+                        InkWell(
+                          child: Image.asset('assets/bodies/coa/twit.png'),
+                          onTap: () => launch('https://www.twitter.com/coamanila'),
+                        ),
+                        InkWell(
+                          child: Image.asset('assets/bodies/coa/fb.png'),
+                          onTap: () => launch('https://www.facebook.com/ateneocoa'),
+                        ),
+                      ]
+                    )
+                  )
+                ],
+              ),
               Text(
                 "The Council of Organizations of the Ateneo - Manila (COA-M) is the sole, autonomous, confederation of all fifty-six (56) duly-accredited student organizations in the Ateneo de Manila University Loyola Schools. COA-M is united in developing Ateneans to become active, competent, and holistically formed leaders who contribute to nation-building through the Ignatian tradition of service and excellence. COA-M works to promote a vibrant and flourishing organization life in the Ateneo through its roles in being a representative, administrative, formative, collaborative, and unitive body for student organizations in the Loyola Schools.",
                 style: TextStyle(fontSize: 18),

@@ -33,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
   List<Widget> normalList = [];
   List<Orgs> copList = [];
   List<Orgs> groupList = [];
+  int counter = 0;
 
   @override
   void initState() {
@@ -78,12 +79,14 @@ class _LoginScreenState extends State<LoginScreen> {
         orgResult[i]['Logo'],
         orgResult[i]['Cluster'],
         orgResult[i]['Cover'],
+        orgResult[i]['projectImageOne'],
+        orgResult[i]['projectImageTwo'],
+        orgResult[i]['projectImageThree'],
       ));
     }
     // Sorting Area
     orgList
         .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
-    print(orgList.length);
 
     copList.addAll(orgList.where(
         (i) => i.cluster.contains("Confederation of Publications (COP)")));
@@ -91,26 +94,27 @@ class _LoginScreenState extends State<LoginScreen> {
     groupList.addAll(orgList.where((i) => i.cluster.contains(
         "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)")));
 
+    if (counter == 0) {
+      filter();
+      counter++;
+    }
+
     // Added this to prevent duplication of Data
     orgList = [];
     copList = [];
     groupList = [];
 
     // Return something here, to prevent `Null` in Snapshot Validation below.
-    return Future.value(groupList);
+    return orgList;
   }
 
   filter() {
     List<Orgs> orgs = [];
     normalList = [];
 
-    // We added all the userList to the users. for the passing/getting the specific value.
     orgs.addAll(orgList);
 
-    // Loop
     orgs.forEach((org) {
-      // Since, normalList is an WidgetArray = []
-      // Here is the adding of Widget that depends on the lenght of the Array in  `users`
       normalList.add(
         GestureDetector(
           onTap: () {
@@ -129,28 +133,32 @@ class _LoginScreenState extends State<LoginScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) => new OrgTemplateScreen(
-                      user,
-                      org.name,
-                      org.abbreviation,
-                      org.tagline,
-                      org.website,
-                      org.facebook,
-                      org.twitter,
-                      org.instagram,
-                      org.description,
-                      org.advocacy,
-                      org.core,
-                      org.projectTitleOne,
-                      org.projectDescOne,
-                      org.projectTitleTwo,
-                      org.projectDescTwo,
-                      org.projectTitleThree,
-                      org.projectDescThree,
-                      org.vision,
-                      org.mission,
-                      org.body,
-                      org.logo,
-                      org.cover),
+                    user,
+                    org.name,
+                    org.abbreviation,
+                    org.tagline,
+                    org.website,
+                    org.facebook,
+                    org.twitter,
+                    org.instagram,
+                    org.description,
+                    org.advocacy,
+                    org.core,
+                    org.projectTitleOne,
+                    org.projectDescOne,
+                    org.projectTitleTwo,
+                    org.projectDescTwo,
+                    org.projectTitleThree,
+                    org.projectDescThree,
+                    org.vision,
+                    org.mission,
+                    org.body,
+                    org.logo,
+                    org.cover,
+                    org.projectImageOne,
+                    org.projectImageTwo,
+                    org.projectImageThree,
+                  ),
                 ),
               );
             }
@@ -188,9 +196,6 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       strList.add(org.name);
     });
-    // print(strList);
-    // print(normalList);
-    // SetState to change the Value every time is triggers
     setState(() {
       // ignore: unnecessary_statements
       normalList;
@@ -263,45 +268,11 @@ class _LoginScreenState extends State<LoginScreen> {
       return Scaffold(
         body: FutureBuilder(
           future: loadJSON(),
-
           builder: (context, snapshot) {
-            //new Future.delayed(const Duration(seconds: 5));
             if (snapshot.connectionState == ConnectionState.waiting)
               return const Center(
                 child: CircularProgressIndicator(),
               );
-              
-              // return Container(
-              //   color: Colors.white,
-              //   padding: EdgeInsets.symmetric(
-              //     vertical: MediaQuery.of(context).size.height * 0.1
-              //   ),
-              //   child: Center(
-              //     child: BaseWidget(builder: (context, sizeInfo) {
-              //       return Column(
-              //         mainAxisSize: MainAxisSize.max,
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: <Widget>[
-              //           Column(
-              //             children: <Widget>[
-              //               Image.asset(
-              //                 'assets/images/logo.png', 
-              //                 // width: MediaQuery.of(context).size.height,
-              //               ),
-              //               Text(
-              //                 "pavilion",
-              //                 style: TextStyle(
-              //                     fontWeight: FontWeight.bold,
-              //                     fontSize: 56.0,
-              //                     color: const Color(0xff295EFF)),
-              //               ),
-              //               Image.asset(
-              //                 'assets/images/DSCL logo.png',
-              //               ),
-              //             ],
-              //           ),
-              //         ]);
-              //   })));
 
             if (snapshot.hasData)
               return Container(
@@ -318,19 +289,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           children: <Widget>[
                             Padding(
                               padding: EdgeInsets.only(
-                                top: MediaQuery.of(context).size.height * 0.1
-                              ),
-                              child: Image.asset(
-                                'assets/images/logo.png'
-                              ),
+                                  top:
+                                      MediaQuery.of(context).size.height * 0.1),
+                              child: Image.asset('assets/images/logo.png'),
                             ),
                             Text(
                               "pavilion",
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 56.0,
-                                color: const Color(0xff295EFF)
-                              ),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 56.0,
+                                  color: const Color(0xff295EFF)),
                             )
                           ],
                         ),

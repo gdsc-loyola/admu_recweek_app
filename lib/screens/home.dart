@@ -26,60 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Orgs> groupList = [];
 
   _HomeScreenState(this.copList, this.groupList, this.user);
-  // @override
-  // void initState() {
-  //   WidgetsBinding.instance.addPostFrameCallback((_) async {
-  //     await loadJSON();
-  //   });
-  //   super.initState();
-  // }
-
-  // loadJSON() async {
-  //   var orgResult;
-  //   // Getting the file path of the JSON and Decoding the file into String
-  //   String orgs = await rootBundle.loadString('assets/data/orgs.json');
-  //   orgResult = json.decode(orgs.toString());
-  //   // OUTPUT : [{name: Jan Salvador Sebastian, company: mclinica}, {name: Harvey sison, company: ateneo}, {name: Juan Dela Cruz, company: null universty}]
-  //   // print(jsonResult);
-  //   // We created a loop for adding the `name` and `company` to the USER class
-  //   for (int i = 0; i < orgResult.length; i++) {
-  //     orgList.add(Orgs(
-  //       orgResult[i]['Name'],
-  //       orgResult[i]['Abbreviation'],
-  //       orgResult[i]['Tagline'],
-  //       orgResult[i]['Website'],
-  //       orgResult[i]['Facebook'],
-  //       orgResult[i]['Twitter'],
-  //       orgResult[i]['Instagram'],
-  //       orgResult[i]['Description'],
-  //       orgResult[i]['Advocacy'],
-  //       orgResult[i]['Core'],
-  //       orgResult[i]['Awards'],
-  //       orgResult[i]['projectTitleOne'],
-  //       orgResult[i]['projectDescOne'],
-  //       orgResult[i]['projectTitleTwo'],
-  //       orgResult[i]['projectDescTwo'],
-  //       orgResult[i]['projectTitleThree'],
-  //       orgResult[i]['projectDescThree'],
-  //       orgResult[i]['Vision'],
-  //       orgResult[i]['Mission'],
-  //       orgResult[i]['Body'],
-  //       orgResult[i]['Logo'],
-  //       orgResult[i]['Cluster'],
-  //       orgResult[i]['Cover'],
-  //     ));
-  //   }
-  //   // Sorting Area
-  //   orgList
-  //       .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
-
-  //   //filter Area
-  //   copList.addAll(orgList.where(
-  //       (i) => i.cluster.contains("Confederation of Publications (COP)")));
-
-  //   groupList.addAll(orgList.where((i) => i.cluster.contains(
-  //       "Student Groups (AEGIS, COMELEC, RegCom, SJC, ASLA, DSWS, LSOPCS, OMB, RLA, SANGGU, USAD)")));
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -393,7 +339,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => DSCLoyolaScreen()),
+                    MaterialPageRoute(
+                        builder: (context) => DSCLoyolaScreen(user)),
                   );
                 },
                 child: Stack(children: <Widget>[
