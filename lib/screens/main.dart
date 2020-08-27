@@ -2,15 +2,11 @@ import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
 import 'package:admu_recweek_app/screens/home.dart';
 import 'package:admu_recweek_app/screens/list.dart';
 import 'package:admu_recweek_app/screens/settings.dart';
 import 'package:admu_recweek_app/screens/tracker.dart';
-
 import 'package:admu_recweek_app/models/screen.dart';
-
-// import 'package:dio/dio.dart';
 
 // ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
@@ -48,7 +44,8 @@ class _MainScreenState extends State<MainScreen> {
   static TextEditingController _filter = new TextEditingController();
 
   var pages = [
-    HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._user),
+    HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._orgList,
+        MainScreen._user),
     ListScreen(_filter, scrollController, MainScreen._user, MainScreen._orgList,
         MainScreen._strList, MainScreen._normalList),
     TrackerScreen(
@@ -98,9 +95,6 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
         appBar: _buildBar(context),
         body: pages[selectedPageIndex],
-        // body: Container(
-        //   child: _buildList(),
-        // ),
         resizeToAvoidBottomPadding: false,
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
@@ -183,29 +177,6 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  // Widget _buildList() {
-  //   if (!(_searchText.isEmpty)) {
-  //     List tempList = new List();
-  //     for (int i = 0; i < filteredNames.length; i++) {
-  //       if (filteredNames[i]['name']
-  //           .toLowerCase()
-  //           .contains(_searchText.toLowerCase())) {
-  //         tempList.add(filteredNames[i]);
-  //       }
-  //     }
-  //     filteredNames = tempList;
-  //   }
-  //   return ListView.builder(
-  //     itemCount: names == null ? 0 : filteredNames.length,
-  //     itemBuilder: (BuildContext context, int index) {
-  //       return new ListTile(
-  //         title: Text(filteredNames[index]['name']),
-  //         onTap: () => print(filteredNames[index]['name']),
-  //       );
-  //     },
-  //   );
-  // }
-
   void _searchPressed() {
     setState(() {
       selectedPageIndex = 1;
@@ -245,17 +216,4 @@ class _MainScreenState extends State<MainScreen> {
       }
     });
   }
-
-  // void _getNames() async {
-  //   final response = await dio.get('https://swapi.co/api/people');
-  //   List tempList = new List();
-  //   for (int i = 0; i < response.data['results'].length; i++) {
-  //     tempList.add(response.data['results'][i]);
-  //   }
-  //   setState(() {
-  //     names = tempList;
-  //     names.shuffle();
-  //     filteredNames = names;
-  //   });
-  // }
 }

@@ -62,8 +62,12 @@ class _TrackerScreenState extends State<TrackerScreen> {
   @override
   void initState() {
     contentState = 0;
-    checkIfUserIsSignedIn();
-    firebaseReloader();
+
+    if (user != null) {
+      checkIfUserIsSignedIn();
+      firebaseReloader();
+    }
+
     super.initState();
   }
 
