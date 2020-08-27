@@ -17,6 +17,7 @@ class DSCLoyolaScreen extends StatefulWidget {
 
 class _DSCLoyolaState extends State<DSCLoyolaScreen> {
   bool bookmark = false;
+  bool applied = false;
   FirebaseUser user;
   final firestoreInstance = Firestore.instance;
 
@@ -27,6 +28,22 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
     super.initState();
 
     if (user != null) {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${user.uid}-Developer Student Clubs - Loyola')
+          .get()
+          .then((value) {
+        if (value.data["name"] == "Developer Student Clubs - Loyola" &&
+            value.data["applied"]) {
+          setState(() {
+            applied = true;
+          });
+        } else {
+          setState(() {
+            applied = false;
+          });
+        }
+      });
       firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${user.uid}-Developer Student Clubs - Loyola')
@@ -47,14 +64,23 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
   }
 
   void _onBookmark() async {
-    if (bookmark) {
+    if (applied) {
+      Fluttertoast.showToast(
+          msg: "You have applied to DSC Loyola already.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.grey,
+          textColor: Colors.white,
+          fontSize: 16.0);
+    } else if (bookmark) {
       firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${user.uid}-Developer Student Clubs - Loyola')
           .delete()
           .then((_) {
         Fluttertoast.showToast(
-            msg: "You have unbookmarked League of Independent Organizations",
+            msg: "You have unbookmarked DSC Loyola",
             toastLength: Toast.LENGTH_SHORT,
             gravity: ToastGravity.BOTTOM,
             timeInSecForIosWeb: 1,
@@ -65,7 +91,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
     } else {
       firestoreInstance
           .collection("bookmarks-2020-2021")
-          .document('${user.uid}-DSC Loyola')
+          .document('${user.uid}-Developer Student Clubs - Loyola')
           .setData({
         "id": user.uid,
         "name": "Developer Student Clubs - Loyola",
@@ -74,7 +100,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
         "bookmark": true,
       }).then((_) {
         Fluttertoast.showToast(
-            msg: "You have bookmarked League of Independent Organizations",
+            msg: "You have bookmarked DSC Loyola",
             toastLength: Toast.LENGTH_SHORT,
             gravity: ToastGravity.BOTTOM,
             timeInSecForIosWeb: 1,
@@ -107,7 +133,9 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                         onTap: () {
                           setState(() {
                             _onBookmark();
-                            bookmark = !bookmark;
+                            if (!applied) {
+                              bookmark = !bookmark;
+                            }
                           });
                         },
                         child: SizedBox(

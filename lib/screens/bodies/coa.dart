@@ -25,6 +25,7 @@ class COAScreen extends StatefulWidget {
 class _COAScreenState extends State<COAScreen> {
   final firestoreInstance = Firestore.instance;
   bool bookmark = false;
+  bool applied = false;
   List<Orgs> orgList = [];
   List<Orgs> analysisList = [];
   List<Orgs> faithList = [];
@@ -44,6 +45,23 @@ class _COAScreenState extends State<COAScreen> {
     super.initState();
 
     if (COAScreen._user != null) {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${COAScreen._user.uid}-COA')
+          .get()
+          .then((value) {
+        if (value.data["name"] ==
+                "Council of Organizations of the Ateneo - Manila" &&
+            value.data["applied"]) {
+          setState(() {
+            applied = true;
+          });
+        } else {
+          setState(() {
+            applied = false;
+          });
+        }
+      });
       firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${COAScreen._user.uid}-COA')
@@ -65,7 +83,16 @@ class _COAScreenState extends State<COAScreen> {
   }
 
   void _onBookmark() async {
-    if (bookmark) {
+    if (applied) {
+      Fluttertoast.showToast(
+          msg: "You have applied to COA-M already.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.grey,
+          textColor: Colors.white,
+          fontSize: 16.0);
+    } else if (bookmark) {
       firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${COAScreen._user.uid}-COA')
@@ -197,7 +224,9 @@ class _COAScreenState extends State<COAScreen> {
                       onTap: () {
                         setState(() {
                           _onBookmark();
-                          bookmark = !bookmark;
+                          if (!applied) {
+                            bookmark = !bookmark;
+                          }
                         });
                       },
                       child: SizedBox(

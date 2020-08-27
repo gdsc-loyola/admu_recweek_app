@@ -93,7 +93,7 @@ class OrgTemplateScreen extends StatefulWidget {
 class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   final firestoreInstance = Firestore.instance;
   bool bookmark = false;
-
+  bool applied = false;
   FirebaseUser _user;
   String _name;
   String _abbreviation;
@@ -153,6 +153,21 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     super.initState();
     if (_user != null) {
       firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${_user.uid}-$_name')
+          .get()
+          .then((value) {
+        if (value.data["name"] == _name && value.data["applied"]) {
+          setState(() {
+            applied = true;
+          });
+        } else {
+          setState(() {
+            applied = false;
+          });
+        }
+      });
+      firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${_user.uid}-$_name')
           .get()
@@ -171,7 +186,16 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   }
 
   void _onBookmark() async {
-    if (bookmark) {
+    if (applied) {
+      Fluttertoast.showToast(
+          msg: "You have applied to $_abbreviation already.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.grey,
+          textColor: Colors.white,
+          fontSize: 16.0);
+    } else if (bookmark) {
       firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${_user.uid}-$_name')
@@ -231,7 +255,9 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                         onTap: () {
                           setState(() {
                             _onBookmark();
-                            bookmark = !bookmark;
+                            if (!applied) {
+                              bookmark = !bookmark;
+                            }
                           });
                         },
                         child: SizedBox(

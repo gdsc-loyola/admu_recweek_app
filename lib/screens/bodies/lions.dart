@@ -27,6 +27,7 @@ class LionsScreen extends StatefulWidget {
 class _LionsScreenState extends State<LionsScreen> {
   final firestoreInstance = Firestore.instance;
   bool bookmark = false;
+  bool applied = false;
   List<Orgs> orgList = [];
   List<Orgs> adventureList = [];
   List<Orgs> artsList = [];
@@ -53,6 +54,22 @@ class _LionsScreenState extends State<LionsScreen> {
     super.initState();
     if (LionsScreen._user != null) {
       firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${LionsScreen._user.uid}-LIONS')
+          .get()
+          .then((value) {
+        if (value.data["name"] == "League of Independent Organizations" &&
+            value.data["applied"]) {
+          setState(() {
+            applied = true;
+          });
+        } else {
+          setState(() {
+            applied = false;
+          });
+        }
+      });
+      firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${LionsScreen._user.uid}-LIONS')
           .get()
@@ -72,7 +89,16 @@ class _LionsScreenState extends State<LionsScreen> {
   }
 
   void _onBookmark() async {
-    if (bookmark) {
+    if (applied) {
+      Fluttertoast.showToast(
+          msg: "You have applied to LIONS already.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.grey,
+          textColor: Colors.white,
+          fontSize: 16.0);
+    } else if (bookmark) {
       firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${LionsScreen._user.uid}-LIONS')
@@ -209,7 +235,9 @@ class _LionsScreenState extends State<LionsScreen> {
                       onTap: () {
                         setState(() {
                           _onBookmark();
-                          bookmark = !bookmark;
+                          if (!applied) {
+                            bookmark = !bookmark;
+                          }
                         });
                       },
                       child: SizedBox(
