@@ -25,8 +25,13 @@ class TrackerScreen extends StatefulWidget {
   final List<Orgs> groupList;
 
   // ignore: non_constant_identifier_names
-  TrackerScreen(this.user, this.orgList, this.strList, this.normalList,
-      this.copList, this.groupList);
+  TrackerScreen(
+      [this.user,
+      this.orgList,
+      this.strList,
+      this.normalList,
+      this.copList,
+      this.groupList]);
 
   @override
   _TrackerScreenState createState() => _TrackerScreenState(
@@ -530,7 +535,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
                           padding: EdgeInsets.symmetric(vertical: 13),
                           child: Image.asset('assets/images/maintenance.png')),
                       Text(
-                          "Guests cannot access this screen. Please try signing in with Google",
+                          "You either do not have internet connection or you signed in as guest. Please try again by signing in with Google",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: const Color(0xff000000),

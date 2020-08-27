@@ -24,24 +24,26 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    firestoreInstance
-        .collection("bookmarks-2020-2021")
-        .document('${user.uid}-Developer Student Clubs - Loyola')
-        .get()
-        .then((value) {
-      if (value.data["name"] == "Developer Student Clubs - Loyola" &&
-          value.data["bookmark"]) {
-        setState(() {
-          bookmark = true;
-        });
-      } else {
-        setState(() {
-          bookmark = false;
-        });
-      }
-    });
+
+    if (user != null) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${user.uid}-Developer Student Clubs - Loyola')
+          .get()
+          .then((value) {
+        if (value.data["name"] == "Developer Student Clubs - Loyola" &&
+            value.data["bookmark"]) {
+          setState(() {
+            bookmark = true;
+          });
+        } else {
+          setState(() {
+            bookmark = false;
+          });
+        }
+      });
+    }
   }
 
   void _onBookmark() async {

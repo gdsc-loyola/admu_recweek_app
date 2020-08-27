@@ -32,7 +32,7 @@ class OrgTemplateScreen extends StatefulWidget {
   final String _logo;
   final String _cover;
 
-  OrgTemplateScreen(
+  OrgTemplateScreen([
     this._user,
     this._name,
     this._abbreviation,
@@ -58,7 +58,7 @@ class OrgTemplateScreen extends StatefulWidget {
     this._projectImageOne,
     this._projectImageTwo,
     this._projectImageThree,
-  );
+  ]);
 
   @override
   _OrgTemplateScreenState createState() => _OrgTemplateScreenState(
@@ -151,21 +151,23 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   @override
   void initState() {
     super.initState();
-    firestoreInstance
-        .collection("bookmarks-2020-2021")
-        .document('${_user.uid}-$_name')
-        .get()
-        .then((value) {
-      if (value.data["name"] == _name && value.data["bookmark"]) {
-        setState(() {
-          bookmark = true;
-        });
-      } else {
-        setState(() {
-          bookmark = false;
-        });
-      }
-    });
+    if (_user != null) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${_user.uid}-$_name')
+          .get()
+          .then((value) {
+        if (value.data["name"] == _name && value.data["bookmark"]) {
+          setState(() {
+            bookmark = true;
+          });
+        } else {
+          setState(() {
+            bookmark = false;
+          });
+        }
+      });
+    }
   }
 
   void _onBookmark() async {
@@ -441,13 +443,16 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 1
+
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.network(
-                  _projectImageOne,
-                  fit: BoxFit.cover,
-                ),
+                child: _user != null
+                    ? Image.network(
+                        _projectImageOne,
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset(_logo),
               ),
               _projectTitleOne != ""
                   ? Padding(
@@ -470,10 +475,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.network(
-                  _projectImageTwo,
-                  fit: BoxFit.cover,
-                ),
+                child: _user != null
+                    ? Image.network(
+                        _projectImageTwo,
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset(_logo),
               ),
               _projectTitleTwo != ""
                   ? Padding(
@@ -497,10 +504,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.network(
-                  _projectImageThree,
-                  fit: BoxFit.cover,
-                ),
+                child: _user != null
+                    ? Image.network(
+                        _projectImageThree,
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset(_logo),
               ),
               _projectTitleThree != ""
                   ? Padding(

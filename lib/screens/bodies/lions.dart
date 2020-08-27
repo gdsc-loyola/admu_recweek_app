@@ -16,7 +16,7 @@ class LionsScreen extends StatefulWidget {
   static FirebaseUser _user;
 
   // ignore: non_constant_identifier_names
-  LionsScreen(FirebaseUser user) {
+  LionsScreen([FirebaseUser user]) {
     _user = user;
   }
 
@@ -51,22 +51,24 @@ class _LionsScreenState extends State<LionsScreen> {
       await loadJSON();
     });
     super.initState();
-    firestoreInstance
-        .collection("bookmarks-2020-2021")
-        .document('${LionsScreen._user.uid}-LIONS')
-        .get()
-        .then((value) {
-      if (value.data["name"] == "League of Independent Organizations" &&
-          value.data["bookmark"]) {
-        setState(() {
-          bookmark = true;
-        });
-      } else {
-        setState(() {
-          bookmark = false;
-        });
-      }
-    });
+    if (LionsScreen._user != null) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${LionsScreen._user.uid}-LIONS')
+          .get()
+          .then((value) {
+        if (value.data["name"] == "League of Independent Organizations" &&
+            value.data["bookmark"]) {
+          setState(() {
+            bookmark = true;
+          });
+        } else {
+          setState(() {
+            bookmark = false;
+          });
+        }
+      });
+    }
   }
 
   void _onBookmark() async {
@@ -157,7 +159,8 @@ class _LionsScreenState extends State<LionsScreen> {
 
     businessList.addAll(orgList.where((i) => i.cluster.contains("Business")));
 
-    communityList.addAll(orgList.where((i) => i.cluster.contains("Community Development")));
+    communityList.addAll(
+        orgList.where((i) => i.cluster.contains("Community Development")));
 
     cultureList.addAll(orgList.where((i) => i.cluster.contains("Culture")));
 
@@ -165,11 +168,13 @@ class _LionsScreenState extends State<LionsScreen> {
 
     educationList.addAll(orgList.where((i) => i.cluster.contains("Arts")));
 
-    environmentList.addAll(orgList.where((i) => i.cluster.contains("Environment")));
+    environmentList
+        .addAll(orgList.where((i) => i.cluster.contains("Environment")));
 
     homeList.addAll(orgList.where((i) => i.cluster.contains("Home Org")));
 
-    internationalList.addAll(orgList.where((i) => i.cluster.contains("International")));
+    internationalList
+        .addAll(orgList.where((i) => i.cluster.contains("International")));
 
     languageList.addAll(orgList.where((i) => i.cluster.contains("Language")));
 
@@ -179,7 +184,8 @@ class _LionsScreenState extends State<LionsScreen> {
 
     spiritualList.addAll(orgList.where((i) => i.cluster.contains("Spiritual")));
 
-    technologyList.addAll(orgList.where((i) => i.cluster.contains("Technology")));
+    technologyList
+        .addAll(orgList.where((i) => i.cluster.contains("Technology")));
   }
 
   @override
@@ -235,46 +241,46 @@ class _LionsScreenState extends State<LionsScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
-              Stack(
-                children: <Widget> [
-                  Container(
+              Stack(children: <Widget>[
+                Container(
                     child: ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
-                      child: Image.asset('assets/orgs/lions/logos/lions.jpg', fit: BoxFit.cover,),
+                      child: Image.asset(
+                        'assets/orgs/lions/logos/lions.jpg',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                     height: 180,
                     width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 8, top: 12)
-                  ),
-                  Container(
-                    height: 184, 
+                    margin: const EdgeInsets.only(bottom: 8, top: 12)),
+                Container(
+                    height: 184,
                     alignment: Alignment.bottomCenter,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: <Widget>[
-                        //TODO: Add all socmed of LIONS
-                        // InkWell(
-                        //     child: Image.asset('assets/bodies/lions/website.png'),
-                        //     onTap: () => launch(''),
-                        // ),
-                        // InkWell(
-                        //   child: Image.asset('assets/bodies/lions/ig.png'),
-                        //   onTap: () => launch(''),
-                        // ),
-                        InkWell(
-                          child: Image.asset('assets/bodies/lions/twit.png'),
-                          onTap: () => launch('https://www.twitter.com/admulions'),
-                        ),
-                        InkWell(
-                          child: Image.asset('assets/bodies/lions/fb.png'),
-                          onTap: () => launch('https://www.facebook.com/admu.lions'),
-                        ),
-                      ]
-                    )
-                  )
-                ]
-              ),
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          //TODO: Add all socmed of LIONS
+                          // InkWell(
+                          //     child: Image.asset('assets/bodies/lions/website.png'),
+                          //     onTap: () => launch(''),
+                          // ),
+                          // InkWell(
+                          //   child: Image.asset('assets/bodies/lions/ig.png'),
+                          //   onTap: () => launch(''),
+                          // ),
+                          InkWell(
+                            child: Image.asset('assets/bodies/lions/twit.png'),
+                            onTap: () =>
+                                launch('https://www.twitter.com/admulions'),
+                          ),
+                          InkWell(
+                            child: Image.asset('assets/bodies/lions/fb.png'),
+                            onTap: () =>
+                                launch('https://www.facebook.com/admu.lions'),
+                          ),
+                        ]))
+              ]),
               Text(
                 "The League of Independent Organizations (LIONS) is the official autonomous government of unaccredited student organizations in Ateneo de Manila University. LIONS believes that Ateneans have the right to organize; to pursue their respective advocacies and passions for a better society. Recognized by the Loyola Schools in 2017, LIONS aims to empower independent organizations by promoting their creative purposes,  representing them in University bodies, and creating a community that fosters inclusivity, excellence, and integrity. With that — LIONS, together with the Office of Student Activities, welcomes students who wish to join an organization or even start one of their own!",
                 style: TextStyle(fontSize: 18),
