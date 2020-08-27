@@ -62,19 +62,19 @@ class _ListScreenState extends State<ListScreen> {
                           color: const Color(0xff000000),
                           fontWeight: FontWeight.bold,
                           fontSize: 16)),
-                  InkWell(
-                      onTap: () {
-                        showMaterialModalBottomSheet(
-                          context: context,
-                          builder: (context, scrollController) =>
-                              _sortModal(context, scrollController),
-                        );
-                      },
-                      child: Text(
-                        "Sort",
-                        style: TextStyle(
-                            color: const Color(0xff295EFF), fontSize: 16),
-                      ))
+                  // InkWell(
+                  //     onTap: () {
+                  //       showMaterialModalBottomSheet(
+                  //         context: context,
+                  //         builder: (context, scrollController) =>
+                  //             _sortModal(context, scrollController),
+                  //       );
+                  //     },
+                  //     child: Text(
+                  //       "Sort",
+                  //       style: TextStyle(
+                  //           color: const Color(0xff295EFF), fontSize: 16),
+                  //     ))
                 ],
               ))
         ], icon: Icon(Icons.sort_by_alpha), indexedHeaderHeight: (index) => 90),
