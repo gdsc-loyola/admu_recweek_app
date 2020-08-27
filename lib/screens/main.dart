@@ -85,12 +85,6 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  @override
-  void initState() {
-    // this._getNames();
-    super.initState();
-  }
-
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: _buildBar(context),
