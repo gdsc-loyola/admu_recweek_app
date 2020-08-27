@@ -246,7 +246,7 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/actm_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/actm_cover.jpg"
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/actm_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -271,7 +271,7 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/lex_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/lex_cover.jpg"
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/lex_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -296,7 +296,7 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ajma_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ajma_cover.jpg"
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/ajma_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
@@ -321,7 +321,7 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ama_logo.png",
-		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ama_cover.jpg"
+		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/ama_cover.jpg"
 	},
 	{
 		"Cluster": ["Business Cluster (BC)"],
