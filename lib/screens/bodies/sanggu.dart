@@ -357,7 +357,6 @@ class _SangguScreenState extends State<SangguScreen> {
                                   child: Padding(
                                     padding: EdgeInsets.only(left: 16),
                                     child: Text(
-                                      //TODO: Download icons
                                       "Commission on Anti Sexual Misconduct and Violence",
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -391,6 +390,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
+                                    overflow: TextOverflow.fade,
                                   ),
                                 ),
                               ],
@@ -417,6 +417,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
+                                    overflow: TextOverflow.fade,
                                   ),
                                 ),
                               ],
@@ -445,6 +446,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                       ),
+                                      overflow: TextOverflow.fade,
                                     ),
                                   ),
                                 ),
@@ -472,6 +474,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
+                                    overflow: TextOverflow.fade,
                                   ),
                                 ),
                               ],
@@ -498,6 +501,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
+                                    overflow: TextOverflow.fade,
                                   ),
                                 ),
                               ],
@@ -524,6 +528,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
+                                    overflow: TextOverflow.fade,
                                   ),
                                 ),
                               ],
@@ -577,6 +582,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                       ),
+                                      overflow: TextOverflow.fade,
                                     ),
                                   ),
                                 ),
@@ -590,7 +596,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  //child: Image.asset('assets/bodies/sanggu/LegalAffairs.png'),
+                                  child: Image.asset('assets/bodies/sanggu/logo.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -600,6 +606,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
+                                    overflow: TextOverflow.fade,
                                   ),
                                 ),
                               ],
