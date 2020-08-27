@@ -15,6 +15,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'bodies/coa.dart';
 import 'bodies/lions.dart';
+import 'bodies/sanggu.dart';
 
 class TrackerScreen extends StatefulWidget {
   final List<Orgs> orgList;
@@ -25,8 +26,13 @@ class TrackerScreen extends StatefulWidget {
   final List<Orgs> groupList;
 
   // ignore: non_constant_identifier_names
-  TrackerScreen(this.user, this.orgList, this.strList, this.normalList,
-      this.copList, this.groupList);
+  TrackerScreen(
+      [this.user,
+      this.orgList,
+      this.strList,
+      this.normalList,
+      this.copList,
+      this.groupList]);
 
   @override
   _TrackerScreenState createState() => _TrackerScreenState(
@@ -57,8 +63,12 @@ class _TrackerScreenState extends State<TrackerScreen> {
   @override
   void initState() {
     contentState = 0;
-    checkIfUserIsSignedIn();
-    firebaseReloader();
+
+    if (user != null) {
+      checkIfUserIsSignedIn();
+      firebaseReloader();
+    }
+
     super.initState();
   }
 
@@ -175,6 +185,11 @@ class _TrackerScreenState extends State<TrackerScreen> {
                     MaterialPageRoute(
                         builder: (context) => new LionsScreen(user)),
                   );
+                } else if (org.abbreviation == "Sanggu") {
+                  return Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => new SangguScreen(user)));
                 } else {
                   return Navigator.push(
                     context,
@@ -287,6 +302,11 @@ class _TrackerScreenState extends State<TrackerScreen> {
                       MaterialPageRoute(
                           builder: (context) => new LionsScreen(user)),
                     );
+                  } else if (org.abbreviation == "Sanggu") {
+                    return Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => new SangguScreen(user)));
                   } else {
                     return Navigator.push(
                       context,
@@ -414,58 +434,217 @@ class _TrackerScreenState extends State<TrackerScreen> {
   }
 
   void _removeBookmarks(name, abbreviation, body) async {
-    firestoreInstance
-        .collection("bookmarks-2020-2021")
-        .document('${user.uid}-$name')
-        .delete()
-        .then((_) {
-      Fluttertoast.showToast(
-          msg: "You have remove $name in your bookmark list",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.BOTTOM,
-          timeInSecForIosWeb: 1,
-          backgroundColor: Colors.grey,
-          textColor: Colors.white,
-          fontSize: 16.0);
-      setState(() {
-        WidgetsBinding.instance.addPostFrameCallback((_) async {
-          firebaseReloader();
-        });
-      });
-    });
-  }
-
-  void _removeApplied(name, abbreviation, body) async {
-    firestoreInstance
-        .collection("applied-2020-2021")
-        .document('${user.uid}-$name')
-        .delete()
-        .then((_) {
+    if (name == "League of Independent Organizations") {
       firestoreInstance
           .collection("bookmarks-2020-2021")
-          .document('${user.uid}-$name')
-          .setData({
-        "id": user.uid,
-        "name": name,
-        "abbreviation": abbreviation,
-        "body": body,
-        "bookmark": true,
-      }).then((_) {
+          .document('${user.uid}-LIONS')
+          .delete()
+          .then((_) {
         Fluttertoast.showToast(
-            msg: "You removed $name in your applied list",
+            msg: "You have remove LIONS in your bookmark list",
             toastLength: Toast.LENGTH_SHORT,
             gravity: ToastGravity.BOTTOM,
             timeInSecForIosWeb: 1,
             backgroundColor: Colors.grey,
             textColor: Colors.white,
             fontSize: 16.0);
-      });
-      setState(() {
-        WidgetsBinding.instance.addPostFrameCallback((_) async {
-          firebaseReloader();
+        setState(() {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            firebaseReloader();
+          });
         });
       });
-    });
+    } else if (name == "Council of Organizations of the Ateneo - Manila") {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${user.uid}-COA')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have remove COA-M in your bookmark list",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+        setState(() {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            firebaseReloader();
+          });
+        });
+      });
+    } else if (name ==
+        "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila") {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${user.uid}-Sanggu')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have remove Sanggu in your bookmark list",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+        setState(() {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            firebaseReloader();
+          });
+        });
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${user.uid}-$name')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have remove $name in your bookmark list",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+        setState(() {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            firebaseReloader();
+          });
+        });
+      });
+    }
+  }
+
+  void _removeApplied(name, abbreviation, body) async {
+    if (name == "League of Independent Organizations") {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${user.uid}-LIONS')
+          .delete()
+          .then((_) {
+        firestoreInstance
+            .collection("bookmarks-2020-2021")
+            .document('${user.uid}-LIONS')
+            .setData({
+          "id": user.uid,
+          "name": name,
+          "abbreviation": abbreviation,
+          "body": body,
+          "bookmark": true,
+        }).then((_) {
+          Fluttertoast.showToast(
+              msg: "You removed LIONS in your applied list",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.grey,
+              textColor: Colors.white,
+              fontSize: 16.0);
+        });
+        setState(() {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            firebaseReloader();
+          });
+        });
+      });
+    } else if (name == "Council of Organizations of the Ateneo - Manila") {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${user.uid}-COA')
+          .delete()
+          .then((_) {
+        firestoreInstance
+            .collection("bookmarks-2020-2021")
+            .document('${user.uid}-COA')
+            .setData({
+          "id": user.uid,
+          "name": name,
+          "abbreviation": abbreviation,
+          "body": body,
+          "bookmark": true,
+        }).then((_) {
+          Fluttertoast.showToast(
+              msg: "You removed COA-M in your applied list",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.grey,
+              textColor: Colors.white,
+              fontSize: 16.0);
+        });
+        setState(() {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            firebaseReloader();
+          });
+        });
+      });
+    } else if (name ==
+        "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila") {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${user.uid}-Sanggu')
+          .delete()
+          .then((_) {
+        firestoreInstance
+            .collection("bookmarks-2020-2021")
+            .document('${user.uid}-Sanggu')
+            .setData({
+          "id": user.uid,
+          "name": name,
+          "abbreviation": abbreviation,
+          "body": body,
+          "bookmark": true,
+        }).then((_) {
+          Fluttertoast.showToast(
+              msg: "You removed Sanggu in your applied list",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.grey,
+              textColor: Colors.white,
+              fontSize: 16.0);
+        });
+        setState(() {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            firebaseReloader();
+          });
+        });
+      });
+    } else {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${user.uid}-$name')
+          .delete()
+          .then((_) {
+        firestoreInstance
+            .collection("bookmarks-2020-2021")
+            .document('${user.uid}-$name')
+            .setData({
+          "id": user.uid,
+          "name": name,
+          "abbreviation": abbreviation,
+          "body": body,
+          "bookmark": true,
+        }).then((_) {
+          Fluttertoast.showToast(
+              msg: "You removed $name in your applied list",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.grey,
+              textColor: Colors.white,
+              fontSize: 16.0);
+        });
+        setState(() {
+          WidgetsBinding.instance.addPostFrameCallback((_) async {
+            firebaseReloader();
+          });
+        });
+      });
+    }
   }
 
   void _onApplied(
@@ -473,34 +652,124 @@ class _TrackerScreenState extends State<TrackerScreen> {
     abbreviation,
     body,
   ) async {
-    firestoreInstance
-        .collection("applied-2020-2021")
-        .document('${user.uid}-$name')
-        .setData({
-      "id": user.uid,
-      "name": name,
-      "abbreviation": abbreviation,
-      "body": body,
-      "applied": true,
-    }).then((_) {
+    if (name == "League of Independent Organizations") {
       firestoreInstance
-          .collection("bookmarks-2020-2021")
+          .collection("applied-2020-2021")
+          .document('${user.uid}-LIONS')
+          .setData({
+        "id": user.uid,
+        "name": name,
+        "abbreviation": abbreviation,
+        "body": body,
+        "applied": true,
+      }).then((_) {
+        firestoreInstance
+            .collection("bookmarks-2020-2021")
+            .document('${user.uid}-LIONS')
+            .delete()
+            .then((_) {
+          Fluttertoast.showToast(
+              msg: "You have applied in LIONS",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.grey,
+              textColor: Colors.white,
+              fontSize: 16.0);
+        });
+        setState(() {
+          firebaseReloader();
+        });
+      });
+    } else if (name == "Council of Organizations of the Ateneo - Manila") {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${user.uid}-COA')
+          .setData({
+        "id": user.uid,
+        "name": name,
+        "abbreviation": abbreviation,
+        "body": body,
+        "applied": true,
+      }).then((_) {
+        firestoreInstance
+            .collection("bookmarks-2020-2021")
+            .document('${user.uid}-COA')
+            .delete()
+            .then((_) {
+          Fluttertoast.showToast(
+              msg: "You have applied in COA-M",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.grey,
+              textColor: Colors.white,
+              fontSize: 16.0);
+        });
+        setState(() {
+          firebaseReloader();
+        });
+      });
+    } else if (name ==
+        "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila") {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${user.uid}-Sanggu')
+          .setData({
+        "id": user.uid,
+        "name": name,
+        "abbreviation": abbreviation,
+        "body": body,
+        "applied": true,
+      }).then((_) {
+        firestoreInstance
+            .collection("bookmarks-2020-2021")
+            .document('${user.uid}-Sanggu')
+            .delete()
+            .then((_) {
+          Fluttertoast.showToast(
+              msg: "You have applied in Sanggu",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.grey,
+              textColor: Colors.white,
+              fontSize: 16.0);
+        });
+        setState(() {
+          firebaseReloader();
+        });
+      });
+    } else {
+      firestoreInstance
+          .collection("applied-2020-2021")
           .document('${user.uid}-$name')
-          .delete()
-          .then((_) {
-        Fluttertoast.showToast(
-            msg: "You have applied in $name",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.BOTTOM,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.grey,
-            textColor: Colors.white,
-            fontSize: 16.0);
+          .setData({
+        "id": user.uid,
+        "name": name,
+        "abbreviation": abbreviation,
+        "body": body,
+        "applied": true,
+      }).then((_) {
+        firestoreInstance
+            .collection("bookmarks-2020-2021")
+            .document('${user.uid}-$name')
+            .delete()
+            .then((_) {
+          Fluttertoast.showToast(
+              msg: "You have applied in $name",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.grey,
+              textColor: Colors.white,
+              fontSize: 16.0);
+        });
+        setState(() {
+          firebaseReloader();
+        });
       });
-      setState(() {
-        firebaseReloader();
-      });
-    });
+    }
   }
 
   @override
@@ -530,7 +799,7 @@ class _TrackerScreenState extends State<TrackerScreen> {
                           padding: EdgeInsets.symmetric(vertical: 13),
                           child: Image.asset('assets/images/maintenance.png')),
                       Text(
-                          "Guests cannot access this screen. Please try signing in with Google",
+                          "You either do not have internet connection or you signed in as guest. Please try again by signing in with Google",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: const Color(0xff000000),

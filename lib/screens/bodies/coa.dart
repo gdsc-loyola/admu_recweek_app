@@ -14,7 +14,7 @@ class COAScreen extends StatefulWidget {
   static FirebaseUser _user;
 
   // ignore: non_constant_identifier_names
-  COAScreen(FirebaseUser user) {
+  COAScreen([FirebaseUser user]) {
     _user = user;
   }
 
@@ -25,6 +25,7 @@ class COAScreen extends StatefulWidget {
 class _COAScreenState extends State<COAScreen> {
   final firestoreInstance = Firestore.instance;
   bool bookmark = false;
+  bool applied = false;
   List<Orgs> orgList = [];
   List<Orgs> analysisList = [];
   List<Orgs> faithList = [];
@@ -42,27 +43,56 @@ class _COAScreenState extends State<COAScreen> {
       await loadJSON();
     });
     super.initState();
-    firestoreInstance
-        .collection("bookmarks-2020-2021")
-        .document('${COAScreen._user.uid}-COA')
-        .get()
-        .then((value) {
-      if (value.data["name"] ==
-              "Council of Organizations of the Ateneo - Manila" &&
-          value.data["bookmark"]) {
-        setState(() {
-          bookmark = true;
-        });
-      } else {
-        setState(() {
-          bookmark = false;
-        });
-      }
-    });
+
+    if (COAScreen._user != null) {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${COAScreen._user.uid}-COA')
+          .get()
+          .then((value) {
+        if (value.data["name"] ==
+                "Council of Organizations of the Ateneo - Manila" &&
+            value.data["applied"]) {
+          setState(() {
+            applied = true;
+          });
+        } else {
+          setState(() {
+            applied = false;
+          });
+        }
+      });
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${COAScreen._user.uid}-COA')
+          .get()
+          .then((value) {
+        if (value.data["name"] ==
+                "Council of Organizations of the Ateneo - Manila" &&
+            value.data["bookmark"]) {
+          setState(() {
+            bookmark = true;
+          });
+        } else {
+          setState(() {
+            bookmark = false;
+          });
+        }
+      });
+    }
   }
 
   void _onBookmark() async {
-    if (bookmark) {
+    if (applied) {
+      Fluttertoast.showToast(
+          msg: "You have applied to COA-M already.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.grey,
+          textColor: Colors.white,
+          fontSize: 16.0);
+    } else if (bookmark) {
       firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${COAScreen._user.uid}-COA')
@@ -194,7 +224,9 @@ class _COAScreenState extends State<COAScreen> {
                       onTap: () {
                         setState(() {
                           _onBookmark();
-                          bookmark = !bookmark;
+                          if (!applied) {
+                            bookmark = !bookmark;
+                          }
                         });
                       },
                       child: SizedBox(
@@ -229,43 +261,46 @@ class _COAScreenState extends State<COAScreen> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               Stack(
-                children: <Widget> [
+                children: <Widget>[
                   Container(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      child: Image.asset('assets/bodies/coa/cover.png', fit: BoxFit.cover,),
-                    ),
-                    height: 180,
-                    width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 8, top: 16)
-                  ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        child: Image.asset(
+                          'assets/bodies/coa/cover.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      height: 180,
+                      width: double.infinity,
+                      margin: const EdgeInsets.only(bottom: 8, top: 16)),
                   Container(
-                    height: 184, 
-                    alignment: Alignment.bottomCenter,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: <Widget>[
-                        // InkWell(
-                        //     child: Image.asset('assets/icons/website.png'),
-                        //     //TODO: Add COA website link
-                        //     onTap: () => launch(''),
-                        // ),
-                        InkWell(
-                          child: Image.asset('assets/bodies/coa/ig.png'),
-                          onTap: () => launch('https://www.instagram.com/coamanila'),
-                        ),
-                        InkWell(
-                          child: Image.asset('assets/bodies/coa/twit.png'),
-                          onTap: () => launch('https://www.twitter.com/coamanila'),
-                        ),
-                        InkWell(
-                          child: Image.asset('assets/bodies/coa/fb.png'),
-                          onTap: () => launch('https://www.facebook.com/ateneocoa'),
-                        ),
-                      ]
-                    )
-                  )
+                      height: 184,
+                      alignment: Alignment.bottomCenter,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: <Widget>[
+                            // InkWell(
+                            //     child: Image.asset('assets/icons/website.png'),
+                            //     //TODO: Add COA website link
+                            //     onTap: () => launch(''),
+                            // ),
+                            InkWell(
+                              child: Image.asset('assets/bodies/coa/ig.png'),
+                              onTap: () =>
+                                  launch('https://www.instagram.com/coamanila'),
+                            ),
+                            InkWell(
+                              child: Image.asset('assets/bodies/coa/twit.png'),
+                              onTap: () =>
+                                  launch('https://www.twitter.com/coamanila'),
+                            ),
+                            InkWell(
+                              child: Image.asset('assets/bodies/coa/fb.png'),
+                              onTap: () =>
+                                  launch('https://www.facebook.com/ateneocoa'),
+                            ),
+                          ]))
                 ],
               ),
               Text(

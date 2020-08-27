@@ -32,7 +32,7 @@ class OrgTemplateScreen extends StatefulWidget {
   final String _logo;
   final String _cover;
 
-  OrgTemplateScreen(
+  OrgTemplateScreen([
     this._user,
     this._name,
     this._abbreviation,
@@ -58,7 +58,7 @@ class OrgTemplateScreen extends StatefulWidget {
     this._projectImageOne,
     this._projectImageTwo,
     this._projectImageThree,
-  );
+  ]);
 
   @override
   _OrgTemplateScreenState createState() => _OrgTemplateScreenState(
@@ -93,7 +93,7 @@ class OrgTemplateScreen extends StatefulWidget {
 class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   final firestoreInstance = Firestore.instance;
   bool bookmark = false;
-
+  bool applied = false;
   FirebaseUser _user;
   String _name;
   String _abbreviation;
@@ -151,25 +151,51 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   @override
   void initState() {
     super.initState();
-    firestoreInstance
-        .collection("bookmarks-2020-2021")
-        .document('${_user.uid}-$_name')
-        .get()
-        .then((value) {
-      if (value.data["name"] == _name && value.data["bookmark"]) {
-        setState(() {
-          bookmark = true;
-        });
-      } else {
-        setState(() {
-          bookmark = false;
-        });
-      }
-    });
+    if (_user != null) {
+      firestoreInstance
+          .collection("applied-2020-2021")
+          .document('${_user.uid}-$_name')
+          .get()
+          .then((value) {
+        if (value.data["name"] == _name && value.data["applied"]) {
+          setState(() {
+            applied = true;
+          });
+        } else {
+          setState(() {
+            applied = false;
+          });
+        }
+      });
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${_user.uid}-$_name')
+          .get()
+          .then((value) {
+        if (value.data["name"] == _name && value.data["bookmark"]) {
+          setState(() {
+            bookmark = true;
+          });
+        } else {
+          setState(() {
+            bookmark = false;
+          });
+        }
+      });
+    }
   }
 
   void _onBookmark() async {
-    if (bookmark) {
+    if (applied) {
+      Fluttertoast.showToast(
+          msg: "You have applied to $_abbreviation already.",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.BOTTOM,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.grey,
+          textColor: Colors.white,
+          fontSize: 16.0);
+    } else if (bookmark) {
       firestoreInstance
           .collection("bookmarks-2020-2021")
           .document('${_user.uid}-$_name')
@@ -229,7 +255,9 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                         onTap: () {
                           setState(() {
                             _onBookmark();
-                            bookmark = !bookmark;
+                            if (!applied) {
+                              bookmark = !bookmark;
+                            }
                           });
                         },
                         child: SizedBox(
@@ -441,13 +469,16 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 1
+
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.network(
-                  _projectImageOne,
-                  fit: BoxFit.cover,
-                ),
+                child: _user != null
+                    ? Image.network(
+                        _projectImageOne,
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset(_logo),
               ),
               _projectTitleOne != ""
                   ? Padding(
@@ -470,10 +501,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.network(
-                  _projectImageTwo,
-                  fit: BoxFit.cover,
-                ),
+                child: _user != null
+                    ? Image.network(
+                        _projectImageTwo,
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset(_logo),
               ),
               _projectTitleTwo != ""
                   ? Padding(
@@ -497,10 +530,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: Image.network(
-                  _projectImageThree,
-                  fit: BoxFit.cover,
-                ),
+                child: _user != null
+                    ? Image.network(
+                        _projectImageThree,
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset(_logo),
               ),
               _projectTitleThree != ""
                   ? Padding(

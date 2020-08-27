@@ -11,7 +11,7 @@ class GroupsScreen extends StatefulWidget {
   final String _body;
   final List<Orgs> _orgs;
   final FirebaseUser _user;
-  GroupsScreen(this._user, this._title, this._body, this._orgs);
+  GroupsScreen([this._user, this._title, this._body, this._orgs]);
 
   @override
   _GroupsScreenState createState() =>

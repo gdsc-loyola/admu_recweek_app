@@ -62,19 +62,19 @@ class _ListScreenState extends State<ListScreen> {
                           color: const Color(0xff000000),
                           fontWeight: FontWeight.bold,
                           fontSize: 16)),
-                  InkWell(
-                      onTap: () {
-                        showMaterialModalBottomSheet(
-                          context: context,
-                          builder: (context, scrollController) =>
-                              _sortModal(context, scrollController),
-                        );
-                      },
-                      child: Text(
-                        "Sort",
-                        style: TextStyle(
-                            color: const Color(0xff295EFF), fontSize: 16),
-                      ))
+                  // InkWell(
+                  //     onTap: () {
+                  //       showMaterialModalBottomSheet(
+                  //         context: context,
+                  //         builder: (context, scrollController) =>
+                  //             _sortModal(context, scrollController),
+                  //       );
+                  //     },
+                  //     child: Text(
+                  //       "Sort",
+                  //       style: TextStyle(
+                  //           color: const Color(0xff295EFF), fontSize: 16),
+                  //     ))
                 ],
               ))
         ], icon: Icon(Icons.sort_by_alpha), indexedHeaderHeight: (index) => 90),
@@ -82,55 +82,55 @@ class _ListScreenState extends State<ListScreen> {
     );
   }
 
-  Widget _sortModal(BuildContext context, scrollController) {
-    return Material(
-        child: SafeArea(
-      top: false,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          ListTile(
-            title: Text(
-              'Alphabetical',
-              style: TextStyle(
-                  color: const Color(0xff295EFF),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16),
-            ),
-            leading: SizedBox(
-              child: Image.asset('assets/icons/alphabetical.png'),
-              height: 40,
-              width: 40,
-            ),
-            onTap: () {
-              setState(() {
-                sortStatus = 'Alphabetical';
-              });
-              Navigator.of(context).pop();
-            },
-          ),
-          ListTile(
-            title: Text(
-              'Org Bodies',
-              style: TextStyle(
-                  color: const Color(0xff295EFF),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16),
-            ),
-            leading: SizedBox(
-              child: Image.asset('assets/icons/org-bodies.png'),
-              height: 40,
-              width: 40,
-            ),
-            onTap: () {
-              setState(() {
-                sortStatus = 'Org Bodies';
-              });
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      ),
-    ));
-  }
+  // Widget _sortModal(BuildContext context, scrollController) {
+  //   return Material(
+  //       child: SafeArea(
+  //     top: false,
+  //     child: Column(
+  //       mainAxisSize: MainAxisSize.min,
+  //       children: <Widget>[
+  //         ListTile(
+  //           title: Text(
+  //             'Alphabetical',
+  //             style: TextStyle(
+  //                 color: const Color(0xff295EFF),
+  //                 fontWeight: FontWeight.bold,
+  //                 fontSize: 16),
+  //           ),
+  //           leading: SizedBox(
+  //             child: Image.asset('assets/icons/alphabetical.png'),
+  //             height: 40,
+  //             width: 40,
+  //           ),
+  //           onTap: () {
+  //             setState(() {
+  //               sortStatus = 'Alphabetical';
+  //             });
+  //             Navigator.of(context).pop();
+  //           },
+  //         ),
+  //         ListTile(
+  //           title: Text(
+  //             'Org Bodies',
+  //             style: TextStyle(
+  //                 color: const Color(0xff295EFF),
+  //                 fontWeight: FontWeight.bold,
+  //                 fontSize: 16),
+  //           ),
+  //           leading: SizedBox(
+  //             child: Image.asset('assets/icons/org-bodies.png'),
+  //             height: 40,
+  //             width: 40,
+  //           ),
+  //           onTap: () {
+  //             setState(() {
+  //               sortStatus = 'Org Bodies';
+  //             });
+  //             Navigator.of(context).pop();
+  //           },
+  //         ),
+  //       ],
+  //     ),
+  //   ));
+  // }
 }

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:async';
+import 'dart:io';
 import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/templates/orgs.dart';
@@ -34,11 +35,26 @@ class _LoginScreenState extends State<LoginScreen> {
   List<Orgs> copList = [];
   List<Orgs> groupList = [];
   int counter = 0;
+  bool connected = false;
 
   @override
   void initState() {
     super.initState();
     checkIfUserIsSignedIn();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      try {
+        final result = await InternetAddress.lookup('google.com');
+        if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+          setState(() {
+            connected = true;
+          });
+        }
+      } on SocketException catch (_) {
+        setState(() {
+          connected = false;
+        });
+      }
+    });
   }
 
   void checkIfUserIsSignedIn() async {
@@ -309,7 +325,19 @@ class _LoginScreenState extends State<LoginScreen> {
                                   borderRadius: BorderRadius.circular(15.0),
                                 ),
                                 onPressed: () {
-                                  onGoogleSignIn(context);
+                                  if (connected) {
+                                    onGoogleSignIn(context);
+                                  } else {
+                                    Fluttertoast.showToast(
+                                        msg:
+                                            "You have no internet connection. Please continue offline.",
+                                        toastLength: Toast.LENGTH_SHORT,
+                                        gravity: ToastGravity.BOTTOM,
+                                        timeInSecForIosWeb: 1,
+                                        backgroundColor: Colors.grey,
+                                        textColor: Colors.white,
+                                        fontSize: 16.0);
+                                  }
                                 },
                                 color: const Color(0xff295EFF),
                                 child: Padding(

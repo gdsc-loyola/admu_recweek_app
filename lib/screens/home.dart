@@ -1,5 +1,7 @@
 import 'package:admu_recweek_app/models/orgs.dart';
+import 'package:admu_recweek_app/screens/bodies/sanggu.dart';
 import 'package:admu_recweek_app/templates/groups.dart';
+import 'package:admu_recweek_app/templates/orgs.dart';
 import 'package:admu_recweek_app/widgets/base-widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,27 +10,34 @@ import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/screens/bodies/lions.dart';
 import 'package:admu_recweek_app/screens/orgs/lions/dsc.dart';
+import 'dart:math';
 
 class HomeScreen extends StatefulWidget {
   final List<Orgs> copList;
   final List<Orgs> groupList;
+  final List<Orgs> orgList;
   final FirebaseUser user;
 
-  HomeScreen([this.copList, this.groupList, this.user]);
+  HomeScreen([this.copList, this.groupList, this.orgList, this.user]);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState(copList, groupList, user);
+  _HomeScreenState createState() =>
+      _HomeScreenState(copList, groupList, orgList, user);
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   FirebaseUser user;
   List<Orgs> copList = [];
   List<Orgs> groupList = [];
+  List<Orgs> orgList;
 
-  _HomeScreenState(this.copList, this.groupList, this.user);
+  _HomeScreenState(this.copList, this.groupList, this.orgList, this.user);
 
   @override
   Widget build(BuildContext context) {
+    Random random = new Random();
+    int randomNumber =
+        random.nextInt(orgList.length != 0 ? orgList.length : 10);
     return BaseWidget(
       builder: (context, sizeInformation) {
         return Container(
@@ -325,7 +334,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   alignment: Alignment.topLeft,
                   child: Container(
                       child: AutoSizeText(
-                    "Today's Featured Organizations",
+                    "Featured Organization",
                     minFontSize: 20,
                     maxFontSize: 24,
                     maxLines: 1,
@@ -335,48 +344,148 @@ class _HomeScreenState extends State<HomeScreen> {
                   )),
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DSCLoyolaScreen(user)),
-                  );
-                },
-                child: Stack(children: <Widget>[
-                  Image.asset(
-                    "assets/orgs/dsc/cover.png",
-                    width: MediaQuery.of(context).size.width,
-                  ),
-                  Positioned(
-                    bottom: 0,
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFFF801D).withOpacity(0.25),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.only(left: 8.0, top: 8.0),
-                            child: Text(
-                              "Developers Student Clubs - Loyola",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: const Color(0xFFFFFFFF),
+              orgList.length != 0
+                  ? GestureDetector(
+                      onTap: () {
+                        if (orgList[randomNumber].name ==
+                            "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila") {
+                          return Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      new SangguScreen(user)));
+                        } else if (orgList[randomNumber].name ==
+                            "League of Independent Organizations") {
+                          return Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new LionsScreen(user)));
+                        } else if (orgList[randomNumber].name ==
+                            "Council of Organizations of the Ateneo - Manila") {
+                          return Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new COAScreen(user)));
+                        } else {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => new OrgTemplateScreen(
+                                user,
+                                orgList[randomNumber].name,
+                                orgList[randomNumber].abbreviation,
+                                orgList[randomNumber].tagline,
+                                orgList[randomNumber].website,
+                                orgList[randomNumber].facebook,
+                                orgList[randomNumber].twitter,
+                                orgList[randomNumber].instagram,
+                                orgList[randomNumber].description,
+                                orgList[randomNumber].advocacy,
+                                orgList[randomNumber].core,
+                                orgList[randomNumber].projectImageOne,
+                                orgList[randomNumber].projectTitleOne,
+                                orgList[randomNumber].projectDescOne,
+                                orgList[randomNumber].projectImageTwo,
+                                orgList[randomNumber].projectTitleTwo,
+                                orgList[randomNumber].projectDescTwo,
+                                orgList[randomNumber].projectImageThree,
+                                orgList[randomNumber].projectTitleThree,
+                                orgList[randomNumber].projectDescThree,
+                                orgList[randomNumber].vision,
+                                orgList[randomNumber].mission,
+                                orgList[randomNumber].body,
+                                orgList[randomNumber].logo,
+                                orgList[randomNumber].cover,
                               ),
                             ),
+                          );
+                        }
+                      },
+                      child: Stack(children: <Widget>[
+                        Image.asset(orgList[randomNumber].cover,
+                            width: MediaQuery.of(context).size.width,
+                            height: 200,
+                            fit: BoxFit.cover),
+                        Positioned(
+                          bottom: 0,
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                              color: orgList[randomNumber].body == "LIONS"
+                                  ? const Color(0xFFFF801D).withOpacity(0.25)
+                                  : orgList[randomNumber].body == "COA"
+                                      ? const Color(0xFFE84C4C)
+                                          .withOpacity(0.25)
+                                      : orgList[randomNumber].body == "COP"
+                                          ? const Color(0xFF002864)
+                                              .withOpacity(0.25)
+                                          : const Color(0xFF295EFF)
+                                              .withOpacity(0.25),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8.0, top: 8.0),
+                                  child: Text(
+                                    orgList[randomNumber].name,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: const Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ]),
+                    )
+                  : GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DSCLoyolaScreen(user)),
+                        );
+                      },
+                      child: Stack(children: <Widget>[
+                        Image.asset("assets/orgs/dsc/cover.png",
+                            width: MediaQuery.of(context).size.width,
+                            height: 200,
+                            fit: BoxFit.cover),
+                        Positioned(
+                          bottom: 0,
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFFF801D).withOpacity(0.25),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8.0, top: 8.0),
+                                  child: Text(
+                                    "Developers Student Clubs - Loyola",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: const Color(0xFFFFFFFF),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ]),
                     ),
-                  ),
-                ]),
-              ),
             ],
           ),
         );
