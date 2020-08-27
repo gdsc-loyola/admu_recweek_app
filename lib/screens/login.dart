@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'dart:async';
 import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/templates/orgs.dart';
@@ -38,7 +38,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-
     checkIfUserIsSignedIn();
   }
 
@@ -197,7 +196,6 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       strList.add(org.name);
     });
-
     setState(() {
       // ignore: unnecessary_statements
       normalList;
@@ -272,7 +270,6 @@ class _LoginScreenState extends State<LoginScreen> {
           future: loadJSON(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting)
-              //Enter Splash Screen here
               return const Center(
                 child: CircularProgressIndicator(),
               );
