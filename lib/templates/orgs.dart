@@ -135,10 +135,13 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     this._description,
     this._advocacy,
     this._core,
+    this._projectImageOne,
     this._projectTitleOne,
     this._projectDescOne,
+    this._projectImageTwo,
     this._projectTitleTwo,
     this._projectDescTwo,
+    this._projectImageThree,
     this._projectTitleThree,
     this._projectDescThree,
     this._vision,
@@ -146,9 +149,6 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     this._body,
     this._logo,
     this._cover,
-    this._projectImageOne,
-    this._projectImageTwo,
-    this._projectImageThree,
   );
 
   @override
@@ -256,7 +256,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            _abbreviation != "" ? _name : _abbreviation,
+            _abbreviation != "" ? _abbreviation : _name,
             style: TextStyle(
                 color: const Color(0xff295EFF), fontWeight: FontWeight.bold),
           ),
@@ -372,8 +372,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   )),
               _tagline != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(
-                          bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                       child: Text(
                         _tagline,
                         style: TextStyle(fontSize: 16),
@@ -391,7 +390,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _description != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                       child: Text(
                         _description,
                         style: TextStyle(
@@ -411,8 +410,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _vision != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(
-                          bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                       child: Text(
                         _vision,
                         style: TextStyle(fontSize: 16),
@@ -430,7 +428,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _mission != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                       child: Text(
                         _mission,
                         style: TextStyle(fontSize: 16),
@@ -448,7 +446,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _advocacy != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                       child: Text(
                         _advocacy,
                         style: TextStyle(fontSize: 16),
@@ -457,7 +455,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               // Core Competency
               _core != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(left: 16, top: 16),
+                      padding: const EdgeInsets.only(left: 16),
                       child: Text(
                         "Core Competency",
                         style: TextStyle(
@@ -467,7 +465,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               _core != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
-                          left: 16, right: 16, bottom: 24),
+                          left: 16, right: 16, bottom: 16),
                       child: Text(
                         _core,
                         style: TextStyle(fontSize: 16),
@@ -508,7 +506,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _projectDescOne != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                       child: Text(
                         _projectDescOne,
                         style: TextStyle(fontSize: 16),
@@ -527,7 +525,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               ),
               _projectTitleTwo != ""
                   ? Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
                       child: Text(
                         _projectTitleTwo,
                         style: TextStyle(
@@ -566,7 +564,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               _projectDescThree != ""
                   ? Padding(
                       padding: const EdgeInsets.only(
-                          bottom: 16, left: 16, right: 16),
+                          bottom: 32, left: 16, right: 16),
                       child: Text(
                         _projectDescThree,
                         style: TextStyle(fontSize: 16),

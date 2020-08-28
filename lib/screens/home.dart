@@ -225,15 +225,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 width: MediaQuery.of(context).size.width / 2,
                                 child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  //crossAxisAlignment: CrossAxisAlignment.center,
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  //mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
+                                    Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Text(
+                                        "Confederation of Publications",
+                                        //height: 60,
+                                      ),
+                                    ),
                                     Padding(
                                       padding: EdgeInsets.all(8.0),
                                       child: Image.asset(
                                         "assets/bodies/cop/logos.png",
-                                        height: 60,
+                                        //height: 60,
                                       ),
                                     ),
                                     Row(
@@ -291,7 +298,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               width: MediaQuery.of(context).size.width / 2,
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                //crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
@@ -299,7 +306,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     padding: EdgeInsets.all(8.0),
                                     child: Image.asset(
                                       "assets/bodies/student-groups/logos.png",
-                                      height: 60,
+                                      //fit: BoxFit.fill,
                                     ),
                                   ),
                                   Row(
@@ -428,7 +435,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8.0, top: 8.0),
+                                  padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
                                   child: Text(
                                     orgList[randomNumber].name,
                                     style: TextStyle(
@@ -470,7 +477,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8.0, top: 8.0),
+                                  padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
                                   child: Text(
                                     "Developers Student Clubs - Loyola",
                                     style: TextStyle(
