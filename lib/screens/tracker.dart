@@ -24,6 +24,7 @@ class TrackerScreen extends StatefulWidget {
   final FirebaseUser user;
   final List<Orgs> copList;
   final List<Orgs> groupList;
+  final TextEditingController searchController;
 
   // ignore: non_constant_identifier_names
   TrackerScreen(
@@ -32,11 +33,12 @@ class TrackerScreen extends StatefulWidget {
       this.strList,
       this.normalList,
       this.copList,
-      this.groupList]);
+      this.groupList,
+      this.searchController]);
 
   @override
   _TrackerScreenState createState() => _TrackerScreenState(
-      user, orgList, strList, normalList, copList, groupList);
+      user, orgList, strList, normalList, copList, groupList, searchController);
 }
 
 class _TrackerScreenState extends State<TrackerScreen> {
@@ -56,9 +58,10 @@ class _TrackerScreenState extends State<TrackerScreen> {
   List<Widget> appliedWidgets = [];
   List<Orgs> copList = [];
   List<Orgs> groupList = [];
+  TextEditingController searchController;
 
   _TrackerScreenState(this.user, this.orgList, this.strList, this.normalList,
-      this.copList, this.groupList);
+      this.copList, this.groupList, this.searchController);
 
   @override
   void initState() {
@@ -424,8 +427,8 @@ class _TrackerScreenState extends State<TrackerScreen> {
     var userSignedIn = await Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => MainScreen(orgList, strList, normalList,
-              copList, groupList, user, _googleSignIn)),
+          builder: (context) => MainScreen(searchController, orgList,
+              normalList, strList, copList, groupList, user, _googleSignIn)),
     );
 
     setState(() {

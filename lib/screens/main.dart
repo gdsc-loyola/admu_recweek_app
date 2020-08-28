@@ -17,20 +17,23 @@ class MainScreen extends StatefulWidget {
   static List<Widget> _normalList;
   static List<Orgs> _copList = [];
   static List<Orgs> _groupList = [];
+  static TextEditingController _searchController;
 
   MainScreen(
-      [List<Orgs> orgList,
-      List<String> normalList,
-      List<Widget> strList,
+      [TextEditingController searchController,
+      List<Orgs> orgList,
+      List<Widget> normalList,
+      List<String> strList,
       List<Orgs> copList,
       List<Orgs> groupList,
       FirebaseUser user,
       GoogleSignIn signIn]) {
+    _searchController = searchController;
     _user = user;
     _googleSignIn = signIn;
     _orgList = orgList;
-    _strList = normalList;
-    _normalList = strList;
+    _strList = strList;
+    _normalList = normalList;
     _copList = copList;
     _groupList = groupList;
   }
@@ -41,28 +44,26 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   static ScrollController scrollController;
-  static TextEditingController _filter = new TextEditingController();
+  static List<String> organizations = MainScreen._strList;
+  static List<String> filteredOrganiztions = organizations;
+  String _searchText = "";
 
   var pages = [
     HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._orgList,
         MainScreen._user),
-    ListScreen(_filter, scrollController, MainScreen._user, MainScreen._orgList,
-        MainScreen._strList, MainScreen._normalList),
+    ListScreen(MainScreen._searchController, scrollController, MainScreen._user,
+        MainScreen._orgList, MainScreen._strList, MainScreen._normalList),
     TrackerScreen(
-      MainScreen._user,
-      MainScreen._orgList,
-      MainScreen._strList,
-      MainScreen._normalList,
-      MainScreen._copList,
-      MainScreen._groupList,
-    ),
+        MainScreen._user,
+        MainScreen._orgList,
+        MainScreen._strList,
+        MainScreen._normalList,
+        MainScreen._copList,
+        MainScreen._groupList,
+        MainScreen._searchController),
     SettingsScreen(MainScreen._googleSignIn, MainScreen._user),
   ];
 
-  // final dio = new Dio();
-  String _searchText = "";
-  List names = new List();
-  List filteredNames = new List();
   Icon _searchIcon = new Icon(Icons.search);
   Widget _appBarTitle = new Text("Pavilion",
       style: TextStyle(
@@ -71,17 +72,22 @@ class _MainScreenState extends State<MainScreen> {
           fontSize: 32.0));
 
   _MainScreenState() {
-    _filter.addListener(() {
-      if (_filter.text.isEmpty) {
+    MainScreen._searchController.addListener(() {
+      if (MainScreen._searchController.text.isNotEmpty) {
         setState(() {
-          _searchText = "";
-          filteredNames = names;
+          _searchText = MainScreen._searchController.text.toLowerCase();
+          filteredOrganiztions.retainWhere((organization) =>
+              organization.toLowerCase().contains(_searchText));
         });
       } else {
         setState(() {
-          _searchText = _filter.text;
+          filteredOrganiztions = organizations;
+          organizations = MainScreen._strList;
         });
       }
+      print(MainScreen._searchController.text.isNotEmpty);
+      print(filteredOrganiztions);
+      print(organizations);
     });
   }
 
@@ -183,7 +189,7 @@ class _MainScreenState extends State<MainScreen> {
           child: new Center(
             child: new TextFormField(
               cursorColor: const Color(0xfff295EFF),
-              controller: _filter,
+              controller: MainScreen._searchController,
               style: TextStyle(color: const Color(0xff8198BB)),
               decoration: new InputDecoration(
                 border: InputBorder.none,
@@ -205,8 +211,8 @@ class _MainScreenState extends State<MainScreen> {
                 color: const Color(0xff295EFF),
                 fontWeight: FontWeight.bold,
                 fontSize: 32.0));
-        filteredNames = names;
-        _filter.clear();
+        filteredOrganiztions = organizations;
+        MainScreen._searchController.clear();
       }
     });
   }
