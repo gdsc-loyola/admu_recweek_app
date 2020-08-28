@@ -262,7 +262,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                     ),
-                                    Align(
+                                    Expanded(
+                                    child: Align(
                                       alignment: Alignment.center,
                                       child: Padding(
                                         padding: EdgeInsets.all(8.0),
@@ -271,6 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           height: 60,
                                         ),
                                       ),
+                                    ),
                                     ),
                                     Align(
                                       alignment: Alignment.bottomCenter,

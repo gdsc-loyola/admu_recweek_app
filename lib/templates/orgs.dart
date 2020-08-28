@@ -525,7 +525,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               ),
               _projectTitleTwo != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(left: 16, right: 16),
                       child: Text(
                         _projectTitleTwo,
                         style: TextStyle(

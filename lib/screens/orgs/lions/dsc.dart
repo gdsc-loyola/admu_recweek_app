@@ -161,14 +161,18 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                   ),
                   Container(
                     alignment: Alignment.bottomCenter,
+                    padding: EdgeInsets.symmetric(horizontal: 16),
                     height: 184,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        SizedBox(
-                          width: 64,
-                          height: 64,
-                          child: Image.asset('assets/orgs/dsc/logo.png'),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          child: SizedBox(
+                            width: 64,
+                            height: 64,
+                            child: Image.asset('assets/orgs/dsc/logo.png'),
+                          ),
                         ),
                         Row(children: <Widget>[
                           InkWell(
