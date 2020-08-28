@@ -10,7 +10,6 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:admu_recweek_app/models/orgs.dart';
-
 import 'bodies/coa.dart';
 import 'bodies/lions.dart';
 
@@ -51,16 +50,64 @@ class _ListScreenState extends State<ListScreen> {
 
   @override
   void initState() {
-    // orgList
-    //     .sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
-    // filterList();
-    // searchController.addListener(() {
-    //   filterList();
-    // });
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await loadJSON();
     });
+
+    searchController.addListener(() {
+      filterList();
+    });
+
     super.initState();
+  }
+
+  filterList() {
+    List<Orgs> orgLists = [];
+    orgLists.addAll(orgList);
+    normalList = [];
+    strList = [];
+
+    if (searchController.text.isNotEmpty) {
+      orgLists.retainWhere(
+        (orgs) => orgs.name.toLowerCase().contains(
+              searchController.text.toLowerCase(),
+            ),
+      );
+    }
+
+    orgLists.forEach((user) {
+      normalList.add(
+        Slidable(
+          actionPane: SlidableDrawerActionPane(),
+          actionExtentRatio: 0.25,
+          secondaryActions: <Widget>[
+            IconSlideAction(
+              iconWidget: Icon(Icons.star),
+              onTap: () {},
+            ),
+            IconSlideAction(
+              iconWidget: Icon(Icons.more_horiz),
+              onTap: () {},
+            ),
+          ],
+          child: ListTile(
+            leading: CircleAvatar(
+              backgroundImage:
+                  NetworkImage("http://placeimg.com/200/200/people"),
+            ),
+            title: Text(user.name),
+            // subtitle: Text(user.company),
+          ),
+        ),
+      );
+      strList.add(user.name);
+    });
+
+    setState(() {
+      strList;
+      normalList;
+      strList;
+    });
   }
 
   loadJSON() async {
