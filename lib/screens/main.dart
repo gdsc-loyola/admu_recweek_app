@@ -17,18 +17,15 @@ class MainScreen extends StatefulWidget {
   static List<Widget> _normalList;
   static List<Orgs> _copList = [];
   static List<Orgs> _groupList = [];
-  static TextEditingController _searchController;
 
   MainScreen(
-      [TextEditingController searchController,
-      List<Orgs> orgList,
+      [List<Orgs> orgList,
       List<Widget> normalList,
       List<String> strList,
       List<Orgs> copList,
       List<Orgs> groupList,
       FirebaseUser user,
       GoogleSignIn signIn]) {
-    _searchController = searchController;
     _user = user;
     _googleSignIn = signIn;
     _orgList = orgList;
@@ -44,23 +41,16 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   static ScrollController scrollController;
-  static List<String> organizations = MainScreen._strList;
-  static List<String> filteredOrganiztions = organizations;
-  String _searchText = "";
+  static TextEditingController searchController = new TextEditingController();
 
   var pages = [
     HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._orgList,
         MainScreen._user),
-    ListScreen(MainScreen._searchController, scrollController, MainScreen._user,
-        MainScreen._orgList, MainScreen._strList, MainScreen._normalList),
-    TrackerScreen(
-        MainScreen._user,
-        MainScreen._orgList,
-        MainScreen._strList,
-        MainScreen._normalList,
-        MainScreen._copList,
-        MainScreen._groupList,
-        MainScreen._searchController),
+    // ListScreen(MainScreen._searchController, scrollController, MainScreen._user,
+    //     MainScreen._orgList, MainScreen._strList, MainScreen._normalList),
+    ListScreen(searchController, scrollController, MainScreen._user),
+    TrackerScreen(MainScreen._user, MainScreen._orgList, MainScreen._strList,
+        MainScreen._normalList, MainScreen._copList, MainScreen._groupList),
     SettingsScreen(MainScreen._googleSignIn, MainScreen._user),
   ];
 
@@ -70,26 +60,6 @@ class _MainScreenState extends State<MainScreen> {
           color: const Color(0xff295EFF),
           fontWeight: FontWeight.bold,
           fontSize: 32.0));
-
-  _MainScreenState() {
-    MainScreen._searchController.addListener(() {
-      if (MainScreen._searchController.text.isNotEmpty) {
-        setState(() {
-          _searchText = MainScreen._searchController.text.toLowerCase();
-          filteredOrganiztions.retainWhere((organization) =>
-              organization.toLowerCase().contains(_searchText));
-        });
-      } else {
-        setState(() {
-          filteredOrganiztions = organizations;
-          organizations = MainScreen._strList;
-        });
-      }
-      print(MainScreen._searchController.text.isNotEmpty);
-      print(filteredOrganiztions);
-      print(organizations);
-    });
-  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -189,7 +159,7 @@ class _MainScreenState extends State<MainScreen> {
           child: new Center(
             child: new TextFormField(
               cursorColor: const Color(0xfff295EFF),
-              controller: MainScreen._searchController,
+              controller: searchController,
               style: TextStyle(color: const Color(0xff8198BB)),
               decoration: new InputDecoration(
                 border: InputBorder.none,
@@ -211,8 +181,7 @@ class _MainScreenState extends State<MainScreen> {
                 color: const Color(0xff295EFF),
                 fontWeight: FontWeight.bold,
                 fontSize: 32.0));
-        filteredOrganiztions = organizations;
-        MainScreen._searchController.clear();
+        searchController.clear();
       }
     });
   }

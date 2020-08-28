@@ -427,8 +427,8 @@ class _TrackerScreenState extends State<TrackerScreen> {
     var userSignedIn = await Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => MainScreen(searchController, orgList,
-              normalList, strList, copList, groupList, user, _googleSignIn)),
+          builder: (context) => MainScreen(orgList, normalList, strList,
+              copList, groupList, user, _googleSignIn)),
     );
 
     setState(() {

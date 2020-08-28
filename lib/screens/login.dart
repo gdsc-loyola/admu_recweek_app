@@ -27,7 +27,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final firestoreInstance = Firestore.instance;
-  TextEditingController searchController = TextEditingController();
 
   FirebaseUser user;
   bool isUserSignedIn = false;
@@ -114,9 +113,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if (counter == 0) {
       filter();
-      searchController.addListener(() {
-        filter();
-      });
       counter++;
     }
 
@@ -365,7 +361,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => MainScreen(
-                                                searchController,
                                                 orgList,
                                                 normalList,
                                                 strList,
@@ -431,8 +426,8 @@ class _LoginScreenState extends State<LoginScreen> {
     var userSignedIn = await Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => MainScreen(searchController, orgList,
-              normalList, strList, copList, groupList, user, _googleSignIn)),
+          builder: (context) => MainScreen(orgList, normalList, strList,
+              copList, groupList, user, _googleSignIn)),
     );
 
     setState(() {
