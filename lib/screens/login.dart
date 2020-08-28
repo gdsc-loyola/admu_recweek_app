@@ -27,6 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final firestoreInstance = Firestore.instance;
+
   FirebaseUser user;
   bool isUserSignedIn = false;
   List<Orgs> orgList = [];
@@ -361,8 +362,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                       MaterialPageRoute(
                                           builder: (context) => MainScreen(
                                                 orgList,
-                                                strList,
                                                 normalList,
+                                                strList,
                                                 copList,
                                                 groupList,
                                               )),
@@ -425,7 +426,7 @@ class _LoginScreenState extends State<LoginScreen> {
     var userSignedIn = await Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => MainScreen(orgList, strList, normalList,
+          builder: (context) => MainScreen(orgList, normalList, strList,
               copList, groupList, user, _googleSignIn)),
     );
 
