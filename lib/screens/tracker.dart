@@ -16,6 +16,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'bodies/coa.dart';
 import 'bodies/lions.dart';
 import 'bodies/sanggu.dart';
+import 'package:page_transition/page_transition.dart';
 
 class TrackerScreen extends StatefulWidget {
   final List<Orgs> orgList;
@@ -178,54 +179,54 @@ class _TrackerScreenState extends State<TrackerScreen> {
               onTap: () {
                 if (org.abbreviation == "COA-M") {
                   return Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => new COAScreen(user)),
-                  );
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.leftToRight,
+                          child: new COAScreen(user)));
                 } else if (org.abbreviation == "LIONS") {
                   return Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => new LionsScreen(user)),
-                  );
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.leftToRight,
+                          child: new LionsScreen(user)));
                 } else if (org.abbreviation == "Sanggu") {
                   return Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => new SangguScreen(user)));
+                      PageTransition(
+                          type: PageTransitionType.leftToRight,
+                          child: new SangguScreen(user)));
                 } else {
                   return Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => new OrgTemplateScreen(
-                        user,
-                        org.name,
-                        org.abbreviation,
-                        org.tagline,
-                        org.website,
-                        org.facebook,
-                        org.twitter,
-                        org.instagram,
-                        org.description,
-                        org.advocacy,
-                        org.core,
-                        org.projectTitleOne,
-                        org.projectDescOne,
-                        org.projectTitleTwo,
-                        org.projectDescTwo,
-                        org.projectTitleThree,
-                        org.projectDescThree,
-                        org.vision,
-                        org.mission,
-                        org.body,
-                        org.logo,
-                        org.cover,
-                        org.projectImageOne,
-                        org.projectImageTwo,
-                        org.projectImageThree,
-                      ),
-                    ),
-                  );
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.leftToRight,
+                          child: new OrgTemplateScreen(
+                            user,
+                            org.name,
+                            org.abbreviation,
+                            org.tagline,
+                            org.website,
+                            org.facebook,
+                            org.twitter,
+                            org.instagram,
+                            org.description,
+                            org.advocacy,
+                            org.core,
+                            org.projectTitleOne,
+                            org.projectDescOne,
+                            org.projectTitleTwo,
+                            org.projectDescTwo,
+                            org.projectTitleThree,
+                            org.projectDescThree,
+                            org.vision,
+                            org.mission,
+                            org.body,
+                            org.logo,
+                            org.cover,
+                            org.projectImageOne,
+                            org.projectImageTwo,
+                            org.projectImageThree,
+                          )));
                 }
               },
               child: Slidable(
@@ -295,53 +296,54 @@ class _TrackerScreenState extends State<TrackerScreen> {
                 onTap: () {
                   if (org.abbreviation == "COA-M") {
                     return Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => new COAScreen(user)),
-                    );
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.leftToRight,
+                            child: new COAScreen(user)));
                   } else if (org.abbreviation == "LIONS") {
                     return Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => new LionsScreen(user)),
-                    );
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.leftToRight,
+                            child: new LionsScreen(user)));
                   } else if (org.abbreviation == "Sanggu") {
                     return Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => new SangguScreen(user)));
+                        PageTransition(
+                            type: PageTransitionType.leftToRight,
+                            child: new SangguScreen(user)));
                   } else {
                     return Navigator.push(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => new OrgTemplateScreen(
-                          user,
-                          org.name,
-                          org.abbreviation,
-                          org.tagline,
-                          org.website,
-                          org.facebook,
-                          org.twitter,
-                          org.instagram,
-                          org.description,
-                          org.advocacy,
-                          org.core,
-                          org.projectTitleOne,
-                          org.projectDescOne,
-                          org.projectTitleTwo,
-                          org.projectDescTwo,
-                          org.projectTitleThree,
-                          org.projectDescThree,
-                          org.vision,
-                          org.mission,
-                          org.body,
-                          org.logo,
-                          org.cover,
-                          org.projectImageOne,
-                          org.projectImageTwo,
-                          org.projectImageThree,
-                        ),
-                      ),
+                      PageTransition(
+                          type: PageTransitionType.leftToRight,
+                          child: new OrgTemplateScreen(
+                            user,
+                            org.name,
+                            org.abbreviation,
+                            org.tagline,
+                            org.website,
+                            org.facebook,
+                            org.twitter,
+                            org.instagram,
+                            org.description,
+                            org.advocacy,
+                            org.core,
+                            org.projectTitleOne,
+                            org.projectDescOne,
+                            org.projectTitleTwo,
+                            org.projectDescTwo,
+                            org.projectTitleThree,
+                            org.projectDescThree,
+                            org.vision,
+                            org.mission,
+                            org.body,
+                            org.logo,
+                            org.cover,
+                            org.projectImageOne,
+                            org.projectImageTwo,
+                            org.projectImageThree,
+                          )),
                     );
                   }
                 },
@@ -425,11 +427,12 @@ class _TrackerScreenState extends State<TrackerScreen> {
   void onGoogleSignIn(BuildContext context) async {
     FirebaseUser user = await _handleSignIn();
     var userSignedIn = await Navigator.push(
-      context,
-      MaterialPageRoute(
-          builder: (context) => MainScreen(orgList, normalList, strList,
-              copList, groupList, user, _googleSignIn)),
-    );
+        context,
+        PageTransition(
+          type: PageTransitionType.fade,
+          child: MainScreen(orgList, normalList, strList, copList, groupList,
+              user, _googleSignIn),
+        ));
 
     setState(() {
       isUserSignedIn = userSignedIn == null ? true : false;

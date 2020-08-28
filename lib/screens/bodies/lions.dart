@@ -11,6 +11,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/templates/groups.dart';
+import 'package:page_transition/page_transition.dart';
 
 class LionsScreen extends StatefulWidget {
   static FirebaseUser _user;
@@ -331,12 +332,11 @@ class _LionsScreenState extends State<LionsScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Adventure",
-                                        "LIONS",
-                                        adventureList)),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(LionsScreen._user,
+                                      "Adventure", "LIONS", adventureList),
+                                ),
                               );
                             },
                             child: Container(
@@ -386,12 +386,11 @@ class _LionsScreenState extends State<LionsScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Arts",
-                                        "LIONS",
-                                        artsList)),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(LionsScreen._user,
+                                      "Arts", "LIONS", artsList),
+                                ),
                               );
                             },
                             child: Container(
@@ -443,12 +442,11 @@ class _LionsScreenState extends State<LionsScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Business",
-                                        "LIONS",
-                                        businessList)),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(LionsScreen._user,
+                                      "Business", "LIONS", businessList),
+                                ),
                               );
                             },
                             child: Container(
@@ -498,12 +496,14 @@ class _LionsScreenState extends State<LionsScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Community Development",
-                                        "LIONS",
-                                        communityList)),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(
+                                      LionsScreen._user,
+                                      "Community Development",
+                                      "LIONS",
+                                      communityList),
+                                ),
                               );
                             },
                             child: Container(
@@ -556,12 +556,11 @@ class _LionsScreenState extends State<LionsScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Culture",
-                                        "LIONS",
-                                        cultureList)),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(LionsScreen._user,
+                                      "Culture", "LIONS", cultureList),
+                                ),
                               );
                             },
                             child: Container(
@@ -610,14 +609,12 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Design",
-                                        "LIONS",
-                                        designList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: new GroupsScreen(LionsScreen._user,
+                                        "Design", "LIONS", designList),
+                                  ));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -668,14 +665,12 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Education",
-                                        "LIONS",
-                                        educationList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: new GroupsScreen(LionsScreen._user,
+                                        "Education", "LIONS", educationList),
+                                  ));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -723,14 +718,15 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: new GroupsScreen(
                                         LionsScreen._user,
                                         "Environment",
                                         "LIONS",
-                                        environmentList)),
-                              );
+                                        environmentList),
+                                  ));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -781,14 +777,12 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Home Orgs",
-                                        "LIONS",
-                                        homeList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: new GroupsScreen(LionsScreen._user,
+                                        "Home Orgs", "LIONS", homeList),
+                                  ));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -837,12 +831,14 @@ class _LionsScreenState extends State<LionsScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "International",
-                                        "LIONS",
-                                        internationalList)),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(
+                                      LionsScreen._user,
+                                      "International",
+                                      "LIONS",
+                                      internationalList),
+                                ),
                               );
                             },
                             child: Container(
@@ -895,12 +891,11 @@ class _LionsScreenState extends State<LionsScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Language",
-                                        "LIONS",
-                                        languageList)),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(LionsScreen._user,
+                                      "Language", "LIONS", languageList),
+                                ),
                               );
                             },
                             child: Container(
@@ -949,14 +944,12 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Lifestyle",
-                                        "LIONS",
-                                        lifestyleList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: new GroupsScreen(LionsScreen._user,
+                                        "Lifestyle", "LIONS", lifestyleList),
+                                  ));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -1007,14 +1000,12 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Literature",
-                                        "LIONS",
-                                        literatureList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: new GroupsScreen(LionsScreen._user,
+                                        "Literature", "LIONS", literatureList),
+                                  ));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -1062,14 +1053,11 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Music",
-                                        "LIONS",
-                                        musicList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                      type: PageTransitionType.leftToRight,
+                                      child: new GroupsScreen(LionsScreen._user,
+                                          "Music", "LIONS", musicList)));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -1120,14 +1108,14 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Spiritual",
-                                        "LIONS",
-                                        spiritualList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                      type: PageTransitionType.leftToRight,
+                                      child: new GroupsScreen(
+                                          LionsScreen._user,
+                                          "Spiritual",
+                                          "LIONS",
+                                          spiritualList)));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -1175,14 +1163,14 @@ class _LionsScreenState extends State<LionsScreen> {
                           return GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        LionsScreen._user,
-                                        "Technology",
-                                        "LIONS",
-                                        technologyList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                      type: PageTransitionType.leftToRight,
+                                      child: new GroupsScreen(
+                                          LionsScreen._user,
+                                          "Technology",
+                                          "LIONS",
+                                          technologyList)));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
