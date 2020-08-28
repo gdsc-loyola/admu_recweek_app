@@ -20,8 +20,8 @@ class MainScreen extends StatefulWidget {
 
   MainScreen(
       [List<Orgs> orgList,
-      List<String> normalList,
-      List<Widget> strList,
+      List<Widget> normalList,
+      List<String> strList,
       List<Orgs> copList,
       List<Orgs> groupList,
       FirebaseUser user,
@@ -29,8 +29,8 @@ class MainScreen extends StatefulWidget {
     _user = user;
     _googleSignIn = signIn;
     _orgList = orgList;
-    _strList = normalList;
-    _normalList = strList;
+    _strList = strList;
+    _normalList = normalList;
     _copList = copList;
     _groupList = groupList;
   }
@@ -41,49 +41,25 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   static ScrollController scrollController;
-  static TextEditingController _filter = new TextEditingController();
+  static TextEditingController searchController = new TextEditingController();
 
   var pages = [
     HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._orgList,
         MainScreen._user),
-    ListScreen(_filter, scrollController, MainScreen._user, MainScreen._orgList,
-        MainScreen._strList, MainScreen._normalList),
-    TrackerScreen(
-      MainScreen._user,
-      MainScreen._orgList,
-      MainScreen._strList,
-      MainScreen._normalList,
-      MainScreen._copList,
-      MainScreen._groupList,
-    ),
+    // ListScreen(MainScreen._searchController, scrollController, MainScreen._user,
+    //     MainScreen._orgList, MainScreen._strList, MainScreen._normalList),
+    ListScreen(searchController, scrollController, MainScreen._user),
+    TrackerScreen(MainScreen._user, MainScreen._orgList, MainScreen._strList,
+        MainScreen._normalList, MainScreen._copList, MainScreen._groupList),
     SettingsScreen(MainScreen._googleSignIn, MainScreen._user),
   ];
 
-  // final dio = new Dio();
-  String _searchText = "";
-  List names = new List();
-  List filteredNames = new List();
   Icon _searchIcon = new Icon(Icons.search);
   Widget _appBarTitle = new Text("Pavilion",
       style: TextStyle(
           color: const Color(0xff295EFF),
           fontWeight: FontWeight.bold,
           fontSize: 32.0));
-
-  _MainScreenState() {
-    _filter.addListener(() {
-      if (_filter.text.isEmpty) {
-        setState(() {
-          _searchText = "";
-          filteredNames = names;
-        });
-      } else {
-        setState(() {
-          _searchText = _filter.text;
-        });
-      }
-    });
-  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -183,7 +159,7 @@ class _MainScreenState extends State<MainScreen> {
           child: new Center(
             child: new TextFormField(
               cursorColor: const Color(0xfff295EFF),
-              controller: _filter,
+              controller: searchController,
               style: TextStyle(color: const Color(0xff8198BB)),
               decoration: new InputDecoration(
                 border: InputBorder.none,
@@ -205,8 +181,7 @@ class _MainScreenState extends State<MainScreen> {
                 color: const Color(0xff295EFF),
                 fontWeight: FontWeight.bold,
                 fontSize: 32.0));
-        filteredNames = names;
-        _filter.clear();
+        searchController.clear();
       }
     });
   }
