@@ -75,32 +75,87 @@ class _ListScreenState extends State<ListScreen> {
       );
     }
 
-    orgLists.forEach((user) {
+    orgLists.forEach((org) {
       normalList.add(
-        Slidable(
-          actionPane: SlidableDrawerActionPane(),
-          actionExtentRatio: 0.25,
-          secondaryActions: <Widget>[
-            IconSlideAction(
-              iconWidget: Icon(Icons.star),
-              onTap: () {},
+        GestureDetector(
+          onTap: () {
+            if (org.abbreviation == "COA-M") {
+              return Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => new COAScreen(user)),
+              );
+            } else if (org.abbreviation == "LIONS") {
+              return Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => new LionsScreen(user)),
+              );
+            } else {
+              return Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => new OrgTemplateScreen(
+                    user,
+                    org.name,
+                    org.abbreviation,
+                    org.tagline,
+                    org.website,
+                    org.facebook,
+                    org.twitter,
+                    org.instagram,
+                    org.description,
+                    org.advocacy,
+                    org.core,
+                    org.projectTitleOne,
+                    org.projectDescOne,
+                    org.projectTitleTwo,
+                    org.projectDescTwo,
+                    org.projectTitleThree,
+                    org.projectDescThree,
+                    org.vision,
+                    org.mission,
+                    org.body,
+                    org.logo,
+                    org.cover,
+                    org.projectImageOne,
+                    org.projectImageTwo,
+                    org.projectImageThree,
+                  ),
+                ),
+              );
+            }
+          },
+          child: Slidable(
+            actionPane: SlidableDrawerActionPane(),
+            actionExtentRatio: 0.25,
+            secondaryActions: imageUrl == ""
+                ? null
+                : <Widget>[
+                    IconSlideAction(
+                        iconWidget:
+                            Image.asset('assets/icons/list_bookmark.png'),
+                        onTap: () {
+                          _onBookmark(org.name, org.abbreviation, org.body);
+                        },
+                        color: const Color(0xff7598FF))
+                  ],
+            child: ListTile(
+              leading: SizedBox(child: Image.asset(org.logo)),
+              title: Text(org.name),
+              subtitle: Text(org.body,
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: org.body == "COP"
+                          ? const Color(0xff002864)
+                          : org.body == "Student Groups"
+                              ? const Color(0xff1C41B2)
+                              : org.body == "LIONS"
+                                  ? const Color(0xffFF801D)
+                                  : const Color(0xffE84C4C))),
             ),
-            IconSlideAction(
-              iconWidget: Icon(Icons.more_horiz),
-              onTap: () {},
-            ),
-          ],
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundImage:
-                  NetworkImage("http://placeimg.com/200/200/people"),
-            ),
-            title: Text(user.name),
-            // subtitle: Text(user.company),
           ),
         ),
       );
-      strList.add(user.name);
+      strList.add(org.name);
     });
 
     setState(() {
