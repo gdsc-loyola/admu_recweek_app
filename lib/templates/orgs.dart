@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -119,6 +121,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   String _projectImageOne;
   String _projectImageTwo;
   String _projectImageThree;
+  bool connected = false;
 
   _OrgTemplateScreenState(
     this._user,
@@ -151,6 +154,20 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      try {
+        final result = await InternetAddress.lookup('google.com');
+        if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
+          setState(() {
+            connected = true;
+          });
+        }
+      } on SocketException catch (_) {
+        setState(() {
+          connected = false;
+        });
+      }
+    });
     if (_user != null) {
       firestoreInstance
           .collection("applied-2020-2021")
@@ -473,7 +490,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: _user != null
+                child: _user != null || !connected
                     ? Image.network(
                         _projectImageOne,
                         fit: BoxFit.cover,
@@ -501,7 +518,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: _user != null
+                child: _user != null || !connected
                     ? Image.network(
                         _projectImageTwo,
                         fit: BoxFit.cover,
@@ -530,7 +547,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: _user != null
+                child: _user != null || !connected
                     ? Image.network(
                         _projectImageThree,
                         fit: BoxFit.cover,
