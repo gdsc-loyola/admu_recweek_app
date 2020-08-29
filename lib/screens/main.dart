@@ -64,7 +64,13 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: _buildBar(context),
-        body: pages[selectedPageIndex],
+        body: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 500),
+          transitionBuilder: (Widget child, Animation<double> animation) {
+            return FadeTransition(child: child, opacity: animation);
+          },
+          child: pages[selectedPageIndex],
+        ),
         resizeToAvoidBottomPadding: false,
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,

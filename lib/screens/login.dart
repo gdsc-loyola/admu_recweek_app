@@ -13,9 +13,8 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:admu_recweek_app/screens/main.dart';
-
+import 'package:page_transition/page_transition.dart';
 import 'package:admu_recweek_app/models/user.dart';
-
 import 'bodies/lions.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -138,18 +137,25 @@ class _LoginScreenState extends State<LoginScreen> {
             if (org.abbreviation == "COA-M") {
               return Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => new COAScreen(user)),
+                PageTransition(
+                  type: PageTransitionType.leftToRight,
+                  child: new COAScreen(user),
+                ),
               );
             } else if (org.abbreviation == "LIONS") {
               return Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => new LionsScreen(user)),
+                PageTransition(
+                  type: PageTransitionType.leftToRight,
+                  child: new LionsScreen(user),
+                ),
               );
             } else {
               return Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => new OrgTemplateScreen(
+                PageTransition(
+                  type: PageTransitionType.leftToRight,
+                  child: new OrgTemplateScreen(
                     user,
                     org.name,
                     org.abbreviation,
@@ -359,14 +365,16 @@ class _LoginScreenState extends State<LoginScreen> {
                                   onTap: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(
-                                          builder: (context) => MainScreen(
-                                                orgList,
-                                                normalList,
-                                                strList,
-                                                copList,
-                                                groupList,
-                                              )),
+                                      PageTransition(
+                                        type: PageTransitionType.fade,
+                                        child: MainScreen(
+                                          orgList,
+                                          normalList,
+                                          strList,
+                                          copList,
+                                          groupList,
+                                        ),
+                                      ),
                                     );
                                     setState(() {
                                       firstName = "Atenean";
@@ -425,9 +433,11 @@ class _LoginScreenState extends State<LoginScreen> {
     FirebaseUser user = await _handleSignIn();
     var userSignedIn = await Navigator.push(
       context,
-      MaterialPageRoute(
-          builder: (context) => MainScreen(orgList, normalList, strList,
-              copList, groupList, user, _googleSignIn)),
+      PageTransition(
+        type: PageTransitionType.fade,
+        child: MainScreen(orgList, normalList, strList, copList, groupList,
+            user, _googleSignIn),
+      ),
     );
 
     setState(() {

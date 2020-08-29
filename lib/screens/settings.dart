@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:page_transition/page_transition.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -57,10 +57,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
         buttons: [
           DialogButton(
               onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DSCLoyolaScreen(user)),
-                  ),
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: DSCLoyolaScreen(user))),
               radius: BorderRadius.circular(10),
               color: const Color(0xff1C41B2),
               child: Text(
@@ -209,12 +209,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                                                             BorderRadius.circular(10.0),
                                                                       ),
                                                                       onPressed: () {
-                                                                        Navigator
-                                                                            .push(
-                                                                          context,
-                                                                          MaterialPageRoute(
-                                                                              builder: (context) => ProductTeamScreen()),
-                                                                        );
+                                                                        Navigator.push(
+                                                                            context,
+                                                                            PageTransition(
+                                                                                type: PageTransitionType.leftToRight,
+                                                                                child: ProductTeamScreen()));
                                                                       },
                                                                       color: const Color(0xff1C41B2),
                                                                       child: Padding(padding: EdgeInsets.all(8.0), child: Text('Product Team', style: TextStyle(color: Colors.white, fontSize: 12.0, fontWeight: FontWeight.bold)))))),
@@ -230,14 +229,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                                                               10.0),
                                                                 ),
                                                                 onPressed: () {
-                                                                  Navigator
-                                                                      .push(
-                                                                    context,
-                                                                    MaterialPageRoute(
-                                                                        builder:
-                                                                            (context) =>
-                                                                                DSCLoyolaScreen(user)),
-                                                                  );
+                                                                  Navigator.push(
+                                                                      context,
+                                                                      PageTransition(
+                                                                          type: PageTransitionType
+                                                                              .leftToRight,
+                                                                          child:
+                                                                              DSCLoyolaScreen(user)));
                                                                 },
                                                                 color: const Color(
                                                                     0xffFFFFFF),

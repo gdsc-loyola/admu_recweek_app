@@ -11,6 +11,7 @@ import 'package:admu_recweek_app/screens/bodies/coa.dart';
 import 'package:admu_recweek_app/screens/bodies/lions.dart';
 import 'package:admu_recweek_app/screens/orgs/lions/dsc.dart';
 import 'dart:math';
+import 'package:page_transition/page_transition.dart';
 
 class HomeScreen extends StatefulWidget {
   final List<Orgs> copList;
@@ -81,8 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => LionsScreen(user),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: LionsScreen(user),
                                 ),
                               );
                             },
@@ -151,8 +153,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => COAScreen(user),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: COAScreen(user),
                                 ),
                               );
                             },
@@ -221,9 +224,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(
-                                      builder: (context) => new GroupsScreen(
-                                          user, "COP", "COP", copList)),
+                                  PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: GroupsScreen(
+                                        user, "COP", "COP", copList),
+                                  ),
                                 );
                               },
                               child: Container(
@@ -310,12 +315,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        user,
-                                        "Student Groups",
-                                        "Student Groups",
-                                        groupList)),
+                                PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: GroupsScreen(user, "Student Groups",
+                                      "Student Groups", groupList),
+                                ),
                               );
                             },
                             child: Container(
@@ -420,55 +424,63 @@ class _HomeScreenState extends State<HomeScreen> {
                         if (orgList[randomNumber].name ==
                             "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila") {
                           return Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      new SangguScreen(user)));
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: new SangguScreen(user),
+                            ),
+                          );
                         } else if (orgList[randomNumber].name ==
                             "League of Independent Organizations") {
                           return Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => new LionsScreen(user)));
+                            context,
+                            PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: new LionsScreen(user),
+                            ),
+                          );
                         } else if (orgList[randomNumber].name ==
                             "Council of Organizations of the Ateneo - Manila") {
                           return Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => new COAScreen(user)));
-                        } else {
-                          Navigator.push(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) => new OrgTemplateScreen(
-                                user,
-                                orgList[randomNumber].name,
-                                orgList[randomNumber].abbreviation,
-                                orgList[randomNumber].tagline,
-                                orgList[randomNumber].website,
-                                orgList[randomNumber].facebook,
-                                orgList[randomNumber].twitter,
-                                orgList[randomNumber].instagram,
-                                orgList[randomNumber].description,
-                                orgList[randomNumber].advocacy,
-                                orgList[randomNumber].core,
-                                orgList[randomNumber].projectImageOne,
-                                orgList[randomNumber].projectTitleOne,
-                                orgList[randomNumber].projectDescOne,
-                                orgList[randomNumber].projectImageTwo,
-                                orgList[randomNumber].projectTitleTwo,
-                                orgList[randomNumber].projectDescTwo,
-                                orgList[randomNumber].projectImageThree,
-                                orgList[randomNumber].projectTitleThree,
-                                orgList[randomNumber].projectDescThree,
-                                orgList[randomNumber].vision,
-                                orgList[randomNumber].mission,
-                                orgList[randomNumber].body,
-                                orgList[randomNumber].logo,
-                                orgList[randomNumber].cover,
-                              ),
+                            PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: new COAScreen(user),
                             ),
                           );
+                        } else {
+                          Navigator.push(
+                              context,
+                              PageTransition(
+                                type: PageTransitionType.leftToRight,
+                                child: new OrgTemplateScreen(
+                                  user,
+                                  orgList[randomNumber].name,
+                                  orgList[randomNumber].abbreviation,
+                                  orgList[randomNumber].tagline,
+                                  orgList[randomNumber].website,
+                                  orgList[randomNumber].facebook,
+                                  orgList[randomNumber].twitter,
+                                  orgList[randomNumber].instagram,
+                                  orgList[randomNumber].description,
+                                  orgList[randomNumber].advocacy,
+                                  orgList[randomNumber].core,
+                                  orgList[randomNumber].projectImageOne,
+                                  orgList[randomNumber].projectTitleOne,
+                                  orgList[randomNumber].projectDescOne,
+                                  orgList[randomNumber].projectImageTwo,
+                                  orgList[randomNumber].projectTitleTwo,
+                                  orgList[randomNumber].projectDescTwo,
+                                  orgList[randomNumber].projectImageThree,
+                                  orgList[randomNumber].projectTitleThree,
+                                  orgList[randomNumber].projectDescThree,
+                                  orgList[randomNumber].vision,
+                                  orgList[randomNumber].mission,
+                                  orgList[randomNumber].body,
+                                  orgList[randomNumber].logo,
+                                  orgList[randomNumber].cover,
+                                ),
+                              ));
                         }
                       },
                       child: Stack(children: <Widget>[
@@ -519,10 +531,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   : GestureDetector(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => DSCLoyolaScreen(user)),
-                        );
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.leftToRight,
+                                child: DSCLoyolaScreen(user)));
                       },
                       child: Stack(children: <Widget>[
                         Image.asset("assets/orgs/dsc/cover.png",

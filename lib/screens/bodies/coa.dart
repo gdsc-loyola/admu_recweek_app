@@ -9,6 +9,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:admu_recweek_app/templates/groups.dart';
+import 'package:page_transition/page_transition.dart';
 
 class COAScreen extends StatefulWidget {
   static FirebaseUser _user;
@@ -322,14 +323,14 @@ class _COAScreenState extends State<COAScreen> {
                         child: GestureDetector(
                             onTap: () {
                               Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => new GroupsScreen(
-                                        COAScreen._user,
-                                        "Analysis & Discourse",
-                                        "COA",
-                                        analysisList)),
-                              );
+                                  context,
+                                  PageTransition(
+                                      type: PageTransitionType.leftToRight,
+                                      child: new GroupsScreen(
+                                          COAScreen._user,
+                                          "Analysis & Discourse",
+                                          "COA",
+                                          analysisList)));
                             },
                             child: Container(
                               padding: const EdgeInsets.all(8),
@@ -361,14 +362,14 @@ class _COAScreenState extends State<COAScreen> {
                       child: GestureDetector(
                           onTap: () {
                             Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => new GroupsScreen(
-                                      COAScreen._user,
-                                      "Faith & Formation",
-                                      "COA",
-                                      faithList)),
-                            );
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: new GroupsScreen(
+                                        COAScreen._user,
+                                        "Faith & Formation",
+                                        "COA",
+                                        faithList)));
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
@@ -401,14 +402,14 @@ class _COAScreenState extends State<COAScreen> {
                       child: GestureDetector(
                           onTap: () {
                             Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => new GroupsScreen(
-                                      COAScreen._user,
-                                      "Science & Technology",
-                                      "COA",
-                                      techList)),
-                            );
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.leftToRight,
+                                    child: new GroupsScreen(
+                                        COAScreen._user,
+                                        "Science & Technology",
+                                        "COA",
+                                        techList)));
                           },
                           child: Container(
                             padding: const EdgeInsets.all(8),
@@ -444,12 +445,10 @@ class _COAScreenState extends State<COAScreen> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) => new GroupsScreen(
-                                    COAScreen._user,
-                                    "Health & Environment",
-                                    "COA",
-                                    healthList)),
+                            PageTransition(
+                                type: PageTransitionType.leftToRight,
+                                child: new GroupsScreen(COAScreen._user,
+                                    "Health & Environment", "COA", healthList)),
                           );
                         },
                         child: Container(
@@ -484,14 +483,14 @@ class _COAScreenState extends State<COAScreen> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => new GroupsScreen(
-                                    COAScreen._user,
-                                    "Intercultural Relations",
-                                    "COA",
-                                    cultureList)),
-                          );
+                              context,
+                              PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(
+                                      COAScreen._user,
+                                      "Intercultural Relations",
+                                      "COA",
+                                      cultureList)));
                         },
                         child: Container(
                           padding: const EdgeInsets.all(8),
@@ -525,14 +524,14 @@ class _COAScreenState extends State<COAScreen> {
                         child: GestureDetector(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => new GroupsScreen(
-                                  COAScreen._user,
-                                  "Media & the Creative Arts",
-                                  "COA",
-                                  creativeList)),
-                        );
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.leftToRight,
+                                child: new GroupsScreen(
+                                    COAScreen._user,
+                                    "Media & the Creative Arts",
+                                    "COA",
+                                    creativeList)));
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
@@ -567,11 +566,11 @@ class _COAScreenState extends State<COAScreen> {
                         child: GestureDetector(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => new GroupsScreen(
-                                  COAScreen._user, "Business", "COA", bizList)),
-                        );
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.leftToRight,
+                                child: new GroupsScreen(COAScreen._user,
+                                    "Business", "COA", bizList)));
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
@@ -604,14 +603,11 @@ class _COAScreenState extends State<COAScreen> {
                         child: GestureDetector(
                       onTap: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => new GroupsScreen(
-                                  COAScreen._user,
-                                  "Performing Arts",
-                                  "COA",
-                                  playList)),
-                        );
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.leftToRight,
+                                child: new GroupsScreen(COAScreen._user,
+                                    "Performing Arts", "COA", playList)));
                       },
                       child: Container(
                         padding: const EdgeInsets.all(8),
@@ -645,14 +641,11 @@ class _COAScreenState extends State<COAScreen> {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => new GroupsScreen(
-                                    COAScreen._user,
-                                    "Sector-Based",
-                                    "COA",
-                                    sectorList)),
-                          );
+                              context,
+                              PageTransition(
+                                  type: PageTransitionType.leftToRight,
+                                  child: new GroupsScreen(COAScreen._user,
+                                      "Sector-Based", "COA", sectorList)));
                         },
                         child: Container(
                           padding: const EdgeInsets.all(8),
