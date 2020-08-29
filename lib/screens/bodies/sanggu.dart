@@ -483,7 +483,7 @@ class _SangguScreenState extends State<SangguScreen> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(top: 16, bottom: 16),
+                            padding: EdgeInsets.only(top: 16, bottom: 16,),
                             child: Row(
                               children: <Widget>[
                                 Container(
@@ -503,7 +503,6 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
-                                    maxLines: 2,
                                     overflow: TextOverflow.fade,
                                   ),
                                 ),
