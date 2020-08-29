@@ -12,6 +12,7 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:admu_recweek_app/models/orgs.dart';
 import 'bodies/coa.dart';
 import 'bodies/lions.dart';
+import 'package:page_transition/page_transition.dart';
 
 // ignore: must_be_immutable
 class ListScreen extends StatefulWidget {
@@ -82,46 +83,50 @@ class _ListScreenState extends State<ListScreen> {
             if (org.abbreviation == "COA-M") {
               return Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => new COAScreen(user)),
+                PageTransition(
+                  type: PageTransitionType.leftToRight,
+                  child: new COAScreen(user),
+                ),
               );
             } else if (org.abbreviation == "LIONS") {
               return Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => new LionsScreen(user)),
+                PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    child: new LionsScreen(user)),
               );
             } else {
               return Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => new OrgTemplateScreen(
-                    user,
-                    org.name,
-                    org.abbreviation,
-                    org.tagline,
-                    org.website,
-                    org.facebook,
-                    org.twitter,
-                    org.instagram,
-                    org.description,
-                    org.advocacy,
-                    org.core,
-                    org.projectTitleOne,
-                    org.projectDescOne,
-                    org.projectTitleTwo,
-                    org.projectDescTwo,
-                    org.projectTitleThree,
-                    org.projectDescThree,
-                    org.vision,
-                    org.mission,
-                    org.body,
-                    org.logo,
-                    org.cover,
-                    org.projectImageOne,
-                    org.projectImageTwo,
-                    org.projectImageThree,
-                  ),
-                ),
-              );
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: new OrgTemplateScreen(
+                        user,
+                        org.name,
+                        org.abbreviation,
+                        org.tagline,
+                        org.website,
+                        org.facebook,
+                        org.twitter,
+                        org.instagram,
+                        org.description,
+                        org.advocacy,
+                        org.core,
+                        org.projectTitleOne,
+                        org.projectDescOne,
+                        org.projectTitleTwo,
+                        org.projectDescTwo,
+                        org.projectTitleThree,
+                        org.projectDescThree,
+                        org.vision,
+                        org.mission,
+                        org.body,
+                        org.logo,
+                        org.cover,
+                        org.projectImageOne,
+                        org.projectImageTwo,
+                        org.projectImageThree,
+                      )));
             }
           },
           child: Slidable(
@@ -224,46 +229,50 @@ class _ListScreenState extends State<ListScreen> {
             if (org.abbreviation == "COA-M") {
               return Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => new COAScreen(user)),
+                PageTransition(
+                  type: PageTransitionType.leftToRight,
+                  child: new COAScreen(user),
+                ),
               );
             } else if (org.abbreviation == "LIONS") {
               return Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => new LionsScreen(user)),
+                PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    child: new LionsScreen(user)),
               );
             } else {
               return Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => new OrgTemplateScreen(
-                    user,
-                    org.name,
-                    org.abbreviation,
-                    org.tagline,
-                    org.website,
-                    org.facebook,
-                    org.twitter,
-                    org.instagram,
-                    org.description,
-                    org.advocacy,
-                    org.core,
-                    org.projectTitleOne,
-                    org.projectDescOne,
-                    org.projectTitleTwo,
-                    org.projectDescTwo,
-                    org.projectTitleThree,
-                    org.projectDescThree,
-                    org.vision,
-                    org.mission,
-                    org.body,
-                    org.logo,
-                    org.cover,
-                    org.projectImageOne,
-                    org.projectImageTwo,
-                    org.projectImageThree,
-                  ),
-                ),
-              );
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: new OrgTemplateScreen(
+                        user,
+                        org.name,
+                        org.abbreviation,
+                        org.tagline,
+                        org.website,
+                        org.facebook,
+                        org.twitter,
+                        org.instagram,
+                        org.description,
+                        org.advocacy,
+                        org.core,
+                        org.projectTitleOne,
+                        org.projectDescOne,
+                        org.projectTitleTwo,
+                        org.projectDescTwo,
+                        org.projectTitleThree,
+                        org.projectDescThree,
+                        org.vision,
+                        org.mission,
+                        org.body,
+                        org.logo,
+                        org.cover,
+                        org.projectImageOne,
+                        org.projectImageTwo,
+                        org.projectImageThree,
+                      )));
             }
           },
           child: Slidable(
