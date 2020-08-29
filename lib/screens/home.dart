@@ -124,9 +124,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: Padding(
                                       padding: EdgeInsets.all(8.0),
                                       child: Row(
-                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
                                         mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: <Widget>[
                                           Text(
                                             '27',
@@ -139,7 +141,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ' Orgs',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                                fontSize: 12, color: Colors.white),
+                                                fontSize: 12,
+                                                color: Colors.white),
                                           ),
                                         ],
                                       ),
@@ -183,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: <Widget>[
                                   Align(
                                     alignment: Alignment.center,
-                                  child: Padding(
+                                    child: Padding(
                                       padding: EdgeInsets.all(8.0),
                                       child: Image.asset(
                                           "assets/bodies/coa/logo.png"),
@@ -191,30 +194,32 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                   Align(
                                     alignment: Alignment.bottomCenter,
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Row(
-                                      crossAxisAlignment: CrossAxisAlignment.end,
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: <Widget>[
-                                        Text(
-                                          '56',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16,
-                                            color: Colors.black
+                                    child: Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            '56',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 16,
+                                                color: Colors.black),
                                           ),
-                                        ),
-                                        Text(
-                                          ' Orgs',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize: 12, color: Colors.black),
-                                        ),
-                                      ],
+                                          Text(
+                                            ' Orgs',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                color: Colors.black),
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                  ),
                                   ),
                                 ],
                               ),
@@ -256,10 +261,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                     Align(
                                       alignment: Alignment.topCenter,
                                       child: Padding(
-                                        padding: EdgeInsets.only(top: 8.0, bottom: 8.0, left: 4.0, right: 4.0),
+                                        padding: EdgeInsets.only(
+                                            top: 8.0,
+                                            bottom: 8.0,
+                                            left: 4.0,
+                                            right: 4.0),
                                         child: Text(
                                           "Confederation of Publications",
-                                          style: TextStyle (
+                                          style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 12,
                                           ),
@@ -268,16 +277,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                     ),
                                     Expanded(
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: Padding(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Image.asset(
-                                          "assets/bodies/cop/logos.png",
-                                          height: 60,
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: Image.asset(
+                                            "assets/bodies/cop/logos.png",
+                                            height: 60,
+                                          ),
                                         ),
                                       ),
-                                    ),
                                     ),
                                     Align(
                                       alignment: Alignment.bottomCenter,
@@ -346,16 +355,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Align(
                                     alignment: Alignment.topCenter,
                                     child: Padding(
-                                      padding: EdgeInsets.only(top: 8.0, bottom: 8.0, left: 4.0, right: 4.0),
-                                      child: Text(
-                                        "Student Groups",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12,
-                                        ),
-                                        textAlign: TextAlign.center,
-                                      )
-                                    ),
+                                        padding: EdgeInsets.only(
+                                            top: 8.0,
+                                            bottom: 8.0,
+                                            left: 4.0,
+                                            right: 4.0),
+                                        child: Text(
+                                          "Student Groups",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        )),
                                   ),
                                   Align(
                                     alignment: Alignment.center,
@@ -373,9 +385,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: Padding(
                                       padding: EdgeInsets.all(8.0),
                                       child: Row(
-                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
                                         mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: <Widget>[
                                           Text(
                                             '7',
@@ -388,7 +402,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ' Orgs',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                                fontSize: 12, color: Colors.white),
+                                                fontSize: 12,
+                                                color: Colors.white),
                                           ),
                                         ],
                                       ),
@@ -398,9 +413,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                           ),
-                        ]
-                    )
-                ),
+                        ])),
               ),
               Padding(
                 padding: EdgeInsets.only(bottom: 8, top: 16),
@@ -510,7 +523,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
+                                  padding: EdgeInsets.only(
+                                      left: 8.0, top: 8.0, bottom: 8.0),
                                   child: Text(
                                     orgList[randomNumber].name,
                                     style: TextStyle(
@@ -537,7 +551,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: DSCLoyolaScreen(user)));
                       },
                       child: Stack(children: <Widget>[
-                        Image.asset("assets/orgs/dsc/cover.png",
+                        Image.asset("assets/orgs/lions/covers/DSC.jpg",
                             width: MediaQuery.of(context).size.width,
                             height: 200,
                             fit: BoxFit.cover),
@@ -554,7 +568,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
+                                  padding: EdgeInsets.only(
+                                      left: 8.0, top: 8.0, bottom: 8.0),
                                   child: Text(
                                     "Developers Student Clubs - Loyola",
                                     style: TextStyle(

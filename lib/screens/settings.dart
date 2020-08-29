@@ -29,12 +29,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
     Alert(
         context: context,
         title: "",
-        // Image.asset('assets/orgs/dsc/logo.png')
         content: Column(
           children: <Widget>[
             Align(
               alignment: Alignment.center,
-              child: Image.asset('assets/orgs/dsc/logo.png'),
+              child: Image.asset('assets/orgs/lions/logos/DSC.png'),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16),
