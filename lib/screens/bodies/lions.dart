@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:admu_recweek_app/models/orgs.dart';
+import 'package:admu_recweek_app/screens/empty.dart';
 import 'package:admu_recweek_app/widgets/base-widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -1224,7 +1225,12 @@ class _LionsScreenState extends State<LionsScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      launch("https://lionshub.org/");
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: EmptyScreen()));
+                      // launch("https://lionshub.org/");
                     },
                     color: const Color(0xffFF801D),
                     child: Padding(

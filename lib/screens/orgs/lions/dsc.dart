@@ -1,9 +1,11 @@
+import 'package:admu_recweek_app/screens/empty.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
+import 'package:page_transition/page_transition.dart';
 
 class DSCLoyolaScreen extends StatefulWidget {
   final FirebaseUser user;
@@ -340,7 +342,12 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      launch("https://dscadmu.org/");
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: EmptyScreen()));
+                      // launch("https://dscadmu.org/");
                     },
                     color: const Color(0xff295EFF),
                     child: Padding(
