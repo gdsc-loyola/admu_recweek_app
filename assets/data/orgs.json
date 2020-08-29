@@ -898,7 +898,7 @@
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
 		"Name": "Baybayin Ateneo",
-		"Abbreviation": "",
+		"Abbreviation": "Baybayin",
 		"Tagline": "Laging Para sa Bayan / Makinig Tumindig",
 		"Website": "",
 		"Facebook": "www.facebook.com/BaybayinAteneo/",
@@ -1453,7 +1453,7 @@
 		"Mission": "",
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/tugon_logo.png",
-		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/tugon_cover.jpg"
+		"Cover": "assets/orgs/coa/SECTOR-BASED/tugon_cover.jpg"
 	},
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
@@ -2660,7 +2660,6 @@
 		"Logo": "assets/orgs/lions/logos/Cuisina.jpg",
 		"Cover": "assets/orgs/lions/covers/Cuisina.png"
 	},
-
 	{
 		"Cluster": [],
 		"Name": "League of Independent Organizations",
