@@ -469,7 +469,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 16),
+                                  padding: EdgeInsets.only(left: 16, right: 16,),
                                   child: Text(
                                     "Department of Administrative Affairs",
                                     style: TextStyle(
@@ -496,13 +496,14 @@ class _SangguScreenState extends State<SangguScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 16),
+                                  padding: EdgeInsets.only(left: 16, right: 16,),
                                   child: Text(
                                     "Department of Budget and Management",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
+                                    maxLines: 2,
                                     overflow: TextOverflow.fade,
                                   ),
                                 ),
@@ -523,7 +524,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 16),
+                                  padding: EdgeInsets.only(left: 16, right: 16,),
                                   child: Text(
                                     "Department of Communications",
                                     style: TextStyle(
@@ -550,7 +551,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 16),
+                                  padding: EdgeInsets.only(left: 16, right: 16,),
                                   child: Text(
                                     "Department of External Affairs",
                                     style: TextStyle(
@@ -577,7 +578,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsets.only(left: 16),
+                                    padding: EdgeInsets.only(left: 16, right: 16,),
                                     child: Text(
                                       "Department of Student Welfare and Services",
                                       style: TextStyle(
@@ -602,7 +603,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       'assets/bodies/sanggu/logo.png'),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 16),
+                                  padding: EdgeInsets.only(left: 16, right: 16,),
                                   child: Text(
                                     "Presidential Support Team",
                                     style: TextStyle(
@@ -632,7 +633,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16),
+                                      padding: EdgeInsets.only(left: 16, right: 16,),
                                       child: Text(
                                         "Central Assembly Secretariat",
                                         style: TextStyle(
@@ -658,7 +659,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16),
+                                      padding: EdgeInsets.only(left: 16, right: 16,),
                                       child: Text(
                                         "Internals Division",
                                         style: TextStyle(
@@ -714,7 +715,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16),
+                                      padding: EdgeInsets.only(left: 16, right: 16,),
                                       child: Text(
                                         "SOH Sanggunian",
                                         style: TextStyle(
@@ -740,7 +741,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16),
+                                      padding: EdgeInsets.only(left: 16, right: 16,),
                                       child: Text(
                                         "JGSOM Sanggunian",
                                         style: TextStyle(
@@ -766,7 +767,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16),
+                                      padding: EdgeInsets.only(left: 16, right: 16,),
                                       child: Text(
                                         "SOSE Sanggunian",
                                         style: TextStyle(
@@ -792,7 +793,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16),
+                                      padding: EdgeInsets.only(left: 16, right: 16,),
                                       child: Text(
                                         "SOSS Sanggunian",
                                         style: TextStyle(
@@ -818,7 +819,7 @@ class _SangguScreenState extends State<SangguScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: EmptyScreen()));
                       // launch("https://oursanggu.com/");
                     },
