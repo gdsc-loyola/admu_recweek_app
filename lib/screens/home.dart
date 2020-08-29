@@ -104,37 +104,46 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ],
                               ),
-                              width: MediaQuery.of(context).size.width / 2,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
+                              width: MediaQuery.of(context).size.width / 2.5,
+                              child: Stack(
+                                // crossAxisAlignment: CrossAxisAlignment.center,
+                                // mainAxisSize: MainAxisSize.max,
+                                // mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                      "assets/bodies/lions/logo.png",
+                                  Align(
+                                    alignment: Alignment.center,
+                                    child: Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        "assets/bodies/lions/logo.png",
+                                      ),
                                     ),
                                   ),
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        '27',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16,
-                                            color: Colors.white),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Row(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            '27',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 16,
+                                                color: Colors.white),
+                                          ),
+                                          Text(
+                                            ' Orgs',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontSize: 12, color: Colors.white),
+                                          ),
+                                        ],
                                       ),
-                                      Text(
-                                        ' Orgs',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 12, color: Colors.white),
-                                      ),
-                                    ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -166,36 +175,46 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ],
                               ),
-                              width: MediaQuery.of(context).size.width / 2,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
+                              width: MediaQuery.of(context).size.width / 2.5,
+                              child: Stack(
+                                // crossAxisAlignment: CrossAxisAlignment.center,
+                                // mainAxisSize: MainAxisSize.max,
+                                // mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                        "assets/bodies/coa/logo.png"),
+                                  Align(
+                                    alignment: Alignment.center,
+                                  child: Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                          "assets/bodies/coa/logo.png"),
+                                    ),
                                   ),
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        '56',
-                                        style: TextStyle(
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Row(
+                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          '56',
+                                          style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16,
-                                            color: Colors.black),
-                                      ),
-                                      Text(
-                                        ' Orgs',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 12, color: Colors.black),
-                                      ),
-                                    ],
+                                            color: Colors.black
+                                          ),
+                                        ),
+                                        Text(
+                                          ' Orgs',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontSize: 12, color: Colors.black),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                   ),
                                 ],
                               ),
@@ -228,41 +247,66 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ],
                                 ),
-                                width: MediaQuery.of(context).size.width / 2,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                width: MediaQuery.of(context).size.width / 2.5,
+                                child: Stack(
+                                  //crossAxisAlignment: CrossAxisAlignment.center,
+                                  // mainAxisSize: MainAxisSize.max,
+                                  // mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Image.asset(
-                                        "assets/bodies/cop/logos.png",
-                                        height: 60,
+                                    Align(
+                                      alignment: Alignment.topCenter,
+                                      child: Padding(
+                                        padding: EdgeInsets.only(top: 8.0, bottom: 8.0, left: 4.0, right: 4.0),
+                                        child: Text(
+                                          "Confederation of Publications",
+                                          style: TextStyle (
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
                                       ),
                                     ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: <Widget>[
-                                        Text(
-                                          '3',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 16,
-                                              color: Colors.white),
+                                    Expanded(
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                          "assets/bodies/cop/logos.png",
+                                          height: 60,
                                         ),
-                                        Text(
-                                          ' Orgs',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              color: Colors.white),
+                                      ),
+                                    ),
+                                    ),
+                                    Align(
+                                      alignment: Alignment.bottomCenter,
+                                      child: Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Text(
+                                              '3',
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 16,
+                                                  color: Colors.white),
+                                            ),
+                                            Text(
+                                              ' Orgs',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  color: Colors.white),
+                                            ),
+                                          ],
                                         ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -293,44 +337,70 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ],
                               ),
-                              width: MediaQuery.of(context).size.width / 2,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
+                              width: MediaQuery.of(context).size.width / 2.5,
+                              child: Stack(
+                                //crossAxisAlignment: CrossAxisAlignment.center,
+                                // mainAxisSize: MainAxisSize.max,
+                                // mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
-                                  Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                      "assets/bodies/student-groups/logos.png",
-                                      height: 60,
+                                  Align(
+                                    alignment: Alignment.topCenter,
+                                    child: Padding(
+                                      padding: EdgeInsets.only(top: 8.0, bottom: 8.0, left: 4.0, right: 4.0),
+                                      child: Text(
+                                        "Student Groups",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 12,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      )
                                     ),
                                   ),
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        '7',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16,
-                                            color: Colors.white),
+                                  Align(
+                                    alignment: Alignment.center,
+                                    child: Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Image.asset(
+                                        "assets/bodies/student-groups/logos.png",
+                                        //fit: BoxFit.fitHeight,
+                                        //height: 60,
                                       ),
-                                      Text(
-                                        ' Orgs',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                            fontSize: 12, color: Colors.white),
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Row(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            '7',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 16,
+                                                color: Colors.white),
+                                          ),
+                                          Text(
+                                            ' Orgs',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                fontSize: 12, color: Colors.white),
+                                          ),
+                                        ],
                                       ),
-                                    ],
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
                           ),
-                        ])),
+                        ]
+                    )
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(bottom: 8, top: 16),
@@ -424,15 +494,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             width: MediaQuery.of(context).size.width,
                             decoration: BoxDecoration(
                               color: orgList[randomNumber].body == "LIONS"
-                                  ? const Color(0xFFFF801D).withOpacity(0.25)
+                                  ? const Color(0xFFFF801D).withOpacity(0.50)
                                   : orgList[randomNumber].body == "COA"
                                       ? const Color(0xFFE84C4C)
-                                          .withOpacity(0.25)
+                                          .withOpacity(0.50)
                                       : orgList[randomNumber].body == "COP"
                                           ? const Color(0xFF002864)
-                                              .withOpacity(0.25)
+                                              .withOpacity(0.50)
                                           : const Color(0xFF295EFF)
-                                              .withOpacity(0.25),
+                                              .withOpacity(0.50),
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -440,7 +510,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8.0, top: 8.0),
+                                  padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
                                   child: Text(
                                     orgList[randomNumber].name,
                                     style: TextStyle(
@@ -448,6 +518,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xFFFFFFFF),
                                     ),
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ],
@@ -482,7 +554,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(left: 8.0, top: 8.0),
+                                  padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
                                   child: Text(
                                     "Developers Student Clubs - Loyola",
                                     style: TextStyle(
