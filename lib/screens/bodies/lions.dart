@@ -291,10 +291,11 @@ class _LionsScreenState extends State<LionsScreen> {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>[
                           //TODO: Add all socmed of LIONS
-                          // InkWell(
-                          //     child: Image.asset('assets/bodies/lions/website.png'),
-                          //     onTap: () => launch(''),
-                          // ),
+                          InkWell(
+                            child:
+                                Image.asset('assets/bodies/lions/website.png'),
+                            onTap: () => launch('https://lionshub.org'),
+                          ),
                           // InkWell(
                           //   child: Image.asset('assets/bodies/lions/ig.png'),
                           //   onTap: () => launch(''),
