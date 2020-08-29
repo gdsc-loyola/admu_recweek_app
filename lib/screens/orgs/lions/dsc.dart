@@ -172,7 +172,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               Stack(
                 children: <Widget>[
                   SizedBox(
-                    child: Image.asset('assets/orgs/lions/covers/DSC.jpg'),
+                    child: Image.asset('assets/orgs/lions/covers/DSC.jpg', fit: BoxFit.cover,),
                     height: 200,
                   ),
                   Container(
