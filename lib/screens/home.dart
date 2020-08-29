@@ -523,8 +523,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(
-                                      left: 8.0, top: 8.0, bottom: 8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text(
                                     orgList[randomNumber].name,
                                     style: TextStyle(
