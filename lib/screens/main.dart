@@ -42,7 +42,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   static ScrollController scrollController;
   static TextEditingController searchController = new TextEditingController();
-  bool _visible = true;
+
   var pages = [
     HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._orgList,
         MainScreen._user),
@@ -64,9 +64,11 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: _buildBar(context),
-        body: AnimatedOpacity(
-          opacity: _visible ? 1.0 : 0.0,
-          duration: Duration(milliseconds: 500),
+        body: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 500),
+          transitionBuilder: (Widget child, Animation<double> animation) {
+            return FadeTransition(child: child, opacity: animation);
+          },
           child: pages[selectedPageIndex],
         ),
         resizeToAvoidBottomPadding: false,
@@ -122,9 +124,7 @@ class _MainScreenState extends State<MainScreen> {
             ],
             onTap: (index) {
               setState(() {
-                _visible = !_visible;
                 selectedPageIndex = index;
-                _visible = !_visible;
               });
             },
             currentIndex: selectedPageIndex));
