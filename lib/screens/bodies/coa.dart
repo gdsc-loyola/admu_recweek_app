@@ -1,3 +1,4 @@
+import 'package:admu_recweek_app/screens/empty.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'dart:convert';
 import 'package:admu_recweek_app/models/orgs.dart';
@@ -686,7 +687,12 @@ class _COAScreenState extends State<COAScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      launch("https://lionshub.org/");
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: EmptyScreen()));
+                      // launch("https://lionshub.org/");
                     },
                     color: const Color(0xffE84C4C),
                     child: Padding(
