@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: LionsScreen(user),
                                 ),
                               );
@@ -157,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: COAScreen(user),
                                 ),
                               );
@@ -230,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Navigator.push(
                                   context,
                                   PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: GroupsScreen(
                                         user, "COP", "COP", copList),
                                   ),
@@ -325,7 +325,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: GroupsScreen(user, "Student Groups",
                                       "Student Groups", groupList),
                                 ),
@@ -448,7 +448,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           return Navigator.push(
                             context,
                             PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: new LionsScreen(user),
                             ),
                           );
@@ -457,7 +457,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           return Navigator.push(
                             context,
                             PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: new COAScreen(user),
                             ),
                           );
@@ -465,7 +465,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.push(
                               context,
                               PageTransition(
-                                type: PageTransitionType.leftToRight,
+                                type: PageTransitionType.rightToLeft,
                                 child: new OrgTemplateScreen(
                                   user,
                                   orgList[randomNumber].name,
@@ -523,8 +523,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(
-                                      left: 8.0, top: 8.0, bottom: 8.0),
+                                  padding: EdgeInsets.all(8.0),
                                   child: Text(
                                     orgList[randomNumber].name,
                                     style: TextStyle(
@@ -547,7 +546,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                             context,
                             PageTransition(
-                                type: PageTransitionType.leftToRight,
+                                type: PageTransitionType.rightToLeft,
                                 child: DSCLoyolaScreen(user)));
                       },
                       child: Stack(children: <Widget>[
