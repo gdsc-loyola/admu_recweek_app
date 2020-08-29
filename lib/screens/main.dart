@@ -1,45 +1,59 @@
+import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
 import 'package:admu_recweek_app/screens/home.dart';
 import 'package:admu_recweek_app/screens/list.dart';
 import 'package:admu_recweek_app/screens/settings.dart';
 import 'package:admu_recweek_app/screens/tracker.dart';
-
-// import 'package:dio/dio.dart';
+import 'package:admu_recweek_app/models/screen.dart';
 
 // ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
-  // ignore: unused_field
   static GoogleSignIn _googleSignIn;
-  // ignore: unused_field
-  FirebaseUser _user;
+  static FirebaseUser _user;
+  static List<Orgs> _orgList;
+  static List<String> _strList;
+  static List<Widget> _normalList;
+  static List<Orgs> _copList = [];
+  static List<Orgs> _groupList = [];
 
-  MainScreen(FirebaseUser user, GoogleSignIn signIn) {
+  MainScreen(
+      [List<Orgs> orgList,
+      List<Widget> normalList,
+      List<String> strList,
+      List<Orgs> copList,
+      List<Orgs> groupList,
+      FirebaseUser user,
+      GoogleSignIn signIn]) {
     _user = user;
     _googleSignIn = signIn;
+    _orgList = orgList;
+    _strList = strList;
+    _normalList = normalList;
+    _copList = copList;
+    _groupList = groupList;
   }
 
   @override
-  _MainScreenState createState() => new _MainScreenState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int selectedPageIndex = 0;
+  static ScrollController scrollController;
+  static TextEditingController searchController = new TextEditingController();
 
   var pages = [
-    HomeScreen(),
-    ListScreen(_filter),
-    TrackerScreen(),
-    SettingsScreen(MainScreen._googleSignIn),
+    HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._orgList,
+        MainScreen._user),
+    // ListScreen(MainScreen._searchController, scrollController, MainScreen._user,
+    //     MainScreen._orgList, MainScreen._strList, MainScreen._normalList),
+    ListScreen(searchController, scrollController, MainScreen._user),
+    TrackerScreen(MainScreen._user, MainScreen._orgList, MainScreen._strList,
+        MainScreen._normalList, MainScreen._copList, MainScreen._groupList),
+    SettingsScreen(MainScreen._googleSignIn, MainScreen._user),
   ];
 
-  static TextEditingController _filter = new TextEditingController();
-  // final dio = new Dio();
-  String _searchText = "";
-  List names = new List();
-  List filteredNames = new List();
   Icon _searchIcon = new Icon(Icons.search);
   Widget _appBarTitle = new Text("Pavilion",
       style: TextStyle(
@@ -47,34 +61,16 @@ class _MainScreenState extends State<MainScreen> {
           fontWeight: FontWeight.bold,
           fontSize: 32.0));
 
-  _MainScreenState() {
-    _filter.addListener(() {
-      if (_filter.text.isEmpty) {
-        setState(() {
-          _searchText = "";
-          filteredNames = names;
-        });
-      } else {
-        setState(() {
-          _searchText = _filter.text;
-        });
-      }
-    });
-  }
-
-  @override
-  void initState() {
-    // this._getNames();
-    super.initState();
-  }
-
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: _buildBar(context),
-        body: pages[selectedPageIndex],
-        // body: Container(
-        //   child: _buildList(),
-        // ),
+        body: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 500),
+          transitionBuilder: (Widget child, Animation<double> animation) {
+            return FadeTransition(child: child, opacity: animation);
+          },
+          child: pages[selectedPageIndex],
+        ),
         resizeToAvoidBottomPadding: false,
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
@@ -157,29 +153,6 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  // Widget _buildList() {
-  //   if (!(_searchText.isEmpty)) {
-  //     List tempList = new List();
-  //     for (int i = 0; i < filteredNames.length; i++) {
-  //       if (filteredNames[i]['name']
-  //           .toLowerCase()
-  //           .contains(_searchText.toLowerCase())) {
-  //         tempList.add(filteredNames[i]);
-  //       }
-  //     }
-  //     filteredNames = tempList;
-  //   }
-  //   return ListView.builder(
-  //     itemCount: names == null ? 0 : filteredNames.length,
-  //     itemBuilder: (BuildContext context, int index) {
-  //       return new ListTile(
-  //         title: Text(filteredNames[index]['name']),
-  //         onTap: () => print(filteredNames[index]['name']),
-  //       );
-  //     },
-  //   );
-  // }
-
   void _searchPressed() {
     setState(() {
       selectedPageIndex = 1;
@@ -192,7 +165,7 @@ class _MainScreenState extends State<MainScreen> {
           child: new Center(
             child: new TextFormField(
               cursorColor: const Color(0xfff295EFF),
-              controller: _filter,
+              controller: searchController,
               style: TextStyle(color: const Color(0xff8198BB)),
               decoration: new InputDecoration(
                 border: InputBorder.none,
@@ -214,22 +187,8 @@ class _MainScreenState extends State<MainScreen> {
                 color: const Color(0xff295EFF),
                 fontWeight: FontWeight.bold,
                 fontSize: 32.0));
-        filteredNames = names;
-        _filter.clear();
+        searchController.clear();
       }
     });
   }
-
-  // void _getNames() async {
-  //   final response = await dio.get('https://swapi.co/api/people');
-  //   List tempList = new List();
-  //   for (int i = 0; i < response.data['results'].length; i++) {
-  //     tempList.add(response.data['results'][i]);
-  //   }
-  //   setState(() {
-  //     names = tempList;
-  //     names.shuffle();
-  //     filteredNames = names;
-  //   });
-  // }
 }

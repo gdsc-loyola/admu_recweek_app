@@ -1,132 +1,372 @@
+import 'dart:convert';
+import 'package:admu_recweek_app/models/user.dart';
+import 'package:admu_recweek_app/templates/orgs.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:alphabet_list_scroll_view/alphabet_list_scroll_view.dart';
-import 'package:faker/faker.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-
-import 'package:admu_recweek_app/models/org.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:admu_recweek_app/models/orgs.dart';
+import 'bodies/coa.dart';
+import 'bodies/lions.dart';
+import 'package:page_transition/page_transition.dart';
 
 // ignore: must_be_immutable
 class ListScreen extends StatefulWidget {
-  TextEditingController searchController;
+  final TextEditingController searchController;
+  final ScrollController scrollController;
+  // final List<Orgs> orgList;
+  // final List<String> strList;
+  // final List<Widget> normalList;
+  final FirebaseUser user;
 
-  ListScreen(_searchController) {
-    searchController = _searchController;
-  }
+  // ListScreen(this.searchController, this.scrollController, this.user,
+  //     this.orgList, this.strList, this.normalList);
+
+  ListScreen(this.searchController, this.scrollController, this.user);
 
   @override
-  _ListScreenState createState() => _ListScreenState();
+  _ListScreenState createState() =>
+      _ListScreenState(searchController, scrollController, user);
 }
 
 class _ListScreenState extends State<ListScreen> {
-  List<User> userList = [];
+  TextEditingController searchController;
+  ScrollController scrollController;
+  FirebaseUser user;
+  List<Orgs> orgList = [];
   List<String> strList = [];
-  List<Widget> favouriteList = [];
   List<Widget> normalList = [];
+  String sortStatus = 'Alphabetical';
+  final firestoreInstance = Firestore.instance;
+
+  _ListScreenState(
+    this.searchController,
+    this.scrollController,
+    this.user,
+  );
 
   @override
   void initState() {
-    for (var i = 0; i < 100; i++) {
-      var name = faker.person.name();
-      userList.add(User(name, faker.company.name(), false));
-    }
-    for (var i = 0; i < 4; i++) {
-      var name = faker.person.name();
-      userList.add(User(name, faker.company.name(), true));
-    }
-    userList
-        .sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
-    filterList();
-    widget.searchController.addListener(() {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await loadJSON();
+    });
+
+    searchController.addListener(() {
       filterList();
     });
+
     super.initState();
   }
 
   filterList() {
-    List<User> users = [];
-    users.addAll(userList);
-    favouriteList = [];
+    List<Orgs> orgLists = [];
+    orgLists.addAll(orgList);
     normalList = [];
     strList = [];
-    if (widget.searchController.text.isNotEmpty) {
-      users.retainWhere((user) => user.name
-          .toLowerCase()
-          .contains(widget.searchController.text.toLowerCase()));
+
+    if (searchController.text.isNotEmpty) {
+      orgLists.retainWhere(
+        (orgs) => orgs.name.toLowerCase().contains(
+              searchController.text.toLowerCase(),
+            ),
+      );
     }
-    users.forEach((user) {
-      if (user.favourite) {
-        favouriteList.add(
-          Slidable(
+
+    orgLists.forEach((org) {
+      normalList.add(
+        GestureDetector(
+          onTap: () {
+            if (org.abbreviation == "COA-M") {
+              return Navigator.push(
+                context,
+                PageTransition(
+                  type: PageTransitionType.leftToRight,
+                  child: new COAScreen(user),
+                ),
+              );
+            } else if (org.abbreviation == "LIONS") {
+              return Navigator.push(
+                context,
+                PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    child: new LionsScreen(user)),
+              );
+            } else {
+              return Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: new OrgTemplateScreen(
+                        user,
+                        org.name,
+                        org.abbreviation,
+                        org.tagline,
+                        org.website,
+                        org.facebook,
+                        org.twitter,
+                        org.instagram,
+                        org.description,
+                        org.advocacy,
+                        org.core,
+                        org.projectImageOne,
+                        org.projectTitleOne,
+                        org.projectDescOne,
+                        org.projectImageTwo,
+                        org.projectTitleTwo,
+                        org.projectDescTwo,
+                        org.projectImageThree,
+                        org.projectTitleThree,
+                        org.projectDescThree,
+                        org.vision,
+                        org.mission,
+                        org.body,
+                        org.logo,
+                        org.cover,
+                      )));
+            }
+          },
+          child: Slidable(
             actionPane: SlidableDrawerActionPane(),
             actionExtentRatio: 0.25,
-            secondaryActions: <Widget>[
-              IconSlideAction(
-                iconWidget: Icon(Icons.star),
-                onTap: () {},
-              ),
-              IconSlideAction(
-                iconWidget: Icon(Icons.more_horiz),
-                onTap: () {},
-              ),
-            ],
+            secondaryActions: imageUrl == ""
+                ? null
+                : <Widget>[
+                    IconSlideAction(
+                        iconWidget:
+                            Image.asset('assets/icons/list_bookmark.png'),
+                        onTap: () {
+                          _onBookmark(org.name, org.abbreviation, org.body);
+                        },
+                        color: const Color(0xff7598FF))
+                  ],
             child: ListTile(
-              leading: Stack(
-                children: <Widget>[
-                  CircleAvatar(
-                    backgroundImage:
-                        NetworkImage("http://placeimg.com/200/200/people"),
-                  ),
-                  Container(
-                      height: 40,
-                      width: 40,
-                      child: Center(
-                        child: Icon(
-                          Icons.star,
-                          color: Colors.yellow[100],
-                        ),
-                      ))
-                ],
-              ),
-              title: Text(user.name),
-              subtitle: Text(user.company),
+              leading: SizedBox(child: Image.asset(org.logo)),
+              title: Text(org.name),
+              subtitle: Text(org.body,
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: org.body == "COP"
+                          ? const Color(0xff002864)
+                          : org.body == "Student Groups"
+                              ? const Color(0xff1C41B2)
+                              : org.body == "LIONS"
+                                  ? const Color(0xffFF801D)
+                                  : const Color(0xffE84C4C))),
             ),
           ),
-        );
-      } else {
-        normalList.add(
-          Slidable(
-            actionPane: SlidableDrawerActionPane(),
-            actionExtentRatio: 0.25,
-            secondaryActions: <Widget>[
-              IconSlideAction(
-                iconWidget: Icon(Icons.star),
-                onTap: () {},
-              ),
-              IconSlideAction(
-                iconWidget: Icon(Icons.more_horiz),
-                onTap: () {},
-              ),
-            ],
-            child: ListTile(
-              leading: CircleAvatar(
-                backgroundImage:
-                    NetworkImage("http://placeimg.com/200/200/people"),
-              ),
-              title: Text(user.name),
-              subtitle: Text(user.company),
-            ),
-          ),
-        );
-        strList.add(user.name);
-      }
+        ),
+      );
+      strList.add(org.name);
     });
 
     setState(() {
       strList;
-      favouriteList;
       normalList;
       strList;
     });
+  }
+
+  loadJSON() async {
+    var orgResult;
+    String orgs = await rootBundle.loadString('assets/data/orgs.json');
+    orgResult = json.decode(orgs.toString());
+
+    for (int i = 0; i < orgResult.length; i++) {
+      orgList.add(Orgs(
+        orgResult[i]['Name'],
+        orgResult[i]['Abbreviation'],
+        orgResult[i]['Tagline'],
+        orgResult[i]['Website'],
+        orgResult[i]['Facebook'],
+        orgResult[i]['Twitter'],
+        orgResult[i]['Instagram'],
+        orgResult[i]['Description'],
+        orgResult[i]['Advocacy'],
+        orgResult[i]['Core'],
+        orgResult[i]['Awards'],
+        orgResult[i]['projectTitleOne'],
+        orgResult[i]['projectDescOne'],
+        orgResult[i]['projectTitleTwo'],
+        orgResult[i]['projectDescTwo'],
+        orgResult[i]['projectTitleThree'],
+        orgResult[i]['projectDescThree'],
+        orgResult[i]['Vision'],
+        orgResult[i]['Mission'],
+        orgResult[i]['Body'],
+        orgResult[i]['Logo'],
+        orgResult[i]['Cluster'],
+        orgResult[i]['Cover'],
+        orgResult[i]['projectImageOne'],
+        orgResult[i]['projectImageTwo'],
+        orgResult[i]['projectImageThree'],
+      ));
+    }
+
+    orgList
+        .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
+
+    filter();
+  }
+
+  filter() {
+    List<Orgs> orgs = [];
+    normalList = [];
+
+    orgs.addAll(orgList);
+
+    if (searchController.text.isNotEmpty) {
+      orgs.retainWhere((org) =>
+          org.name.toLowerCase().contains(searchController.text.toLowerCase()));
+    }
+    orgs.forEach((org) {
+      normalList.add(
+        GestureDetector(
+          onTap: () {
+            if (org.abbreviation == "COA-M") {
+              return Navigator.push(
+                context,
+                PageTransition(
+                  type: PageTransitionType.leftToRight,
+                  child: new COAScreen(user),
+                ),
+              );
+            } else if (org.abbreviation == "LIONS") {
+              return Navigator.push(
+                context,
+                PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    child: new LionsScreen(user)),
+              );
+            } else {
+              return Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: new OrgTemplateScreen(
+                        user,
+                        org.name,
+                        org.abbreviation,
+                        org.tagline,
+                        org.website,
+                        org.facebook,
+                        org.twitter,
+                        org.instagram,
+                        org.description,
+                        org.advocacy,
+                        org.core,
+                        org.projectImageOne,
+                        org.projectTitleOne,
+                        org.projectDescOne,
+                        org.projectImageTwo,
+                        org.projectTitleTwo,
+                        org.projectDescTwo,
+                        org.projectImageThree,
+                        org.projectTitleThree,
+                        org.projectDescThree,
+                        org.vision,
+                        org.mission,
+                        org.body,
+                        org.logo,
+                        org.cover,                        
+                      )));
+            }
+          },
+          child: Slidable(
+            actionPane: SlidableDrawerActionPane(),
+            actionExtentRatio: 0.25,
+            secondaryActions: imageUrl == ""
+                ? null
+                : <Widget>[
+                    IconSlideAction(
+                        iconWidget:
+                            Image.asset('assets/icons/list_bookmark.png'),
+                        onTap: () {
+                          _onBookmark(org.name, org.abbreviation, org.body);
+                        },
+                        color: const Color(0xff7598FF))
+                  ],
+            child: ListTile(
+              leading: SizedBox(child: Image.asset(org.logo)),
+              title: Text(org.name),
+              subtitle: Text(org.body,
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: org.body == "COP"
+                          ? const Color(0xff002864)
+                          : org.body == "Student Groups"
+                              ? const Color(0xff1C41B2)
+                              : org.body == "LIONS"
+                                  ? const Color(0xffFF801D)
+                                  : const Color(0xffE84C4C))),
+            ),
+          ),
+        ),
+      );
+      strList.add(org.name);
+    });
+    setState(() {
+      // ignore: unnecessary_statements
+      normalList;
+    });
+  }
+
+  void _onBookmark(name, abbreviation, body) async {
+    bool bookmark = false;
+    firestoreInstance
+        .collection("bookmarks-2020-2021")
+        .document('${user.uid}-$name')
+        .get()
+        .then((value) {
+      if (value.data["name"] == name && value.data["bookmark"]) {
+        setState(() {
+          bookmark = true;
+        });
+      } else {
+        setState(() {
+          bookmark = false;
+        });
+      }
+    });
+    if (bookmark) {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${user.uid}-$name')
+          .delete()
+          .then((_) {
+        Fluttertoast.showToast(
+            msg: "You have unbookmarked $name",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    } else {
+      firestoreInstance
+          .collection("bookmarks-2020-2021")
+          .document('${user.uid}-$name')
+          .setData({
+        "id": user.uid,
+        "name": name,
+        "abbreviation": abbreviation,
+        "body": body,
+        "bookmark": true,
+      }).then((_) {
+        Fluttertoast.showToast(
+            msg: "You have bookmarked $name",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.grey,
+            textColor: Colors.white,
+            fontSize: 16.0);
+      });
+    }
   }
 
   @override
@@ -136,42 +376,102 @@ class _ListScreenState extends State<ListScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     var currentStr = "";
     return AlphabetListScrollView(
       strList: strList,
       highlightTextStyle: TextStyle(
-        color: Colors.yellow,
+        color: const Color(0xff295EFF),
       ),
       showPreview: true,
       itemBuilder: (context, index) {
         return normalList[index];
       },
       indexedHeight: (i) {
-        return 80;
+        return 90;
       },
       keyboardUsage: true,
       headerWidgetList: <AlphabetScrollListHeader>[
-        // AlphabetScrollListHeader(widgetList: [
-        //   Padding(
-        //     padding: const EdgeInsets.all(16.0),
-        //     child: TextFormField(
-        //       controller: widget.searchController,
-        //       decoration: InputDecoration(
-        //         border: OutlineInputBorder(),
-        //         suffix: Icon(
-        //           Icons.search,
-        //           color: Colors.grey,
-        //         ),
-        //         labelText: "Search",
-        //       ),
-        //     ),
-        //   )
-        // ], icon: Icon(Icons.search), indexedHeaderHeight: (index) => 80),
-        AlphabetScrollListHeader(
-            widgetList: favouriteList,
-            icon: Icon(Icons.search),
-            indexedHeaderHeight: (index) => 80),
+        AlphabetScrollListHeader(widgetList: [
+          Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(sortStatus,
+                      style: TextStyle(
+                          color: const Color(0xff000000),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16)),
+                  // InkWell(
+                  //     onTap: () {
+                  //       showMaterialModalBottomSheet(
+                  //         context: context,
+                  //         builder: (context, scrollController) =>
+                  //             _sortModal(context, scrollController),
+                  //       );
+                  //     },
+                  //     child: Text(
+                  //       "Sort",
+                  //       style: TextStyle(
+                  //           color: const Color(0xff295EFF), fontSize: 16),
+                  //     ))
+                ],
+              ))
+        ], icon: Icon(Icons.sort_by_alpha), indexedHeaderHeight: (index) => 90),
       ],
     );
   }
+
+  // Widget _sortModal(BuildContext context, scrollController) {
+  //   return Material(
+  //       child: SafeArea(
+  //     top: false,
+  //     child: Column(
+  //       mainAxisSize: MainAxisSize.min,
+  //       children: <Widget>[
+  //         ListTile(
+  //           title: Text(
+  //             'Alphabetical',
+  //             style: TextStyle(
+  //                 color: const Color(0xff295EFF),
+  //                 fontWeight: FontWeight.bold,
+  //                 fontSize: 16),
+  //           ),
+  //           leading: SizedBox(
+  //             child: Image.asset('assets/icons/alphabetical.png'),
+  //             height: 40,
+  //             width: 40,
+  //           ),
+  //           onTap: () {
+  //             setState(() {
+  //               sortStatus = 'Alphabetical';
+  //             });
+  //             Navigator.of(context).pop();
+  //           },
+  //         ),
+  //         ListTile(
+  //           title: Text(
+  //             'Org Bodies',
+  //             style: TextStyle(
+  //                 color: const Color(0xff295EFF),
+  //                 fontWeight: FontWeight.bold,
+  //                 fontSize: 16),
+  //           ),
+  //           leading: SizedBox(
+  //             child: Image.asset('assets/icons/org-bodies.png'),
+  //             height: 40,
+  //             width: 40,
+  //           ),
+  //           onTap: () {
+  //             setState(() {
+  //               sortStatus = 'Org Bodies';
+  //             });
+  //             Navigator.of(context).pop();
+  //           },
+  //         ),
+  //       ],
+  //     ),
+  //   ));
+  // }
 }
