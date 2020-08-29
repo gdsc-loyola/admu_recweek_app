@@ -10,20 +10,20 @@ class Orgs {
   String advocacy;
   String core;
   String awards;
+  String projectImageOne;
   String projectTitleOne;
   String projectDescOne;
+  String projectImageTwo;
   String projectTitleTwo;
   String projectDescTwo;
+  String projectImageThree;
   String projectTitleThree;
   String projectDescThree;
   String vision;
   String mission;
   String body;
   String logo;
-  String cover;
-  String projectImageOne;
-  String projectImageTwo;
-  String projectImageThree;
+  String cover;  
   List<dynamic> cluster;
 
   Orgs(

@@ -107,10 +107,13 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   String _description;
   String _advocacy;
   String _core;
+  String _projectImageOne;
   String _projectTitleOne;
   String _projectDescOne;
+  String _projectImageTwo;
   String _projectTitleTwo;
   String _projectDescTwo;
+  String _projectImageThree;
   String _projectTitleThree;
   String _projectDescThree;
   String _vision;
@@ -118,9 +121,6 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   String _body;
   String _logo;
   String _cover;
-  String _projectImageOne;
-  String _projectImageTwo;
-  String _projectImageThree;
   bool connected = false;
 
   _OrgTemplateScreenState(

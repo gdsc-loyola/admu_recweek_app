@@ -167,7 +167,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          padding: EdgeInsets.symmetric(horizontal: 4.0),
                           child: SizedBox(
                             width: 64,
                             height: 64,
