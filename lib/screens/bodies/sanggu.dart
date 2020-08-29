@@ -1,9 +1,11 @@
+import 'package:admu_recweek_app/screens/empty.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:admu_recweek_app/models/user.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SangguScreen extends StatefulWidget {
   static FirebaseUser _user;
@@ -596,7 +598,8 @@ class _SangguScreenState extends State<SangguScreen> {
                                 Container(
                                   height: 48,
                                   width: 48,
-                                  child: Image.asset('assets/bodies/sanggu/logo.png'),
+                                  child: Image.asset(
+                                      'assets/bodies/sanggu/logo.png'),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 16),
@@ -812,7 +815,12 @@ class _SangguScreenState extends State<SangguScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      launch("https://oursanggu.com/");
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: EmptyScreen()));
+                      // launch("https://oursanggu.com/");
                     },
                     color: const Color(0xff1C41B2),
                     child: Padding(

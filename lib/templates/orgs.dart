@@ -1,5 +1,6 @@
 import 'dart:io';
-
+import 'package:admu_recweek_app/screens/empty.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -581,7 +582,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      launch("https://dscadmu.org/");
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.leftToRight,
+                              child: EmptyScreen()));
+                      // launch("https://dscadmu.org/");
                     },
                     color: const Color(0xff295EFF),
                     child: Padding(
