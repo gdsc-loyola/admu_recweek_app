@@ -58,7 +58,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               onPressed: () => Navigator.push(
                   context,
                   PageTransition(
-                      type: PageTransitionType.leftToRight,
+                      type: PageTransitionType.rightToLeft,
                       child: DSCLoyolaScreen(user))),
               radius: BorderRadius.circular(10),
               color: const Color(0xff1C41B2),
@@ -211,7 +211,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                                                         Navigator.push(
                                                                             context,
                                                                             PageTransition(
-                                                                                type: PageTransitionType.leftToRight,
+                                                                                type: PageTransitionType.rightToLeft,
                                                                                 child: ProductTeamScreen()));
                                                                       },
                                                                       color: const Color(0xff1C41B2),
@@ -232,7 +232,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                                                       context,
                                                                       PageTransition(
                                                                           type: PageTransitionType
-                                                                              .leftToRight,
+                                                                              .rightToLeft,
                                                                           child:
                                                                               DSCLoyolaScreen(user)));
                                                                 },

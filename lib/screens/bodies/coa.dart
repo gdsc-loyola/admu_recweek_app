@@ -326,7 +326,7 @@ class _COAScreenState extends State<COAScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                      type: PageTransitionType.leftToRight,
+                                      type: PageTransitionType.rightToLeft,
                                       child: new GroupsScreen(
                                           COAScreen._user,
                                           "Analysis & Discourse",
@@ -365,7 +365,7 @@ class _COAScreenState extends State<COAScreen> {
                             Navigator.push(
                                 context,
                                 PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: new GroupsScreen(
                                         COAScreen._user,
                                         "Faith & Formation",
@@ -405,7 +405,7 @@ class _COAScreenState extends State<COAScreen> {
                             Navigator.push(
                                 context,
                                 PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: new GroupsScreen(
                                         COAScreen._user,
                                         "Science & Technology",
@@ -447,7 +447,7 @@ class _COAScreenState extends State<COAScreen> {
                           Navigator.push(
                             context,
                             PageTransition(
-                                type: PageTransitionType.leftToRight,
+                                type: PageTransitionType.rightToLeft,
                                 child: new GroupsScreen(COAScreen._user,
                                     "Health & Environment", "COA", healthList)),
                           );
@@ -486,7 +486,7 @@ class _COAScreenState extends State<COAScreen> {
                           Navigator.push(
                               context,
                               PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(
                                       COAScreen._user,
                                       "Intercultural Relations",
@@ -527,7 +527,7 @@ class _COAScreenState extends State<COAScreen> {
                         Navigator.push(
                             context,
                             PageTransition(
-                                type: PageTransitionType.leftToRight,
+                                type: PageTransitionType.rightToLeft,
                                 child: new GroupsScreen(
                                     COAScreen._user,
                                     "Media & the Creative Arts",
@@ -569,7 +569,7 @@ class _COAScreenState extends State<COAScreen> {
                         Navigator.push(
                             context,
                             PageTransition(
-                                type: PageTransitionType.leftToRight,
+                                type: PageTransitionType.rightToLeft,
                                 child: new GroupsScreen(COAScreen._user,
                                     "Business", "COA", bizList)));
                       },
@@ -606,7 +606,7 @@ class _COAScreenState extends State<COAScreen> {
                         Navigator.push(
                             context,
                             PageTransition(
-                                type: PageTransitionType.leftToRight,
+                                type: PageTransitionType.rightToLeft,
                                 child: new GroupsScreen(COAScreen._user,
                                     "Performing Arts", "COA", playList)));
                       },
@@ -644,7 +644,7 @@ class _COAScreenState extends State<COAScreen> {
                           Navigator.push(
                               context,
                               PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(COAScreen._user,
                                       "Sector-Based", "COA", sectorList)));
                         },
@@ -690,7 +690,7 @@ class _COAScreenState extends State<COAScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: EmptyScreen()));
                       // launch("https://lionshub.org/");
                     },

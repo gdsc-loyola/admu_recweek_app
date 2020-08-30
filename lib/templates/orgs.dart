@@ -373,7 +373,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   )),
               _tagline != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
                       child: Text(
                         _tagline,
                         style: TextStyle(fontSize: 16),
@@ -391,7 +392,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _description != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
                       child: Text(
                         _description,
                         style: TextStyle(
@@ -411,7 +413,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _vision != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
                       child: Text(
                         _vision,
                         style: TextStyle(fontSize: 16),
@@ -429,7 +432,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _mission != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
                       child: Text(
                         _mission,
                         style: TextStyle(fontSize: 16),
@@ -447,7 +451,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _advocacy != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
                       child: Text(
                         _advocacy,
                         style: TextStyle(fontSize: 16),
@@ -507,7 +512,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                   : SizedBox.shrink(),
               _projectDescOne != ""
                   ? Padding(
-                      padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+                      padding: const EdgeInsets.only(
+                          bottom: 16, left: 16, right: 16),
                       child: Text(
                         _projectDescOne,
                         style: TextStyle(fontSize: 16),
@@ -583,7 +589,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: EmptyScreen()));
                       // launch("https://dscadmu.org/");
                     },

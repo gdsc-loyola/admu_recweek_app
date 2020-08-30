@@ -172,7 +172,10 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               Stack(
                 children: <Widget>[
                   SizedBox(
-                    child: Image.asset('assets/orgs/lions/covers/DSC.jpg', fit: BoxFit.cover,),
+                    child: Image.asset(
+                      'assets/orgs/lions/covers/DSC.jpg',
+                      fit: BoxFit.cover,
+                    ),
                     height: 200,
                   ),
                   Container(
@@ -375,7 +378,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: EmptyScreen()));
                       // launch("https://dscadmu.org/");
                     },
