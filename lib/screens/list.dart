@@ -84,7 +84,7 @@ class _ListScreenState extends State<ListScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                  type: PageTransitionType.leftToRight,
+                  type: PageTransitionType.rightToLeft,
                   child: new COAScreen(user),
                 ),
               );
@@ -92,14 +92,14 @@ class _ListScreenState extends State<ListScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                    type: PageTransitionType.leftToRight,
+                    type: PageTransitionType.rightToLeft,
                     child: new LionsScreen(user)),
               );
             } else {
               return Navigator.push(
                   context,
                   PageTransition(
-                      type: PageTransitionType.leftToRight,
+                      type: PageTransitionType.rightToLeft,
                       child: new OrgTemplateScreen(
                         user,
                         org.name,
@@ -230,7 +230,7 @@ class _ListScreenState extends State<ListScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                  type: PageTransitionType.leftToRight,
+                  type: PageTransitionType.rightToLeft,
                   child: new COAScreen(user),
                 ),
               );
@@ -238,14 +238,14 @@ class _ListScreenState extends State<ListScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                    type: PageTransitionType.leftToRight,
+                    type: PageTransitionType.rightToLeft,
                     child: new LionsScreen(user)),
               );
             } else {
               return Navigator.push(
                   context,
                   PageTransition(
-                      type: PageTransitionType.leftToRight,
+                      type: PageTransitionType.rightToLeft,
                       child: new OrgTemplateScreen(
                         user,
                         org.name,
@@ -271,7 +271,7 @@ class _ListScreenState extends State<ListScreen> {
                         org.mission,
                         org.body,
                         org.logo,
-                        org.cover,                        
+                        org.cover,
                       )));
             }
           },

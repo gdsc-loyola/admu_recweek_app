@@ -439,7 +439,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           return Navigator.push(
                             context,
                             PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: new SangguScreen(user),
                             ),
                           );

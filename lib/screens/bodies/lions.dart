@@ -335,7 +335,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(LionsScreen._user,
                                       "Adventure", "LIONS", adventureList),
                                 ),
@@ -389,7 +389,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(LionsScreen._user,
                                       "Arts", "LIONS", artsList),
                                 ),
@@ -445,7 +445,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(LionsScreen._user,
                                       "Business", "LIONS", businessList),
                                 ),
@@ -499,7 +499,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(
                                       LionsScreen._user,
                                       "Community Development",
@@ -559,7 +559,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(LionsScreen._user,
                                       "Culture", "LIONS", cultureList),
                                 ),
@@ -613,7 +613,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: new GroupsScreen(LionsScreen._user,
                                         "Design", "LIONS", designList),
                                   ));
@@ -669,7 +669,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: new GroupsScreen(LionsScreen._user,
                                         "Education", "LIONS", educationList),
                                   ));
@@ -722,7 +722,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: new GroupsScreen(
                                         LionsScreen._user,
                                         "Environment",
@@ -781,7 +781,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: new GroupsScreen(LionsScreen._user,
                                         "Home Orgs", "LIONS", homeList),
                                   ));
@@ -834,7 +834,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(
                                       LionsScreen._user,
                                       "International",
@@ -894,7 +894,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                 context,
                                 PageTransition(
-                                  type: PageTransitionType.leftToRight,
+                                  type: PageTransitionType.rightToLeft,
                                   child: new GroupsScreen(LionsScreen._user,
                                       "Language", "LIONS", languageList),
                                 ),
@@ -948,7 +948,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: new GroupsScreen(LionsScreen._user,
                                         "Lifestyle", "LIONS", lifestyleList),
                                   ));
@@ -1004,7 +1004,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                    type: PageTransitionType.leftToRight,
+                                    type: PageTransitionType.rightToLeft,
                                     child: new GroupsScreen(LionsScreen._user,
                                         "Literature", "LIONS", literatureList),
                                   ));
@@ -1057,7 +1057,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                      type: PageTransitionType.leftToRight,
+                                      type: PageTransitionType.rightToLeft,
                                       child: new GroupsScreen(LionsScreen._user,
                                           "Music", "LIONS", musicList)));
                             },
@@ -1112,7 +1112,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                      type: PageTransitionType.leftToRight,
+                                      type: PageTransitionType.rightToLeft,
                                       child: new GroupsScreen(
                                           LionsScreen._user,
                                           "Spiritual",
@@ -1167,7 +1167,7 @@ class _LionsScreenState extends State<LionsScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                      type: PageTransitionType.leftToRight,
+                                      type: PageTransitionType.rightToLeft,
                                       child: new GroupsScreen(
                                           LionsScreen._user,
                                           "Technology",
@@ -1229,7 +1229,7 @@ class _LionsScreenState extends State<LionsScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: EmptyScreen()));
                       // launch("https://lionshub.org/");
                     },
