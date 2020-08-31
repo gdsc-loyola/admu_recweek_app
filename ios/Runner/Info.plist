@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.950023954633-oam8n3vfac2mu5ch46hdtkn4vpjisksn</string>
+				<string>com.googleusercontent.apps.900423780245-tpnrqatbtdci0dgegf29e6ck2a011r6a</string>
 			</array>
 		</dict>
 	</array>
@@ -51,16 +51,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.900423780245-0mrfakrv1rvplm9mj45040kvun2drhnj</string>
-			</array>
-		</dict>
-	</array>
 </dict>
 </plist>
