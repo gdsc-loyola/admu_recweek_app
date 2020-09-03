@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:admu_recweek_app/templates/orgs.dart';
 import 'package:admu_recweek_app/screens/bodies/sanggu.dart';
+import 'package:page_transition/page_transition.dart';
 
 class GroupsScreen extends StatefulWidget {
   final String _title;
@@ -76,25 +77,29 @@ class _GroupsScreenState extends State<GroupsScreen> {
                     "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila") {
                   return Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => new SangguScreen(_user)));
+                      PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: new SangguScreen(_user)));
                 } else if (_orgs[index].name ==
                     "League of Independent Organizations") {
                   return Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => new LionsScreen(_user)));
+                      PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: new LionsScreen(_user)));
                 } else if (_orgs[index].name ==
                     "Council of Organizations of the Ateneo - Manila") {
                   return Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => new COAScreen(_user)));
+                      PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: new COAScreen(_user)));
                 } else {
                   return Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => new OrgTemplateScreen(
+                    PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: new OrgTemplateScreen(
                         _user,
                         _orgs[index].name,
                         _orgs[index].abbreviation,
@@ -120,9 +125,7 @@ class _GroupsScreenState extends State<GroupsScreen> {
                         _orgs[index].body,
                         _orgs[index].logo,
                         _orgs[index].cover,
-                      ),
-                    ),
-                  );
+                      )));
                 }
               },
               child: Container(

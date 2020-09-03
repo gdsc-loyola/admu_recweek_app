@@ -33,7 +33,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
           children: <Widget>[
             Align(
               alignment: Alignment.center,
-              child: Image.asset('assets/orgs/lions/logos/DSC.png'),
+              child: Image.asset(
+                'assets/orgs/lions/logos/DSC.png',
+                width: 60,
+                height: 60,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16),
