@@ -326,7 +326,7 @@ class _COAScreenState extends State<COAScreen> {
                               Navigator.push(
                                   context,
                                   PageTransition(
-                                      type: PageTransitionType.rightToLeft,
+                                      type: PageTransitionType.fade,
                                       child: new GroupsScreen(
                                           COAScreen._user,
                                           "Analysis & Discourse",

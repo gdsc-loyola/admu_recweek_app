@@ -495,7 +495,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       height: 160,
                       margin: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
-                      child: _user != null || !connected
+                      child: (_user != null || !connected) && _projectImageOne != ""
                           ? Image.network(
                               _projectImageOne,
                               fit: BoxFit.cover,
@@ -522,12 +522,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 2
-              _projectTitleThree != "" && _projectDescThree != ""
+              _projectTitleTwo != "" && _projectDescTwo != ""
                   ? Container(
                       height: 160,
                       margin: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
-                      child: _user != null || !connected
+                      child: (_user != null || !connected) && _projectImageTwo != ""
                           ? Image.network(
                               _projectImageTwo,
                               fit: BoxFit.cover,
@@ -559,7 +559,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       height: 160,
                       margin: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
-                      child: _user != null || !connected
+                      child: (_user != null || !connected) && _projectImageThree != ""
                           ? Image.network(
                               _projectImageThree,
                               fit: BoxFit.cover,
@@ -597,7 +597,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.rightToLeft,
+                              type: PageTransitionType.fade,
                               child: EmptyScreen()));
                       // launch("https://dscadmu.org/");
                     },
