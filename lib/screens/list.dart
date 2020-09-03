@@ -69,13 +69,13 @@ class _ListScreenState extends State<ListScreen> {
     strList = [];
 
     if (searchController.text.isNotEmpty) {
-      orgLists.retainWhere(
-        (orgs) => orgs.name.toLowerCase().contains(
-              searchController.text.toLowerCase(),
-            ),
-      );
+      orgLists.retainWhere((org) =>
+          org.name
+              .toLowerCase()
+              .contains(searchController.text.toLowerCase()) ||
+          org.name.toLowerCase().contains(searchController.text.toLowerCase()));
     }
-
+  
     orgLists.forEach((org) {
       normalList.add(
         GestureDetector(
@@ -220,8 +220,12 @@ class _ListScreenState extends State<ListScreen> {
 
     if (searchController.text.isNotEmpty) {
       orgs.retainWhere((org) =>
+          org.name
+              .toLowerCase()
+              .contains(searchController.text.toLowerCase()) ||
           org.name.toLowerCase().contains(searchController.text.toLowerCase()));
     }
+    
     orgs.forEach((org) {
       normalList.add(
         GestureDetector(
