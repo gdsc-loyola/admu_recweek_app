@@ -490,17 +490,19 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 1
-
-              Container(
-                height: 160,
-                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: _user != null || !connected
-                    ? Image.network(
-                        _projectImageOne,
-                        fit: BoxFit.cover,
-                      )
-                    : Image.asset(_logo),
-              ),
+              _projectTitleOne != "" && _projectDescOne != ""
+                  ? Container(
+                      height: 160,
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
+                      child: _user != null || !connected
+                          ? Image.network(
+                              _projectImageOne,
+                              fit: BoxFit.cover,
+                            )
+                          : Image.asset(_logo),
+                    )
+                  : SizedBox.shrink(),
               _projectTitleOne != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -520,16 +522,19 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 2
-              Container(
-                height: 160,
-                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: _user != null || !connected
-                    ? Image.network(
-                        _projectImageTwo,
-                        fit: BoxFit.cover,
-                      )
-                    : Image.asset(_logo),
-              ),
+              _projectTitleThree != "" && _projectDescThree != ""
+                  ? Container(
+                      height: 160,
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
+                      child: _user != null || !connected
+                          ? Image.network(
+                              _projectImageTwo,
+                              fit: BoxFit.cover,
+                            )
+                          : Image.asset(_logo),
+                    )
+                  : SizedBox.shrink(),
               _projectTitleTwo != ""
                   ? Padding(
                       padding: const EdgeInsets.only(left: 16, right: 16),
@@ -549,16 +554,19 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 3
-              Container(
-                height: 160,
-                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: _user != null || !connected
-                    ? Image.network(
-                        _projectImageThree,
-                        fit: BoxFit.cover,
-                      )
-                    : Image.asset(_logo),
-              ),
+              _projectTitleThree != "" && _projectDescThree != ""
+                  ? Container(
+                      height: 160,
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
+                      child: _user != null || !connected
+                          ? Image.network(
+                              _projectImageThree,
+                              fit: BoxFit.cover,
+                            )
+                          : Image.asset(_logo),
+                    )
+                  : SizedBox.shrink(),
               _projectTitleThree != ""
                   ? Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
