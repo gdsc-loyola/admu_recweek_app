@@ -171,10 +171,26 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
             children: <Widget>[
               Stack(
                 children: <Widget>[
-                  SizedBox(
-                    child: Image.asset('assets/orgs/lions/covers/DSC.jpg', fit: BoxFit.cover,),
-                    height: 200,
-                  ),
+                  Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        color: const Color(0xffFFFFFF),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xff000000).withOpacity(0.05),
+                            spreadRadius: 1,
+                            blurRadius: 2,
+                            offset: Offset(0, 4), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: SizedBox(
+                          height: 200,
+                          width: double.infinity,
+                          child: Image.asset(
+                            "assets/orgs/lions/covers/DSC.jpg",
+                            fit: BoxFit.cover,
+                          ))),
                   Container(
                     alignment: Alignment.bottomCenter,
                     padding: EdgeInsets.symmetric(horizontal: 16),
@@ -182,15 +198,11 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 4.0),
-                          child: SizedBox(
+                        SizedBox(
                             width: 64,
                             height: 64,
                             child:
-                                Image.asset('assets/orgs/lions/logos/DSC.png'),
-                          ),
-                        ),
+                                Image.asset('assets/orgs/lions/logos/DSC.png')),
                         Row(children: <Widget>[
                           InkWell(
                             child: Image.asset('assets/icons/web.png'),
