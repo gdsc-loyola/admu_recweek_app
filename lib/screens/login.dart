@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
   List<Orgs> groupList = [];
   int counter = 0;
   bool connected = false;
-
+  Future _future;
   @override
   void initState() {
     super.initState();
@@ -54,6 +54,8 @@ class _LoginScreenState extends State<LoginScreen> {
           connected = false;
         });
       }
+
+      _future = loadJSON();
     });
   }
 
@@ -290,10 +292,10 @@ class _LoginScreenState extends State<LoginScreen> {
     return BaseWidget(builder: (context, sizeInfo) {
       return Scaffold(
         body: FutureBuilder(
-          future: loadJSON(),
-          builder: (context, snapshot) {
+          future: _future,
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting)
-              return const Center(
+              return Center(
                 child: CircularProgressIndicator(),
               );
 
@@ -431,7 +433,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void onGoogleSignIn(BuildContext context) async {
     FirebaseUser user = await _handleSignIn();
-    var userSignedIn = await Navigator.push(
+    var userSignedIn = Navigator.push(
       context,
       PageTransition(
         type: PageTransitionType.fade,
