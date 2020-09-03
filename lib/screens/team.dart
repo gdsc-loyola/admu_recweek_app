@@ -41,7 +41,7 @@ class ProductTeamScreen extends StatelessWidget {
                     child: Image.asset('assets/team/ceek.png'),
                   )),
                   Padding(
-                      padding: const EdgeInsets.only(top: 0),
+                      padding: const EdgeInsets.only(top: 8),
                       child: new Text(
                         "Cedric Atienza",
                         textAlign: TextAlign.center,
@@ -73,7 +73,7 @@ class ProductTeamScreen extends StatelessWidget {
                     child: Image.asset('assets/team/harvs.png'),
                   )),
                   Padding(
-                      padding: const EdgeInsets.only(top: 0),
+                      padding: const EdgeInsets.only(top: 8),
                       child: new Text(
                         "Harvey Sison",
                         textAlign: TextAlign.center,

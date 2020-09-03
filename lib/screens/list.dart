@@ -69,11 +69,11 @@ class _ListScreenState extends State<ListScreen> {
     strList = [];
 
     if (searchController.text.isNotEmpty) {
-      orgLists.retainWhere(
-        (orgs) => orgs.name.toLowerCase().contains(
-              searchController.text.toLowerCase(),
-            ),
-      );
+      orgLists.retainWhere((org) =>
+          org.name
+              .toLowerCase()
+              .contains(searchController.text.toLowerCase()) ||
+      org.abbreviation.toLowerCase().contains(searchController.text.toLowerCase()));
     }
 
     orgLists.forEach((org) {
@@ -84,7 +84,7 @@ class _ListScreenState extends State<ListScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                  type: PageTransitionType.leftToRight,
+                  type: PageTransitionType.rightToLeft,
                   child: new COAScreen(user),
                 ),
               );
@@ -92,14 +92,14 @@ class _ListScreenState extends State<ListScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                    type: PageTransitionType.leftToRight,
+                    type: PageTransitionType.rightToLeft,
                     child: new LionsScreen(user)),
               );
             } else {
               return Navigator.push(
                   context,
                   PageTransition(
-                      type: PageTransitionType.leftToRight,
+                      type: PageTransitionType.rightToLeft,
                       child: new OrgTemplateScreen(
                         user,
                         org.name,
@@ -145,7 +145,7 @@ class _ListScreenState extends State<ListScreen> {
                   ],
             child: ListTile(
               leading: SizedBox(child: Image.asset(org.logo)),
-              title: Text(org.name),
+              title: Text(org.abbreviation),
               subtitle: Text(org.body,
                   style: TextStyle(
                       fontSize: 12,
@@ -160,7 +160,7 @@ class _ListScreenState extends State<ListScreen> {
           ),
         ),
       );
-      strList.add(org.name);
+      strList.add(org.abbreviation);
     });
 
     setState(() {
@@ -220,8 +220,12 @@ class _ListScreenState extends State<ListScreen> {
 
     if (searchController.text.isNotEmpty) {
       orgs.retainWhere((org) =>
-          org.name.toLowerCase().contains(searchController.text.toLowerCase()));
+          org.name
+              .toLowerCase()
+              .contains(searchController.text.toLowerCase()) ||
+          org.abbreviation.toLowerCase().contains(searchController.text.toLowerCase()));
     }
+    
     orgs.forEach((org) {
       normalList.add(
         GestureDetector(
@@ -230,7 +234,7 @@ class _ListScreenState extends State<ListScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                  type: PageTransitionType.leftToRight,
+                  type: PageTransitionType.rightToLeft,
                   child: new COAScreen(user),
                 ),
               );
@@ -238,14 +242,14 @@ class _ListScreenState extends State<ListScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                    type: PageTransitionType.leftToRight,
+                    type: PageTransitionType.rightToLeft,
                     child: new LionsScreen(user)),
               );
             } else {
               return Navigator.push(
                   context,
                   PageTransition(
-                      type: PageTransitionType.leftToRight,
+                      type: PageTransitionType.rightToLeft,
                       child: new OrgTemplateScreen(
                         user,
                         org.name,
@@ -271,7 +275,7 @@ class _ListScreenState extends State<ListScreen> {
                         org.mission,
                         org.body,
                         org.logo,
-                        org.cover,                        
+                        org.cover,
                       )));
             }
           },
@@ -291,7 +295,7 @@ class _ListScreenState extends State<ListScreen> {
                   ],
             child: ListTile(
               leading: SizedBox(child: Image.asset(org.logo)),
-              title: Text(org.name),
+              title: Text(org.abbreviation),
               subtitle: Text(org.body,
                   style: TextStyle(
                       fontSize: 12,
@@ -306,7 +310,7 @@ class _ListScreenState extends State<ListScreen> {
           ),
         ),
       );
-      strList.add(org.name);
+      strList.add(org.abbreviation);
     });
     setState(() {
       // ignore: unnecessary_statements

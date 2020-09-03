@@ -597,7 +597,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.leftToRight,
+                              type: PageTransitionType.rightToLeft,
                               child: EmptyScreen()));
                       // launch("https://dscadmu.org/");
                     },

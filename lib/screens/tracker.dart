@@ -181,25 +181,25 @@ class _TrackerScreenState extends State<TrackerScreen> {
                   return Navigator.push(
                       context,
                       PageTransition(
-                          type: PageTransitionType.leftToRight,
+                          type: PageTransitionType.rightToLeft,
                           child: new COAScreen(user)));
                 } else if (org.abbreviation == "LIONS") {
                   return Navigator.push(
                       context,
                       PageTransition(
-                          type: PageTransitionType.leftToRight,
+                          type: PageTransitionType.rightToLeft,
                           child: new LionsScreen(user)));
                 } else if (org.abbreviation == "Sanggu") {
                   return Navigator.push(
                       context,
                       PageTransition(
-                          type: PageTransitionType.leftToRight,
+                          type: PageTransitionType.rightToLeft,
                           child: new SangguScreen(user)));
                 } else {
                   return Navigator.push(
                       context,
                       PageTransition(
-                          type: PageTransitionType.leftToRight,
+                          type: PageTransitionType.rightToLeft,
                           child: new OrgTemplateScreen(
                             user,
                             org.name,
@@ -298,25 +298,25 @@ class _TrackerScreenState extends State<TrackerScreen> {
                     return Navigator.push(
                         context,
                         PageTransition(
-                            type: PageTransitionType.leftToRight,
+                            type: PageTransitionType.rightToLeft,
                             child: new COAScreen(user)));
                   } else if (org.abbreviation == "LIONS") {
                     return Navigator.push(
                         context,
                         PageTransition(
-                            type: PageTransitionType.leftToRight,
+                            type: PageTransitionType.rightToLeft,
                             child: new LionsScreen(user)));
                   } else if (org.abbreviation == "Sanggu") {
                     return Navigator.push(
                         context,
                         PageTransition(
-                            type: PageTransitionType.leftToRight,
+                            type: PageTransitionType.rightToLeft,
                             child: new SangguScreen(user)));
                   } else {
                     return Navigator.push(
                       context,
                       PageTransition(
-                          type: PageTransitionType.leftToRight,
+                          type: PageTransitionType.rightToLeft,
                           child: new OrgTemplateScreen(
                             user,
                             org.name,

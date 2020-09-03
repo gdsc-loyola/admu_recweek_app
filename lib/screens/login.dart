@@ -140,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                  type: PageTransitionType.leftToRight,
+                  type: PageTransitionType.rightToLeft,
                   child: new COAScreen(user),
                 ),
               );
@@ -148,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                  type: PageTransitionType.leftToRight,
+                  type: PageTransitionType.rightToLeft,
                   child: new LionsScreen(user),
                 ),
               );
@@ -156,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
               return Navigator.push(
                 context,
                 PageTransition(
-                  type: PageTransitionType.leftToRight,
+                  type: PageTransitionType.rightToLeft,
                   child: new OrgTemplateScreen(
                     user,
                     org.name,
