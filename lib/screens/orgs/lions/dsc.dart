@@ -171,7 +171,6 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
             children: <Widget>[
               Stack(
                 children: <Widget>[
-
                   Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -192,7 +191,6 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                             "assets/orgs/lions/covers/DSC.jpg",
                             fit: BoxFit.cover,
                           ))),
-
                   Container(
                     alignment: Alignment.bottomCenter,
                     padding: EdgeInsets.symmetric(horizontal: 16),
