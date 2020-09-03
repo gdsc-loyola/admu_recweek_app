@@ -54,6 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
           connected = false;
         });
       }
+      onGoogleSignIn(context);
     });
   }
 
@@ -296,7 +297,6 @@ class _LoginScreenState extends State<LoginScreen> {
               return const Center(
                 child: CircularProgressIndicator(),
               );
-
             if (snapshot.hasData)
               return Container(
                 color: Colors.white,
