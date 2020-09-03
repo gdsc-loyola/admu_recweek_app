@@ -1,3 +1,4 @@
+import 'package:admu_recweek_app/controllers/push_nofitications.dart';
 import 'package:admu_recweek_app/models/orgs.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -42,6 +43,13 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   static ScrollController scrollController;
   static TextEditingController searchController = new TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    PushNotificationsManager().init(context);
+  }
 
   var pages = [
     HomeScreen(MainScreen._copList, MainScreen._groupList, MainScreen._orgList,

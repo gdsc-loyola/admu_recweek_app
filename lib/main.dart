@@ -25,13 +25,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:admu_recweek_app/screens/login.dart';
-import 'package:admu_recweek_app/controllers/push_nofitications.dart';
 import 'package:admu_recweek_app/widgets/base-widget.dart';
 
 void main() {
   runApp(MyApp());
   WidgetsFlutterBinding.ensureInitialized();
-  PushNotificationsManager().init();
 }
 
 class MyApp extends StatelessWidget {
