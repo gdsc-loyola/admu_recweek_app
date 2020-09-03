@@ -253,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ],
                                 ),
                                 width: MediaQuery.of(context).size.width / 2.5,
-                                child: Stack(
+                                child: Column(
                                   //crossAxisAlignment: CrossAxisAlignment.center,
                                   // mainAxisSize: MainAxisSize.max,
                                   // mainAxisAlignment: MainAxisAlignment.center,
@@ -347,7 +347,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ],
                               ),
                               width: MediaQuery.of(context).size.width / 2.5,
-                              child: Stack(
+                              child: Column(
                                 //crossAxisAlignment: CrossAxisAlignment.center,
                                 // mainAxisSize: MainAxisSize.max,
                                 // mainAxisAlignment: MainAxisAlignment.center,
@@ -369,14 +369,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                           textAlign: TextAlign.center,
                                         )),
                                   ),
-                                  Align(
-                                    alignment: Alignment.center,
-                                    child: Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Image.asset(
-                                        "assets/bodies/student-groups/logos.png",
-                                        //fit: BoxFit.fitHeight,
-                                        //height: 60,
+                                  Expanded(
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Image.asset(
+                                          "assets/bodies/student-groups/logos.png",
+                                          //fit: BoxFit.fitHeight,
+                                          //height: 60,
+                                        ),
                                       ),
                                     ),
                                   ),
