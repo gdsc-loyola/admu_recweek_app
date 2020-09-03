@@ -73,7 +73,7 @@ class _ListScreenState extends State<ListScreen> {
           org.name
               .toLowerCase()
               .contains(searchController.text.toLowerCase()) ||
-          org.name.toLowerCase().contains(searchController.text.toLowerCase()));
+          org.abbreviation.toLowerCase().contains(searchController.text.toLowerCase()));
     }
   
     orgLists.forEach((org) {
@@ -223,7 +223,7 @@ class _ListScreenState extends State<ListScreen> {
           org.name
               .toLowerCase()
               .contains(searchController.text.toLowerCase()) ||
-          org.name.toLowerCase().contains(searchController.text.toLowerCase()));
+          org.abbreviation.toLowerCase().contains(searchController.text.toLowerCase()));
     }
     
     orgs.forEach((org) {
