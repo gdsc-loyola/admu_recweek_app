@@ -145,7 +145,7 @@ class _ListScreenState extends State<ListScreen> {
                   ],
             child: ListTile(
               leading: SizedBox(child: Image.asset(org.logo)),
-              title: Text(org.name),
+              title: Text(org.abbreviation),
               subtitle: Text(org.body,
                   style: TextStyle(
                       fontSize: 12,
@@ -160,7 +160,7 @@ class _ListScreenState extends State<ListScreen> {
           ),
         ),
       );
-      strList.add(org.name);
+      strList.add(org.abbreviation);
     });
 
     setState(() {
@@ -291,7 +291,7 @@ class _ListScreenState extends State<ListScreen> {
                   ],
             child: ListTile(
               leading: SizedBox(child: Image.asset(org.logo)),
-              title: Text(org.name),
+              title: Text(org.abbreviation),
               subtitle: Text(org.body,
                   style: TextStyle(
                       fontSize: 12,
@@ -306,7 +306,7 @@ class _ListScreenState extends State<ListScreen> {
           ),
         ),
       );
-      strList.add(org.name);
+      strList.add(org.abbreviation);
     });
     setState(() {
       // ignore: unnecessary_statements
