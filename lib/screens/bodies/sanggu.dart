@@ -818,7 +818,7 @@ class _SangguScreenState extends State<SangguScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.rightToLeft,
+                              type: PageTransitionType.fade,
                               child: EmptyScreen()));
                       // launch("https://oursanggu.com/");
                     },

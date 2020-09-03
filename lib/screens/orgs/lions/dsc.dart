@@ -387,7 +387,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.rightToLeft,
+                              type: PageTransitionType.fade,
                               child: EmptyScreen()));
                       // launch("https://dscadmu.org/");
                     },

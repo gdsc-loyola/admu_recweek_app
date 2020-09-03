@@ -1229,7 +1229,7 @@ class _LionsScreenState extends State<LionsScreen> {
                       Navigator.push(
                           context,
                           PageTransition(
-                              type: PageTransitionType.rightToLeft,
+                              type: PageTransitionType.fade,
                               child: EmptyScreen()));
                       // launch("https://lionshub.org/");
                     },
