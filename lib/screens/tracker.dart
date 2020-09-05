@@ -329,10 +329,13 @@ class _TrackerScreenState extends State<TrackerScreen> {
                             org.description,
                             org.advocacy,
                             org.core,
+                            org.projectImageOne,
                             org.projectTitleOne,
                             org.projectDescOne,
+                            org.projectImageTwo,
                             org.projectTitleTwo,
                             org.projectDescTwo,
+                            org.projectImageThree,
                             org.projectTitleThree,
                             org.projectDescThree,
                             org.vision,
@@ -340,9 +343,6 @@ class _TrackerScreenState extends State<TrackerScreen> {
                             org.body,
                             org.logo,
                             org.cover,
-                            org.projectImageOne,
-                            org.projectImageTwo,
-                            org.projectImageThree,
                           )),
                     );
                   }
