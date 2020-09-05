@@ -2431,7 +2431,7 @@
 		"Cover": "assets/orgs/lions/covers/CYA.JPG"
 	},
 	{
-		"Cluster": ["Literature"],
+		"Cluster": ["Literature", "Home Org"],
 		"Name": "League of Atenean Historians (LAHi)",
 		"Abbreviation": "LAHi",
 		"Tagline": "Make History Your Story!",
@@ -2577,7 +2577,7 @@
 		"Cover": "assets/orgs/lions/covers/AGILA.png"
 	},
 	{
-		"Cluster": ["Arts", "Design"],
+		"Cluster": ["Arts", "Design", "Home Org"],
 		"Name": "DECO",
 		"Abbreviation": "DECO",
 		"Tagline": "Your home for graphic designers. ",
