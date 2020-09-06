@@ -213,7 +213,7 @@ class ProductTeamScreen extends StatelessWidget {
                   Padding(
                       padding: const EdgeInsets.only(top: 0),
                       child: new Text(
-                        "Research and Externals",
+                        "Data Engineer",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: const Color(0xff000000), fontSize: 12),
