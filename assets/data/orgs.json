@@ -656,13 +656,13 @@
 		"Advocacy": "A+: YFCs being models of excellence esp. when it comes to their education\nG-Project: for a greener generation, YFCs as God's stewards of creation\nRev-up: uplifting the poor, being God's instruments to help others in need of help\n100% free: freedom in/with God, living life to the fullest",
 		"Core": "Creative Evangelization \nHousehold Community Building",
 		"Awards": "",
-		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Ffaith-formation%2Fatsca%2FimageOne.jpg?alt=media&token=d0aaf8a7-ff50-46e4-89a6-428043ed5a4e",
+		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Ffaith-formation%2Fyfc%2FimageOne.jpg?alt=media&token=7467e99b-a105-4244-abc7-4da00c9ca1a2",
 		"projectTitleOne": "Youth Camp",
 		"projectDescOne": "Youth Camp is a three-day, two-night retreat that serves as an official entry into YFC-A and a way to enter into a fruitful relationship with God through various talks and activities.",
-		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Ffaith-formation%2Fatsca%2FimageTwo.jpg?alt=media&token=e3559edf-af36-4c3b-9863-c67aadfeaeac",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Ffaith-formation%2Fyfc%2FimageTwo.jpg?alt=media&token=222404c8-5baa-47d3-b4e2-d08c1c94302e",
 		"projectTitleTwo": "Household Kamustahan",
 		"projectDescTwo": "Kumustahan is a semestral event that allows YFC-A members to interact with their households and other organization members in a day of fun, faith, freedom, and friendship.",
-		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Ffaith-formation%2Fatsca%2FimageThree.jpg?alt=media&token=64e6d1b9-d6ae-4ada-8eec-ae1ee605d4fe",
+		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Ffaith-formation%2Fyfc%2FimageThree.jpg?alt=media&token=87d6c79b-41ef-4b6a-a80a-07317ce0270f",
 		"projectTitleThree": "Worship Day",
 		"projectDescThree": "Worship Day is an event that showcases different avenues of worship, such as song, dance, spoken word, and bible reflection.",
 		"Vision": "",
@@ -1178,7 +1178,7 @@
 	{
 		"Cluster": ["Performing Arts Cluster (PAC)"],
 		"Name": "Ateneo Blue Repertory",
-		"Abbreviation": "blueREP",
+		"Abbreviation": "Ateneo blueREP",
 		"Tagline": "Be anything, be blueREP!",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/blueREPERTORY",
@@ -1598,7 +1598,7 @@
 	{
 		"Cluster": ["Sector-Based Cluster (SBC)"],
 		"Name": "Musmos Ateneo",
-		"Abbreviation": " MUSMOS",
+		"Abbreviation": "MUSMOS",
 		"Tagline": "Pangarap, hindi panaginip",
 		"Website": "",
 		"Facebook": "https://www.facebook.com/musmosateneo/ ",
@@ -1917,7 +1917,7 @@
 		"Mission": "Our mission is to provide programs, diet plans and support that every fitness enthusiast or gym goer needs through projects and team building activities geared to promote a health and wellness to its community",
 		"Body": "LIONS",
 		"Logo": "assets/orgs/lions/logos/FIT.png",
-		"Cover": ""
+		"Cover": "assets/orgs/lions/logos/FIT.png"
 	},
 	{
 		"Cluster": ["Arts"],
@@ -2197,7 +2197,7 @@
 		"Mission": "To equip both its members, as well as people outside the organization, with sound Financial skills to utilize in everyday Financial situations through its various talks, training seminars, an programs.",
 		"Body": "LIONS",
 		"Logo": "assets/orgs/lions/logos/JFEL.png",
-		"Cover": ""
+		"Cover": "assets/orgs/lions/covers/jfel.jpg"
 	},
 	{
 		"Cluster": ["Home Org", "Technology"],
@@ -2307,7 +2307,7 @@
 		"projectTitleOne": "UX&Chill",
 		"projectDescOne": "An online conference wherein User Experience design professionals share about their work and their passion for design and development.",
 		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fuxsoc%2FImageTwo.jpg?alt=media&token=991962d7-906d-416c-aee9-2f37279dd878",
-		"projectTitleTwo": " UX University",
+		"projectTitleTwo": "UX University",
 		"projectDescTwo": "A case competition to hone members' problem-solving skills to create human-centered design for the community. ",
 		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fuxsoc%2FImageThree.jpg?alt=media&token=0cbfc9dd-d5d3-495b-9d20-c39d12f1506e",
 		"projectTitleThree": "UX Masters",
@@ -2431,7 +2431,7 @@
 		"Cover": "assets/orgs/lions/covers/CYA.JPG"
 	},
 	{
-		"Cluster": ["Literature"],
+		"Cluster": ["Literature", "Home Org"],
 		"Name": "League of Atenean Historians (LAHi)",
 		"Abbreviation": "LAHi",
 		"Tagline": "Make History Your Story!",
@@ -2577,7 +2577,7 @@
 		"Cover": "assets/orgs/lions/covers/AGILA.png"
 	},
 	{
-		"Cluster": ["Arts", "Design"],
+		"Cluster": ["Arts", "Design", "Home Org"],
 		"Name": "DECO",
 		"Abbreviation": "DECO",
 		"Tagline": "Your home for graphic designers. ",

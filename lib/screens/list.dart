@@ -207,7 +207,7 @@ class _ListScreenState extends State<ListScreen> {
     }
 
     orgList
-        .sort((x, y) => x.name.toLowerCase().compareTo(y.name.toLowerCase()));
+        .sort((x, y) => x.abbreviation.toLowerCase().compareTo(y.abbreviation.toLowerCase()));
 
     filter();
   }

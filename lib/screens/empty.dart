@@ -18,7 +18,7 @@ class EmptyScreen extends StatelessWidget {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Text("Oh no! The website isn't out yet",
+                  Text("Oh no! The website isn't out yet.",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: const Color(0xff295EFF),
