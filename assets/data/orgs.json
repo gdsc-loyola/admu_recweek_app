@@ -869,7 +869,7 @@
 	},
 	{
 		"Cluster": ["Intercultural Relations Cluster (IRC)"],
-		"Name": "Ateneo Lingua Ars Cultura",
+		"Name": "Ateneo Lingua Arts Cultura",
 		"Abbreviation": "ALAC",
 		"Tagline": "#MakeYourMark",
 		"Website": "",
@@ -1917,7 +1917,7 @@
 		"Mission": "Our mission is to provide programs, diet plans and support that every fitness enthusiast or gym goer needs through projects and team building activities geared to promote a health and wellness to its community",
 		"Body": "LIONS",
 		"Logo": "assets/orgs/lions/logos/FIT.png",
-		"Cover": ""
+		"Cover": "assets/orgs/lions/logos/FIT.png"
 	},
 	{
 		"Cluster": ["Arts"],
