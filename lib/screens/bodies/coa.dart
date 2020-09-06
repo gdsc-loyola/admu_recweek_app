@@ -260,7 +260,8 @@ class _COAScreenState extends State<COAScreen> {
               AutoSizeText(
                 "Council of Organizations - Ateneo",
                 maxLines: 1,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,),
+                textAlign: TextAlign.center,
               ),
               Stack(
                 children: <Widget>[

@@ -307,7 +307,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: !connected
+                child: connected
                     ? Image.network(
                         "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fdsc-loyola%2FImageOne.jpg?alt=media&token=2f5d1f87-f753-4e2c-b037-945ec21bebf9",
                         fit: BoxFit.cover,
@@ -331,7 +331,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: !connected
+                child: connected
                     ? Image.network(
                         "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fdsc-loyola%2FImageTwo.JPG?alt=media&token=65f9aee0-723f-46e5-972d-b7921fec97fb",
                         fit: BoxFit.cover,
@@ -355,7 +355,7 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               Container(
                 height: 160,
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                child: !connected
+                child: connected
                     ? Image.network(
                         "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fdsc-loyola%2FImageThree.JPG?alt=media&token=928d9920-0f62-4ac2-a784-3bd0b892185f",
                         fit: BoxFit.cover,
