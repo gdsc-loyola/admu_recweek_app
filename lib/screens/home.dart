@@ -527,13 +527,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Padding(
                                   padding: EdgeInsets.all(8.0),
                                   child: Text(
-                                    orgList[randomNumber].name,
+                                    orgList[randomNumber].abbreviation,
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: const Color(0xFFFFFFFF),
                                     ),
-                                    maxLines: 2,
+                                    maxLines: 3,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
