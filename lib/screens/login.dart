@@ -497,7 +497,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold))));
     } else {
-      return SizedBox(height: 1);
+      return SizedBox.shrink();
     }
   }
 }
