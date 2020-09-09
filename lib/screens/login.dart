@@ -443,7 +443,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget apple() {
-    if (!Platform.isIOS) {
+    if (Platform.isIOS) {
       return SizedBox(
           width: 260,
           child: SignInWithAppleButton(
