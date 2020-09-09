@@ -491,6 +491,7 @@ class _LoginScreenState extends State<LoginScreen> {
             },
         )
       );
+
     } else {
       return SizedBox.shrink();
     }
