@@ -17,6 +17,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'bodies/lions.dart';
+import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -329,36 +330,25 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Column(
                           children: <Widget>[
-                            SizedBox(
-                              height: 56,
-                              width: 260,
-                            child: FlatButton(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                onPressed: () {
-                                  if (connected) {
-                                    onGoogleSignIn(context);
-                                  } else {
-                                    Fluttertoast.showToast(
-                                        msg:
-                                            "You have no internet connection. Please continue offline.",
-                                        toastLength: Toast.LENGTH_SHORT,
-                                        gravity: ToastGravity.BOTTOM,
-                                        timeInSecForIosWeb: 1,
-                                        backgroundColor: Colors.grey,
-                                        textColor: Colors.white,
-                                        fontSize: 16.0);
-                                  }
-                                },
-                                color: const Color(0xff295EFF),
-                                child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Text('Sign in with Google',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20.0,
-                                            fontWeight: FontWeight.bold))))),
+                            GoogleSignInButton(
+                              borderRadius: 15.0,
+                              onPressed: () {
+                                if (connected) {
+                                  onGoogleSignIn(context);
+                                } else {
+                                  Fluttertoast.showToast(
+                                      msg:
+                                          "You have no internet connection. Please continue offline.",
+                                      toastLength: Toast.LENGTH_SHORT,
+                                      gravity: ToastGravity.BOTTOM,
+                                      timeInSecForIosWeb: 1,
+                                      backgroundColor: Colors.grey,
+                                      textColor: Colors.white,
+                                      fontSize: 16.0);
+                                }
+                              },
+                              textStyle: TextStyle(fontSize: 20.5),
+                            ),
                             SizedBox(height: 10),
                             apple(),
                             Padding(
@@ -453,12 +443,13 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget apple() {
-    if (Platform.isIOS) {
+    if (!Platform.isIOS) {
       return SizedBox(
-        width: 260,
-        height: 56,
-        child: SignInWithAppleButton(
-          borderRadius: BorderRadius.all(Radius.circular(15.0),),
+          width: 260,
+          child: SignInWithAppleButton(
+            borderRadius: BorderRadius.all(
+              Radius.circular(15.0),
+            ),
             onPressed: () async {
               final credential = await SignInWithApple.getAppleIDCredential(
                 scopes: [
@@ -489,9 +480,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 });
               }
             },
-        )
-      );
-
+          ));
     } else {
       return SizedBox.shrink();
     }
