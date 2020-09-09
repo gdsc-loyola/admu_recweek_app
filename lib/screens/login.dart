@@ -17,6 +17,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:admu_recweek_app/models/user.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'bodies/lions.dart';
+import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -55,7 +56,9 @@ class _LoginScreenState extends State<LoginScreen> {
           connected = false;
         });
       }
-      onGoogleSignIn(context);
+      if (connected) {
+        onGoogleSignIn(context);
+      }
       _future = loadJSON();
     });
   }
@@ -329,33 +332,25 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Column(
                           children: <Widget>[
-                            FlatButton(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                onPressed: () {
-                                  if (connected) {
-                                    onGoogleSignIn(context);
-                                  } else {
-                                    Fluttertoast.showToast(
-                                        msg:
-                                            "You have no internet connection. Please continue offline.",
-                                        toastLength: Toast.LENGTH_SHORT,
-                                        gravity: ToastGravity.BOTTOM,
-                                        timeInSecForIosWeb: 1,
-                                        backgroundColor: Colors.grey,
-                                        textColor: Colors.white,
-                                        fontSize: 16.0);
-                                  }
-                                },
-                                color: const Color(0xff295EFF),
-                                child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Text('Sign in with Google',
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 24.0,
-                                            fontWeight: FontWeight.bold)))),
+                            GoogleSignInButton(
+                              borderRadius: 15.0,
+                              onPressed: () {
+                                if (connected) {
+                                  onGoogleSignIn(context);
+                                } else {
+                                  Fluttertoast.showToast(
+                                      msg:
+                                          "You have no internet connection. Please continue offline.",
+                                      toastLength: Toast.LENGTH_SHORT,
+                                      gravity: ToastGravity.BOTTOM,
+                                      timeInSecForIosWeb: 1,
+                                      backgroundColor: Colors.grey,
+                                      textColor: Colors.white,
+                                      fontSize: 16.0);
+                                }
+                              },
+                              textStyle: TextStyle(fontSize: 20.5),
+                            ),
                             SizedBox(height: 10),
                             apple(),
                             Padding(
@@ -451,51 +446,43 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget apple() {
     if (Platform.isIOS) {
-      return OutlineButton(
-          borderSide: BorderSide(
-            color: const Color(0xff295EFF),
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          onPressed: () async {
-            final credential = await SignInWithApple.getAppleIDCredential(
-              scopes: [
-                AppleIDAuthorizationScopes.email,
-                AppleIDAuthorizationScopes.fullName,
-              ],
-            );
-
-            if (credential.authorizationCode != null) {
-              Navigator.push(
-                context,
-                PageTransition(
-                  type: PageTransitionType.fade,
-                  child: MainScreen(
-                    orgList,
-                    normalList,
-                    strList,
-                    copList,
-                    groupList,
-                  ),
-                ),
+      return SizedBox(
+          width: 260,
+          child: SignInWithAppleButton(
+            borderRadius: BorderRadius.all(
+              Radius.circular(15.0),
+            ),
+            onPressed: () async {
+              final credential = await SignInWithApple.getAppleIDCredential(
+                scopes: [
+                  AppleIDAuthorizationScopes.email,
+                  AppleIDAuthorizationScopes.fullName,
+                ],
               );
-              setState(() {
-                firstName = credential.givenName;
-                email = credential.email;
-                imageUrl = "";
-                displayName = credential.givenName;
-              });
-            }
-          },
-          color: Colors.white,
-          child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text('Sign in with Apple ',
-                  style: TextStyle(
-                      color: const Color(0xff295EFF),
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold))));
+
+              if (credential.authorizationCode != null) {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    child: MainScreen(
+                      orgList,
+                      normalList,
+                      strList,
+                      copList,
+                      groupList,
+                    ),
+                  ),
+                );
+                setState(() {
+                  firstName = credential.givenName;
+                  email = credential.email;
+                  imageUrl = "";
+                  displayName = credential.givenName;
+                });
+              }
+            },
+          ));
     } else {
       return SizedBox.shrink();
     }
