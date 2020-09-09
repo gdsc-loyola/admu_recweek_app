@@ -15,6 +15,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:admu_recweek_app/screens/main.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:admu_recweek_app/models/user.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'bodies/lions.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -355,6 +356,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                             color: Colors.white,
                                             fontSize: 24.0,
                                             fontWeight: FontWeight.bold)))),
+                            SizedBox(height: 10),
+                            apple(),
                             Padding(
                                 padding: const EdgeInsets.only(top: 16.0),
                                 child: GestureDetector(
@@ -444,5 +447,57 @@ class _LoginScreenState extends State<LoginScreen> {
     setState(() {
       isUserSignedIn = userSignedIn == null ? true : false;
     });
+  }
+
+  Widget apple() {
+    if (Platform.isIOS) {
+      return OutlineButton(
+          borderSide: BorderSide(
+            color: const Color(0xff295EFF),
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          onPressed: () async {
+            final credential = await SignInWithApple.getAppleIDCredential(
+              scopes: [
+                AppleIDAuthorizationScopes.email,
+                AppleIDAuthorizationScopes.fullName,
+              ],
+            );
+
+            if (credential.authorizationCode != null) {
+              Navigator.push(
+                context,
+                PageTransition(
+                  type: PageTransitionType.fade,
+                  child: MainScreen(
+                    orgList,
+                    normalList,
+                    strList,
+                    copList,
+                    groupList,
+                  ),
+                ),
+              );
+              setState(() {
+                firstName = credential.givenName;
+                email = credential.email;
+                imageUrl = "";
+                displayName = credential.givenName;
+              });
+            }
+          },
+          color: Colors.white,
+          child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('Sign in with Apple ',
+                  style: TextStyle(
+                      color: const Color(0xff295EFF),
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold))));
+    } else {
+      return SizedBox.shrink();
+    }
   }
 }
