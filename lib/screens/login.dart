@@ -56,7 +56,9 @@ class _LoginScreenState extends State<LoginScreen> {
           connected = false;
         });
       }
-      onGoogleSignIn(context);
+      if (connected) {
+        onGoogleSignIn(context);
+      }
       _future = loadJSON();
     });
   }
