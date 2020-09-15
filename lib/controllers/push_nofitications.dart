@@ -18,7 +18,7 @@ class PushNotificationsManager {
       _firebaseMessaging.requestNotificationPermissions();
       _firebaseMessaging.configure(
         onMessage: (Map<String, dynamic> message) async {
-          print("message : $message");
+          // print("message : $message");
 
           showDialog(
             context: context,
@@ -41,10 +41,10 @@ class PushNotificationsManager {
           );
         },
         onResume: (Map<String, dynamic> message) async {
-          print("message : $message");
+          // print("message : $message");
         },
         onLaunch: (Map<String, dynamic> message) async {
-          print("message : $message");
+          // print("message : $message");
         },
       );
 

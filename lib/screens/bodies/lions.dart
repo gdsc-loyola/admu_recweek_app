@@ -1222,20 +1222,47 @@ class _LionsScreenState extends State<LionsScreen> {
               ),
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
+                    const EdgeInsets.only(left: 60, right: 60, top: 30, bottom: 0),
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: EmptyScreen()));
-                      // launch("https://lionshub.org/");
+                      // Navigator.push(
+                      //     context,
+                      //     PageTransition(
+                      //         type: PageTransitionType.fade,
+                      //         child: EmptyScreen()));
+                      launch("https://docs.google.com/document/d/1w4GodQroaObFrhts8pmiEjy7dNLDjNqUpmdC4Hex_x8/edit");
                     },
                     color: const Color(0xffFF801D),
+                    child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: AutoSizeText('Sign Up',
+                            minFontSize: 20,
+                            maxFontSize: 24,
+                            maxLines: 1,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)))),
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.only(left: 60, right: 60, top: 16, bottom: 30),
+                child: OutlineButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    borderSide: BorderSide(color: const Color(0xffFF801D), width: 1, style: BorderStyle.solid),
+                    onPressed: () {
+                      // Navigator.push(
+                      //     context,
+                      //     PageTransition(
+                      //         type: PageTransitionType.fade,
+                      //         child: EmptyScreen()));
+                      launch("https://lionshome.org/");
+                    },
+                    color: const Color(0xffFFFFFF),
                     child: Padding(
                         padding: EdgeInsets.all(8.0),
                         child: AutoSizeText('Learn More',
@@ -1243,7 +1270,7 @@ class _LionsScreenState extends State<LionsScreen> {
                             maxFontSize: 24,
                             maxLines: 1,
                             style: TextStyle(
-                                color: Colors.white,
+                                color: const Color(0xffFF801D),
                                 fontWeight: FontWeight.bold)))),
               )
             ],

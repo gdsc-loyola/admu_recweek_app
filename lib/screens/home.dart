@@ -494,6 +494,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   orgList[randomNumber].body,
                                   orgList[randomNumber].logo,
                                   orgList[randomNumber].cover,
+                                  orgList[randomNumber].application,
+                                  orgList[randomNumber].learnMore,
                                 ),
                               ));
                         }
