@@ -838,7 +838,7 @@ class _SangguScreenState extends State<SangguScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
-                    borderSide: BorderSide(color: const Color(0xff295EFF), width: 1, style: BorderStyle.solid),
+                    borderSide: BorderSide(color: const Color(0xff1C41B2), width: 1, style: BorderStyle.solid),
                     onPressed: () {
                       // Navigator.push(
                       //     context,
@@ -852,7 +852,7 @@ class _SangguScreenState extends State<SangguScreen> {
                         padding: EdgeInsets.all(8.0),
                         child: Text('Learn More',
                             style: TextStyle(
-                                color: const Color(0xff295EFF),
+                                color: const Color(0xff1C41B2),
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.bold)))),
               )
