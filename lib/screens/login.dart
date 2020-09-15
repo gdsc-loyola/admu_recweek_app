@@ -104,6 +104,8 @@ class _LoginScreenState extends State<LoginScreen> {
         orgResult[i]['projectImageOne'],
         orgResult[i]['projectImageTwo'],
         orgResult[i]['projectImageThree'],
+        orgResult[i]['Application'],
+        orgResult[i]['LearnMore'],
       ));
     }
     // Sorting Area
@@ -187,6 +189,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     org.projectImageOne,
                     org.projectImageTwo,
                     org.projectImageThree,
+                    org.application,
+                    org.learnMore,
                   ),
                 ),
               );
