@@ -378,25 +378,50 @@ class _DSCLoyolaState extends State<DSCLoyolaScreen> {
               //Learn More Button
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
+                    const EdgeInsets.only(left: 60, right: 60, top: 30, bottom: 0),
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: EmptyScreen()));
-                      // launch("https://dscadmu.org/");
+                      // Navigator.push(
+                      //     context,
+                      //     PageTransition(
+                      //         type: PageTransitionType.fade,
+                      //         child: EmptyScreen()));
+                      launch("https:\/\/airtable.com\/shrt5wlIQrI2yep05");
                     },
                     color: const Color(0xff295EFF),
                     child: Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Learn More',
+                        child: Text('Sign Up',
                             style: TextStyle(
                                 color: Colors.white,
+                                fontSize: 24.0,
+                                fontWeight: FontWeight.bold)))),
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.only(left: 60, right: 60, top: 16, bottom: 30),
+                child: OutlineButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    borderSide: BorderSide(color: const Color(0xff295EFF), width: 1, style: BorderStyle.solid),
+                    onPressed: () {
+                      // Navigator.push(
+                      //     context,
+                      //     PageTransition(
+                      //         type: PageTransitionType.fade,
+                      //         child: EmptyScreen()));
+                      launch("https:\/\/lionshome.org\/developer-student-clubs-loyola\/");
+                    },
+                    color: const Color(0xffFFFFFF),
+                    child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Learn More',
+                            style: TextStyle(
+                                color: const Color(0xff295EFF),
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.bold)))),
               )

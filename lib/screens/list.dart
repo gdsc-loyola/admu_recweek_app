@@ -75,7 +75,7 @@ class _ListScreenState extends State<ListScreen> {
               .contains(searchController.text.toLowerCase()) ||
       org.abbreviation.toLowerCase().contains(searchController.text.toLowerCase()));
     }
-
+    print(orgList);
     orgLists.forEach((org) {
       normalList.add(
         GestureDetector(
@@ -126,6 +126,8 @@ class _ListScreenState extends State<ListScreen> {
                         org.body,
                         org.logo,
                         org.cover,
+                        org.application,
+                        org.learnMore,
                       )));
             }
           },
@@ -203,6 +205,8 @@ class _ListScreenState extends State<ListScreen> {
         orgResult[i]['projectImageOne'],
         orgResult[i]['projectImageTwo'],
         orgResult[i]['projectImageThree'],
+        orgResult[i]['Application'],
+        orgResult[i]['LearnMore'],
       ));
     }
 
@@ -276,6 +280,8 @@ class _ListScreenState extends State<ListScreen> {
                         org.body,
                         org.logo,
                         org.cover,
+                        org.application,
+                        org.learnMore,
                       )));
             }
           },

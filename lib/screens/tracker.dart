@@ -150,6 +150,8 @@ class _TrackerScreenState extends State<TrackerScreen> {
         orgResult[i]['projectImageOne'],
         orgResult[i]['projectImageTwo'],
         orgResult[i]['projectImageThree'],
+        orgResult[i]['Application'],
+        orgResult[i]['LearnMore'],
       ));
     }
     // Sorting Area
@@ -226,6 +228,8 @@ class _TrackerScreenState extends State<TrackerScreen> {
                             org.body,
                             org.logo,
                             org.cover,
+                            org.application,
+                            org.learnMore,
                           )));
                 }
               },
@@ -343,6 +347,8 @@ class _TrackerScreenState extends State<TrackerScreen> {
                             org.body,
                             org.logo,
                             org.cover,
+                            org.application,
+                            org.learnMore,
                           )),
                     );
                   }

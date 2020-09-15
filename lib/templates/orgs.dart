@@ -34,6 +34,8 @@ class OrgTemplateScreen extends StatefulWidget {
   final String _body;
   final String _logo;
   final String _cover;
+  final String _application;
+  final String _learnMore;
 
   OrgTemplateScreen([
     this._user,
@@ -61,6 +63,8 @@ class OrgTemplateScreen extends StatefulWidget {
     this._projectImageOne,
     this._projectImageTwo,
     this._projectImageThree,
+    this._application,
+    this._learnMore,
   ]);
 
   @override
@@ -90,6 +94,8 @@ class OrgTemplateScreen extends StatefulWidget {
         _projectImageOne,
         _projectImageTwo,
         _projectImageThree,
+        _application,
+        _learnMore,
       );
 }
 
@@ -122,6 +128,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   String _body;
   String _logo;
   String _cover;
+  String _application;
+  String _learnMore;
   bool connected = false;
 
   _OrgTemplateScreenState(
@@ -150,6 +158,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     this._body,
     this._logo,
     this._cover,
+    this._application,
+    this._learnMore,
   );
 
   @override
@@ -490,7 +500,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 1
-              _projectTitleOne != "" && _projectDescOne != ""
+              _projectTitleOne != "" 
                   ? Container(
                       height: 160,
                       margin: const EdgeInsets.symmetric(
@@ -522,7 +532,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 2
-              _projectTitleTwo != "" && _projectDescTwo != ""
+              _projectTitleTwo != "" 
                   ? Container(
                       height: 160,
                       margin: const EdgeInsets.symmetric(
@@ -554,7 +564,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 3
-              _projectTitleThree != "" && _projectDescThree != ""
+              _projectTitleThree != "" 
                   ? Container(
                       height: 160,
                       margin: const EdgeInsets.symmetric(
@@ -594,12 +604,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: EmptyScreen()));
-                      // launch("https://dscadmu.org/");
+                      // Navigator.push(
+                      //     context,
+                      //     PageTransition(
+                      //         type: PageTransitionType.fade,
+                      //         child: EmptyScreen()));
+                      launch(_application);
                     },
                     color: const Color(0xff295EFF),
                     child: Padding(
@@ -619,12 +629,12 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                     ),
                     borderSide: BorderSide(color: const Color(0xff295EFF), width: 1, style: BorderStyle.solid),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: EmptyScreen()));
-                      // launch("https://dscadmu.org/");
+                      // Navigator.push(
+                      //     context,
+                      //     PageTransition(
+                      //         type: PageTransitionType.fade,
+                      //         child: EmptyScreen()));
+                      launch(_learnMore);
                     },
                     color: const Color(0xffFFFFFF),
                     child: Padding(
