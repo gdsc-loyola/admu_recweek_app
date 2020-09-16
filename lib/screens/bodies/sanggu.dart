@@ -170,7 +170,7 @@ class _SangguScreenState extends State<SangguScreen> {
               Text(
                 "Sanggunian ng mga Mag-aaral ng mga Paaralang Loyola ng Ateneo de Manila",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.left,
               ),
               Stack(
                 children: <Widget>[
@@ -220,7 +220,7 @@ class _SangguScreenState extends State<SangguScreen> {
                 padding: const EdgeInsets.only(top: 24, bottom: 16),
                 child: Row(
                   children: <Widget>[
-                    Expanded(
+                    Flexible(
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -245,7 +245,7 @@ class _SangguScreenState extends State<SangguScreen> {
                             )),
                       ),
                     ),
-                    Expanded(
+                    Flexible(
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -270,7 +270,7 @@ class _SangguScreenState extends State<SangguScreen> {
                             )),
                       ),
                     ),
-                    Expanded(
+                    Flexible(
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -302,7 +302,7 @@ class _SangguScreenState extends State<SangguScreen> {
                 padding: EdgeInsets.only(bottom: 24),
                 child: Row(
                   children: <Widget>[
-                    Expanded(
+                    Flexible(
                       child: Container(
                         height: 5,
                         width: MediaQuery.of(context).size.width / 3,
@@ -313,7 +313,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 : Color(0xffE5E5E5),
                       ),
                     ),
-                    Expanded(
+                    Flexible(
                       child: Container(
                         height: 5,
                         width: MediaQuery.of(context).size.width / 3,
@@ -324,7 +324,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                 : Color(0xffE5E5E5),
                       ),
                     ),
-                    Expanded(
+                    Flexible(
                       child: Container(
                         height: 5,
                         width: MediaQuery.of(context).size.width / 3,
@@ -355,7 +355,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     cacheHeight: 96,
                                   ),
                                 ),
-                                Expanded(
+                                Flexible(
                                   child: Padding(
                                     padding: EdgeInsets.only(left: 16),
                                     child: Text(
@@ -364,7 +364,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                       ),
-                                      overflow: TextOverflow.fade,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
                                 ),
@@ -392,7 +392,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
-                                    overflow: TextOverflow.fade,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ],
@@ -419,7 +419,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
-                                    overflow: TextOverflow.fade,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ],
@@ -438,7 +438,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                     cacheHeight: 96,
                                   ),
                                 ),
-                                Expanded(
+                                Flexible(
                                   child: Padding(
                                     padding:
                                         EdgeInsets.only(left: 16, right: 16),
@@ -448,7 +448,7 @@ class _SangguScreenState extends State<SangguScreen> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                       ),
-                                      overflow: TextOverflow.fade,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
                                 ),
@@ -468,22 +468,27 @@ class _SangguScreenState extends State<SangguScreen> {
                                     cacheHeight: 96,
                                   ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 16, right: 16,),
-                                  child: Text(
-                                    "Department of Administrative Affairs",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16,
+                                Flexible(
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                      left: 16,
+                                      right: 16,
                                     ),
-                                    overflow: TextOverflow.fade,
+                                    child: Text(
+                                      "Department of Administrative Affairs",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
                                   ),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(top: 16, bottom: 16,),
+                            padding: EdgeInsets.only(top: 16, bottom: 16),
                             child: Row(
                               children: <Widget>[
                                 Container(
@@ -495,15 +500,18 @@ class _SangguScreenState extends State<SangguScreen> {
                                     cacheHeight: 96,
                                   ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 16, right: 16,),
-                                  child: Text(
-                                    "Department of Budget and Management",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16,
+                                Flexible(
+                                  child: Padding(
+                                    padding:
+                                        EdgeInsets.only(left: 16, right: 16),
+                                    child: Text(
+                                      "Department of Budget and Management",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
                                     ),
-                                    overflow: TextOverflow.fade,
                                   ),
                                 ),
                               ],
@@ -523,14 +531,17 @@ class _SangguScreenState extends State<SangguScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 16, right: 16,),
+                                  padding: EdgeInsets.only(
+                                    left: 16,
+                                    right: 16,
+                                  ),
                                   child: Text(
                                     "Department of Communications",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
-                                    overflow: TextOverflow.fade,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ],
@@ -550,7 +561,10 @@ class _SangguScreenState extends State<SangguScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 16, right: 16,),
+                                  padding: EdgeInsets.only(
+                                    left: 16,
+                                    right: 16,
+                                  ),
                                   child: Text(
                                     "Department of External Affairs",
                                     style: TextStyle(
@@ -575,16 +589,19 @@ class _SangguScreenState extends State<SangguScreen> {
                                     cacheHeight: 96,
                                   ),
                                 ),
-                                Expanded(
+                                Flexible(
                                   child: Padding(
-                                    padding: EdgeInsets.only(left: 16, right: 16,),
+                                    padding: EdgeInsets.only(
+                                      left: 16,
+                                      right: 16,
+                                    ),
                                     child: Text(
                                       "Department of Student Welfare and Services",
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                       ),
-                                      overflow: TextOverflow.fade,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
                                 ),
@@ -602,14 +619,17 @@ class _SangguScreenState extends State<SangguScreen> {
                                       'assets/bodies/sanggu/logo.png'),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 16, right: 16,),
+                                  padding: EdgeInsets.only(
+                                    left: 16,
+                                    right: 16,
+                                  ),
                                   child: Text(
                                     "Presidential Support Team",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
-                                    overflow: TextOverflow.fade,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                               ],
@@ -632,7 +652,10 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16, right: 16,),
+                                      padding: EdgeInsets.only(
+                                        left: 16,
+                                        right: 16,
+                                      ),
                                       child: Text(
                                         "Central Assembly Secretariat",
                                         style: TextStyle(
@@ -658,7 +681,10 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16, right: 16,),
+                                      padding: EdgeInsets.only(
+                                        left: 16,
+                                        right: 16,
+                                      ),
                                       child: Text(
                                         "Internals Division",
                                         style: TextStyle(
@@ -714,7 +740,10 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16, right: 16,),
+                                      padding: EdgeInsets.only(
+                                        left: 16,
+                                        right: 16,
+                                      ),
                                       child: Text(
                                         "SOH Sanggunian",
                                         style: TextStyle(
@@ -740,7 +769,10 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16, right: 16,),
+                                      padding: EdgeInsets.only(
+                                        left: 16,
+                                        right: 16,
+                                      ),
                                       child: Text(
                                         "JGSOM Sanggunian",
                                         style: TextStyle(
@@ -766,7 +798,10 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16, right: 16,),
+                                      padding: EdgeInsets.only(
+                                        left: 16,
+                                        right: 16,
+                                      ),
                                       child: Text(
                                         "SOSE Sanggunian",
                                         style: TextStyle(
@@ -792,7 +827,10 @@ class _SangguScreenState extends State<SangguScreen> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(left: 16, right: 16,),
+                                      padding: EdgeInsets.only(
+                                        left: 16,
+                                        right: 16,
+                                      ),
                                       child: Text(
                                         "SOSS Sanggunian",
                                         style: TextStyle(
@@ -808,8 +846,8 @@ class _SangguScreenState extends State<SangguScreen> {
                 ],
               ),
               Padding(
-                padding:
-                    const EdgeInsets.only(left: 60, right: 60, top: 30, bottom: 0),
+                padding: const EdgeInsets.only(
+                    left: 60, right: 60, top: 30, bottom: 0),
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
@@ -838,7 +876,10 @@ class _SangguScreenState extends State<SangguScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
-                    borderSide: BorderSide(color: const Color(0xff1C41B2), width: 1, style: BorderStyle.solid),
+                    borderSide: BorderSide(
+                        color: const Color(0xff1C41B2),
+                        width: 1,
+                        style: BorderStyle.solid),
                     onPressed: () {
                       // Navigator.push(
                       //     context,
