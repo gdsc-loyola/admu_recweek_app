@@ -470,10 +470,8 @@ class _SangguScreenState extends State<SangguScreen> {
                                 ),
                                 Flexible(
                                   child: Padding(
-                                    padding: EdgeInsets.only(
-                                      left: 16,
-                                      right: 16,
-                                    ),
+                                    padding:
+                                        EdgeInsets.only(left: 16, right: 16),
                                     child: Text(
                                       "Department of Administrative Affairs",
                                       style: TextStyle(
