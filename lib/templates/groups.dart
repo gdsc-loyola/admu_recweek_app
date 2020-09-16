@@ -125,6 +125,8 @@ class _GroupsScreenState extends State<GroupsScreen> {
                         _orgs[index].body,
                         _orgs[index].logo,
                         _orgs[index].cover,
+                        _orgs[index].application,
+                        _orgs[index].learnMore,
                       )));
                 }
               },

@@ -34,6 +34,8 @@ class OrgTemplateScreen extends StatefulWidget {
   final String _body;
   final String _logo;
   final String _cover;
+  final String _application;
+  final String _learnMore;
 
   OrgTemplateScreen([
     this._user,
@@ -61,6 +63,8 @@ class OrgTemplateScreen extends StatefulWidget {
     this._projectImageOne,
     this._projectImageTwo,
     this._projectImageThree,
+    this._application,
+    this._learnMore,
   ]);
 
   @override
@@ -90,6 +94,8 @@ class OrgTemplateScreen extends StatefulWidget {
         _projectImageOne,
         _projectImageTwo,
         _projectImageThree,
+        _application,
+        _learnMore,
       );
 }
 
@@ -122,6 +128,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
   String _body;
   String _logo;
   String _cover;
+  String _application;
+  String _learnMore;
   bool connected = false;
 
   _OrgTemplateScreenState(
@@ -150,6 +158,8 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     this._body,
     this._logo,
     this._cover,
+    this._application,
+    this._learnMore,
   );
 
   @override
@@ -256,6 +266,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: false,
           title: Text(
             _abbreviation != "" ? _abbreviation : _name,
             style: TextStyle(
@@ -490,7 +501,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 1
-              _projectTitleOne != "" && _projectDescOne != ""
+              _projectTitleOne != "" 
                   ? Container(
                       height: 160,
                       margin: const EdgeInsets.symmetric(
@@ -522,7 +533,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 2
-              _projectTitleTwo != "" && _projectDescTwo != ""
+              _projectTitleTwo != "" 
                   ? Container(
                       height: 160,
                       margin: const EdgeInsets.symmetric(
@@ -554,7 +565,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
                       ))
                   : SizedBox.shrink(),
               // Event/Project # 3
-              _projectTitleThree != "" && _projectDescThree != ""
+              _projectTitleThree != "" 
                   ? Container(
                       height: 160,
                       margin: const EdgeInsets.symmetric(
@@ -588,25 +599,50 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
               //Learn More Button
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 60, vertical: 30),
+                    const EdgeInsets.only(left: 60, right: 60, top: 30, bottom: 0),
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.fade,
-                              child: EmptyScreen()));
-                      // launch("https://dscadmu.org/");
+                      // Navigator.push(
+                      //     context,
+                      //     PageTransition(
+                      //         type: PageTransitionType.fade,
+                      //         child: EmptyScreen()));
+                      launch(_application);
                     },
                     color: const Color(0xff295EFF),
                     child: Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: Text('Learn More',
+                        child: Text('Sign Up',
                             style: TextStyle(
                                 color: Colors.white,
+                                fontSize: 24.0,
+                                fontWeight: FontWeight.bold)))),
+              ),
+              Padding(
+                padding:
+                    EdgeInsets.only(left: 60, right: 60, top: 16, bottom: 30),
+                child: OutlineButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    borderSide: BorderSide(color: const Color(0xff295EFF), width: 1, style: BorderStyle.solid),
+                    onPressed: () {
+                      // Navigator.push(
+                      //     context,
+                      //     PageTransition(
+                      //         type: PageTransitionType.fade,
+                      //         child: EmptyScreen()));
+                      launch(_learnMore);
+                    },
+                    color: const Color(0xffFFFFFF),
+                    child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text('Learn More',
+                            style: TextStyle(
+                                color: const Color(0xff295EFF),
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.bold)))),
               )

@@ -24,6 +24,8 @@ class Orgs {
   String body;
   String logo;
   String cover;  
+  String application;
+  String learnMore;
   List<dynamic> cluster;
 
   Orgs(
@@ -52,5 +54,7 @@ class Orgs {
       this.cover,
       this.projectImageOne,
       this.projectImageTwo,
-      this.projectImageThree]);
+      this.projectImageThree,
+      this.application,
+      this.learnMore]);
 }

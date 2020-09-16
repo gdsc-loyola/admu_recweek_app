@@ -4,7 +4,7 @@ import 'package:admu_recweek_app/templates/orgs.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:alphabet_list_scroll_view/alphabet_list_scroll_view.dart';
+// import 'package:alphabet_list_scroll_view/alphabet_list_scroll_view.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -73,9 +73,10 @@ class _ListScreenState extends State<ListScreen> {
           org.name
               .toLowerCase()
               .contains(searchController.text.toLowerCase()) ||
-      org.abbreviation.toLowerCase().contains(searchController.text.toLowerCase()));
+          org.abbreviation
+              .toLowerCase()
+              .contains(searchController.text.toLowerCase()));
     }
-
     orgLists.forEach((org) {
       normalList.add(
         GestureDetector(
@@ -126,6 +127,8 @@ class _ListScreenState extends State<ListScreen> {
                         org.body,
                         org.logo,
                         org.cover,
+                        org.application,
+                        org.learnMore,
                       )));
             }
           },
@@ -203,11 +206,13 @@ class _ListScreenState extends State<ListScreen> {
         orgResult[i]['projectImageOne'],
         orgResult[i]['projectImageTwo'],
         orgResult[i]['projectImageThree'],
+        orgResult[i]['Application'],
+        orgResult[i]['LearnMore'],
       ));
     }
 
-    orgList
-        .sort((x, y) => x.abbreviation.toLowerCase().compareTo(y.abbreviation.toLowerCase()));
+    orgList.sort((x, y) =>
+        x.abbreviation.toLowerCase().compareTo(y.abbreviation.toLowerCase()));
 
     filter();
   }
@@ -223,9 +228,11 @@ class _ListScreenState extends State<ListScreen> {
           org.name
               .toLowerCase()
               .contains(searchController.text.toLowerCase()) ||
-          org.abbreviation.toLowerCase().contains(searchController.text.toLowerCase()));
+          org.abbreviation
+              .toLowerCase()
+              .contains(searchController.text.toLowerCase()));
     }
-    
+
     orgs.forEach((org) {
       normalList.add(
         GestureDetector(
@@ -276,6 +283,8 @@ class _ListScreenState extends State<ListScreen> {
                         org.body,
                         org.logo,
                         org.cover,
+                        org.application,
+                        org.learnMore,
                       )));
             }
           },
@@ -380,51 +389,90 @@ class _ListScreenState extends State<ListScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: unused_local_variable
-    var currentStr = "";
-    return AlphabetListScrollView(
-      strList: strList,
-      highlightTextStyle: TextStyle(
-        color: const Color(0xff295EFF),
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(bottom: 16, left: 8, right: 8),
+                child: Text(sortStatus,
+                    style: TextStyle(
+                        color: const Color(0xff000000),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16)),
+              ),
+              // InkWell(
+              //     onTap: () {
+              //       showMaterialModalBottomSheet(
+              //         context: context,
+              //         builder: (context, scrollController) =>
+              //             _sortModal(context, scrollController),
+              //       );
+              //     },
+              //     child: Text(
+              //       "Sort",
+              //       style: TextStyle(
+              //           color: const Color(0xff295EFF), fontSize: 16),
+              //     ))
+            ],
+          ),
+          Expanded(
+            child: ListView.builder(
+                itemCount: normalList.length,
+                itemBuilder: (BuildContext ctxt, int index) {
+                  return normalList[index];
+                }),
+          )
+        ],
       ),
-      showPreview: true,
-      itemBuilder: (context, index) {
-        return normalList[index];
-      },
-      indexedHeight: (i) {
-        return 90;
-      },
-      keyboardUsage: true,
-      headerWidgetList: <AlphabetScrollListHeader>[
-        AlphabetScrollListHeader(widgetList: [
-          Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(sortStatus,
-                      style: TextStyle(
-                          color: const Color(0xff000000),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16)),
-                  // InkWell(
-                  //     onTap: () {
-                  //       showMaterialModalBottomSheet(
-                  //         context: context,
-                  //         builder: (context, scrollController) =>
-                  //             _sortModal(context, scrollController),
-                  //       );
-                  //     },
-                  //     child: Text(
-                  //       "Sort",
-                  //       style: TextStyle(
-                  //           color: const Color(0xff295EFF), fontSize: 16),
-                  //     ))
-                ],
-              ))
-        ], icon: Icon(Icons.sort_by_alpha), indexedHeaderHeight: (index) => 90),
-      ],
     );
+
+    // AlphabetListScrollView(
+    //   strList: strList,
+    //   highlightTextStyle: TextStyle(
+    //     color: const Color(0xff295EFF),
+    //   ),
+    //   showPreview: false,
+    //   itemBuilder: (context, index) {
+    //     return normalList[index];
+    //   },
+    //   indexedHeight: (i) {
+    //     return 90;
+    //   },
+    //   keyboardUsage: true,
+    //   headerWidgetList: <AlphabetScrollListHeader>[
+    //     AlphabetScrollListHeader(widgetList: [
+    //       Padding(
+    //           padding: const EdgeInsets.all(16.0),
+    //           child: Row(
+    //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    //             children: <Widget>[
+    //               Text(sortStatus,
+    //                   style: TextStyle(
+    //                       color: const Color(0xff000000),
+    //                       fontWeight: FontWeight.bold,
+    //                       fontSize: 16)),
+    //               // InkWell(
+    //               //     onTap: () {
+    //               //       showMaterialModalBottomSheet(
+    //               //         context: context,
+    //               //         builder: (context, scrollController) =>
+    //               //             _sortModal(context, scrollController),
+    //               //       );
+    //               //     },
+    //               //     child: Text(
+    //               //       "Sort",
+    //               //       style: TextStyle(
+    //               //           color: const Color(0xff295EFF), fontSize: 16),
+    //               //     ))
+    //             ],
+    //           ))
+    //     ], icon: Icon(Icons.sort_by_alpha), indexedHeaderHeight: (index) => 90),
+    //   ],
+    // );
   }
 
   // Widget _sortModal(BuildContext context, scrollController) {
