@@ -266,6 +266,7 @@ class _OrgTemplateScreenState extends State<OrgTemplateScreen> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: false,
           title: Text(
             _abbreviation != "" ? _abbreviation : _name,
             style: TextStyle(
