@@ -844,13 +844,8 @@ class _SangguScreenState extends State<SangguScreen> {
                 ],
               ),
               Padding(
-<<<<<<< HEAD
-                padding:
-                    const EdgeInsets.only(left: 60, right: 60, top: 30, bottom: 0),
-=======
                 padding: const EdgeInsets.only(
                     left: 60, right: 60, top: 30, bottom: 0),
->>>>>>> Clarz/hotfix/logos
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
@@ -879,14 +874,10 @@ class _SangguScreenState extends State<SangguScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
-<<<<<<< HEAD
-                    borderSide: BorderSide(color: const Color(0xff1C41B2), width: 1, style: BorderStyle.solid),
-=======
                     borderSide: BorderSide(
                         color: const Color(0xff1C41B2),
                         width: 1,
                         style: BorderStyle.solid),
->>>>>>> Clarz/hotfix/logos
                     onPressed: () {
                       // Navigator.push(
                       //     context,
