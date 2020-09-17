@@ -174,6 +174,8 @@ class _LionsScreenState extends State<LionsScreen> {
         orgResult[i]['projectImageOne'],
         orgResult[i]['projectImageTwo'],
         orgResult[i]['projectImageThree'],
+        orgResult[i]['Application'],
+        orgResult[i]['LearnMore'],
       ));
     }
     // Sorting Area
@@ -208,7 +210,8 @@ class _LionsScreenState extends State<LionsScreen> {
 
     lifestyleList.addAll(orgList.where((i) => i.cluster.contains("Lifestyle")));
 
-    literatureList.addAll(orgList.where((i) => i.cluster.contains("Literature")));
+    literatureList
+        .addAll(orgList.where((i) => i.cluster.contains("Literature")));
 
     musicList.addAll(orgList.where((i) => i.cluster.contains("Music")));
 
@@ -1221,8 +1224,8 @@ class _LionsScreenState extends State<LionsScreen> {
                 ],
               ),
               Padding(
-                padding:
-                    const EdgeInsets.only(left: 60, right: 60, top: 30, bottom: 0),
+                padding: const EdgeInsets.only(
+                    left: 60, right: 60, top: 30, bottom: 0),
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1233,7 +1236,8 @@ class _LionsScreenState extends State<LionsScreen> {
                       //     PageTransition(
                       //         type: PageTransitionType.fade,
                       //         child: EmptyScreen()));
-                      launch("https://docs.google.com/document/d/1w4GodQroaObFrhts8pmiEjy7dNLDjNqUpmdC4Hex_x8/edit");
+                      launch(
+                          "https://docs.google.com/document/d/1w4GodQroaObFrhts8pmiEjy7dNLDjNqUpmdC4Hex_x8/edit");
                     },
                     color: const Color(0xffFF801D),
                     child: Padding(
@@ -1253,7 +1257,10 @@ class _LionsScreenState extends State<LionsScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
-                    borderSide: BorderSide(color: const Color(0xffFF801D), width: 1, style: BorderStyle.solid),
+                    borderSide: BorderSide(
+                        color: const Color(0xffFF801D),
+                        width: 1,
+                        style: BorderStyle.solid),
                     onPressed: () {
                       // Navigator.push(
                       //     context,

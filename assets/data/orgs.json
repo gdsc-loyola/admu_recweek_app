@@ -26,7 +26,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_logo.png",
 		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/assembly_cover.jpg",
-		"Application": "http://bit.ly/RW20TheAteneoAssembly",
+		"Application": "https://bit.ly/RW20TheAteneoAssembly",
 		"LearnMore": "https://www.coarecweek.com/theateneoassembly"
 	},
 	{
@@ -56,7 +56,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_logo.png",
 		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/devsoc_cover.jpg",
-		"Application": "http://bit.ly/RW20DevSoc",
+		"Application": "https://bit.ly/RW20DevSoc",
 		"LearnMore": "https://www.coarecweek.com/devsoc"
 	},
 	{
@@ -86,7 +86,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_logo.png",
 		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aeuss_cover.png",
-		"Application": "http://bit.ly/RW20AEUSS",
+		"Application": "https://bit.ly/RW20AEUSS",
 		"LearnMore": "https://www.coarecweek.com/aeuss"
 	},
 	{
@@ -116,7 +116,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_logo.png",
 		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/entablado_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoENTABLADO",
+		"Application": "https://bit.ly/RW20AteneoENTABLADO",
 		"LearnMore": "https://www.coarecweek.com/entablado"
 	},
 	{
@@ -146,7 +146,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_logo.png",
 		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/aea_cover.png",
-		"Application": "http://bit.ly/RW20AEA",
+		"Application": "https://bit.ly/RW20AEA",
 		"LearnMore": "https://www.coarecweek.com/aea"
 	},
 	{
@@ -176,7 +176,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_logo.png",
 		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/apair_cover.JPG",
-		"Application": "http://bit.ly/RW20APAIR",
+		"Application": "https://bit.ly/RW20APAIR",
 		"LearnMore": "https://www.coarecweek.com/apair"
 	},
 	{
@@ -206,7 +206,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_logo.png",
 		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/ads_cover.JPG",
-		"Application": "http://bit.ly/RW20ADS",
+		"Application": "https://bit.ly/RW20ADS",
 		"LearnMore": "https://www.coarecweek.com/ads"
 	},
 	{
@@ -236,7 +236,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_logo.png",
 		"Cover": "assets/orgs/coa/ANALYSIS_AND_DISCOURSE/astat_cover.png",
-		"Application": "http://bit.ly/RW20A-Stat",
+		"Application": "https://bit.ly/RW20A-Stat",
 		"LearnMore": "https://www.coarecweek.com/a-stat"
 	},
 	{
@@ -255,7 +255,7 @@
 		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fbusiness%2Factm%2FimageTwo.jpg?alt=media&token=e41324e2-1b2a-4535-971e-81352b40853d",
 		"projectTitleOne": "LEAP (Leadership Enhancement and Advancement Program)",
 		"projectDescOne": "The Leadership Enhancement and Advancement Program is an annual leadership camp that aims to enhance the skills of future leaders of the organization through a series of activities and group dynamics.",
-		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fbusiness%2Factm%2FimageTwo.jpg?alt=media&token=e41324e2-1b2a-4535-971e-81352b40853d",
+		"projectImageTwo": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fbusiness%2Factm%2FimageOne.png?alt=media&token=afe44b14-6f61-46cc-be1f-353a43c01f46",
 		"projectTitleTwo": "CSR",
 		"projectDescTwo": "Guided by the principle of corporate social responsibility, ACTM dedicates this project to promote an external advocacy that differs each year through the use of Integrated Marketing Communications.",
 		"projectImageThree": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/coa%2Fbusiness%2Factm%2FimageThree.jpg?alt=media&token=31e19b47-650f-49ee-aa02-e2b10d65edda",
@@ -266,7 +266,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/actm_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/actm_cover.jpg",
-		"Application": "http://bit.ly/RW20ACTM",
+		"Application": "https://bit.ly/RW20ACTM",
 		"LearnMore": "https://www.coarecweek.com/ateneoactm"
 	},
 	{
@@ -296,7 +296,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/lex_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/lex_cover.jpg",
-		"Application": "http://bit.ly/RW20ALex",
+		"Application": "https://bit.ly/RW20ALex",
 		"LearnMore": "https://www.coarecweek.com/alex"
 	},
 	{
@@ -326,7 +326,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ajma_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/ajma_cover.jpg",
-		"Application": "http://bit.ly/RW20AJMA",
+		"Application": "https://bit.ly/RW20AJMA",
 		"LearnMore": "https://www.coarecweek.com/ajma"
 	},
 	{
@@ -356,7 +356,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/ama_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/ama_cover.jpg",
-		"Application": "http://bit.ly/RW20AMA",
+		"Application": "https://bit.ly/RW20AMA",
 		"LearnMore": "https://www.coarecweek.com/ama"
 	},
 	{
@@ -386,7 +386,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/meco_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/meco_cover.jpg",
-		"Application": "http://bit.ly/RW20MEcO",
+		"Application": "https://bit.ly/RW20MEcO",
 		"LearnMore": "https://www.coarecweek.com/meco"
 	},
 	{
@@ -416,7 +416,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/mea_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/mea_cover.png",
-		"Application": "http://bit.ly/RW20MEA",
+		"Application": "https://bit.ly/RW20MEA",
 		"LearnMore": "https://www.coarecweek.com/mea"
 	},
 	{
@@ -446,7 +446,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/maca_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/maca_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoMACA",
+		"Application": "https://bit.ly/RW20AteneoMACA",
 		"LearnMore": "https://www.coarecweek.com/ateneomaca"
 	},
 	{
@@ -476,7 +476,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/aiesec_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/aiesec_cover.JPG",
-		"Application": "http://bit.ly/RW20AIESEC",
+		"Application": "https://bit.ly/RW20AIESEC",
 		"LearnMore": "https://www.coarecweek.com/aiesec"
 	},
 	{
@@ -506,7 +506,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/BUSINESS_CLUSTER/bcg_logo.png",
 		"Cover": "assets/orgs/coa/BUSINESS_CLUSTER/bcg_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoBCG",
+		"Application": "https://bit.ly/RW20AteneoBCG",
 		"LearnMore": "https://www.coarecweek.com/ateneobcg"
 	},
 	{
@@ -536,7 +536,7 @@
 		"Body": "COP",
 		"Logo": "assets/orgs/coa/COP/heights_logo.jpg",
 		"Cover": "assets/orgs/coa/COP/heights_cover.JPG",
-		"Application": "http://bit.ly/RW20HEIGHTSAteneo",
+		"Application": "https://bit.ly/RW20HEIGHTSAteneo",
 		"LearnMore": "https://www.coarecweek.com/heightsateneo"
 	},
 	{
@@ -566,7 +566,7 @@
 		"Body": "COP",
 		"Logo": "assets/orgs/coa/COP/guidon_logo.png",
 		"Cover": "assets/orgs/coa/COP/guidon_cover.jpg",
-		"Application": "http://bit.ly/RW20TGDN",
+		"Application": "https://bit.ly/RW20TGDN",
 		"LearnMore": "https://www.coarecweek.com/theguidon"
 	},
 	{
@@ -596,7 +596,7 @@
 		"Body": "COP",
 		"Logo": "assets/orgs/coa/COP/matanglawin_logo.png",
 		"Cover": "assets/orgs/coa/COP/matanglawin_cover.png",
-		"Application": "http://bit.ly/RW20MatanglawinAteneo",
+		"Application": "https://bit.ly/RW20MatanglawinAteneo",
 		"LearnMore": "https://www.coarecweek.com/matanglawinateneo"
 	},
 	{
@@ -626,7 +626,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/FAITH_FORMATION/aclc_logo.png",
 		"Cover": "assets/orgs/coa/FAITH_FORMATION/aclc_cover.jpg",
-		"Application": "http://bit.ly/RW20ACLC",
+		"Application": "https://bit.ly/RW20ACLC",
 		"LearnMore": "https://www.coarecweek.com/aclc"
 	},
 	{
@@ -656,7 +656,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/FAITH_FORMATION/acil_logo.png",
 		"Cover": "assets/orgs/coa/FAITH_FORMATION/acil_cover.png",
-		"Application": "http://bit.ly/RW20ACIL",
+		"Application": "https://bit.ly/RW20ACIL",
 		"LearnMore": "https://www.coarecweek.com/acil"
 	},
 	{
@@ -686,7 +686,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/FAITH_FORMATION/atsca_logo.png",
 		"Cover": "assets/orgs/coa/FAITH_FORMATION/atsca_cover.jpg",
-		"Application": "http://bit.ly/RW20AtSCA",
+		"Application": "https://bit.ly/RW20AtSCA",
 		"LearnMore": "https://www.coarecweek.com/atsca"
 	},
 	{
@@ -716,7 +716,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/FAITH_FORMATION/yfc_logo.png",
 		"Cover": "assets/orgs/coa/FAITH_FORMATION/yfc_cover.jpg",
-		"Application": "http://bit.ly/RW20YFC-A",
+		"Application": "https://bit.ly/RW20YFC-A",
 		"LearnMore": "https://www.coarecweek.com/yfc-a"
 	},
 	{
@@ -746,7 +746,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/FAITH_FORMATION/acmg_logo.png",
 		"Cover": "assets/orgs/coa/FAITH_FORMATION/acmg_cover.jpg",
-		"Application": "http://bit.ly/RW20ACMG",
+		"Application": "https://bit.ly/RW20ACMG",
 		"LearnMore": "https://www.coarecweek.com/acmg"
 	},
 	{
@@ -776,7 +776,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_logo.png",
 		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/lm_cover.JPG",
-		"Application": "http://bit.ly/RW20LM",
+		"Application": "https://bit.ly/RW20LM",
 		"LearnMore": "https://www.coarecweek.com/lm"
 	},
 	{
@@ -806,7 +806,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_logo.png",
 		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/isda_cover.jpg",
-		"Application": "http://bit.ly/RW20ISDA",
+		"Application": "https://bit.ly/RW20ISDA",
 		"LearnMore": "https://www.coarecweek.com/isda"
 	},
 	{
@@ -836,7 +836,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_logo.png",
 		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/pmsa_cover.JPG",
-		"Application": "http://bit.ly/RW20ThePMSA",
+		"Application": "https://bit.ly/RW20ThePMSA",
 		"LearnMore": "https://www.coarecweek.com/thepmsa"
 	},
 	{
@@ -866,7 +866,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_logo.png",
 		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/aess_cover.jpg",
-		"Application": "http://bit.ly/RW20AESS",
+		"Application": "https://bit.ly/RW20AESS",
 		"LearnMore": "https://www.coarecweek.com/aess"
 	},
 	{
@@ -896,7 +896,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_logo.png",
 		"Cover": "assets/orgs/coa/HEALTH_AND_ENVIRONMENT/peers_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoPeers",
+		"Application": "https://bit.ly/RW20AteneoPeers",
 		"LearnMore": "https://www.coarecweek.com/ateneopeers"
 	},
 	{
@@ -926,7 +926,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_logo.png",
 		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/hinomoto_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoHinomoto",
+		"Application": "https://bit.ly/RW20AteneoHinomoto",
 		"LearnMore": "https://www.coarecweek.com/hinomoto"
 	},
 	{
@@ -956,7 +956,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_logo.png",
 		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/alac_cover.jpg",
-		"Application": "http://bit.ly/RW20ALAC",
+		"Application": "https://bit.ly/RW20ALAC",
 		"LearnMore": "https://www.coarecweek.com/alac"
 	},
 	{
@@ -986,7 +986,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_logo.png",
 		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/baybayin_cover.jpg",
-		"Application": "http://bit.ly/RW20BaybayinAteneo",
+		"Application": "https://bit.ly/RW20BaybayinAteneo",
 		"LearnMore": "https://www.coarecweek.com/baybayinateneo"
 	},
 	{
@@ -1016,7 +1016,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_logo.png",
 		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/celadon_cover.JPG",
-		"Application": "http://bit.ly/RW20AteneoCeladon",
+		"Application": "https://bit.ly/RW20AteneoCeladon",
 		"LearnMore": "https://www.coarecweek.com/celadon"
 	},
 	{
@@ -1046,7 +1046,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_logo.png",
 		"Cover": "assets/orgs/coa/INTERCULTURAL_RELATIONS/asec_cover.png",
-		"Application": "http://bit.ly/RW20ASEC",
+		"Application": "https://bit.ly/RW20ASEC",
 		"LearnMore": "https://www.coarecweek.com/asec"
 	},
 	{
@@ -1076,7 +1076,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_logo.png",
 		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/amp_cover.jpg",
-		"Application": "http://bit.ly/RW20AMP",
+		"Application": "https://bit.ly/RW20AMP",
 		"LearnMore": "https://www.coarecweek.com/amp"
 	},
 	{
@@ -1106,7 +1106,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_logo.png",
 		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/lfc_cover.png",
-		"Application": "http://bit.ly/RW20LFC",
+		"Application": "https://bit.ly/RW20LFC",
 		"LearnMore": "https://www.coarecweek.com/lfc"
 	},
 	{
@@ -1136,7 +1136,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_logo.png",
 		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/cosa_cover.JPG",
-		"Application": "http://bit.ly/RW20CoSA",
+		"Application": "https://bit.ly/RW20CoSA",
 		"LearnMore": "https://www.coarecweek.com/cosa"
 	},
 	{
@@ -1166,7 +1166,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_logo.png",
 		"Cover": "assets/orgs/coa/MEDIA_AND_CREATIVES_CLUSTER/acomm_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoACOMM",
+		"Application": "https://bit.ly/RW20AteneoACOMM",
 		"LearnMore": "https://www.coarecweek.com/ateneoacomm"
 	},
 	{
@@ -1196,7 +1196,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_logo.png",
 		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/cads_cover.png",
-		"Application": "http://bit.ly/RW20CADs",
+		"Application": "https://bit.ly/RW20CADs",
 		"LearnMore": "https://www.coarecweek.com/cads"
 	},
 	{
@@ -1226,7 +1226,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_logo.png",
 		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/acgc_cover.png",
-		"Application": "http://bit.ly/RW20ACGC",
+		"Application": "https://bit.ly/RW20ACGC",
 		"LearnMore": "https://www.coarecweek.com/acgc"
 	},
 	{
@@ -1256,7 +1256,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_logo.png",
 		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/ta_cover.png",
-		"Application": "http://bit.ly/RW20TanghalangAteneo",
+		"Application": "https://bit.ly/RW20TanghalangAteneo",
 		"LearnMore": "https://www.coarecweek.com/ta"
 	},
 	{
@@ -1286,7 +1286,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_logo.png",
 		"Cover": "assets/orgs/coa/PERFORMING_ARTS_CLUSTER/bluerep_cover.png",
-		"Application": "http://bit.ly/RW20blueREP",
+		"Application": "https://bit.ly/RW20blueREP",
 		"LearnMore": "https://www.coarecweek.com/bluerep"
 	},
 	{
@@ -1316,7 +1316,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/psyche_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/psyche_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoPsyche",
+		"Application": "https://bit.ly/RW20AteneoPsyche",
 		"LearnMore": "https://www.coarecweek.com/ateneopsyche"
 	},
 	{
@@ -1346,7 +1346,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aeces_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/aeces_cover.png",
-		"Application": "http://bit.ly/RW20AECES",
+		"Application": "https://bit.ly/RW20AECES",
 		"LearnMore": "https://www.coarecweek.com/aeces"
 	},
 	{
@@ -1376,7 +1376,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/aches_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/aches_cover.png",
-		"Application": "http://bit.ly/RW20ACheS",
+		"Application": "https://bit.ly/RW20ACheS",
 		"LearnMore": "https://www.coarecweek.com/aches"
 	},
 	{
@@ -1406,7 +1406,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/leaps_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/leaps_cover.jpg",
-		"Application": "http://bit.ly/RW20LeaPs",
+		"Application": "https://bit.ly/RW20LeaPs",
 		"LearnMore": "https://www.coarecweek.com/leaps"
 	},
 	{
@@ -1436,7 +1436,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/compsat_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/compsat_cover.png",
-		"Application": "http://bit.ly/RW20CompSAt",
+		"Application": "https://bit.ly/RW20CompSAt",
 		"LearnMore": "https://www.coarecweek.com/compsat"
 	},
 	{
@@ -1466,7 +1466,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/ams_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/ams_cover.png",
-		"Application": "http://bit.ly/RW20AMS",
+		"Application": "https://bit.ly/RW20AMS",
 		"LearnMore": "https://www.coarecweek.com/ams"
 	},
 	{
@@ -1496,7 +1496,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/misa_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/misa_cover.png",
-		"Application": "http://bit.ly/RW20MISA",
+		"Application": "https://bit.ly/RW20MISA",
 		"LearnMore": "https://www.coarecweek.com/misa"
 	},
 	{
@@ -1526,7 +1526,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SCIENCE_AND_TECH/box_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/box_cover.png",
-		"Application": "http://bit.ly/RW20AteneoBOx",
+		"Application": "https://bit.ly/RW20AteneoBOx",
 		"LearnMore": "https://www.coarecweek.com/ateneobox"
 	},
 	{
@@ -1556,7 +1556,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/tugon_logo.png",
 		"Cover": "assets/orgs/coa/SCIENCE_AND_TECH/tugon_cover.jpg",
-		"Application": "http://bit.ly/RW20TUGON",
+		"Application": "https://bit.ly/RW20TUGON",
 		"LearnMore": "https://www.coarecweek.com/tugon"
 	},
 	{
@@ -1586,7 +1586,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/code_logo.png",
 		"Cover": "assets/orgs/coa/SECTOR-BASED/code_cover.png",
-		"Application": "http://bit.ly/RW20AteneoCODE",
+		"Application": "https://bit.ly/RW20AteneoCODE",
 		"LearnMore": "https://www.coarecweek.com/ateneocode"
 	},
 	{
@@ -1616,7 +1616,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/edge_logo.png",
 		"Cover": "assets/orgs/coa/SECTOR-BASED/edge_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoEDGE",
+		"Application": "https://bit.ly/RW20AteneoEDGE",
 		"LearnMore": "https://www.coarecweek.com/ateneoedge"
 	},
 	{
@@ -1646,7 +1646,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/gabay_logo.png",
 		"Cover": "assets/orgs/coa/SECTOR-BASED/gabay_cover.jpg",
-		"Application": "http://bit.ly/RW20GABAY",
+		"Application": "https://bit.ly/RW20GABAY",
 		"LearnMore": "https://www.coarecweek.com/gabay"
 	},
 	{
@@ -1676,7 +1676,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/barefoot_logo.png",
 		"Cover": "assets/orgs/coa/SECTOR-BASED/barefoot_cover.jpg",
-		"Application": "http://bit.ly/RW20Barefoot",
+		"Application": "https://bit.ly/RW20Barefoot",
 		"LearnMore": "https://www.coarecweek.com/barefoot"
 	},
 	{
@@ -1706,7 +1706,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/speed_logo.png",
 		"Cover": "assets/orgs/coa/SECTOR-BASED/speed_cover.jpg",
-		"Application": "http://bit.ly/RW20AteneoSPEED",
+		"Application": "https://bit.ly/RW20AteneoSPEED",
 		"LearnMore": "https://www.coarecweek.com/ateneospeed"
 	},
 	{
@@ -1736,7 +1736,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/musmos_logo.png",
 		"Cover": "assets/orgs/coa/SECTOR-BASED/musmos_cover.jpg",
-		"Application": "http://bit.ly/RW20MUSMOS",
+		"Application": "https://bit.ly/RW20MUSMOS",
 		"LearnMore": "https://www.coarecweek.com/musmos"
 	},
 	{
@@ -1766,7 +1766,7 @@
 		"Body": "COA",
 		"Logo": "assets/orgs/coa/SECTOR-BASED/kythe_logo.png",
 		"Cover": "assets/orgs/coa/SECTOR-BASED/kythe_cover.jpg",
-		"Application": "http://bit.ly/RW20Kythe",
+		"Application": "https://bit.ly/RW20Kythe",
 		"LearnMore": "https://www.coarecweek.com/kythe"
 	},
 	{
@@ -1798,7 +1798,7 @@
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sjc_logo.png",
 		"Cover": "assets/orgs/coa/STUDENT_GROUPS/sjc_cover.jpeg",
-		"Application": "http://bit.ly/RW20AteneoStudentJudicialCourt",
+		"Application": "https://bit.ly/RW20AteneoStudentJudicialCourt",
 		"LearnMore": "https://www.coarecweek.com/sjc"
 	},
 	{
@@ -1830,7 +1830,7 @@
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/dsws_logo.png",
 		"Cover": "assets/orgs/coa/STUDENT_GROUPS/dsws_cover.JPG",
-		"Application": "http://bit.ly/RW20DSWS",
+		"Application": "https://bit.ly/RW20DSWS",
 		"LearnMore": "https://www.coarecweek.com/dsws"
 	},
 	{
@@ -1862,7 +1862,7 @@
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/aegis_logo.png",
 		"Cover": "assets/orgs/coa/STUDENT_GROUPS/aegis_cover.JPG",
-		"Application": "http://bit.ly/RW20AEGIS",
+		"Application": "https://bit.ly/RW20AEGIS",
 		"LearnMore": "https://www.coarecweek.com/aegis"
 	},
 	{
@@ -1894,7 +1894,7 @@
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_logo.png",
 		"Cover": "assets/orgs/coa/STUDENT_GROUPS/ombudsman_cover.jpg",
-		"Application": "http://bit.ly/RW20OMB",
+		"Application": "https://bit.ly/RW20OMB",
 		"LearnMore": "https://www.coarecweek.com/omb"
 	},
 	{
@@ -1926,7 +1926,7 @@
 		"Body": "COA",
 		"Logo": "assets/bodies/coa/logo.png",
 		"Cover": "assets/bodies/coa/cover.png",
-		"Application": "http://bit.ly/RW20COA-M",
+		"Application": "https://bit.ly/RW20COA-M",
 		"LearnMore": "https://www.coarecweek.com/coam"
 	},
 	{
@@ -1958,7 +1958,7 @@
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_logo.png",
 		"Cover": "assets/orgs/coa/STUDENT_GROUPS/lsopcs_cover.jpg",
-		"Application": "http://bit.ly/RW20LSOPCS",
+		"Application": "https://bit.ly/RW20LSOPCS",
 		"LearnMore": "https://www.coarecweek.com/lsopcs"
 	},
 	{
@@ -1990,7 +1990,7 @@
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/comelec_logo.png",
 		"Cover": "assets/orgs/coa/STUDENT_GROUPS/comelec_cover.jpg",
-		"Application": "http://bit.ly/RW20COMELEC",
+		"Application": "https://bit.ly/RW20COMELEC",
 		"LearnMore": "https://www.coarecweek.com/comelec"
 	},
 	{
@@ -2022,7 +2022,7 @@
 		"Body": "Student Groups",
 		"Logo": "assets/orgs/coa/STUDENT_GROUPS/sanggu_logo.png",
 		"Cover": "assets/orgs/coa/STUDENT_GROUPS/sanggu_cover.png",
-		"Application": "http://bit.ly/RW20Sanggu",
+		"Application": "https://bit.ly/RW20Sanggu",
 		"LearnMore": "https://www.coarecweek.com/sanggu"
 	},
 	{
@@ -2086,7 +2086,7 @@
 		"LearnMore": "https://lionshome.org/blue-bird-improv/"
 	},
 	{
-		"Cluster": ["Arts", " Culture", " Literature"],
+		"Cluster": ["Arts", "Culture", "Literature"],
 		"Name": "Toushin",
 		"Abbreviation": "Toushin",
 		"Tagline": "Let's get GENKI!!",
@@ -2116,7 +2116,7 @@
 		"LearnMore": "https://lionshome.org/toushin/"
 	},
 	{
-		"Cluster": ["Arts", " Culture", " Language", " Literature"],
+		"Cluster": ["Arts", "Culture", "Language", "Literature"],
 		"Name": "Blue Hanguk Society",
 		"Abbreviation": "BlueHan",
 		"Tagline": "Be Anything with BlueHan",
@@ -2206,7 +2206,7 @@
 		"LearnMore": "https://lionshome.org/developer-student-clubs-loyola/"
 	},
 	{
-		"Cluster": ["Culture", " Design"],
+		"Cluster": ["Culture", "Design"],
 		"Name": "Mokoa Animation Studio",
 		"Abbreviation": "Mokoa",
 		"Tagline": "Moving together, one frame at a time",
@@ -2236,7 +2236,7 @@
 		"LearnMore": "https://lionshome.org/mokoa-animation-studio/"
 	},
 	{
-		"Cluster": ["Arts", " Culture", " Literature"],
+		"Cluster": ["Arts", "Culture", "Literature"],
 		"Name": "WriterSkill ",
 		"Abbreviation": "WriterSkill",
 		"Tagline": "Excellence in Progress",
@@ -2262,11 +2262,11 @@
 		"Body": "LIONS",
 		"Logo": "assets/orgs/lions/logos/WS.png",
 		"Cover": "assets/orgs/lions/covers/WS.jpeg",
-		"Application": "http://bit.ly/WS2020Registration",
+		"Application": "https://bit.ly/WS2020Registration",
 		"LearnMore": "https://lionshome.org/writer-skill/"
 	},
 	{
-		"Cluster": ["Arts", " Culture", " Design"],
+		"Cluster": ["Arts", "Culture", "Design"],
 		"Name": "Blue Indie Komiks",
 		"Abbreviation": "BLINK",
 		"Tagline": "Linking People Through Komiks",
@@ -2296,7 +2296,7 @@
 		"LearnMore": "https://lionshome.org/blink/"
 	},
 	{
-		"Cluster": ["Adventure", " Culture", " Lifestyle"],
+		"Cluster": ["Adventure", "Culture", "Lifestyle"],
 		"Name": "THINC",
 		"Abbreviation": "THINC",
 		"Tagline": "Roll with us!",
@@ -2326,7 +2326,7 @@
 		"LearnMore": "https://lionshome.org/thinc/"
 	},
 	{
-		"Cluster": ["Business", " Education"],
+		"Cluster": ["Business", "Education"],
 		"Name": "Junior Fellowship for Financial Literacy",
 		"Abbreviation": "JFel",
 		"Tagline": "Elevating Financial Literacy",
@@ -2356,7 +2356,7 @@
 		"LearnMore": "https://lionshome.org/junior-fellowship-for-financial-literacy/"
 	},
 	{
-		"Cluster": ["Home Org", " Technology"],
+		"Cluster": ["Home Org", "Technology"],
 		"Name": "BYTE",
 		"Abbreviation": "BYTE",
 		"Tagline": "Building Young Tech Entrepreneurs ",
@@ -2386,7 +2386,7 @@
 		"LearnMore": "https://lionshome.org/byte/"
 	},
 	{
-		"Cluster": ["International", " Spiritual"],
+		"Cluster": ["International", "Spiritual"],
 		"Name": "RC LIFE - Loyola",
 		"Abbreviation": "RC Life",
 		"Tagline": "Love Inspired by Faith & Encounter",
@@ -2416,7 +2416,7 @@
 		"LearnMore": "https://lionshome.org/rc-life-loyola/"
 	},
 	{
-		"Cluster": ["Community Development", " Design", " Education"],
+		"Cluster": ["Community Development", "Design", "Education"],
 		"Name": "Project LAAN",
 		"Abbreviation": "Proj LAAN",
 		"Tagline": "Fighting Poverty Through Health",
@@ -2448,11 +2448,11 @@
 	{
 		"Cluster": [
 			"Business",
-			" Community Development",
-			" Design",
-			" Education",
-			" International",
-			" Technology"
+			"Community Development",
+			"Design",
+			"Education",
+			"International",
+			"Technology"
 		],
 		"Name": "User Experience Society",
 		"Abbreviation": "UXS",
@@ -2513,7 +2513,7 @@
 		"LearnMore": "https://lionshome.org/blue-symphony-orchestra/"
 	},
 	{
-		"Cluster": ["Community Development", " Education", " International"],
+		"Cluster": ["Community Development", "Education", "International"],
 		"Name": "Effective Altruism Blue",
 		"Abbreviation": "EA Blue",
 		"Tagline": "Using reason and evidence to do the most good.",
@@ -2543,7 +2543,7 @@
 		"LearnMore": "https://lionshome.org/effective-altruism-blue/"
 	},
 	{
-		"Cluster": ["Community Development", " International"],
+		"Cluster": ["Community Development", "International"],
 		"Name": "Habitat for Humanity Blue Chapter",
 		"Abbreviation": "HFH",
 		"Tagline": "Not One Less",
@@ -2603,7 +2603,7 @@
 		"LearnMore": "https://lionshome.org/christ-s-youth-in-action/"
 	},
 	{
-		"Cluster": ["Education", " Home Org", " Literature"],
+		"Cluster": ["Education", "Home Org", "Literature"],
 		"Name": "League of Atenean Historians (LAHi)",
 		"Abbreviation": "LAHi",
 		"Tagline": "Make History Your Story!",
@@ -2663,7 +2663,7 @@
 		"LearnMore": "https://lionshome.org/casa/"
 	},
 	{
-		"Cluster": ["Culture", " Lifestyle", " Technology"],
+		"Cluster": ["Culture", "Lifestyle", "Technology"],
 		"Name": "Loyola Gaming",
 		"Abbreviation": "LG",
 		"Tagline": "#BeyondThePlay",
@@ -2695,10 +2695,10 @@
 	{
 		"Cluster": [
 			"Community Development",
-			" Culture",
-			" Education",
-			" International",
-			" Technology"
+			"Culture",
+			"Education",
+			"International",
+			"Technology"
 		],
 		"Name": "Developer Student Clubs - Loyola",
 		"Abbreviation": "DSC Loyola",
@@ -2729,7 +2729,7 @@
 		"LearnMore": "https://lionshome.org/developer-student-clubs-loyola/"
 	},
 	{
-		"Cluster": ["Education", " Environment"],
+		"Cluster": ["Education", "Environment"],
 		"Name": "AGILA",
 		"Abbreviation": "AGILA",
 		"Tagline": "Your partner for animal welfare",
@@ -2759,7 +2759,7 @@
 		"LearnMore": "https://lionshome.org/agila/"
 	},
 	{
-		"Cluster": ["Home Org", " Arts", " Design"],
+		"Cluster": ["Home Org", "Arts", "Design"],
 		"Name": "DECO",
 		"Abbreviation": "DECO",
 		"Tagline": "Your home for graphic designers. ",
@@ -2819,7 +2819,7 @@
 		"LearnMore": "https://lionshome.org/atenean-car-enthusiasts/"
 	},
 	{
-		"Cluster": ["Arts", " Culture", " Education", " Lifestyle"],
+		"Cluster": ["Arts", "Culture", "Education", "Lifestyle"],
 		"Name": "Cuisina",
 		"Abbreviation": "Cuisina",
 		"Tagline": "All Flavors Welcome!",
@@ -2863,10 +2863,10 @@
 		"Awards": "",
 		"projectImageOne": "https://firebasestorage.googleapis.com/v0/b/admu-recweek-app.appspot.com/o/lions%2Fksa%2FImageOne.jpeg?alt=media&token=dbf45057-64d2-4789-ad66-3b5a93d97203",
 		"projectTitleOne": "Distanced Diaries",
-		"projectDescOne": "Distanced Diaries is KSA's brand new project, brought about by the social distancing and reclusion enforced by the COVID-19 outbreak. It serves as an outlet for members to share their creative works: visual art, videos, poetry, narratives, comics, even memes to the world, giving them a space for expression as the entirety of society grapples with the experiences brought about by the new everyday of this pandemic.",
+		"projectDescOne": "Distanced Diaries is KSA's brand new project, brought about by the social distancing and reclusion enforced by the COVID-19 outbreak. It serves as an outlet for members to share their creative works: visual art, videos, poetry, narratives, comics -- even memes -- to the world, giving them a space for expression as the entirety of society grapples with the experiences brought about by the new everyday of this pandemic.",
 		"projectImageTwo": "",
-		"projectTitleTwo": " ",
-		"projectDescTwo": " ",
+		"projectTitleTwo": "",
+		"projectDescTwo": "",
 		"projectImageThree": "",
 		"projectTitleThree": "",
 		"projectDescThree": "",
