@@ -299,7 +299,7 @@ class _LionsScreenState extends State<LionsScreen> {
                           InkWell(
                             child:
                                 Image.asset('assets/bodies/lions/website.png'),
-                            onTap: () => launch('https://lionshub.org'),
+                            onTap: () => launch('https://lionshome.org'),
                           ),
                           // InkWell(
                           //   child: Image.asset('assets/bodies/lions/ig.png'),
@@ -1236,8 +1236,7 @@ class _LionsScreenState extends State<LionsScreen> {
                       //     PageTransition(
                       //         type: PageTransitionType.fade,
                       //         child: EmptyScreen()));
-                      launch(
-                          "https://docs.google.com/document/d/1w4GodQroaObFrhts8pmiEjy7dNLDjNqUpmdC4Hex_x8/edit");
+                      launch("bit.ly/LIONSCBRWSignUps");
                     },
                     color: const Color(0xffFF801D),
                     child: Padding(
