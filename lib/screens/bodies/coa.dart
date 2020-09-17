@@ -170,6 +170,8 @@ class _COAScreenState extends State<COAScreen> {
         orgResult[i]['projectImageOne'],
         orgResult[i]['projectImageTwo'],
         orgResult[i]['projectImageThree'],
+        orgResult[i]['Application'],
+        orgResult[i]['LearnMore'],
       ));
     }
     // Sorting Area
@@ -260,7 +262,10 @@ class _COAScreenState extends State<COAScreen> {
               AutoSizeText(
                 "Council of Organizations - Ateneo",
                 maxLines: 1,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
                 textAlign: TextAlign.center,
               ),
               Stack(
@@ -681,8 +686,8 @@ class _COAScreenState extends State<COAScreen> {
                 ],
               ),
               Padding(
-                padding:
-                    const EdgeInsets.only(left: 60, right: 60, top: 30, bottom: 0),
+                padding: const EdgeInsets.only(
+                    left: 60, right: 60, top: 30, bottom: 0),
                 child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
@@ -714,7 +719,10 @@ class _COAScreenState extends State<COAScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
-                    borderSide: BorderSide(color: const Color(0xffE84C4C), width: 1, style: BorderStyle.solid),
+                    borderSide: BorderSide(
+                        color: const Color(0xffE84C4C),
+                        width: 1,
+                        style: BorderStyle.solid),
                     onPressed: () {
                       // Navigator.push(
                       //     context,
