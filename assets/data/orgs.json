@@ -2052,7 +2052,7 @@
 		"Body": "LIONS",
 		"Logo": "assets/orgs/lions/logos/FIT.png",
 		"Cover": "assets/orgs/lions/logos/FIT.png",
-		"Application": "https://forms.gle/ucVMNuKvwToE8UoK8",
+		"Application": "https://web.facebook.com/groups/fiteamcommunity",
 		"LearnMore": "https://lionshome.org/fitness-improvement-team/"
 	},
 	{
@@ -2382,7 +2382,7 @@
 		"Body": "LIONS",
 		"Logo": "assets/orgs/lions/logos/byte.png",
 		"Cover": "assets/orgs/lions/covers/byte.JPG",
-		"Application": "https://tinyurl.com/BYTE-RecWeek2020",
+		"Application": "https://tinyurl.com/BYTE-RecWeekApps2020",
 		"LearnMore": "https://lionshome.org/byte/"
 	},
 	{
@@ -2877,5 +2877,35 @@
 		"Cover": "assets/orgs/lions/covers/KSA.jpeg",
 		"Application": "https://bit.ly/KSAApplication2021",
 		"LearnMore": "https://lionshome.org/kalipunang-sosyolohiya-at-antropolohiya/"
+	},
+	{
+		"Cluster": [],
+		"Name": "League of Independent Organizations",
+		"Abbreviation": "LIONS",
+		"Tagline": "",
+		"Website": "https://lionshome.org",
+		"Facebook": "https://www.facebook.com/admu.lions",
+		"Twitter": "https://www.twitter.com/admulions",
+		"Instagram": "",
+		"Description": "",
+		"Advocacy": "",
+		"Core": "",
+		"Awards": "",
+		"projectImageOne": "",
+		"projectTitleOne": "",
+		"projectDescOne": "",
+		"projectImageTwo": "",
+		"projectTitleTwo": "",
+		"projectDescTwo": "",
+		"projectImageThree": "",
+		"projectTitleThree": "",
+		"projectDescThree": "",
+		"Vision": "",
+		"Mission": "",
+		"Body": "LIONS",
+		"Logo": "assets/bodies/lions/circle.png",
+		"Cover": "",
+		"Application": "bit.ly/LIONSCBRWSignUps",
+		"LearnMore": "https://lionshome.org"
 	}
 ]
